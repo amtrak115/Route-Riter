@@ -1,0 +1,23 @@
+BrakeEquipmentType( "Triple_valve, Auxilary_reservoir, Emergency_brake_reservoir" )
+
+        BrakeSystemType( "Air_single_pipe" )
+        
+        MaxBrakeForce( XXXkN )
+
+        EmergencyBrakeResMaxPressure( 110 )
+        TripleValveRatio( 2.5 )
+        MaxReleaseRate( 20 )
+        MaxApplicationRate( 20 )
+        MaxAuxilaryChargingRate( 30 )
+        EmergencyResCapacity( 10 )
+        EmergencyResChargingRate( 30 )
+        BrakeCylinderPressureForMaxBrakeBrakeForce( 70 )
+
+        BrakeDistributorFullServicePressure( 82 )
+        BrakeDistributorMaxAuxilaryResPressure( 110 )
+        BrakeDistributorEmergencyResPressure( 110 )
+        BrakeDistributorReleaseRate( 10 )
+        BrakeDistributorApplicationRate( 15 )
+        BrakeDistributorTrainPipeControlRatio( 2.03 )
+        BrakeDistributorNormalFullReleasePressure( 110 )
+        

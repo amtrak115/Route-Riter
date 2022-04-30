@@ -1,0 +1,21 @@
+
+        AirBrakesAirCompressorPowerRating( 1.2 )
+        AirBrakesMainMinResAirPressure( 0 )
+        AirBrakesMainMaxAirPressure( 90 )
+        AirBrakesMainResVolume( 8 )
+        AirBrakesAirCompressorWattage( 19000 )
+        AirBrakesCompressorRestartPressure( 87 )
+        AirBrakesAirUsedPerPoundsOfBrakePipePressure( 0.22 )
+        AirBrakesIsCompressorElectricOrMechanical( 1 )
+
+        TrainBrakesControllerMinPressureReduction( 6 )
+        TrainBrakesControllerMaxApplicationRate( 20 )
+        TrainBrakesControllerMaxReleaseRate( 80 )
+        TrainBrakesControllerEmergencyApplicationRate( 50 )
+        TrainBrakesControllerMinSystemPressure( 0 )
+        TrainBrakesControllerMaxSystemPressure( 90 )
+        TrainBrakesControllerEmergencyBrakeTimePenalty( 20 )
+        TrainBrakesControllerFullServicePressureDrop( 26 )
+
+      BrakesEngineControllers( "Train" )
+

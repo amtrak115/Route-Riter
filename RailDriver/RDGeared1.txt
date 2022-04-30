@@ -1,0 +1,17 @@
+
+
+	BrakeEquipmentType( "EP_brake" )
+
+	BrakeSystemType( "EP" )
+	MaxBrakeForce( XXXkN )
+
+	EmergencyBrakeResMaxPressure( 100 )
+	TripleValveRatio( 2.5 )
+	MaxReleaseRate( 25 )
+	MaxApplicationRate( 25 )
+	MaxAuxilaryChargingRate( 15 )
+	EmergencyResCapacity( 8 )
+	EmergencyResChargingRate( 18 )
+	BrakeCylinderPressureForMaxBrakeBrakeForce( 70 )
+        
+

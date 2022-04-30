@@ -1,0 +1,3700 @@
+[Root]
+Most Recent Package=Route_Riter5220a
+
+
+[Package|RouteRiter4232|Root]
+SubWizProgID=PDWizard.SetupPkgSubWiz
+BuildFolder=D:\VB Projects\Route_Riter\Package5
+
+[Package|RouteRiter4232|Configure DAO ISAMs]
+Applicable=No
+
+[Package|RouteRiter4232|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|RouteRiter4232|Files Found]
+stuffit.ref=D:\VB Projects\Route_Riter\stuffit.ref
+
+[Package|RouteRiter4232|Files Released]
+route_riter.CHI=
+STKIT432.DLL=
+Tokens.dat=
+langdanish.txt=
+language.txt=
+langspanish.txt=
+langnorwegian.txt=
+langdutch.txt=
+zipdll.dll=
+unzdll.dll=
+zipit.dll=
+decompw.exe=
+Route_RiterFR.CHI=
+keepme.txt=
+newshape.tms=
+
+[Package|RouteRiter4232|Missing Dependency Information]
+C:\WINDOWS\system32\vsflex7l.ocx=
+D:\VB Projects\Route_Riter\SetupFiles\DecompW.exe=
+D:\VB Projects\Route_Riter\SetupFiles\zlib.dll=
+D:\VB Projects\Route_Riter\SetupFiles\WBDCH34I.DLL=
+D:\VB Projects\Route_Riter\SetupFiles\WWHUG34I.DLL=
+C:\WINDOWS\system32\VSPRINT7.ocx=
+D:\VB Projects\Route_Riter\SetupFiles\DecompT.exe=
+D:\VB Code\DecompW\VBZip\VBZip_Control.ocx=
+D:\VB Projects\Route_Riter\Unzdll.dll=
+D:\VB Projects\Route_Riter\Zipdll.dll=
+C:\WINDOWS\system32\VBZip_Control.ocx=
+C:\Program Files\VideoSoft\Shared Files\VSPRINT7.ocx=
+C:\Program Files\VideoSoft\Shared Files\vsflex7L.ocx=
+C:\Program Files\Your Company Name\Your Product Name\vsflex7L.ocx=
+C:\Program Files\Your Company Name\Your Product Name\VSPRINT7.ocx=
+D:\SAWZip\SAWZip.tlb=
+C:\WINDOWS\system32\SAWZip.dll=
+C:\WINDOWS\system32\SAWZip.tlb=
+C:\WINDOWS\system32\STKIT432.DLL=
+C:\Program Files\VideoSoft\Shared Files\Vsflex7.ocx=
+D:\VB Code\SAWZipNG\SAWZipNG.tlb=
+D:\VB Code\SAWZipNG\SAWZipNG.dll=
+C:\WINDOWS\system32\mwacevb.dll=
+C:\WINDOWS\system32\mwgfxvb.dll=
+D:\VB Projects\Route_Riter\mwace.dll=
+
+[Package|RouteRiter4232|Out-of-Date Dependency Information]
+C:\WINDOWS\system32\COMDLG32.OCX=
+C:\WINDOWS\system32\scrrun.dll=
+
+[Package|RouteRiter4232|Files Added]
+stuffit.ref=
+d:\vb projects\route_riter\route_riter.chm=
+d:\vb projects\route_riter\setupfiles\reffilestart.txt=
+d:\vb projects\route_riter\setupfiles\acecomp.exe=
+d:\vb projects\route_riter\setupfiles\zlib.dll=
+d:\vb projects\route_riter\setupfiles\wbdch34i.dll=
+d:\vb projects\route_riter\setupfiles\wtokens.dat=
+d:\vb projects\route_riter\setupfiles\wwhug34i.dll=
+d:\vb projects\route_riter\setupfiles\decompt.exe=
+d:\vb projects\route_riter\setupfiles\terrain.dat=
+d:\vb projects\route_riter\lang_spanish.txt=
+d:\vb projects\route_riter\lang_danish.txt=
+d:\vb projects\route_riter\lang_dutch.txt=
+d:\vb projects\route_riter\lang_english.txt=
+d:\vb projects\route_riter\lang_french.txt=
+d:\vb projects\route_riter\lang_norwegian.txt=
+d:\vb projects\route_riter\stuffitpack2\ezstuff4.bat=
+d:\vb projects\route_riter\suggested_readme.txt=
+c:\windows\system32\sawzip.dll=
+d:\vb projects\route_riter\stuffitpack2a.zip=
+d:\vb code\sawzipng\sawzipng.dll=
+D:\VB Projects\Route_Riter\Route_RiterFR.chm=
+D:\VB Code\SAWZipNG2\SAWZipNG.dll=
+D:\VB Projects\Route_Riter\StuffitPack.zip=
+C:\WINDOWS\system32\SAWZipNG.dll=
+D:\VB Projects\Route_Riter\mwace.dll=
+
+[Package|RouteRiter4232|Files Removed]
+c:\windows\system32\hh.exe=
+d:\vb projects\route_riter\setupfiles\keepme.txt=
+d:\vb projects\route_riter\zipit.dll=
+d:\vb projects\route_riter\zipdll.dll=
+c:\windows\system32\sawzip.dll=
+d:\vb projects\route_riter\newshape.tms=
+c:\windows\system32\msvcrt.dll=
+c:\windows\system32\mwgfxvb.dll=
+
+[Package|RouteRiter4232|Files In Project]
+C:\WINDOWS\SYSTEM32\msvbvm60.dll=Yes
+C:\WINDOWS\SYSTEM32\hhctrl.ocx=Yes
+C:\WINDOWS\SYSTEM32\itss.dll=Yes
+C:\WINDOWS\SYSTEM32\itircl.dll=Yes
+C:\WINDOWS\SYSTEM32\RICHTX32.OCX=Yes
+C:\WINDOWS\SYSTEM32\mscomctl.ocx=Yes
+C:\WINDOWS\SYSTEM32\COMDLG32.OCX=Yes
+C:\WINDOWS\SYSTEM32\VB6STKIT.DLL=Yes
+D:\VB Projects\Route_Riter\route_riter.chm=Yes
+D:\VB Projects\Route_Riter\SetupFiles\RefFileStart.txt=Yes
+D:\VB Projects\Route_Riter\SetupFiles\acecomp.exe=Yes
+C:\WINDOWS\system32\TABCTL32.OCX=Yes
+C:\WINDOWS\system32\COMCTL32.OCX=Yes
+D:\Program Files\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=Yes
+D:\Program Files\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=Yes
+D:\Program Files\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=Yes
+D:\Program Files\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=Yes
+D:\Program Files\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+D:\Program Files\VB98\Wizards\PDWizard\Redist\RICHED32.DLL=Yes
+D:\Program Files\VB98\Wizards\PDWizard\SETUP.EXE=Yes
+D:\Program Files\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
+D:\Program Files\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
+C:\WINDOWS\system32\hh.exe=No
+C:\WINDOWS\system32\STKIT432.DLL=Yes
+D:\VB Projects\Route_Riter\Route_Riter.exe=Yes
+D:\VB Projects\Route_Riter\zlib.dll=Yes
+C:\WINDOWS\system32\Vsflex7.ocx=Yes
+C:\WINDOWS\system32\scrrun.dll=Yes
+C:\WINDOWS\system32\msvcrt.dll=No
+C:\WINDOWS\system32\SAWZipNG.tlb=Yes
+D:\VB Projects\Route_Riter\Lang_Danish.txt=Yes
+D:\VB Projects\Route_Riter\Lang_Dutch.txt=Yes
+D:\VB Projects\Route_Riter\Lang_English.txt=Yes
+D:\VB Projects\Route_Riter\Lang_French.txt=Yes
+D:\VB Projects\Route_Riter\Lang_Norwegian.txt=Yes
+D:\VB Projects\Route_Riter\Lang_Spanish.txt=Yes
+D:\VB Projects\Route_Riter\stuffit.ref=Yes
+D:\VB Projects\Route_Riter\Route_RiterFR.chm=Yes
+C:\Program Files\Your Company Name\Your Product Name\VSPRINT7.ocx=Yes
+C:\Program Files\Your Company Name\Your Product Name\vsflex7L.ocx=Yes
+C:\WINDOWS\system32\mwgfxvb.dll=No
+C:\WINDOWS\system32\mwacevb.dll=Yes
+D:\VB Projects\Route_Riter\StuffitPack.zip=Yes
+D:\VB Projects\Route_Riter\mwace.dll=Yes
+C:\WINDOWS\system32\SAWZipNG.dll=Yes
+
+[Package|RouteRiter4232|Configure Registry Files]
+Applicable=No
+
+[Package|RouteRiter4232|Configure Remote Servers]
+Applicable=No
+
+[Package|RouteRiter4232|Install Locations]
+D:\VB Projects\Route_Riter\Route_Riter.exe=$(AppPath)
+C:\WINDOWS\SYSTEM32\msvbvm60.dll=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM32\STKIT432.DLL=$(WinSysPath)
+C:\WINDOWS\SYSTEM32\hhctrl.ocx=$(WinSysPath)
+C:\WINDOWS\SYSTEM32\itss.dll=$(WinSysPath)
+C:\WINDOWS\SYSTEM32\itircl.dll=$(WinSysPath)
+C:\WINDOWS\SYSTEM32\hh.exe=$(WinSysPath)
+C:\WINDOWS\SYSTEM32\RICHTX32.OCX=$(WinSysPath)
+C:\WINDOWS\SYSTEM32\mscomctl.ocx=$(WinSysPath)
+C:\WINDOWS\SYSTEM32\COMDLG32.OCX=$(WinSysPath)
+C:\WINDOWS\SYSTEM32\VsVIEW3.ocx=$(WinSysPath)
+C:\WINDOWS\SYSTEM32\Vsflex7L.ocx=$(WinSysPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+C:\WINDOWS\SYSTEM32\VB6STKIT.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+D:\VB Projects\Route_Riter\stuffitpack2\stuffit.ref=$(AppPath)\stuffitpack2
+D:\VB Projects\Route_Riter\route_riter.chm=$(AppPath)
+D:\VB Projects\Route_Riter\langDutch.txt=$(AppPath)
+D:\VB Projects\Route_Riter\LangNorwegian.txt=$(AppPath)
+D:\VB Projects\Route_Riter\langSpanish.txt=$(AppPath)
+D:\VB Projects\Route_Riter\language.txt=$(AppPath)
+D:\VB Projects\Route_Riter\newshape.tms=$(AppPath)
+D:\VB Projects\Route_Riter\SetupFiles\RefFileStart.txt=$(AppPath)\SetupFiles
+D:\VB Projects\Route_Riter\SetupFiles\acecomp.exe=$(AppPath)\SetupFiles
+D:\VB Projects\Route_Riter\SetupFiles\KeepMe.txt=$(AppPath)\SetupFiles
+D:\VB Projects\Route_Riter\Route_Riter2.exe=$(AppPath)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=$(WinSysPathSysFile)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=$(WinSysPathSysFile)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=$(WinSysPathSysFile)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=$(WinSysPathSysFile)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\hh.exe=$(WinSysPath)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\RICHED32.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\system32\mfc42.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\msvcrt.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\TABCTL32.OCX=$(WinSysPath)
+C:\WINDOWS\system32\COMCTL32.OCX=$(WinSysPath)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+D:\VB Projects\Route_Riter\SetupFiles\DecompW.exe=$(AppPath)\SetupFiles
+D:\VB Projects\Route_Riter\SetupFiles\Tokens.dat=$(AppPath)\SetupFiles
+D:\VB Projects\Route_Riter\SetupFiles\zlib.dll=$(WinSysPath)
+D:\VB Projects\Route_Riter\SetupFiles\WBDCH34I.DLL=$(AppPath)\setupfiles
+D:\VB Projects\Route_Riter\SetupFiles\WTokens.dat=$(AppPath)\setupfiles
+D:\VB Projects\Route_Riter\SetupFiles\WWHUG34I.DLL=$(AppPath)\setupfiles
+C:\WINDOWS\system32\VSPRINT7.ocx=$(WinSysPath)
+D:\VB Projects\Route_Riter\SetupFiles\DecompT.exe=$(AppPath)\SetupFiles
+D:\VB Projects\Route_Riter\SetupFiles\terrain.dat=$(AppPath)\SetupFiles
+D:\VB Projects\Route_Riter\Langdanish.txt=$(AppPath)
+D:\VB Code\DecompW\VBZip\VBZip_Control.ocx=$(WinSysPath)
+D:\VB Projects\Route_Riter\Zipit.dll=$(WinSysPath)
+D:\VB Projects\Route_Riter\Unzdll.dll=$(WinSysPath)
+D:\VB Projects\Route_Riter\Zipdll.dll=$(WinSysPath)
+C:\WINDOWS\system32\VBZip_Control.ocx=$(WinSysPath)
+D:\VB Projects\Route_Riter\Lang_Spanish.txt=$(AppPath)
+D:\VB Projects\Route_Riter\Lang_Danish.txt=$(AppPath)
+D:\VB Projects\Route_Riter\Lang_Dutch.txt=$(AppPath)
+D:\VB Projects\Route_Riter\Lang_English.txt=$(AppPath)
+D:\VB Projects\Route_Riter\Lang_French.txt=$(AppPath)
+D:\VB Projects\Route_Riter\Lang_Norwegian.txt=$(AppPath)
+D:\VB Projects\Route_Riter\stuffitpack2\EZstuff4.bat=$(AppPath)\stuffitpack2
+D:\Program Files\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=$(WinSysPathSysFile)
+D:\Program Files\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=$(WinSysPathSysFile)
+D:\Program Files\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=$(WinSysPathSysFile)
+D:\Program Files\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=$(WinSysPathSysFile)
+D:\Program Files\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\Program Files\VideoSoft\Shared Files\vsflex7L.ocx=$(WinSysPath)
+C:\Program Files\VideoSoft\Shared Files\VSPRINT7.ocx=$(WinSysPath)
+D:\Program Files\VB98\Wizards\PDWizard\Redist\RICHED32.DLL=$(WinSysPathSysFile)
+D:\Program Files\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+D:\Program Files\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+D:\Program Files\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+D:\VB Projects\Route_Riter\Suggested_ReadMe.txt=$(AppPath)
+C:\Program Files\Your Company Name\Your Product Name\VSPRINT7.ocx=$(WinSysPath)
+C:\Program Files\Your Company Name\Your Product Name\vsflex7L.ocx=$(WinSysPath)
+D:\VB Projects\RR2\Route_Riter.exe=$(AppPath)
+D:\SAWZip\SAWZip.tlb=$(WinSysPath)
+C:\WINDOWS\system32\SAWZip.dll=$(WinSysPath)
+D:\VB Projects\RR4\Route_Riter.exe=$(AppPath)
+C:\WINDOWS\system32\SAWZip.tlb=$(WinSysPath)
+D:\VB Projects\Route_Riter\stuffitpack2a.zip=$(AppPath)
+D:\VB Code\SAWZipNG\SAWZipNG.tlb=$(WinSysPath)
+C:\Program Files\VideoSoft\Shared Files\Vsflex7.ocx=$(WinSysPath)
+D:\VB Code\SAWZipNG\SAWZipNG.dll=$(WinSysPath)
+D:\VB Projects\Route_Riter\zlib.dll=$(WinSysPath)
+D:\VB Code\SAWZipNG2\SAWZipNG.tlb=$(WinSysPath)
+C:\WINDOWS\system32\Vsflex7.ocx=$(WinSysPath)
+C:\WINDOWS\system32\scrrun.dll=$(WinSysPath)
+D:\VB Projects\Route_Riter\Route_RiterFR.chm=$(AppPath)
+D:\VB Code\SAWZipNG2\SAWZipNG.dll=$(WinSysPath)
+C:\WINDOWS\system32\SAWZipNG.tlb=$(WinSysPath)
+D:\VB Projects\Route_Riter\stuffitpack2a\stuffit.ref=$(AppPath)\stuffitpack2a
+D:\VB Projects\Route_Riter\stuffit.ref=$(AppPath)
+D:\VB Projects\Route_Riter\StuffitPack.zip=$(AppPath)
+C:\WINDOWS\system32\SAWZipNG.dll=$(WinSysPath)
+C:\WINDOWS\system32\mwacevb.dll=$(WinSysPath)
+D:\VB Projects\Route_Riter\mwace.dll=$(WinSysPath)
+
+[Package|RouteRiter4232|Configure Shared Files]
+Applicable=Yes
+D:\VB Projects\Route_Riter\Route_Riter.exe=No
+D:\VB Projects\Route_Riter\stuffitpack2\stuffit.ref=No
+D:\VB Projects\Route_Riter\route_riter.chm=No
+D:\VB Projects\Route_Riter\langDutch.txt=No
+D:\VB Projects\Route_Riter\LangNorwegian.txt=No
+D:\VB Projects\Route_Riter\langSpanish.txt=No
+D:\VB Projects\Route_Riter\language.txt=No
+D:\VB Projects\Route_Riter\newshape.tms=No
+D:\VB Projects\Route_Riter\SetupFiles\RefFileStart.txt=No
+D:\VB Projects\Route_Riter\SetupFiles\acecomp.exe=Yes
+D:\VB Projects\Route_Riter\SetupFiles\KeepMe.txt=No
+D:\VB Projects\Route_Riter\Route_Riter2.exe=No
+D:\VB Projects\Route_Riter\SetupFiles\DecompW.exe=No
+D:\VB Projects\Route_Riter\SetupFiles\Tokens.dat=No
+D:\VB Projects\Route_Riter\SetupFiles\WTokens.dat=Yes
+D:\VB Projects\Route_Riter\SetupFiles\zlib.dll=Yes
+D:\VB Projects\Route_Riter\SetupFiles\WBDCH34I.DLL=Yes
+D:\VB Projects\Route_Riter\SetupFiles\WWHUG34I.DLL=Yes
+D:\VB Projects\Route_Riter\SetupFiles\DecompT.exe=No
+D:\VB Projects\Route_Riter\SetupFiles\terrain.dat=Yes
+D:\VB Projects\Route_Riter\Langdanish.txt=No
+D:\VB Projects\Route_Riter\Lang_Spanish.txt=No
+D:\VB Projects\Route_Riter\Lang_Danish.txt=No
+D:\VB Projects\Route_Riter\Lang_Dutch.txt=No
+D:\VB Projects\Route_Riter\Lang_English.txt=No
+D:\VB Projects\Route_Riter\Lang_French.txt=No
+D:\VB Projects\Route_Riter\Lang_Norwegian.txt=No
+D:\VB Projects\Route_Riter\stuffitpack2\EZstuff4.bat=No
+D:\VB Projects\Route_Riter\Suggested_ReadMe.txt=No
+D:\VB Projects\RR2\Route_Riter.exe=No
+D:\VB Projects\RR4\Route_Riter.exe=No
+D:\VB Projects\Route_Riter\stuffitpack2a.zip=No
+D:\VB Projects\Route_Riter\Route_RiterFR.chm=No
+D:\VB Projects\Route_Riter\stuffitpack2a\stuffit.ref=No
+D:\VB Projects\Route_Riter\stuffit.ref=No
+D:\VB Projects\Route_Riter\StuffitPack.zip=No
+
+[Package|RouteRiter4232|Distribution]
+Type=single
+Size=
+Title=Route_Riter
+
+[Package|RouteRiter4232|IconGroups]
+Group0=Route_Riter
+PrivateGroup0=-1
+Parent0=$(Programs)
+
+[Package|RouteRiter4232|Route_Riter]
+Icon1=Route_Riter.exe
+Title1=Route_Riter
+StartIn1=$(AppPath)
+Key1=Icon1
+Icon2=route_riter.chm
+Title2=RouteRiter Help
+StartIn2=$(AppPath)
+Key2=Icon3
+
+[Package|RouteRiter4232|Package]
+PackageFolder=D:\VB Projects\Route_Riter\Package5
+ProjectFolder=D:\VB Projects\Route_Riter
+ServerSideCab=
+File1=D:\VB Projects\Route_Riter\Package5\setup.exe
+File2=D:\VB Projects\Route_Riter\Package5\Setup.Lst
+File3=D:\VB Projects\Route_Riter\Package5\Route_Riter.CAB
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz
+
+
+[Package|RouteRiter4234|Root]
+SubWizProgID=PDWizard.SetupPkgSubWiz
+BuildFolder=D:\VB Projects\Route_Riter\Package6
+
+[Package|RouteRiter4234|Configure DAO ISAMs]
+Applicable=No
+
+[Package|RouteRiter4234|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|RouteRiter4234|Files Found]
+stuffit.ref=D:\VB Projects\Route_Riter\stuffit.ref
+
+[Package|RouteRiter4234|Files Released]
+route_riter.CHI=
+STKIT432.DLL=
+Tokens.dat=
+langdanish.txt=
+language.txt=
+langspanish.txt=
+langnorwegian.txt=
+langdutch.txt=
+zipdll.dll=
+unzdll.dll=
+zipit.dll=
+decompw.exe=
+Route_RiterFR.CHI=
+keepme.txt=
+newshape.tms=
+
+[Package|RouteRiter4234|Missing Dependency Information]
+C:\WINDOWS\system32\vsflex7l.ocx=
+D:\VB Projects\Route_Riter\SetupFiles\DecompW.exe=
+D:\VB Projects\Route_Riter\SetupFiles\zlib.dll=
+D:\VB Projects\Route_Riter\SetupFiles\WBDCH34I.DLL=
+D:\VB Projects\Route_Riter\SetupFiles\WWHUG34I.DLL=
+C:\WINDOWS\system32\VSPRINT7.ocx=
+D:\VB Projects\Route_Riter\SetupFiles\DecompT.exe=
+D:\VB Code\DecompW\VBZip\VBZip_Control.ocx=
+D:\VB Projects\Route_Riter\Unzdll.dll=
+D:\VB Projects\Route_Riter\Zipdll.dll=
+C:\WINDOWS\system32\VBZip_Control.ocx=
+C:\Program Files\VideoSoft\Shared Files\VSPRINT7.ocx=
+C:\Program Files\VideoSoft\Shared Files\vsflex7L.ocx=
+C:\Program Files\Your Company Name\Your Product Name\vsflex7L.ocx=
+C:\Program Files\Your Company Name\Your Product Name\VSPRINT7.ocx=
+D:\SAWZip\SAWZip.tlb=
+C:\WINDOWS\system32\SAWZip.dll=
+C:\WINDOWS\system32\SAWZip.tlb=
+C:\WINDOWS\system32\STKIT432.DLL=
+C:\Program Files\VideoSoft\Shared Files\Vsflex7.ocx=
+D:\VB Code\SAWZipNG\SAWZipNG.tlb=
+D:\VB Code\SAWZipNG\SAWZipNG.dll=
+C:\WINDOWS\system32\mwacevb.dll=
+C:\WINDOWS\system32\mwgfxvb.dll=
+D:\VB Projects\Route_Riter\mwace.dll=
+
+[Package|RouteRiter4234|Out-of-Date Dependency Information]
+C:\WINDOWS\system32\COMDLG32.OCX=
+C:\WINDOWS\system32\scrrun.dll=
+
+[Package|RouteRiter4234|Files Added]
+d:\vb projects\route_riter\stuffit.ref=
+d:\vb projects\route_riter\route_riter.chm=
+d:\vb projects\route_riter\setupfiles\reffilestart.txt=
+d:\vb projects\route_riter\setupfiles\acecomp.exe=
+d:\vb projects\route_riter\setupfiles\zlib.dll=
+d:\vb projects\route_riter\setupfiles\wbdch34i.dll=
+d:\vb projects\route_riter\setupfiles\wtokens.dat=
+d:\vb projects\route_riter\setupfiles\wwhug34i.dll=
+d:\vb projects\route_riter\setupfiles\decompt.exe=
+d:\vb projects\route_riter\setupfiles\terrain.dat=
+d:\vb projects\route_riter\lang_spanish.txt=
+d:\vb projects\route_riter\lang_danish.txt=
+d:\vb projects\route_riter\lang_dutch.txt=
+d:\vb projects\route_riter\lang_english.txt=
+d:\vb projects\route_riter\lang_french.txt=
+d:\vb projects\route_riter\lang_norwegian.txt=
+d:\vb projects\route_riter\stuffitpack2\ezstuff4.bat=
+d:\vb projects\route_riter\suggested_readme.txt=
+c:\windows\system32\sawzip.dll=
+d:\vb projects\route_riter\stuffitpack2a.zip=
+d:\vb code\sawzipng\sawzipng.dll=
+D:\VB Projects\Route_Riter\Route_RiterFR.chm=
+D:\VB Code\SAWZipNG2\SAWZipNG.dll=
+D:\VB Projects\Route_Riter\StuffitPack.zip=
+C:\WINDOWS\system32\SAWZipNG.dll=
+D:\VB Projects\Route_Riter\mwace.dll=
+
+[Package|RouteRiter4234|Files Removed]
+c:\windows\system32\hh.exe=
+d:\vb projects\route_riter\setupfiles\keepme.txt=
+d:\vb projects\route_riter\zipit.dll=
+d:\vb projects\route_riter\zipdll.dll=
+c:\windows\system32\sawzip.dll=
+d:\vb projects\route_riter\newshape.tms=
+c:\windows\system32\msvcrt.dll=
+c:\windows\system32\mwgfxvb.dll=
+
+[Package|RouteRiter4234|Files In Project]
+C:\WINDOWS\SYSTEM32\msvbvm60.dll=Yes
+C:\WINDOWS\SYSTEM32\hhctrl.ocx=Yes
+C:\WINDOWS\SYSTEM32\itss.dll=Yes
+C:\WINDOWS\SYSTEM32\itircl.dll=Yes
+C:\WINDOWS\SYSTEM32\RICHTX32.OCX=Yes
+C:\WINDOWS\SYSTEM32\mscomctl.ocx=Yes
+C:\WINDOWS\SYSTEM32\COMDLG32.OCX=Yes
+C:\WINDOWS\SYSTEM32\VB6STKIT.DLL=Yes
+D:\VB Projects\Route_Riter\route_riter.chm=Yes
+D:\VB Projects\Route_Riter\SetupFiles\RefFileStart.txt=Yes
+D:\VB Projects\Route_Riter\SetupFiles\acecomp.exe=Yes
+C:\WINDOWS\system32\TABCTL32.OCX=Yes
+C:\WINDOWS\system32\COMCTL32.OCX=Yes
+D:\Program Files\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=Yes
+D:\Program Files\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=Yes
+D:\Program Files\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=Yes
+D:\Program Files\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=Yes
+D:\Program Files\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+D:\Program Files\VB98\Wizards\PDWizard\Redist\RICHED32.DLL=Yes
+D:\Program Files\VB98\Wizards\PDWizard\SETUP.EXE=Yes
+D:\Program Files\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
+D:\Program Files\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
+C:\WINDOWS\system32\hh.exe=No
+C:\WINDOWS\system32\STKIT432.DLL=Yes
+D:\VB Projects\Route_Riter\Route_Riter.exe=Yes
+D:\VB Projects\Route_Riter\zlib.dll=Yes
+C:\WINDOWS\system32\Vsflex7.ocx=Yes
+C:\WINDOWS\system32\scrrun.dll=Yes
+C:\WINDOWS\system32\msvcrt.dll=No
+C:\WINDOWS\system32\SAWZipNG.tlb=Yes
+D:\VB Projects\Route_Riter\Lang_Danish.txt=Yes
+D:\VB Projects\Route_Riter\Lang_Dutch.txt=Yes
+D:\VB Projects\Route_Riter\Lang_English.txt=Yes
+D:\VB Projects\Route_Riter\Lang_French.txt=Yes
+D:\VB Projects\Route_Riter\Lang_Norwegian.txt=Yes
+D:\VB Projects\Route_Riter\Lang_Spanish.txt=Yes
+D:\VB Projects\Route_Riter\stuffit.ref=Yes
+D:\VB Projects\Route_Riter\Route_RiterFR.chm=Yes
+C:\Program Files\Your Company Name\Your Product Name\VSPRINT7.ocx=Yes
+C:\Program Files\Your Company Name\Your Product Name\vsflex7L.ocx=Yes
+C:\WINDOWS\system32\mwgfxvb.dll=No
+C:\WINDOWS\system32\mwacevb.dll=Yes
+D:\VB Projects\Route_Riter\StuffitPack.zip=Yes
+D:\VB Projects\Route_Riter\mwace.dll=Yes
+C:\WINDOWS\system32\SAWZipNG.dll=Yes
+
+[Package|RouteRiter4234|Configure Registry Files]
+Applicable=No
+
+[Package|RouteRiter4234|Configure Remote Servers]
+Applicable=No
+
+[Package|RouteRiter4234|Install Locations]
+D:\VB Projects\Route_Riter\Route_Riter.exe=$(AppPath)
+C:\WINDOWS\SYSTEM32\msvbvm60.dll=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM32\STKIT432.DLL=$(WinSysPath)
+C:\WINDOWS\SYSTEM32\hhctrl.ocx=$(WinSysPath)
+C:\WINDOWS\SYSTEM32\itss.dll=$(WinSysPath)
+C:\WINDOWS\SYSTEM32\itircl.dll=$(WinSysPath)
+C:\WINDOWS\SYSTEM32\hh.exe=$(WinSysPath)
+C:\WINDOWS\SYSTEM32\RICHTX32.OCX=$(WinSysPath)
+C:\WINDOWS\SYSTEM32\mscomctl.ocx=$(WinSysPath)
+C:\WINDOWS\SYSTEM32\COMDLG32.OCX=$(WinSysPath)
+C:\WINDOWS\SYSTEM32\VsVIEW3.ocx=$(WinSysPath)
+C:\WINDOWS\SYSTEM32\Vsflex7L.ocx=$(WinSysPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+C:\WINDOWS\SYSTEM32\VB6STKIT.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+D:\VB Projects\Route_Riter\stuffitpack2\stuffit.ref=$(AppPath)\stuffitpack2
+D:\VB Projects\Route_Riter\route_riter.chm=$(AppPath)
+D:\VB Projects\Route_Riter\langDutch.txt=$(AppPath)
+D:\VB Projects\Route_Riter\LangNorwegian.txt=$(AppPath)
+D:\VB Projects\Route_Riter\langSpanish.txt=$(AppPath)
+D:\VB Projects\Route_Riter\language.txt=$(AppPath)
+D:\VB Projects\Route_Riter\newshape.tms=$(AppPath)
+D:\VB Projects\Route_Riter\SetupFiles\RefFileStart.txt=$(AppPath)\SetupFiles
+D:\VB Projects\Route_Riter\SetupFiles\acecomp.exe=$(AppPath)\SetupFiles
+D:\VB Projects\Route_Riter\SetupFiles\KeepMe.txt=$(AppPath)\SetupFiles
+D:\VB Projects\Route_Riter\Route_Riter2.exe=$(AppPath)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=$(WinSysPathSysFile)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=$(WinSysPathSysFile)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=$(WinSysPathSysFile)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=$(WinSysPathSysFile)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\hh.exe=$(WinSysPath)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\RICHED32.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\system32\mfc42.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\msvcrt.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\TABCTL32.OCX=$(WinSysPath)
+C:\WINDOWS\system32\COMCTL32.OCX=$(WinSysPath)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+D:\VB Projects\Route_Riter\SetupFiles\DecompW.exe=$(AppPath)\SetupFiles
+D:\VB Projects\Route_Riter\SetupFiles\Tokens.dat=$(AppPath)\SetupFiles
+D:\VB Projects\Route_Riter\SetupFiles\zlib.dll=$(WinSysPath)
+D:\VB Projects\Route_Riter\SetupFiles\WBDCH34I.DLL=$(AppPath)\setupfiles
+D:\VB Projects\Route_Riter\SetupFiles\WTokens.dat=$(AppPath)\setupfiles
+D:\VB Projects\Route_Riter\SetupFiles\WWHUG34I.DLL=$(AppPath)\setupfiles
+C:\WINDOWS\system32\VSPRINT7.ocx=$(WinSysPath)
+D:\VB Projects\Route_Riter\SetupFiles\DecompT.exe=$(AppPath)\SetupFiles
+D:\VB Projects\Route_Riter\SetupFiles\terrain.dat=$(AppPath)\SetupFiles
+D:\VB Projects\Route_Riter\Langdanish.txt=$(AppPath)
+D:\VB Code\DecompW\VBZip\VBZip_Control.ocx=$(WinSysPath)
+D:\VB Projects\Route_Riter\Zipit.dll=$(WinSysPath)
+D:\VB Projects\Route_Riter\Unzdll.dll=$(WinSysPath)
+D:\VB Projects\Route_Riter\Zipdll.dll=$(WinSysPath)
+C:\WINDOWS\system32\VBZip_Control.ocx=$(WinSysPath)
+D:\VB Projects\Route_Riter\Lang_Spanish.txt=$(AppPath)
+D:\VB Projects\Route_Riter\Lang_Danish.txt=$(AppPath)
+D:\VB Projects\Route_Riter\Lang_Dutch.txt=$(AppPath)
+D:\VB Projects\Route_Riter\Lang_English.txt=$(AppPath)
+D:\VB Projects\Route_Riter\Lang_French.txt=$(AppPath)
+D:\VB Projects\Route_Riter\Lang_Norwegian.txt=$(AppPath)
+D:\VB Projects\Route_Riter\stuffitpack2\EZstuff4.bat=$(AppPath)\stuffitpack2
+D:\Program Files\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=$(WinSysPathSysFile)
+D:\Program Files\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=$(WinSysPathSysFile)
+D:\Program Files\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=$(WinSysPathSysFile)
+D:\Program Files\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=$(WinSysPathSysFile)
+D:\Program Files\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\Program Files\VideoSoft\Shared Files\vsflex7L.ocx=$(WinSysPath)
+C:\Program Files\VideoSoft\Shared Files\VSPRINT7.ocx=$(WinSysPath)
+D:\Program Files\VB98\Wizards\PDWizard\Redist\RICHED32.DLL=$(WinSysPathSysFile)
+D:\Program Files\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+D:\Program Files\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+D:\Program Files\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+D:\VB Projects\Route_Riter\Suggested_ReadMe.txt=$(AppPath)
+C:\Program Files\Your Company Name\Your Product Name\VSPRINT7.ocx=$(WinSysPath)
+C:\Program Files\Your Company Name\Your Product Name\vsflex7L.ocx=$(WinSysPath)
+D:\VB Projects\RR2\Route_Riter.exe=$(AppPath)
+D:\SAWZip\SAWZip.tlb=$(WinSysPath)
+C:\WINDOWS\system32\SAWZip.dll=$(WinSysPath)
+D:\VB Projects\RR4\Route_Riter.exe=$(AppPath)
+C:\WINDOWS\system32\SAWZip.tlb=$(WinSysPath)
+D:\VB Projects\Route_Riter\stuffitpack2a.zip=$(AppPath)
+D:\VB Code\SAWZipNG\SAWZipNG.tlb=$(WinSysPath)
+C:\Program Files\VideoSoft\Shared Files\Vsflex7.ocx=$(WinSysPath)
+D:\VB Code\SAWZipNG\SAWZipNG.dll=$(WinSysPath)
+D:\VB Projects\Route_Riter\zlib.dll=$(WinSysPath)
+D:\VB Code\SAWZipNG2\SAWZipNG.tlb=$(WinSysPath)
+C:\WINDOWS\system32\Vsflex7.ocx=$(WinSysPath)
+C:\WINDOWS\system32\scrrun.dll=$(WinSysPath)
+D:\VB Projects\Route_Riter\Route_RiterFR.chm=$(AppPath)
+D:\VB Code\SAWZipNG2\SAWZipNG.dll=$(WinSysPath)
+C:\WINDOWS\system32\SAWZipNG.tlb=$(WinSysPath)
+D:\VB Projects\Route_Riter\stuffitpack2a\stuffit.ref=$(AppPath)\stuffitpack2a
+D:\VB Projects\Route_Riter\stuffit.ref=$(AppPath)
+D:\VB Projects\Route_Riter\StuffitPack.zip=$(AppPath)
+C:\WINDOWS\system32\SAWZipNG.dll=$(WinSysPath)
+C:\WINDOWS\system32\mwacevb.dll=$(WinSysPath)
+D:\VB Projects\Route_Riter\mwace.dll=$(WinSysPath)
+
+[Package|RouteRiter4234|Configure Shared Files]
+Applicable=Yes
+D:\VB Projects\Route_Riter\Route_Riter.exe=No
+D:\VB Projects\Route_Riter\stuffitpack2\stuffit.ref=No
+D:\VB Projects\Route_Riter\route_riter.chm=No
+D:\VB Projects\Route_Riter\langDutch.txt=No
+D:\VB Projects\Route_Riter\LangNorwegian.txt=No
+D:\VB Projects\Route_Riter\langSpanish.txt=No
+D:\VB Projects\Route_Riter\language.txt=No
+D:\VB Projects\Route_Riter\newshape.tms=No
+D:\VB Projects\Route_Riter\SetupFiles\RefFileStart.txt=No
+D:\VB Projects\Route_Riter\SetupFiles\acecomp.exe=Yes
+D:\VB Projects\Route_Riter\SetupFiles\KeepMe.txt=No
+D:\VB Projects\Route_Riter\Route_Riter2.exe=No
+D:\VB Projects\Route_Riter\SetupFiles\DecompW.exe=No
+D:\VB Projects\Route_Riter\SetupFiles\Tokens.dat=No
+D:\VB Projects\Route_Riter\SetupFiles\WTokens.dat=Yes
+D:\VB Projects\Route_Riter\SetupFiles\zlib.dll=Yes
+D:\VB Projects\Route_Riter\SetupFiles\WBDCH34I.DLL=Yes
+D:\VB Projects\Route_Riter\SetupFiles\WWHUG34I.DLL=Yes
+D:\VB Projects\Route_Riter\SetupFiles\DecompT.exe=No
+D:\VB Projects\Route_Riter\SetupFiles\terrain.dat=Yes
+D:\VB Projects\Route_Riter\Langdanish.txt=No
+D:\VB Projects\Route_Riter\Lang_Spanish.txt=No
+D:\VB Projects\Route_Riter\Lang_Danish.txt=No
+D:\VB Projects\Route_Riter\Lang_Dutch.txt=No
+D:\VB Projects\Route_Riter\Lang_English.txt=No
+D:\VB Projects\Route_Riter\Lang_French.txt=No
+D:\VB Projects\Route_Riter\Lang_Norwegian.txt=No
+D:\VB Projects\Route_Riter\stuffitpack2\EZstuff4.bat=No
+D:\VB Projects\Route_Riter\Suggested_ReadMe.txt=No
+D:\VB Projects\RR2\Route_Riter.exe=No
+D:\VB Projects\RR4\Route_Riter.exe=No
+D:\VB Projects\Route_Riter\stuffitpack2a.zip=No
+D:\VB Projects\Route_Riter\Route_RiterFR.chm=No
+D:\VB Projects\Route_Riter\stuffitpack2a\stuffit.ref=No
+D:\VB Projects\Route_Riter\stuffit.ref=No
+D:\VB Projects\Route_Riter\StuffitPack.zip=No
+
+[Package|RouteRiter4234|Distribution]
+Type=single
+Size=
+Title=Route_Riter
+
+[Package|RouteRiter4234|IconGroups]
+Group0=Route_Riter
+PrivateGroup0=-1
+Parent0=$(Programs)
+
+[Package|RouteRiter4234|Route_Riter]
+Icon1=Route_Riter.exe
+Title1=Route_Riter
+StartIn1=$(AppPath)
+Key1=Icon1
+Icon2=route_riter.chm
+Title2=RouteRiter Help
+StartIn2=$(AppPath)
+Key2=Icon3
+
+[Package|RouteRiter4234|Package]
+PackageFolder=D:\VB Projects\Route_Riter\Package6
+ProjectFolder=D:\VB Projects\Route_Riter
+ServerSideCab=
+File1=D:\VB Projects\Route_Riter\Package6\setup.exe
+File2=D:\VB Projects\Route_Riter\Package6\Setup.Lst
+File3=D:\VB Projects\Route_Riter\Package6\Route_Riter.CAB
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz
+
+
+[Package|RouteRiter4254|Root]
+SubWizProgID=PDWizard.SetupPkgSubWiz
+BuildFolder=D:\VB Projects\Route_Riter\Package7
+
+[Package|RouteRiter4254|Configure DAO ISAMs]
+Applicable=No
+
+[Package|RouteRiter4254|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|RouteRiter4254|Files Found]
+stuffit.ref=D:\VB Projects\Route_Riter\stuffit.ref
+
+[Package|RouteRiter4254|Files Released]
+route_riter.CHI=
+STKIT432.DLL=
+Tokens.dat=
+langdanish.txt=
+language.txt=
+langspanish.txt=
+langnorwegian.txt=
+langdutch.txt=
+zipdll.dll=
+unzdll.dll=
+zipit.dll=
+decompw.exe=
+Route_RiterFR.CHI=
+keepme.txt=
+newshape.tms=
+
+[Package|RouteRiter4254|Missing Dependency Information]
+C:\WINDOWS\system32\vsflex7l.ocx=
+D:\VB Projects\Route_Riter\SetupFiles\DecompW.exe=
+D:\VB Projects\Route_Riter\SetupFiles\zlib.dll=
+D:\VB Projects\Route_Riter\SetupFiles\WBDCH34I.DLL=
+D:\VB Projects\Route_Riter\SetupFiles\WWHUG34I.DLL=
+C:\WINDOWS\system32\VSPRINT7.ocx=
+D:\VB Projects\Route_Riter\SetupFiles\DecompT.exe=
+D:\VB Code\DecompW\VBZip\VBZip_Control.ocx=
+D:\VB Projects\Route_Riter\Unzdll.dll=
+D:\VB Projects\Route_Riter\Zipdll.dll=
+C:\WINDOWS\system32\VBZip_Control.ocx=
+C:\Program Files\VideoSoft\Shared Files\VSPRINT7.ocx=
+C:\Program Files\VideoSoft\Shared Files\vsflex7L.ocx=
+C:\Program Files\Your Company Name\Your Product Name\vsflex7L.ocx=
+C:\Program Files\Your Company Name\Your Product Name\VSPRINT7.ocx=
+D:\SAWZip\SAWZip.tlb=
+C:\WINDOWS\system32\SAWZip.dll=
+C:\WINDOWS\system32\SAWZip.tlb=
+C:\WINDOWS\system32\STKIT432.DLL=
+C:\Program Files\VideoSoft\Shared Files\Vsflex7.ocx=
+D:\VB Code\SAWZipNG\SAWZipNG.tlb=
+D:\VB Code\SAWZipNG\SAWZipNG.dll=
+C:\WINDOWS\system32\mwacevb.dll=
+C:\WINDOWS\system32\mwgfxvb.dll=
+D:\VB Projects\Route_Riter\mwace.dll=
+D:\VB Projects\Route_Riter\SView.exe=
+
+[Package|RouteRiter4254|Out-of-Date Dependency Information]
+C:\WINDOWS\system32\COMDLG32.OCX=
+C:\WINDOWS\system32\scrrun.dll=
+
+[Package|RouteRiter4254|Files Added]
+d:\vb projects\route_riter\stuffit.ref=
+d:\vb projects\route_riter\route_riter.chm=
+d:\vb projects\route_riter\setupfiles\reffilestart.txt=
+d:\vb projects\route_riter\setupfiles\acecomp.exe=
+d:\vb projects\route_riter\setupfiles\zlib.dll=
+d:\vb projects\route_riter\setupfiles\wbdch34i.dll=
+d:\vb projects\route_riter\setupfiles\wtokens.dat=
+d:\vb projects\route_riter\setupfiles\wwhug34i.dll=
+d:\vb projects\route_riter\setupfiles\decompt.exe=
+d:\vb projects\route_riter\setupfiles\terrain.dat=
+d:\vb projects\route_riter\lang_spanish.txt=
+d:\vb projects\route_riter\lang_danish.txt=
+d:\vb projects\route_riter\lang_dutch.txt=
+d:\vb projects\route_riter\lang_english.txt=
+d:\vb projects\route_riter\lang_french.txt=
+d:\vb projects\route_riter\lang_norwegian.txt=
+d:\vb projects\route_riter\stuffitpack2\ezstuff4.bat=
+d:\vb projects\route_riter\suggested_readme.txt=
+c:\windows\system32\sawzip.dll=
+d:\vb projects\route_riter\stuffitpack2a.zip=
+d:\vb code\sawzipng\sawzipng.dll=
+D:\VB Projects\Route_Riter\Route_RiterFR.chm=
+D:\VB Code\SAWZipNG2\SAWZipNG.dll=
+D:\VB Projects\Route_Riter\StuffitPack.zip=
+C:\WINDOWS\system32\SAWZipNG.dll=
+D:\VB Projects\Route_Riter\mwace.dll=
+D:\VB Projects\Route_Riter\SView.exe=
+C:\WINDOWS\system32\mwace.dll=
+
+[Package|RouteRiter4254|Files Removed]
+c:\windows\system32\hh.exe=
+d:\vb projects\route_riter\setupfiles\keepme.txt=
+d:\vb projects\route_riter\zipit.dll=
+d:\vb projects\route_riter\zipdll.dll=
+c:\windows\system32\sawzip.dll=
+d:\vb projects\route_riter\newshape.tms=
+c:\windows\system32\msvcrt.dll=
+c:\windows\system32\mwgfxvb.dll=
+
+[Package|RouteRiter4254|Files In Project]
+C:\WINDOWS\SYSTEM32\msvbvm60.dll=Yes
+C:\WINDOWS\SYSTEM32\hhctrl.ocx=Yes
+C:\WINDOWS\SYSTEM32\itss.dll=Yes
+C:\WINDOWS\SYSTEM32\itircl.dll=Yes
+C:\WINDOWS\SYSTEM32\RICHTX32.OCX=Yes
+C:\WINDOWS\SYSTEM32\mscomctl.ocx=Yes
+C:\WINDOWS\SYSTEM32\COMDLG32.OCX=Yes
+C:\WINDOWS\SYSTEM32\VB6STKIT.DLL=Yes
+D:\VB Projects\Route_Riter\route_riter.chm=Yes
+D:\VB Projects\Route_Riter\SetupFiles\RefFileStart.txt=Yes
+D:\VB Projects\Route_Riter\SetupFiles\acecomp.exe=Yes
+C:\WINDOWS\system32\TABCTL32.OCX=Yes
+C:\WINDOWS\system32\COMCTL32.OCX=Yes
+D:\Program Files\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=Yes
+D:\Program Files\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=Yes
+D:\Program Files\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=Yes
+D:\Program Files\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=Yes
+D:\Program Files\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+D:\Program Files\VB98\Wizards\PDWizard\Redist\RICHED32.DLL=Yes
+D:\Program Files\VB98\Wizards\PDWizard\SETUP.EXE=Yes
+D:\Program Files\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
+D:\Program Files\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
+C:\WINDOWS\system32\hh.exe=No
+C:\WINDOWS\system32\STKIT432.DLL=Yes
+D:\VB Projects\Route_Riter\Route_Riter.exe=Yes
+D:\VB Projects\Route_Riter\zlib.dll=Yes
+C:\WINDOWS\system32\Vsflex7.ocx=Yes
+C:\WINDOWS\system32\scrrun.dll=Yes
+C:\WINDOWS\system32\msvcrt.dll=No
+D:\VB Projects\Route_Riter\stuffit.ref=Yes
+C:\Program Files\Your Company Name\Your Product Name\VSPRINT7.ocx=Yes
+C:\Program Files\Your Company Name\Your Product Name\vsflex7L.ocx=Yes
+C:\WINDOWS\system32\mwgfxvb.dll=No
+D:\VB Projects\Route_Riter\mwacevb.dll=Yes
+D:\VB Code\SAWZipNG2_new\SAWZipNG.tlb=Yes
+D:\VB Projects\Route_Riter\Lang_Spanish.txt=Yes
+D:\VB Projects\Route_Riter\Lang_Danish.txt=Yes
+D:\VB Projects\Route_Riter\Lang_Dutch.txt=Yes
+D:\VB Projects\Route_Riter\Lang_English.txt=Yes
+D:\VB Projects\Route_Riter\Lang_French.txt=Yes
+D:\VB Projects\Route_Riter\Lang_Norwegian.txt=Yes
+D:\VB Projects\Route_Riter\SView.exe=Yes
+C:\WINDOWS\system32\SAWZipNG.dll=Yes
+C:\WINDOWS\system32\mwace.dll=Yes
+D:\VB Projects\Route_Riter\StuffitPack.zip=Yes
+
+[Package|RouteRiter4254|Configure Registry Files]
+Applicable=No
+
+[Package|RouteRiter4254|Configure Remote Servers]
+Applicable=No
+
+[Package|RouteRiter4254|Install Locations]
+D:\VB Projects\Route_Riter\Route_Riter.exe=$(AppPath)
+C:\WINDOWS\SYSTEM32\msvbvm60.dll=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM32\STKIT432.DLL=$(WinSysPath)
+C:\WINDOWS\SYSTEM32\hhctrl.ocx=$(WinSysPath)
+C:\WINDOWS\SYSTEM32\itss.dll=$(WinSysPath)
+C:\WINDOWS\SYSTEM32\itircl.dll=$(WinSysPath)
+C:\WINDOWS\SYSTEM32\hh.exe=$(WinSysPath)
+C:\WINDOWS\SYSTEM32\RICHTX32.OCX=$(WinSysPath)
+C:\WINDOWS\SYSTEM32\mscomctl.ocx=$(WinSysPath)
+C:\WINDOWS\SYSTEM32\COMDLG32.OCX=$(WinSysPath)
+C:\WINDOWS\SYSTEM32\VsVIEW3.ocx=$(WinSysPath)
+C:\WINDOWS\SYSTEM32\Vsflex7L.ocx=$(WinSysPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+C:\WINDOWS\SYSTEM32\VB6STKIT.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+D:\VB Projects\Route_Riter\stuffitpack2\stuffit.ref=$(AppPath)\stuffitpack2
+D:\VB Projects\Route_Riter\route_riter.chm=$(AppPath)
+D:\VB Projects\Route_Riter\langDutch.txt=$(AppPath)
+D:\VB Projects\Route_Riter\LangNorwegian.txt=$(AppPath)
+D:\VB Projects\Route_Riter\langSpanish.txt=$(AppPath)
+D:\VB Projects\Route_Riter\language.txt=$(AppPath)
+D:\VB Projects\Route_Riter\newshape.tms=$(AppPath)
+D:\VB Projects\Route_Riter\SetupFiles\RefFileStart.txt=$(AppPath)\SetupFiles
+D:\VB Projects\Route_Riter\SetupFiles\acecomp.exe=$(AppPath)\SetupFiles
+D:\VB Projects\Route_Riter\SetupFiles\KeepMe.txt=$(AppPath)\SetupFiles
+D:\VB Projects\Route_Riter\Route_Riter2.exe=$(AppPath)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=$(WinSysPathSysFile)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=$(WinSysPathSysFile)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=$(WinSysPathSysFile)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=$(WinSysPathSysFile)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\hh.exe=$(WinSysPath)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\RICHED32.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\system32\mfc42.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\msvcrt.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\TABCTL32.OCX=$(WinSysPath)
+C:\WINDOWS\system32\COMCTL32.OCX=$(WinSysPath)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+D:\VB Projects\Route_Riter\SetupFiles\DecompW.exe=$(AppPath)\SetupFiles
+D:\VB Projects\Route_Riter\SetupFiles\Tokens.dat=$(AppPath)\SetupFiles
+D:\VB Projects\Route_Riter\SetupFiles\zlib.dll=$(WinSysPath)
+D:\VB Projects\Route_Riter\SetupFiles\WBDCH34I.DLL=$(AppPath)\setupfiles
+D:\VB Projects\Route_Riter\SetupFiles\WTokens.dat=$(AppPath)\setupfiles
+D:\VB Projects\Route_Riter\SetupFiles\WWHUG34I.DLL=$(AppPath)\setupfiles
+C:\WINDOWS\system32\VSPRINT7.ocx=$(WinSysPath)
+D:\VB Projects\Route_Riter\SetupFiles\DecompT.exe=$(AppPath)\SetupFiles
+D:\VB Projects\Route_Riter\SetupFiles\terrain.dat=$(AppPath)\SetupFiles
+D:\VB Projects\Route_Riter\Langdanish.txt=$(AppPath)
+D:\VB Code\DecompW\VBZip\VBZip_Control.ocx=$(WinSysPath)
+D:\VB Projects\Route_Riter\Zipit.dll=$(WinSysPath)
+D:\VB Projects\Route_Riter\Unzdll.dll=$(WinSysPath)
+D:\VB Projects\Route_Riter\Zipdll.dll=$(WinSysPath)
+C:\WINDOWS\system32\VBZip_Control.ocx=$(WinSysPath)
+D:\VB Projects\Route_Riter\Lang_Spanish.txt=$(AppPath)
+D:\VB Projects\Route_Riter\Lang_Danish.txt=$(AppPath)
+D:\VB Projects\Route_Riter\Lang_Dutch.txt=$(AppPath)
+D:\VB Projects\Route_Riter\Lang_English.txt=$(AppPath)
+D:\VB Projects\Route_Riter\Lang_French.txt=$(AppPath)
+D:\VB Projects\Route_Riter\Lang_Norwegian.txt=$(AppPath)
+D:\VB Projects\Route_Riter\stuffitpack2\EZstuff4.bat=$(AppPath)\stuffitpack2
+D:\Program Files\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=$(WinSysPathSysFile)
+D:\Program Files\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=$(WinSysPathSysFile)
+D:\Program Files\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=$(WinSysPathSysFile)
+D:\Program Files\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=$(WinSysPathSysFile)
+D:\Program Files\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\Program Files\VideoSoft\Shared Files\vsflex7L.ocx=$(WinSysPath)
+C:\Program Files\VideoSoft\Shared Files\VSPRINT7.ocx=$(WinSysPath)
+D:\Program Files\VB98\Wizards\PDWizard\Redist\RICHED32.DLL=$(WinSysPathSysFile)
+D:\Program Files\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+D:\Program Files\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+D:\Program Files\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+D:\VB Projects\Route_Riter\Suggested_ReadMe.txt=$(AppPath)
+C:\Program Files\Your Company Name\Your Product Name\VSPRINT7.ocx=$(WinSysPath)
+C:\Program Files\Your Company Name\Your Product Name\vsflex7L.ocx=$(WinSysPath)
+D:\VB Projects\RR2\Route_Riter.exe=$(AppPath)
+D:\SAWZip\SAWZip.tlb=$(WinSysPath)
+C:\WINDOWS\system32\SAWZip.dll=$(WinSysPath)
+D:\VB Projects\RR4\Route_Riter.exe=$(AppPath)
+C:\WINDOWS\system32\SAWZip.tlb=$(WinSysPath)
+D:\VB Projects\Route_Riter\stuffitpack2a.zip=$(AppPath)
+D:\VB Code\SAWZipNG\SAWZipNG.tlb=$(WinSysPath)
+C:\Program Files\VideoSoft\Shared Files\Vsflex7.ocx=$(WinSysPath)
+D:\VB Code\SAWZipNG\SAWZipNG.dll=$(WinSysPath)
+D:\VB Projects\Route_Riter\zlib.dll=$(WinSysPath)
+D:\VB Code\SAWZipNG2\SAWZipNG.tlb=$(WinSysPath)
+C:\WINDOWS\system32\Vsflex7.ocx=$(WinSysPath)
+C:\WINDOWS\system32\scrrun.dll=$(WinSysPath)
+D:\VB Projects\Route_Riter\Route_RiterFR.chm=$(AppPath)
+D:\VB Code\SAWZipNG2\SAWZipNG.dll=$(WinSysPath)
+C:\WINDOWS\system32\SAWZipNG.tlb=$(WinSysPath)
+D:\VB Projects\Route_Riter\stuffitpack2a\stuffit.ref=$(AppPath)\stuffitpack2a
+D:\VB Projects\Route_Riter\stuffit.ref=$(AppPath)
+D:\VB Projects\Route_Riter\StuffitPack.zip=$(AppPath)
+C:\WINDOWS\system32\SAWZipNG.dll=$(WinSysPath)
+C:\WINDOWS\system32\mwacevb.dll=$(WinSysPath)
+D:\VB Projects\Route_Riter\mwace.dll=$(WinSysPath)
+C:\WINDOWS\system32\mwgfxvb.dll=$(AppPath)
+D:\VB Projects\Route_Riter\mwacevb.dll=$(AppPath)
+D:\VB Code\SAWZipNG2_new\SAWZipNG.tlb=$(WinSysPath)
+D:\VB Projects\Route_Riter\SView.exe=$(AppPath)
+C:\WINDOWS\system32\mwace.dll=$(AppPath)
+
+[Package|RouteRiter4254|Configure Shared Files]
+Applicable=Yes
+D:\VB Projects\Route_Riter\Route_Riter.exe=No
+D:\VB Projects\Route_Riter\stuffitpack2\stuffit.ref=No
+D:\VB Projects\Route_Riter\route_riter.chm=No
+D:\VB Projects\Route_Riter\langDutch.txt=No
+D:\VB Projects\Route_Riter\LangNorwegian.txt=No
+D:\VB Projects\Route_Riter\langSpanish.txt=No
+D:\VB Projects\Route_Riter\language.txt=No
+D:\VB Projects\Route_Riter\newshape.tms=No
+D:\VB Projects\Route_Riter\SetupFiles\RefFileStart.txt=No
+D:\VB Projects\Route_Riter\SetupFiles\acecomp.exe=Yes
+D:\VB Projects\Route_Riter\SetupFiles\KeepMe.txt=No
+D:\VB Projects\Route_Riter\Route_Riter2.exe=No
+D:\VB Projects\Route_Riter\SetupFiles\DecompW.exe=No
+D:\VB Projects\Route_Riter\SetupFiles\Tokens.dat=No
+D:\VB Projects\Route_Riter\SetupFiles\WTokens.dat=Yes
+D:\VB Projects\Route_Riter\SetupFiles\zlib.dll=Yes
+D:\VB Projects\Route_Riter\SetupFiles\WBDCH34I.DLL=Yes
+D:\VB Projects\Route_Riter\SetupFiles\WWHUG34I.DLL=Yes
+D:\VB Projects\Route_Riter\SetupFiles\DecompT.exe=No
+D:\VB Projects\Route_Riter\SetupFiles\terrain.dat=Yes
+D:\VB Projects\Route_Riter\Langdanish.txt=No
+D:\VB Projects\Route_Riter\Lang_Spanish.txt=No
+D:\VB Projects\Route_Riter\Lang_Danish.txt=No
+D:\VB Projects\Route_Riter\Lang_Dutch.txt=No
+D:\VB Projects\Route_Riter\Lang_English.txt=No
+D:\VB Projects\Route_Riter\Lang_French.txt=No
+D:\VB Projects\Route_Riter\Lang_Norwegian.txt=No
+D:\VB Projects\Route_Riter\stuffitpack2\EZstuff4.bat=No
+D:\VB Projects\Route_Riter\Suggested_ReadMe.txt=No
+D:\VB Projects\RR2\Route_Riter.exe=No
+D:\VB Projects\RR4\Route_Riter.exe=No
+D:\VB Projects\Route_Riter\stuffitpack2a.zip=No
+D:\VB Projects\Route_Riter\Route_RiterFR.chm=No
+D:\VB Projects\Route_Riter\stuffitpack2a\stuffit.ref=No
+D:\VB Projects\Route_Riter\stuffit.ref=No
+D:\VB Projects\Route_Riter\StuffitPack.zip=No
+C:\WINDOWS\system32\mwgfxvb.dll=No
+D:\VB Projects\Route_Riter\mwacevb.dll=No
+D:\VB Projects\Route_Riter\SView.exe=No
+C:\WINDOWS\system32\mwace.dll=No
+
+[Package|RouteRiter4254|Distribution]
+Type=single
+Size=
+Title=Route_Riter
+
+[Package|RouteRiter4254|IconGroups]
+Group0=Route_Riter
+PrivateGroup0=-1
+Parent0=$(Programs)
+
+[Package|RouteRiter4254|Route_Riter]
+Icon1=Route_Riter.exe
+Title1=Route_Riter
+StartIn1=$(AppPath)
+Key1=Icon1
+Icon2=route_riter.chm
+Title2=RouteRiter Help
+StartIn2=$(AppPath)
+Key2=Icon3
+
+[Package|RouteRiter4254|Package]
+PackageFolder=D:\VB Projects\Route_Riter\Package7
+ProjectFolder=D:\VB Projects\Route_Riter
+ServerSideCab=
+File1=D:\VB Projects\Route_Riter\Package7\setup.exe
+File2=D:\VB Projects\Route_Riter\Package7\Setup.Lst
+File3=D:\VB Projects\Route_Riter\Package7\Route_Riter.CAB
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz
+
+
+[Package|RouteRiter5011|Root]
+SubWizProgID=PDWizard.SetupPkgSubWiz
+BuildFolder=D:\VB Projects\RR2\Package1
+
+[Package|RouteRiter5011|Configure DAO ISAMs]
+Applicable=No
+
+[Package|RouteRiter5011|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|RouteRiter5011|Files Found]
+stuffit.ref=D:\VB Projects\Route_Riter\stuffit.ref
+
+[Package|RouteRiter5011|Files Released]
+route_riter.CHI=
+STKIT432.DLL=
+Tokens.dat=
+langdanish.txt=
+language.txt=
+langspanish.txt=
+langnorwegian.txt=
+langdutch.txt=
+zipdll.dll=
+unzdll.dll=
+zipit.dll=
+decompw.exe=
+Route_RiterFR.CHI=
+keepme.txt=
+newshape.tms=
+
+[Package|RouteRiter5011|Missing Dependency Information]
+C:\WINDOWS\system32\vsflex7l.ocx=
+D:\VB Projects\Route_Riter\SetupFiles\DecompW.exe=
+D:\VB Projects\Route_Riter\SetupFiles\zlib.dll=
+D:\VB Projects\Route_Riter\SetupFiles\WBDCH34I.DLL=
+D:\VB Projects\Route_Riter\SetupFiles\WWHUG34I.DLL=
+C:\WINDOWS\system32\VSPRINT7.ocx=
+D:\VB Projects\Route_Riter\SetupFiles\DecompT.exe=
+D:\VB Code\DecompW\VBZip\VBZip_Control.ocx=
+D:\VB Projects\Route_Riter\Unzdll.dll=
+D:\VB Projects\Route_Riter\Zipdll.dll=
+C:\WINDOWS\system32\VBZip_Control.ocx=
+C:\Program Files\VideoSoft\Shared Files\VSPRINT7.ocx=
+C:\Program Files\VideoSoft\Shared Files\vsflex7L.ocx=
+C:\Program Files\Your Company Name\Your Product Name\vsflex7L.ocx=
+C:\Program Files\Your Company Name\Your Product Name\VSPRINT7.ocx=
+D:\SAWZip\SAWZip.tlb=
+C:\WINDOWS\system32\SAWZip.dll=
+C:\WINDOWS\system32\SAWZip.tlb=
+C:\WINDOWS\system32\STKIT432.DLL=
+C:\Program Files\VideoSoft\Shared Files\Vsflex7.ocx=
+D:\VB Code\SAWZipNG\SAWZipNG.tlb=
+D:\VB Code\SAWZipNG\SAWZipNG.dll=
+C:\WINDOWS\system32\mwacevb.dll=
+C:\WINDOWS\system32\mwgfxvb.dll=
+D:\VB Projects\Route_Riter\mwace.dll=
+D:\VB Projects\Route_Riter\SView.exe=
+D:\VB Projects\RR2\TView.exe=
+D:\VB Projects\RR2\SView.exe=
+
+[Package|RouteRiter5011|Out-of-Date Dependency Information]
+C:\WINDOWS\system32\COMDLG32.OCX=
+C:\WINDOWS\system32\scrrun.dll=
+
+[Package|RouteRiter5011|Files Added]
+d:\vb projects\route_riter\stuffit.ref=
+d:\vb projects\route_riter\route_riter.chm=
+d:\vb projects\route_riter\setupfiles\reffilestart.txt=
+d:\vb projects\route_riter\setupfiles\acecomp.exe=
+d:\vb projects\route_riter\setupfiles\zlib.dll=
+d:\vb projects\route_riter\setupfiles\wbdch34i.dll=
+d:\vb projects\route_riter\setupfiles\wtokens.dat=
+d:\vb projects\route_riter\setupfiles\wwhug34i.dll=
+d:\vb projects\route_riter\setupfiles\decompt.exe=
+d:\vb projects\route_riter\setupfiles\terrain.dat=
+d:\vb projects\route_riter\lang_spanish.txt=
+d:\vb projects\route_riter\lang_danish.txt=
+d:\vb projects\route_riter\lang_dutch.txt=
+d:\vb projects\route_riter\lang_english.txt=
+d:\vb projects\route_riter\lang_french.txt=
+d:\vb projects\route_riter\lang_norwegian.txt=
+d:\vb projects\route_riter\stuffitpack2\ezstuff4.bat=
+d:\vb projects\route_riter\suggested_readme.txt=
+c:\windows\system32\sawzip.dll=
+d:\vb projects\route_riter\stuffitpack2a.zip=
+d:\vb code\sawzipng\sawzipng.dll=
+D:\VB Projects\Route_Riter\Route_RiterFR.chm=
+D:\VB Code\SAWZipNG2\SAWZipNG.dll=
+D:\VB Projects\Route_Riter\StuffitPack.zip=
+C:\WINDOWS\system32\SAWZipNG.dll=
+D:\VB Projects\Route_Riter\mwace.dll=
+D:\VB Projects\Route_Riter\SView.exe=
+C:\WINDOWS\system32\mwace.dll=
+D:\VB Projects\RR2\TView.exe=
+D:\VB Projects\RR2\SView.exe=
+D:\VB Projects\RR2\Lang_Spanish.txt=
+D:\VB Projects\RR2\Lang_Norwegian.txt=
+D:\VB Projects\RR2\Lang_Danish.txt=
+D:\VB Projects\RR2\Lang_Deutsch.txt=
+D:\VB Projects\RR2\Lang_Dutch.txt=
+D:\VB Projects\RR2\Lang_English.txt=
+D:\VB Projects\RR2\Lang_French.txt=
+D:\VB Projects\RR2\mwace.dll=
+
+[Package|RouteRiter5011|Files Removed]
+c:\windows\system32\hh.exe=
+d:\vb projects\route_riter\setupfiles\keepme.txt=
+d:\vb projects\route_riter\zipit.dll=
+d:\vb projects\route_riter\zipdll.dll=
+c:\windows\system32\sawzip.dll=
+d:\vb projects\route_riter\newshape.tms=
+c:\windows\system32\msvcrt.dll=
+c:\windows\system32\mwgfxvb.dll=
+
+[Package|RouteRiter5011|Files In Project]
+C:\WINDOWS\SYSTEM32\msvbvm60.dll=Yes
+C:\WINDOWS\SYSTEM32\hhctrl.ocx=Yes
+C:\WINDOWS\SYSTEM32\itss.dll=Yes
+C:\WINDOWS\SYSTEM32\itircl.dll=Yes
+C:\WINDOWS\SYSTEM32\RICHTX32.OCX=Yes
+C:\WINDOWS\SYSTEM32\mscomctl.ocx=Yes
+C:\WINDOWS\SYSTEM32\COMDLG32.OCX=Yes
+C:\WINDOWS\SYSTEM32\VB6STKIT.DLL=Yes
+D:\VB Projects\Route_Riter\route_riter.chm=Yes
+D:\VB Projects\Route_Riter\SetupFiles\RefFileStart.txt=Yes
+D:\VB Projects\Route_Riter\SetupFiles\acecomp.exe=Yes
+C:\WINDOWS\system32\TABCTL32.OCX=Yes
+C:\WINDOWS\system32\COMCTL32.OCX=Yes
+D:\Program Files\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=Yes
+D:\Program Files\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=Yes
+D:\Program Files\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=Yes
+D:\Program Files\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=Yes
+D:\Program Files\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+D:\Program Files\VB98\Wizards\PDWizard\Redist\RICHED32.DLL=Yes
+D:\Program Files\VB98\Wizards\PDWizard\SETUP.EXE=Yes
+D:\Program Files\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
+D:\Program Files\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
+C:\WINDOWS\system32\hh.exe=No
+C:\WINDOWS\system32\STKIT432.DLL=Yes
+C:\WINDOWS\system32\Vsflex7.ocx=Yes
+C:\WINDOWS\system32\scrrun.dll=Yes
+C:\WINDOWS\system32\msvcrt.dll=No
+D:\VB Projects\Route_Riter\stuffit.ref=Yes
+C:\Program Files\Your Company Name\Your Product Name\VSPRINT7.ocx=Yes
+C:\Program Files\Your Company Name\Your Product Name\vsflex7L.ocx=Yes
+C:\WINDOWS\system32\mwgfxvb.dll=No
+D:\VB Code\SAWZipNG2_new\SAWZipNG.tlb=Yes
+C:\WINDOWS\system32\SAWZipNG.dll=Yes
+D:\VB Projects\RR2\Route_Riter.exe=Yes
+D:\VB Projects\RR2\zlib.dll=Yes
+D:\VB Projects\RR2\mwacevb.dll=Yes
+D:\VB Projects\RR2\TView.exe=Yes
+D:\VB Projects\RR2\SView.exe=Yes
+D:\VB Projects\RR2\Lang_Spanish.txt=Yes
+D:\VB Projects\RR2\Lang_Norwegian.txt=Yes
+D:\VB Projects\RR2\Lang_Danish.txt=Yes
+D:\VB Projects\RR2\Lang_Deutsch.txt=Yes
+D:\VB Projects\RR2\Lang_Dutch.txt=Yes
+D:\VB Projects\RR2\Lang_English.txt=Yes
+D:\VB Projects\RR2\Lang_French.txt=Yes
+D:\VB Projects\RR2\mwace.dll=Yes
+
+[Package|RouteRiter5011|Configure Registry Files]
+Applicable=No
+
+[Package|RouteRiter5011|Configure Remote Servers]
+Applicable=No
+
+[Package|RouteRiter5011|Install Locations]
+D:\VB Projects\Route_Riter\Route_Riter.exe=$(AppPath)
+C:\WINDOWS\SYSTEM32\msvbvm60.dll=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM32\STKIT432.DLL=$(WinSysPath)
+C:\WINDOWS\SYSTEM32\hhctrl.ocx=$(WinSysPath)
+C:\WINDOWS\SYSTEM32\itss.dll=$(WinSysPath)
+C:\WINDOWS\SYSTEM32\itircl.dll=$(WinSysPath)
+C:\WINDOWS\SYSTEM32\hh.exe=$(WinSysPath)
+C:\WINDOWS\SYSTEM32\RICHTX32.OCX=$(WinSysPath)
+C:\WINDOWS\SYSTEM32\mscomctl.ocx=$(WinSysPath)
+C:\WINDOWS\SYSTEM32\COMDLG32.OCX=$(WinSysPath)
+C:\WINDOWS\SYSTEM32\VsVIEW3.ocx=$(WinSysPath)
+C:\WINDOWS\SYSTEM32\Vsflex7L.ocx=$(WinSysPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+C:\WINDOWS\SYSTEM32\VB6STKIT.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+D:\VB Projects\Route_Riter\stuffitpack2\stuffit.ref=$(AppPath)\stuffitpack2
+D:\VB Projects\Route_Riter\route_riter.chm=$(AppPath)
+D:\VB Projects\Route_Riter\langDutch.txt=$(AppPath)
+D:\VB Projects\Route_Riter\LangNorwegian.txt=$(AppPath)
+D:\VB Projects\Route_Riter\langSpanish.txt=$(AppPath)
+D:\VB Projects\Route_Riter\language.txt=$(AppPath)
+D:\VB Projects\Route_Riter\newshape.tms=$(AppPath)
+D:\VB Projects\Route_Riter\SetupFiles\RefFileStart.txt=$(AppPath)\SetupFiles
+D:\VB Projects\Route_Riter\SetupFiles\acecomp.exe=$(AppPath)\SetupFiles
+D:\VB Projects\Route_Riter\SetupFiles\KeepMe.txt=$(AppPath)\SetupFiles
+D:\VB Projects\Route_Riter\Route_Riter2.exe=$(AppPath)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=$(WinSysPathSysFile)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=$(WinSysPathSysFile)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=$(WinSysPathSysFile)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=$(WinSysPathSysFile)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\hh.exe=$(WinSysPath)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\RICHED32.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\system32\mfc42.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\msvcrt.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\TABCTL32.OCX=$(WinSysPath)
+C:\WINDOWS\system32\COMCTL32.OCX=$(WinSysPath)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+D:\VB Projects\Route_Riter\SetupFiles\DecompW.exe=$(AppPath)\SetupFiles
+D:\VB Projects\Route_Riter\SetupFiles\Tokens.dat=$(AppPath)\SetupFiles
+D:\VB Projects\Route_Riter\SetupFiles\zlib.dll=$(WinSysPath)
+D:\VB Projects\Route_Riter\SetupFiles\WBDCH34I.DLL=$(AppPath)\setupfiles
+D:\VB Projects\Route_Riter\SetupFiles\WTokens.dat=$(AppPath)\setupfiles
+D:\VB Projects\Route_Riter\SetupFiles\WWHUG34I.DLL=$(AppPath)\setupfiles
+C:\WINDOWS\system32\VSPRINT7.ocx=$(WinSysPath)
+D:\VB Projects\Route_Riter\SetupFiles\DecompT.exe=$(AppPath)\SetupFiles
+D:\VB Projects\Route_Riter\SetupFiles\terrain.dat=$(AppPath)\SetupFiles
+D:\VB Projects\Route_Riter\Langdanish.txt=$(AppPath)
+D:\VB Code\DecompW\VBZip\VBZip_Control.ocx=$(WinSysPath)
+D:\VB Projects\Route_Riter\Zipit.dll=$(WinSysPath)
+D:\VB Projects\Route_Riter\Unzdll.dll=$(WinSysPath)
+D:\VB Projects\Route_Riter\Zipdll.dll=$(WinSysPath)
+C:\WINDOWS\system32\VBZip_Control.ocx=$(WinSysPath)
+D:\VB Projects\Route_Riter\Lang_Spanish.txt=$(AppPath)
+D:\VB Projects\Route_Riter\Lang_Danish.txt=$(AppPath)
+D:\VB Projects\Route_Riter\Lang_Dutch.txt=$(AppPath)
+D:\VB Projects\Route_Riter\Lang_English.txt=$(AppPath)
+D:\VB Projects\Route_Riter\Lang_French.txt=$(AppPath)
+D:\VB Projects\Route_Riter\Lang_Norwegian.txt=$(AppPath)
+D:\VB Projects\Route_Riter\stuffitpack2\EZstuff4.bat=$(AppPath)\stuffitpack2
+D:\Program Files\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=$(WinSysPathSysFile)
+D:\Program Files\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=$(WinSysPathSysFile)
+D:\Program Files\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=$(WinSysPathSysFile)
+D:\Program Files\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=$(WinSysPathSysFile)
+D:\Program Files\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\Program Files\VideoSoft\Shared Files\vsflex7L.ocx=$(WinSysPath)
+C:\Program Files\VideoSoft\Shared Files\VSPRINT7.ocx=$(WinSysPath)
+D:\Program Files\VB98\Wizards\PDWizard\Redist\RICHED32.DLL=$(WinSysPathSysFile)
+D:\Program Files\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+D:\Program Files\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+D:\Program Files\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+D:\VB Projects\Route_Riter\Suggested_ReadMe.txt=$(AppPath)
+C:\Program Files\Your Company Name\Your Product Name\VSPRINT7.ocx=$(WinSysPath)
+C:\Program Files\Your Company Name\Your Product Name\vsflex7L.ocx=$(WinSysPath)
+D:\VB Projects\RR2\Route_Riter.exe=$(AppPath)
+D:\SAWZip\SAWZip.tlb=$(WinSysPath)
+C:\WINDOWS\system32\SAWZip.dll=$(WinSysPath)
+D:\VB Projects\RR4\Route_Riter.exe=$(AppPath)
+C:\WINDOWS\system32\SAWZip.tlb=$(WinSysPath)
+D:\VB Projects\Route_Riter\stuffitpack2a.zip=$(AppPath)
+D:\VB Code\SAWZipNG\SAWZipNG.tlb=$(WinSysPath)
+C:\Program Files\VideoSoft\Shared Files\Vsflex7.ocx=$(WinSysPath)
+D:\VB Code\SAWZipNG\SAWZipNG.dll=$(WinSysPath)
+D:\VB Projects\Route_Riter\zlib.dll=$(WinSysPath)
+D:\VB Code\SAWZipNG2\SAWZipNG.tlb=$(WinSysPath)
+C:\WINDOWS\system32\Vsflex7.ocx=$(WinSysPath)
+C:\WINDOWS\system32\scrrun.dll=$(WinSysPath)
+D:\VB Projects\Route_Riter\Route_RiterFR.chm=$(AppPath)
+D:\VB Code\SAWZipNG2\SAWZipNG.dll=$(WinSysPath)
+C:\WINDOWS\system32\SAWZipNG.tlb=$(WinSysPath)
+D:\VB Projects\Route_Riter\stuffitpack2a\stuffit.ref=$(AppPath)\stuffitpack2a
+D:\VB Projects\Route_Riter\stuffit.ref=$(AppPath)
+D:\VB Projects\Route_Riter\StuffitPack.zip=$(AppPath)
+C:\WINDOWS\system32\SAWZipNG.dll=$(WinSysPath)
+C:\WINDOWS\system32\mwacevb.dll=$(WinSysPath)
+D:\VB Projects\Route_Riter\mwace.dll=$(WinSysPath)
+C:\WINDOWS\system32\mwgfxvb.dll=$(AppPath)
+D:\VB Projects\Route_Riter\mwacevb.dll=$(AppPath)
+D:\VB Code\SAWZipNG2_new\SAWZipNG.tlb=$(WinSysPath)
+D:\VB Projects\Route_Riter\SView.exe=$(AppPath)
+C:\WINDOWS\system32\mwace.dll=$(AppPath)
+D:\VB Projects\RR2\zlib.dll=$(WinSysPath)
+D:\VB Projects\RR2\mwacevb.dll=$(AppPath)
+D:\VB Projects\RR2\TView.exe=$(AppPath)
+D:\VB Projects\RR2\SView.exe=$(AppPath)
+D:\VB Projects\RR2\Lang_Spanish.txt=$(AppPath)
+D:\VB Projects\RR2\Lang_Norwegian.txt=$(AppPath)
+D:\VB Projects\RR2\Lang_Danish.txt=$(AppPath)
+D:\VB Projects\RR2\Lang_Deutsch.txt=$(AppPath)
+D:\VB Projects\RR2\Lang_Dutch.txt=$(AppPath)
+D:\VB Projects\RR2\Lang_English.txt=$(AppPath)
+D:\VB Projects\RR2\Lang_French.txt=$(AppPath)
+D:\VB Projects\RR2\mwace.dll=$(AppPath)
+
+[Package|RouteRiter5011|Configure Shared Files]
+Applicable=Yes
+D:\VB Projects\Route_Riter\Route_Riter.exe=No
+D:\VB Projects\Route_Riter\stuffitpack2\stuffit.ref=No
+D:\VB Projects\Route_Riter\route_riter.chm=No
+D:\VB Projects\Route_Riter\langDutch.txt=No
+D:\VB Projects\Route_Riter\LangNorwegian.txt=No
+D:\VB Projects\Route_Riter\langSpanish.txt=No
+D:\VB Projects\Route_Riter\language.txt=No
+D:\VB Projects\Route_Riter\newshape.tms=No
+D:\VB Projects\Route_Riter\SetupFiles\RefFileStart.txt=No
+D:\VB Projects\Route_Riter\SetupFiles\acecomp.exe=Yes
+D:\VB Projects\Route_Riter\SetupFiles\KeepMe.txt=No
+D:\VB Projects\Route_Riter\Route_Riter2.exe=No
+D:\VB Projects\Route_Riter\SetupFiles\DecompW.exe=No
+D:\VB Projects\Route_Riter\SetupFiles\Tokens.dat=No
+D:\VB Projects\Route_Riter\SetupFiles\WTokens.dat=Yes
+D:\VB Projects\Route_Riter\SetupFiles\zlib.dll=Yes
+D:\VB Projects\Route_Riter\SetupFiles\WBDCH34I.DLL=Yes
+D:\VB Projects\Route_Riter\SetupFiles\WWHUG34I.DLL=Yes
+D:\VB Projects\Route_Riter\SetupFiles\DecompT.exe=No
+D:\VB Projects\Route_Riter\SetupFiles\terrain.dat=Yes
+D:\VB Projects\Route_Riter\Langdanish.txt=No
+D:\VB Projects\Route_Riter\Lang_Spanish.txt=No
+D:\VB Projects\Route_Riter\Lang_Danish.txt=No
+D:\VB Projects\Route_Riter\Lang_Dutch.txt=No
+D:\VB Projects\Route_Riter\Lang_English.txt=No
+D:\VB Projects\Route_Riter\Lang_French.txt=No
+D:\VB Projects\Route_Riter\Lang_Norwegian.txt=No
+D:\VB Projects\Route_Riter\stuffitpack2\EZstuff4.bat=No
+D:\VB Projects\Route_Riter\Suggested_ReadMe.txt=No
+D:\VB Projects\RR2\Route_Riter.exe=No
+D:\VB Projects\RR4\Route_Riter.exe=No
+D:\VB Projects\Route_Riter\stuffitpack2a.zip=No
+D:\VB Projects\Route_Riter\Route_RiterFR.chm=No
+D:\VB Projects\Route_Riter\stuffitpack2a\stuffit.ref=No
+D:\VB Projects\Route_Riter\stuffit.ref=No
+D:\VB Projects\Route_Riter\StuffitPack.zip=No
+C:\WINDOWS\system32\mwgfxvb.dll=No
+D:\VB Projects\Route_Riter\mwacevb.dll=No
+D:\VB Projects\Route_Riter\SView.exe=No
+C:\WINDOWS\system32\mwace.dll=No
+D:\VB Projects\RR2\mwacevb.dll=No
+D:\VB Projects\RR2\TView.exe=No
+D:\VB Projects\RR2\SView.exe=No
+D:\VB Projects\RR2\Lang_Spanish.txt=No
+D:\VB Projects\RR2\Lang_Norwegian.txt=No
+D:\VB Projects\RR2\Lang_Danish.txt=No
+D:\VB Projects\RR2\Lang_Deutsch.txt=No
+D:\VB Projects\RR2\Lang_Dutch.txt=No
+D:\VB Projects\RR2\Lang_English.txt=No
+D:\VB Projects\RR2\Lang_French.txt=No
+D:\VB Projects\RR2\mwace.dll=No
+
+[Package|RouteRiter5011|Distribution]
+Type=single
+Size=
+Title=Route_Riter
+
+[Package|RouteRiter5011|IconGroups]
+Group0=Route_Riter
+PrivateGroup0=-1
+Parent0=$(Programs)
+
+[Package|RouteRiter5011|Route_Riter]
+Icon1=Route_Riter.exe
+Title1=Route_Riter
+StartIn1=$(AppPath)
+Key1=Icon1
+Icon2=route_riter.chm
+Title2=RouteRiter Help
+StartIn2=$(AppPath)
+Key2=Icon3
+
+[Package|RouteRiter5011|Package]
+PackageFolder=D:\VB Projects\RR2\Package1
+ProjectFolder=D:\VB Projects\RR2
+ServerSideCab=
+File1=D:\VB Projects\RR2\Package1\setup.exe
+File2=D:\VB Projects\RR2\Package1\Setup.Lst
+File3=D:\VB Projects\RR2\Package1\Route_Riter.CAB
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz
+
+
+[Package|RouteRiter5023|Root]
+SubWizProgID=PDWizard.SetupPkgSubWiz
+BuildFolder=D:\VB Projects\RR2\Package2
+
+[Package|RouteRiter5023|Configure DAO ISAMs]
+Applicable=No
+
+[Package|RouteRiter5023|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|RouteRiter5023|Files Found]
+stuffit.ref=D:\VB Projects\Route_Riter\stuffit.ref
+
+[Package|RouteRiter5023|Files Released]
+route_riter.CHI=
+STKIT432.DLL=
+Tokens.dat=
+langdanish.txt=
+language.txt=
+langspanish.txt=
+langnorwegian.txt=
+langdutch.txt=
+zipdll.dll=
+unzdll.dll=
+zipit.dll=
+decompw.exe=
+Route_RiterFR.CHI=
+keepme.txt=
+newshape.tms=
+SView.CHI=
+
+[Package|RouteRiter5023|Missing Dependency Information]
+C:\WINDOWS\system32\vsflex7l.ocx=
+D:\VB Projects\Route_Riter\SetupFiles\DecompW.exe=
+D:\VB Projects\Route_Riter\SetupFiles\zlib.dll=
+D:\VB Projects\Route_Riter\SetupFiles\WBDCH34I.DLL=
+D:\VB Projects\Route_Riter\SetupFiles\WWHUG34I.DLL=
+C:\WINDOWS\system32\VSPRINT7.ocx=
+D:\VB Projects\Route_Riter\SetupFiles\DecompT.exe=
+D:\VB Code\DecompW\VBZip\VBZip_Control.ocx=
+D:\VB Projects\Route_Riter\Unzdll.dll=
+D:\VB Projects\Route_Riter\Zipdll.dll=
+C:\WINDOWS\system32\VBZip_Control.ocx=
+C:\Program Files\VideoSoft\Shared Files\VSPRINT7.ocx=
+C:\Program Files\VideoSoft\Shared Files\vsflex7L.ocx=
+C:\Program Files\Your Company Name\Your Product Name\vsflex7L.ocx=
+C:\Program Files\Your Company Name\Your Product Name\VSPRINT7.ocx=
+D:\SAWZip\SAWZip.tlb=
+C:\WINDOWS\system32\SAWZip.dll=
+C:\WINDOWS\system32\SAWZip.tlb=
+C:\WINDOWS\system32\STKIT432.DLL=
+C:\Program Files\VideoSoft\Shared Files\Vsflex7.ocx=
+D:\VB Code\SAWZipNG\SAWZipNG.tlb=
+D:\VB Code\SAWZipNG\SAWZipNG.dll=
+C:\WINDOWS\system32\mwacevb.dll=
+C:\WINDOWS\system32\mwgfxvb.dll=
+D:\VB Projects\Route_Riter\mwace.dll=
+D:\VB Projects\Route_Riter\SView.exe=
+D:\VB Projects\RR2\TView.exe=
+D:\VB Projects\RR2\SView.exe=
+
+[Package|RouteRiter5023|Out-of-Date Dependency Information]
+C:\WINDOWS\system32\COMDLG32.OCX=
+C:\WINDOWS\system32\scrrun.dll=
+
+[Package|RouteRiter5023|Files Added]
+d:\vb projects\route_riter\stuffit.ref=
+d:\vb projects\route_riter\route_riter.chm=
+d:\vb projects\route_riter\setupfiles\reffilestart.txt=
+d:\vb projects\route_riter\setupfiles\acecomp.exe=
+d:\vb projects\route_riter\setupfiles\zlib.dll=
+d:\vb projects\route_riter\setupfiles\wbdch34i.dll=
+d:\vb projects\route_riter\setupfiles\wtokens.dat=
+d:\vb projects\route_riter\setupfiles\wwhug34i.dll=
+d:\vb projects\route_riter\setupfiles\decompt.exe=
+d:\vb projects\route_riter\setupfiles\terrain.dat=
+d:\vb projects\route_riter\lang_spanish.txt=
+d:\vb projects\route_riter\lang_danish.txt=
+d:\vb projects\route_riter\lang_dutch.txt=
+d:\vb projects\route_riter\lang_english.txt=
+d:\vb projects\route_riter\lang_french.txt=
+d:\vb projects\route_riter\lang_norwegian.txt=
+d:\vb projects\route_riter\stuffitpack2\ezstuff4.bat=
+d:\vb projects\route_riter\suggested_readme.txt=
+c:\windows\system32\sawzip.dll=
+d:\vb projects\route_riter\stuffitpack2a.zip=
+d:\vb code\sawzipng\sawzipng.dll=
+D:\VB Projects\Route_Riter\Route_RiterFR.chm=
+D:\VB Code\SAWZipNG2\SAWZipNG.dll=
+D:\VB Projects\Route_Riter\StuffitPack.zip=
+C:\WINDOWS\system32\SAWZipNG.dll=
+D:\VB Projects\Route_Riter\mwace.dll=
+D:\VB Projects\Route_Riter\SView.exe=
+C:\WINDOWS\system32\mwace.dll=
+D:\VB Projects\RR2\TView.exe=
+D:\VB Projects\RR2\SView.exe=
+D:\VB Projects\RR2\Lang_Spanish.txt=
+D:\VB Projects\RR2\Lang_Norwegian.txt=
+D:\VB Projects\RR2\Lang_Danish.txt=
+D:\VB Projects\RR2\Lang_Deutsch.txt=
+D:\VB Projects\RR2\Lang_Dutch.txt=
+D:\VB Projects\RR2\Lang_English.txt=
+D:\VB Projects\RR2\Lang_French.txt=
+D:\VB Projects\RR2\mwace.dll=
+D:\VB Projects\RR2\grid.bmp=
+D:\VB Projects\RR2\sky.jpg=
+D:\VB Projects\RR2\SView.chm=
+D:\VB Projects\RR2\grass.bmp=
+D:\VB Projects\RR2\StuffitPack.zip=
+
+[Package|RouteRiter5023|Files Removed]
+c:\windows\system32\hh.exe=
+d:\vb projects\route_riter\setupfiles\keepme.txt=
+d:\vb projects\route_riter\zipit.dll=
+d:\vb projects\route_riter\zipdll.dll=
+c:\windows\system32\sawzip.dll=
+d:\vb projects\route_riter\newshape.tms=
+c:\windows\system32\msvcrt.dll=
+c:\windows\system32\mwgfxvb.dll=
+
+[Package|RouteRiter5023|Files In Project]
+C:\WINDOWS\SYSTEM32\msvbvm60.dll=Yes
+C:\WINDOWS\SYSTEM32\hhctrl.ocx=Yes
+C:\WINDOWS\SYSTEM32\itss.dll=Yes
+C:\WINDOWS\SYSTEM32\itircl.dll=Yes
+C:\WINDOWS\SYSTEM32\RICHTX32.OCX=Yes
+C:\WINDOWS\SYSTEM32\mscomctl.ocx=Yes
+C:\WINDOWS\SYSTEM32\COMDLG32.OCX=Yes
+C:\WINDOWS\SYSTEM32\VB6STKIT.DLL=Yes
+D:\VB Projects\Route_Riter\route_riter.chm=Yes
+D:\VB Projects\Route_Riter\SetupFiles\RefFileStart.txt=Yes
+D:\VB Projects\Route_Riter\SetupFiles\acecomp.exe=Yes
+C:\WINDOWS\system32\TABCTL32.OCX=Yes
+C:\WINDOWS\system32\COMCTL32.OCX=Yes
+D:\Program Files\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=Yes
+D:\Program Files\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=Yes
+D:\Program Files\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=Yes
+D:\Program Files\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=Yes
+D:\Program Files\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+D:\Program Files\VB98\Wizards\PDWizard\Redist\RICHED32.DLL=Yes
+D:\Program Files\VB98\Wizards\PDWizard\SETUP.EXE=Yes
+D:\Program Files\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
+D:\Program Files\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
+C:\WINDOWS\system32\hh.exe=No
+C:\WINDOWS\system32\STKIT432.DLL=Yes
+C:\WINDOWS\system32\Vsflex7.ocx=Yes
+C:\WINDOWS\system32\scrrun.dll=Yes
+C:\WINDOWS\system32\msvcrt.dll=No
+D:\VB Projects\Route_Riter\stuffit.ref=Yes
+C:\Program Files\Your Company Name\Your Product Name\VSPRINT7.ocx=Yes
+C:\Program Files\Your Company Name\Your Product Name\vsflex7L.ocx=Yes
+C:\WINDOWS\system32\mwgfxvb.dll=No
+D:\VB Code\SAWZipNG2_new\SAWZipNG.tlb=Yes
+C:\WINDOWS\system32\SAWZipNG.dll=Yes
+D:\VB Projects\RR2\Route_Riter.exe=Yes
+D:\VB Projects\RR2\zlib.dll=Yes
+D:\VB Projects\RR2\mwacevb.dll=Yes
+D:\VB Projects\RR2\TView.exe=Yes
+D:\VB Projects\RR2\SView.exe=Yes
+D:\VB Projects\RR2\Lang_Spanish.txt=Yes
+D:\VB Projects\RR2\Lang_Norwegian.txt=Yes
+D:\VB Projects\RR2\Lang_Danish.txt=Yes
+D:\VB Projects\RR2\Lang_Dutch.txt=Yes
+D:\VB Projects\RR2\Lang_English.txt=Yes
+D:\VB Projects\RR2\Lang_French.txt=Yes
+D:\VB Projects\RR2\mwace.dll=Yes
+D:\VB Projects\RR2\grid.bmp=Yes
+D:\VB Projects\RR2\sky.jpg=Yes
+D:\VB Projects\RR2\SView.chm=Yes
+D:\VB Projects\RR2\grass.bmp=Yes
+D:\VB Projects\RR2\StuffitPack.zip=Yes
+
+[Package|RouteRiter5023|Configure Registry Files]
+Applicable=No
+
+[Package|RouteRiter5023|Configure Remote Servers]
+Applicable=No
+
+[Package|RouteRiter5023|Install Locations]
+D:\VB Projects\Route_Riter\Route_Riter.exe=$(AppPath)
+C:\WINDOWS\SYSTEM32\msvbvm60.dll=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM32\STKIT432.DLL=$(WinSysPath)
+C:\WINDOWS\SYSTEM32\hhctrl.ocx=$(WinSysPath)
+C:\WINDOWS\SYSTEM32\itss.dll=$(WinSysPath)
+C:\WINDOWS\SYSTEM32\itircl.dll=$(WinSysPath)
+C:\WINDOWS\SYSTEM32\hh.exe=$(WinSysPath)
+C:\WINDOWS\SYSTEM32\RICHTX32.OCX=$(WinSysPath)
+C:\WINDOWS\SYSTEM32\mscomctl.ocx=$(WinSysPath)
+C:\WINDOWS\SYSTEM32\COMDLG32.OCX=$(WinSysPath)
+C:\WINDOWS\SYSTEM32\VsVIEW3.ocx=$(WinSysPath)
+C:\WINDOWS\SYSTEM32\Vsflex7L.ocx=$(WinSysPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+C:\WINDOWS\SYSTEM32\VB6STKIT.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+D:\VB Projects\Route_Riter\stuffitpack2\stuffit.ref=$(AppPath)\stuffitpack2
+D:\VB Projects\Route_Riter\route_riter.chm=$(AppPath)
+D:\VB Projects\Route_Riter\langDutch.txt=$(AppPath)
+D:\VB Projects\Route_Riter\LangNorwegian.txt=$(AppPath)
+D:\VB Projects\Route_Riter\langSpanish.txt=$(AppPath)
+D:\VB Projects\Route_Riter\language.txt=$(AppPath)
+D:\VB Projects\Route_Riter\newshape.tms=$(AppPath)
+D:\VB Projects\Route_Riter\SetupFiles\RefFileStart.txt=$(AppPath)\SetupFiles
+D:\VB Projects\Route_Riter\SetupFiles\acecomp.exe=$(AppPath)\SetupFiles
+D:\VB Projects\Route_Riter\SetupFiles\KeepMe.txt=$(AppPath)\SetupFiles
+D:\VB Projects\Route_Riter\Route_Riter2.exe=$(AppPath)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=$(WinSysPathSysFile)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=$(WinSysPathSysFile)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=$(WinSysPathSysFile)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=$(WinSysPathSysFile)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\hh.exe=$(WinSysPath)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\RICHED32.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\system32\mfc42.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\msvcrt.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\TABCTL32.OCX=$(WinSysPath)
+C:\WINDOWS\system32\COMCTL32.OCX=$(WinSysPath)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+D:\VB Projects\Route_Riter\SetupFiles\DecompW.exe=$(AppPath)\SetupFiles
+D:\VB Projects\Route_Riter\SetupFiles\Tokens.dat=$(AppPath)\SetupFiles
+D:\VB Projects\Route_Riter\SetupFiles\zlib.dll=$(WinSysPath)
+D:\VB Projects\Route_Riter\SetupFiles\WBDCH34I.DLL=$(AppPath)\setupfiles
+D:\VB Projects\Route_Riter\SetupFiles\WTokens.dat=$(AppPath)\setupfiles
+D:\VB Projects\Route_Riter\SetupFiles\WWHUG34I.DLL=$(AppPath)\setupfiles
+C:\WINDOWS\system32\VSPRINT7.ocx=$(WinSysPath)
+D:\VB Projects\Route_Riter\SetupFiles\DecompT.exe=$(AppPath)\SetupFiles
+D:\VB Projects\Route_Riter\SetupFiles\terrain.dat=$(AppPath)\SetupFiles
+D:\VB Projects\Route_Riter\Langdanish.txt=$(AppPath)
+D:\VB Code\DecompW\VBZip\VBZip_Control.ocx=$(WinSysPath)
+D:\VB Projects\Route_Riter\Zipit.dll=$(WinSysPath)
+D:\VB Projects\Route_Riter\Unzdll.dll=$(WinSysPath)
+D:\VB Projects\Route_Riter\Zipdll.dll=$(WinSysPath)
+C:\WINDOWS\system32\VBZip_Control.ocx=$(WinSysPath)
+D:\VB Projects\Route_Riter\Lang_Spanish.txt=$(AppPath)
+D:\VB Projects\Route_Riter\Lang_Danish.txt=$(AppPath)
+D:\VB Projects\Route_Riter\Lang_Dutch.txt=$(AppPath)
+D:\VB Projects\Route_Riter\Lang_English.txt=$(AppPath)
+D:\VB Projects\Route_Riter\Lang_French.txt=$(AppPath)
+D:\VB Projects\Route_Riter\Lang_Norwegian.txt=$(AppPath)
+D:\VB Projects\Route_Riter\stuffitpack2\EZstuff4.bat=$(AppPath)\stuffitpack2
+D:\Program Files\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=$(WinSysPathSysFile)
+D:\Program Files\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=$(WinSysPathSysFile)
+D:\Program Files\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=$(WinSysPathSysFile)
+D:\Program Files\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=$(WinSysPathSysFile)
+D:\Program Files\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\Program Files\VideoSoft\Shared Files\vsflex7L.ocx=$(WinSysPath)
+C:\Program Files\VideoSoft\Shared Files\VSPRINT7.ocx=$(WinSysPath)
+D:\Program Files\VB98\Wizards\PDWizard\Redist\RICHED32.DLL=$(WinSysPathSysFile)
+D:\Program Files\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+D:\Program Files\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+D:\Program Files\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+D:\VB Projects\Route_Riter\Suggested_ReadMe.txt=$(AppPath)
+C:\Program Files\Your Company Name\Your Product Name\VSPRINT7.ocx=$(WinSysPath)
+C:\Program Files\Your Company Name\Your Product Name\vsflex7L.ocx=$(WinSysPath)
+D:\VB Projects\RR2\Route_Riter.exe=$(AppPath)
+D:\SAWZip\SAWZip.tlb=$(WinSysPath)
+C:\WINDOWS\system32\SAWZip.dll=$(WinSysPath)
+D:\VB Projects\RR4\Route_Riter.exe=$(AppPath)
+C:\WINDOWS\system32\SAWZip.tlb=$(WinSysPath)
+D:\VB Projects\Route_Riter\stuffitpack2a.zip=$(AppPath)
+D:\VB Code\SAWZipNG\SAWZipNG.tlb=$(WinSysPath)
+C:\Program Files\VideoSoft\Shared Files\Vsflex7.ocx=$(WinSysPath)
+D:\VB Code\SAWZipNG\SAWZipNG.dll=$(WinSysPath)
+D:\VB Projects\Route_Riter\zlib.dll=$(WinSysPath)
+D:\VB Code\SAWZipNG2\SAWZipNG.tlb=$(WinSysPath)
+C:\WINDOWS\system32\Vsflex7.ocx=$(WinSysPath)
+C:\WINDOWS\system32\scrrun.dll=$(WinSysPath)
+D:\VB Projects\Route_Riter\Route_RiterFR.chm=$(AppPath)
+D:\VB Code\SAWZipNG2\SAWZipNG.dll=$(WinSysPath)
+C:\WINDOWS\system32\SAWZipNG.tlb=$(WinSysPath)
+D:\VB Projects\Route_Riter\stuffitpack2a\stuffit.ref=$(AppPath)\stuffitpack2a
+D:\VB Projects\Route_Riter\stuffit.ref=$(AppPath)
+D:\VB Projects\Route_Riter\StuffitPack.zip=$(AppPath)
+C:\WINDOWS\system32\SAWZipNG.dll=$(WinSysPath)
+C:\WINDOWS\system32\mwacevb.dll=$(WinSysPath)
+D:\VB Projects\Route_Riter\mwace.dll=$(WinSysPath)
+C:\WINDOWS\system32\mwgfxvb.dll=$(AppPath)
+D:\VB Projects\Route_Riter\mwacevb.dll=$(AppPath)
+D:\VB Code\SAWZipNG2_new\SAWZipNG.tlb=$(WinSysPath)
+D:\VB Projects\Route_Riter\SView.exe=$(AppPath)
+C:\WINDOWS\system32\mwace.dll=$(AppPath)
+D:\VB Projects\RR2\zlib.dll=$(WinSysPath)
+D:\VB Projects\RR2\mwacevb.dll=$(AppPath)
+D:\VB Projects\RR2\TView.exe=$(AppPath)
+D:\VB Projects\RR2\SView.exe=$(AppPath)
+D:\VB Projects\RR2\Lang_Spanish.txt=$(AppPath)
+D:\VB Projects\RR2\Lang_Norwegian.txt=$(AppPath)
+D:\VB Projects\RR2\Lang_Danish.txt=$(AppPath)
+D:\VB Projects\RR2\Lang_Deutsch.txt=$(AppPath)
+D:\VB Projects\RR2\Lang_Dutch.txt=$(AppPath)
+D:\VB Projects\RR2\Lang_English.txt=$(AppPath)
+D:\VB Projects\RR2\Lang_French.txt=$(AppPath)
+D:\VB Projects\RR2\mwace.dll=$(AppPath)
+D:\VB Projects\RR2\grid.bmp=$(AppPath)
+D:\VB Projects\RR2\sky.jpg=$(AppPath)
+D:\VB Projects\RR2\SView.chm=$(AppPath)
+D:\VB Projects\RR2\grass.bmp=$(AppPath)
+D:\VB Projects\RR2\StuffitPack.zip=$(AppPath)
+
+[Package|RouteRiter5023|Configure Shared Files]
+Applicable=Yes
+D:\VB Projects\Route_Riter\Route_Riter.exe=No
+D:\VB Projects\Route_Riter\stuffitpack2\stuffit.ref=No
+D:\VB Projects\Route_Riter\route_riter.chm=No
+D:\VB Projects\Route_Riter\langDutch.txt=No
+D:\VB Projects\Route_Riter\LangNorwegian.txt=No
+D:\VB Projects\Route_Riter\langSpanish.txt=No
+D:\VB Projects\Route_Riter\language.txt=No
+D:\VB Projects\Route_Riter\newshape.tms=No
+D:\VB Projects\Route_Riter\SetupFiles\RefFileStart.txt=No
+D:\VB Projects\Route_Riter\SetupFiles\acecomp.exe=Yes
+D:\VB Projects\Route_Riter\SetupFiles\KeepMe.txt=No
+D:\VB Projects\Route_Riter\Route_Riter2.exe=No
+D:\VB Projects\Route_Riter\SetupFiles\DecompW.exe=No
+D:\VB Projects\Route_Riter\SetupFiles\Tokens.dat=No
+D:\VB Projects\Route_Riter\SetupFiles\WTokens.dat=Yes
+D:\VB Projects\Route_Riter\SetupFiles\zlib.dll=Yes
+D:\VB Projects\Route_Riter\SetupFiles\WBDCH34I.DLL=Yes
+D:\VB Projects\Route_Riter\SetupFiles\WWHUG34I.DLL=Yes
+D:\VB Projects\Route_Riter\SetupFiles\DecompT.exe=No
+D:\VB Projects\Route_Riter\SetupFiles\terrain.dat=Yes
+D:\VB Projects\Route_Riter\Langdanish.txt=No
+D:\VB Projects\Route_Riter\Lang_Spanish.txt=No
+D:\VB Projects\Route_Riter\Lang_Danish.txt=No
+D:\VB Projects\Route_Riter\Lang_Dutch.txt=No
+D:\VB Projects\Route_Riter\Lang_English.txt=No
+D:\VB Projects\Route_Riter\Lang_French.txt=No
+D:\VB Projects\Route_Riter\Lang_Norwegian.txt=No
+D:\VB Projects\Route_Riter\stuffitpack2\EZstuff4.bat=No
+D:\VB Projects\Route_Riter\Suggested_ReadMe.txt=No
+D:\VB Projects\RR2\Route_Riter.exe=No
+D:\VB Projects\RR4\Route_Riter.exe=No
+D:\VB Projects\Route_Riter\stuffitpack2a.zip=No
+D:\VB Projects\Route_Riter\Route_RiterFR.chm=No
+D:\VB Projects\Route_Riter\stuffitpack2a\stuffit.ref=No
+D:\VB Projects\Route_Riter\stuffit.ref=No
+D:\VB Projects\Route_Riter\StuffitPack.zip=No
+C:\WINDOWS\system32\mwgfxvb.dll=No
+D:\VB Projects\Route_Riter\mwacevb.dll=No
+D:\VB Projects\Route_Riter\SView.exe=No
+C:\WINDOWS\system32\mwace.dll=No
+D:\VB Projects\RR2\mwacevb.dll=Yes
+D:\VB Projects\RR2\TView.exe=No
+D:\VB Projects\RR2\SView.exe=No
+D:\VB Projects\RR2\Lang_Spanish.txt=No
+D:\VB Projects\RR2\Lang_Norwegian.txt=No
+D:\VB Projects\RR2\Lang_Danish.txt=No
+D:\VB Projects\RR2\Lang_Deutsch.txt=No
+D:\VB Projects\RR2\Lang_Dutch.txt=No
+D:\VB Projects\RR2\Lang_English.txt=No
+D:\VB Projects\RR2\Lang_French.txt=No
+D:\VB Projects\RR2\mwace.dll=Yes
+D:\VB Projects\RR2\grid.bmp=No
+D:\VB Projects\RR2\sky.jpg=No
+D:\VB Projects\RR2\SView.chm=No
+D:\VB Projects\RR2\grass.bmp=No
+D:\VB Projects\RR2\StuffitPack.zip=No
+
+[Package|RouteRiter5023|Distribution]
+Type=single
+Size=
+Title=Route_Riter
+
+[Package|RouteRiter5023|IconGroups]
+Group0=Route_Riter
+PrivateGroup0=-1
+Parent0=$(Programs)
+
+[Package|RouteRiter5023|Route_Riter]
+Icon1=Route_Riter.exe
+Title1=Route_Riter
+StartIn1=$(AppPath)
+Key1=Icon1
+Icon2=route_riter.chm
+Title2=RouteRiter Help
+StartIn2=$(AppPath)
+Key2=Icon3
+
+[Package|RouteRiter5023|Package]
+PackageFolder=D:\VB Projects\RR2\Package2
+ProjectFolder=D:\VB Projects\RR2
+ServerSideCab=
+File1=D:\VB Projects\RR2\Package2\setup.exe
+File2=D:\VB Projects\RR2\Package2\Setup.Lst
+File3=D:\VB Projects\RR2\Package2\Route_Riter.CAB
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz
+
+
+[Package|RouteRiter5040|Root]
+SubWizProgID=PDWizard.SetupPkgSubWiz
+BuildFolder=D:\VB Projects\RR2\Package3
+
+[Package|RouteRiter5040|Configure DAO ISAMs]
+Applicable=No
+
+[Package|RouteRiter5040|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|RouteRiter5040|Files Found]
+stuffit.ref=D:\VB Projects\Route_Riter\stuffit.ref
+
+[Package|RouteRiter5040|Files Released]
+route_riter.CHI=
+STKIT432.DLL=
+Tokens.dat=
+langdanish.txt=
+language.txt=
+langspanish.txt=
+langnorwegian.txt=
+langdutch.txt=
+zipdll.dll=
+unzdll.dll=
+zipit.dll=
+decompw.exe=
+Route_RiterFR.CHI=
+keepme.txt=
+newshape.tms=
+SView.CHI=
+
+[Package|RouteRiter5040|Missing Dependency Information]
+C:\WINDOWS\system32\vsflex7l.ocx=
+D:\VB Projects\Route_Riter\SetupFiles\DecompW.exe=
+D:\VB Projects\Route_Riter\SetupFiles\zlib.dll=
+D:\VB Projects\Route_Riter\SetupFiles\WBDCH34I.DLL=
+D:\VB Projects\Route_Riter\SetupFiles\WWHUG34I.DLL=
+C:\WINDOWS\system32\VSPRINT7.ocx=
+D:\VB Projects\Route_Riter\SetupFiles\DecompT.exe=
+D:\VB Code\DecompW\VBZip\VBZip_Control.ocx=
+D:\VB Projects\Route_Riter\Unzdll.dll=
+D:\VB Projects\Route_Riter\Zipdll.dll=
+C:\WINDOWS\system32\VBZip_Control.ocx=
+C:\Program Files\VideoSoft\Shared Files\VSPRINT7.ocx=
+C:\Program Files\VideoSoft\Shared Files\vsflex7L.ocx=
+C:\Program Files\Your Company Name\Your Product Name\vsflex7L.ocx=
+C:\Program Files\Your Company Name\Your Product Name\VSPRINT7.ocx=
+D:\SAWZip\SAWZip.tlb=
+C:\WINDOWS\system32\SAWZip.dll=
+C:\WINDOWS\system32\SAWZip.tlb=
+C:\WINDOWS\system32\STKIT432.DLL=
+C:\Program Files\VideoSoft\Shared Files\Vsflex7.ocx=
+D:\VB Code\SAWZipNG\SAWZipNG.tlb=
+D:\VB Code\SAWZipNG\SAWZipNG.dll=
+C:\WINDOWS\system32\mwacevb.dll=
+C:\WINDOWS\system32\mwgfxvb.dll=
+D:\VB Projects\Route_Riter\mwace.dll=
+D:\VB Projects\Route_Riter\SView.exe=
+D:\VB Projects\RR2\TView.exe=
+D:\VB Projects\RR2\SView.exe=
+C:\Program Files\MSTS Shape Viewer\trainlib.ocx=
+C:\WINDOWS\system32\dx8vb.dll=
+C:\WINDOWS\system32\Vsflex7.ocx=
+C:\WINDOWS\system32\SAWZipNG.tlb=
+D:\VB Projects\RR2\mwacevb.dll=
+D:\VB Projects\RR2\zlib.dll=
+D:\VB Projects\RR2\mwace.dll=
+C:\WINDOWS\system32\SAWZipNG.dll=
+
+[Package|RouteRiter5040|Out-of-Date Dependency Information]
+C:\WINDOWS\system32\COMDLG32.OCX=
+C:\WINDOWS\system32\scrrun.dll=
+C:\WINDOWS\system32\MSCOMCTL.OCX=
+
+[Package|RouteRiter5040|Files Added]
+d:\vb projects\route_riter\stuffit.ref=
+d:\vb projects\route_riter\route_riter.chm=
+d:\vb projects\route_riter\setupfiles\reffilestart.txt=
+d:\vb projects\route_riter\setupfiles\acecomp.exe=
+d:\vb projects\route_riter\setupfiles\zlib.dll=
+d:\vb projects\route_riter\setupfiles\wbdch34i.dll=
+d:\vb projects\route_riter\setupfiles\wtokens.dat=
+d:\vb projects\route_riter\setupfiles\wwhug34i.dll=
+d:\vb projects\route_riter\setupfiles\decompt.exe=
+d:\vb projects\route_riter\setupfiles\terrain.dat=
+d:\vb projects\route_riter\lang_spanish.txt=
+d:\vb projects\route_riter\lang_danish.txt=
+d:\vb projects\route_riter\lang_dutch.txt=
+d:\vb projects\route_riter\lang_english.txt=
+d:\vb projects\route_riter\lang_french.txt=
+d:\vb projects\route_riter\lang_norwegian.txt=
+d:\vb projects\route_riter\stuffitpack2\ezstuff4.bat=
+d:\vb projects\route_riter\suggested_readme.txt=
+c:\windows\system32\sawzip.dll=
+d:\vb projects\route_riter\stuffitpack2a.zip=
+d:\vb code\sawzipng\sawzipng.dll=
+D:\VB Projects\Route_Riter\Route_RiterFR.chm=
+D:\VB Code\SAWZipNG2\SAWZipNG.dll=
+D:\VB Projects\Route_Riter\StuffitPack.zip=
+C:\WINDOWS\system32\SAWZipNG.dll=
+D:\VB Projects\Route_Riter\mwace.dll=
+D:\VB Projects\Route_Riter\SView.exe=
+C:\WINDOWS\system32\mwace.dll=
+D:\VB Projects\RR2\TView.exe=
+D:\VB Projects\RR2\SView.exe=
+D:\VB Projects\RR2\Lang_Spanish.txt=
+D:\VB Projects\RR2\Lang_Norwegian.txt=
+D:\VB Projects\RR2\Lang_Danish.txt=
+D:\VB Projects\RR2\Lang_Deutsch.txt=
+D:\VB Projects\RR2\Lang_Dutch.txt=
+D:\VB Projects\RR2\Lang_English.txt=
+D:\VB Projects\RR2\Lang_French.txt=
+D:\VB Projects\RR2\mwace.dll=
+D:\VB Projects\RR2\grid.bmp=
+D:\VB Projects\RR2\sky.jpg=
+D:\VB Projects\RR2\SView.chm=
+D:\VB Projects\RR2\grass.bmp=
+D:\VB Projects\RR2\StuffitPack.zip=
+C:\WINDOWS\system32\trainlib.lib=
+C:\WINDOWS\system32\trainlib.DEP=
+C:\WINDOWS\system32\trainlib.exp=
+D:\VB Projects\RR2\liesmich.txt=
+
+[Package|RouteRiter5040|Files Removed]
+c:\windows\system32\hh.exe=
+d:\vb projects\route_riter\setupfiles\keepme.txt=
+d:\vb projects\route_riter\zipit.dll=
+d:\vb projects\route_riter\zipdll.dll=
+c:\windows\system32\sawzip.dll=
+d:\vb projects\route_riter\newshape.tms=
+c:\windows\system32\msvcrt.dll=
+c:\windows\system32\mwgfxvb.dll=
+c:\windows\hh.exe=
+d:\vb projects\route_riter\setupfiles\acecomp.exe=
+
+[Package|RouteRiter5040|Files In Project]
+C:\WINDOWS\SYSTEM32\msvbvm60.dll=Yes
+C:\WINDOWS\SYSTEM32\hhctrl.ocx=Yes
+C:\WINDOWS\SYSTEM32\itss.dll=Yes
+C:\WINDOWS\SYSTEM32\itircl.dll=Yes
+C:\WINDOWS\SYSTEM32\RICHTX32.OCX=Yes
+C:\WINDOWS\SYSTEM32\mscomctl.ocx=Yes
+C:\WINDOWS\SYSTEM32\COMDLG32.OCX=Yes
+C:\WINDOWS\SYSTEM32\VB6STKIT.DLL=Yes
+D:\VB Projects\Route_Riter\route_riter.chm=Yes
+D:\VB Projects\Route_Riter\SetupFiles\RefFileStart.txt=Yes
+D:\VB Projects\Route_Riter\SetupFiles\acecomp.exe=No
+C:\WINDOWS\system32\TABCTL32.OCX=Yes
+C:\WINDOWS\system32\COMCTL32.OCX=Yes
+C:\WINDOWS\system32\STKIT432.DLL=Yes
+C:\WINDOWS\system32\Vsflex7.ocx=Yes
+C:\WINDOWS\system32\scrrun.dll=Yes
+C:\WINDOWS\system32\msvcrt.dll=No
+D:\VB Projects\Route_Riter\stuffit.ref=Yes
+C:\WINDOWS\system32\mwgfxvb.dll=Yes
+C:\WINDOWS\system32\SAWZipNG.dll=Yes
+D:\VB Projects\RR2\Route_Riter.exe=Yes
+D:\VB Projects\RR2\zlib.dll=Yes
+D:\VB Projects\RR2\mwacevb.dll=Yes
+D:\VB Projects\RR2\TView.exe=Yes
+D:\VB Projects\RR2\Lang_Spanish.txt=Yes
+D:\VB Projects\RR2\Lang_Norwegian.txt=Yes
+D:\VB Projects\RR2\Lang_Danish.txt=Yes
+D:\VB Projects\RR2\Lang_Dutch.txt=Yes
+D:\VB Projects\RR2\Lang_English.txt=Yes
+D:\VB Projects\RR2\Lang_French.txt=Yes
+D:\VB Projects\RR2\mwace.dll=Yes
+D:\VB Projects\RR2\grid.bmp=Yes
+D:\VB Projects\RR2\sky.jpg=Yes
+D:\VB Projects\RR2\SView.chm=Yes
+D:\VB Projects\RR2\grass.bmp=Yes
+D:\VB Projects\RR2\StuffitPack.zip=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+C:\WINDOWS\hh.exe=No
+C:\WINDOWS\system32\VSPRINT7.ocx=Yes
+C:\WINDOWS\system32\vsflex7L.ocx=Yes
+C:\WINDOWS\system32\SAWZipNG.tlb=Yes
+C:\WINDOWS\system32\dx8vb.dll=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\RICHED32.DLL=Yes
+C:\Program Files\MSTS Shape Viewer\trainlib.ocx=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
+D:\VB Projects\RR2\Lang_Deutsch.txt=Yes
+C:\WINDOWS\system32\trainlib.lib=Yes
+C:\WINDOWS\system32\trainlib.DEP=Yes
+C:\WINDOWS\system32\trainlib.exp=Yes
+D:\VB Projects\RR2\liesmich.txt=Yes
+
+[Package|RouteRiter5040|Configure Registry Files]
+Applicable=No
+
+[Package|RouteRiter5040|Configure Remote Servers]
+Applicable=No
+
+[Package|RouteRiter5040|Install Locations]
+D:\VB Projects\Route_Riter\Route_Riter.exe=$(AppPath)
+C:\WINDOWS\SYSTEM32\msvbvm60.dll=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM32\STKIT432.DLL=$(WinSysPath)
+C:\WINDOWS\SYSTEM32\hhctrl.ocx=$(WinSysPath)
+C:\WINDOWS\SYSTEM32\itss.dll=$(WinSysPath)
+C:\WINDOWS\SYSTEM32\itircl.dll=$(WinSysPath)
+C:\WINDOWS\SYSTEM32\hh.exe=$(WinSysPath)
+C:\WINDOWS\SYSTEM32\RICHTX32.OCX=$(WinSysPath)
+C:\WINDOWS\SYSTEM32\mscomctl.ocx=$(WinSysPath)
+C:\WINDOWS\SYSTEM32\COMDLG32.OCX=$(WinSysPath)
+C:\WINDOWS\SYSTEM32\VsVIEW3.ocx=$(WinSysPath)
+C:\WINDOWS\SYSTEM32\Vsflex7L.ocx=$(WinSysPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+C:\WINDOWS\SYSTEM32\VB6STKIT.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+D:\VB Projects\Route_Riter\stuffitpack2\stuffit.ref=$(AppPath)\stuffitpack2
+D:\VB Projects\Route_Riter\route_riter.chm=$(AppPath)
+D:\VB Projects\Route_Riter\langDutch.txt=$(AppPath)
+D:\VB Projects\Route_Riter\LangNorwegian.txt=$(AppPath)
+D:\VB Projects\Route_Riter\langSpanish.txt=$(AppPath)
+D:\VB Projects\Route_Riter\language.txt=$(AppPath)
+D:\VB Projects\Route_Riter\newshape.tms=$(AppPath)
+D:\VB Projects\Route_Riter\SetupFiles\RefFileStart.txt=$(AppPath)\SetupFiles
+D:\VB Projects\Route_Riter\SetupFiles\acecomp.exe=$(AppPath)\SetupFiles
+D:\VB Projects\Route_Riter\SetupFiles\KeepMe.txt=$(AppPath)\SetupFiles
+D:\VB Projects\Route_Riter\Route_Riter2.exe=$(AppPath)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=$(WinSysPathSysFile)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=$(WinSysPathSysFile)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=$(WinSysPathSysFile)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=$(WinSysPathSysFile)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\hh.exe=$(WinSysPath)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\RICHED32.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\system32\mfc42.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\msvcrt.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\TABCTL32.OCX=$(WinSysPath)
+C:\WINDOWS\system32\COMCTL32.OCX=$(WinSysPath)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+D:\VB Projects\Route_Riter\SetupFiles\DecompW.exe=$(AppPath)\SetupFiles
+D:\VB Projects\Route_Riter\SetupFiles\Tokens.dat=$(AppPath)\SetupFiles
+D:\VB Projects\Route_Riter\SetupFiles\zlib.dll=$(WinSysPath)
+D:\VB Projects\Route_Riter\SetupFiles\WBDCH34I.DLL=$(AppPath)\setupfiles
+D:\VB Projects\Route_Riter\SetupFiles\WTokens.dat=$(AppPath)\setupfiles
+D:\VB Projects\Route_Riter\SetupFiles\WWHUG34I.DLL=$(AppPath)\setupfiles
+C:\WINDOWS\system32\VSPRINT7.ocx=$(WinSysPath)
+D:\VB Projects\Route_Riter\SetupFiles\DecompT.exe=$(AppPath)\SetupFiles
+D:\VB Projects\Route_Riter\SetupFiles\terrain.dat=$(AppPath)\SetupFiles
+D:\VB Projects\Route_Riter\Langdanish.txt=$(AppPath)
+D:\VB Code\DecompW\VBZip\VBZip_Control.ocx=$(WinSysPath)
+D:\VB Projects\Route_Riter\Zipit.dll=$(WinSysPath)
+D:\VB Projects\Route_Riter\Unzdll.dll=$(WinSysPath)
+D:\VB Projects\Route_Riter\Zipdll.dll=$(WinSysPath)
+C:\WINDOWS\system32\VBZip_Control.ocx=$(WinSysPath)
+D:\VB Projects\Route_Riter\Lang_Spanish.txt=$(AppPath)
+D:\VB Projects\Route_Riter\Lang_Danish.txt=$(AppPath)
+D:\VB Projects\Route_Riter\Lang_Dutch.txt=$(AppPath)
+D:\VB Projects\Route_Riter\Lang_English.txt=$(AppPath)
+D:\VB Projects\Route_Riter\Lang_French.txt=$(AppPath)
+D:\VB Projects\Route_Riter\Lang_Norwegian.txt=$(AppPath)
+D:\VB Projects\Route_Riter\stuffitpack2\EZstuff4.bat=$(AppPath)\stuffitpack2
+D:\Program Files\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=$(WinSysPathSysFile)
+D:\Program Files\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=$(WinSysPathSysFile)
+D:\Program Files\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=$(WinSysPathSysFile)
+D:\Program Files\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=$(WinSysPathSysFile)
+D:\Program Files\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\Program Files\VideoSoft\Shared Files\vsflex7L.ocx=$(WinSysPath)
+C:\Program Files\VideoSoft\Shared Files\VSPRINT7.ocx=$(WinSysPath)
+D:\Program Files\VB98\Wizards\PDWizard\Redist\RICHED32.DLL=$(WinSysPathSysFile)
+D:\Program Files\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+D:\Program Files\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+D:\Program Files\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+D:\VB Projects\Route_Riter\Suggested_ReadMe.txt=$(AppPath)
+C:\Program Files\Your Company Name\Your Product Name\VSPRINT7.ocx=$(WinSysPath)
+C:\Program Files\Your Company Name\Your Product Name\vsflex7L.ocx=$(WinSysPath)
+D:\VB Projects\RR2\Route_Riter.exe=$(AppPath)
+D:\SAWZip\SAWZip.tlb=$(WinSysPath)
+C:\WINDOWS\system32\SAWZip.dll=$(WinSysPath)
+D:\VB Projects\RR4\Route_Riter.exe=$(AppPath)
+C:\WINDOWS\system32\SAWZip.tlb=$(WinSysPath)
+D:\VB Projects\Route_Riter\stuffitpack2a.zip=$(AppPath)
+D:\VB Code\SAWZipNG\SAWZipNG.tlb=$(WinSysPath)
+C:\Program Files\VideoSoft\Shared Files\Vsflex7.ocx=$(WinSysPath)
+D:\VB Code\SAWZipNG\SAWZipNG.dll=$(WinSysPath)
+D:\VB Projects\Route_Riter\zlib.dll=$(WinSysPath)
+D:\VB Code\SAWZipNG2\SAWZipNG.tlb=$(WinSysPath)
+C:\WINDOWS\system32\Vsflex7.ocx=$(WinSysPath)
+C:\WINDOWS\system32\scrrun.dll=$(WinSysPath)
+D:\VB Projects\Route_Riter\Route_RiterFR.chm=$(AppPath)
+D:\VB Code\SAWZipNG2\SAWZipNG.dll=$(WinSysPath)
+C:\WINDOWS\system32\SAWZipNG.tlb=$(WinSysPath)
+D:\VB Projects\Route_Riter\stuffitpack2a\stuffit.ref=$(AppPath)\stuffitpack2a
+D:\VB Projects\Route_Riter\stuffit.ref=$(AppPath)
+D:\VB Projects\Route_Riter\StuffitPack.zip=$(AppPath)
+C:\WINDOWS\system32\SAWZipNG.dll=$(WinSysPath)
+C:\WINDOWS\system32\mwacevb.dll=$(WinSysPath)
+D:\VB Projects\Route_Riter\mwace.dll=$(WinSysPath)
+C:\WINDOWS\system32\mwgfxvb.dll=$(AppPath)
+D:\VB Projects\Route_Riter\mwacevb.dll=$(AppPath)
+D:\VB Code\SAWZipNG2_new\SAWZipNG.tlb=$(WinSysPath)
+D:\VB Projects\Route_Riter\SView.exe=$(AppPath)
+C:\WINDOWS\system32\mwace.dll=$(AppPath)
+D:\VB Projects\RR2\zlib.dll=$(WinSysPath)
+D:\VB Projects\RR2\mwacevb.dll=$(AppPath)
+D:\VB Projects\RR2\TView.exe=$(AppPath)
+D:\VB Projects\RR2\SView.exe=$(AppPath)
+D:\VB Projects\RR2\Lang_Spanish.txt=$(AppPath)
+D:\VB Projects\RR2\Lang_Norwegian.txt=$(AppPath)
+D:\VB Projects\RR2\Lang_Danish.txt=$(AppPath)
+D:\VB Projects\RR2\Lang_Deutsch.txt=$(AppPath)
+D:\VB Projects\RR2\Lang_Dutch.txt=$(AppPath)
+D:\VB Projects\RR2\Lang_English.txt=$(AppPath)
+D:\VB Projects\RR2\Lang_French.txt=$(AppPath)
+D:\VB Projects\RR2\mwace.dll=$(AppPath)
+D:\VB Projects\RR2\grid.bmp=$(AppPath)
+D:\VB Projects\RR2\sky.jpg=$(AppPath)
+D:\VB Projects\RR2\SView.chm=$(AppPath)
+D:\VB Projects\RR2\grass.bmp=$(AppPath)
+D:\VB Projects\RR2\StuffitPack.zip=$(AppPath)
+C:\WINDOWS\system32\dx8vb.dll=$(WinSysPath)
+C:\Program Files\MSTS Shape Viewer\trainlib.ocx=$(WinSysPath)
+C:\WINDOWS\system32\trainlib.lib=$(AppPath)
+C:\WINDOWS\system32\trainlib.DEP=$(AppPath)
+C:\WINDOWS\system32\trainlib.exp=$(AppPath)
+D:\VB Projects\RR2\liesmich.txt=$(AppPath)
+
+[Package|RouteRiter5040|Configure Shared Files]
+Applicable=Yes
+D:\VB Projects\Route_Riter\Route_Riter.exe=No
+D:\VB Projects\Route_Riter\stuffitpack2\stuffit.ref=No
+D:\VB Projects\Route_Riter\route_riter.chm=No
+D:\VB Projects\Route_Riter\langDutch.txt=No
+D:\VB Projects\Route_Riter\LangNorwegian.txt=No
+D:\VB Projects\Route_Riter\langSpanish.txt=No
+D:\VB Projects\Route_Riter\language.txt=No
+D:\VB Projects\Route_Riter\newshape.tms=No
+D:\VB Projects\Route_Riter\SetupFiles\RefFileStart.txt=No
+D:\VB Projects\Route_Riter\SetupFiles\acecomp.exe=Yes
+D:\VB Projects\Route_Riter\SetupFiles\KeepMe.txt=No
+D:\VB Projects\Route_Riter\Route_Riter2.exe=No
+D:\VB Projects\Route_Riter\SetupFiles\DecompW.exe=No
+D:\VB Projects\Route_Riter\SetupFiles\Tokens.dat=No
+D:\VB Projects\Route_Riter\SetupFiles\WTokens.dat=Yes
+D:\VB Projects\Route_Riter\SetupFiles\zlib.dll=Yes
+D:\VB Projects\Route_Riter\SetupFiles\WBDCH34I.DLL=Yes
+D:\VB Projects\Route_Riter\SetupFiles\WWHUG34I.DLL=Yes
+D:\VB Projects\Route_Riter\SetupFiles\DecompT.exe=No
+D:\VB Projects\Route_Riter\SetupFiles\terrain.dat=Yes
+D:\VB Projects\Route_Riter\Langdanish.txt=No
+D:\VB Projects\Route_Riter\Lang_Spanish.txt=No
+D:\VB Projects\Route_Riter\Lang_Danish.txt=No
+D:\VB Projects\Route_Riter\Lang_Dutch.txt=No
+D:\VB Projects\Route_Riter\Lang_English.txt=No
+D:\VB Projects\Route_Riter\Lang_French.txt=No
+D:\VB Projects\Route_Riter\Lang_Norwegian.txt=No
+D:\VB Projects\Route_Riter\stuffitpack2\EZstuff4.bat=No
+D:\VB Projects\Route_Riter\Suggested_ReadMe.txt=No
+D:\VB Projects\RR2\Route_Riter.exe=No
+D:\VB Projects\RR4\Route_Riter.exe=No
+D:\VB Projects\Route_Riter\stuffitpack2a.zip=No
+D:\VB Projects\Route_Riter\Route_RiterFR.chm=No
+D:\VB Projects\Route_Riter\stuffitpack2a\stuffit.ref=No
+D:\VB Projects\Route_Riter\stuffit.ref=No
+D:\VB Projects\Route_Riter\StuffitPack.zip=No
+C:\WINDOWS\system32\mwgfxvb.dll=No
+D:\VB Projects\Route_Riter\mwacevb.dll=No
+D:\VB Projects\Route_Riter\SView.exe=No
+C:\WINDOWS\system32\mwace.dll=No
+D:\VB Projects\RR2\mwacevb.dll=Yes
+D:\VB Projects\RR2\TView.exe=No
+D:\VB Projects\RR2\SView.exe=No
+D:\VB Projects\RR2\Lang_Spanish.txt=No
+D:\VB Projects\RR2\Lang_Norwegian.txt=No
+D:\VB Projects\RR2\Lang_Danish.txt=No
+D:\VB Projects\RR2\Lang_Deutsch.txt=No
+D:\VB Projects\RR2\Lang_Dutch.txt=No
+D:\VB Projects\RR2\Lang_English.txt=No
+D:\VB Projects\RR2\Lang_French.txt=No
+D:\VB Projects\RR2\mwace.dll=Yes
+D:\VB Projects\RR2\grid.bmp=No
+D:\VB Projects\RR2\sky.jpg=No
+D:\VB Projects\RR2\SView.chm=No
+D:\VB Projects\RR2\grass.bmp=No
+D:\VB Projects\RR2\StuffitPack.zip=No
+C:\WINDOWS\system32\trainlib.lib=No
+C:\WINDOWS\system32\trainlib.DEP=No
+C:\WINDOWS\system32\trainlib.exp=No
+D:\VB Projects\RR2\liesmich.txt=No
+
+[Package|RouteRiter5040|Distribution]
+Type=single
+Size=
+Title=Route_Riter
+
+[Package|RouteRiter5040|IconGroups]
+Group0=Route_Riter
+PrivateGroup0=-1
+Parent0=$(Programs)
+
+[Package|RouteRiter5040|Route_Riter]
+Icon1=Route_Riter.exe
+Title1=Route_Riter
+StartIn1=$(AppPath)
+Key1=Icon1
+Icon2=route_riter.chm
+Title2=RouteRiter Help
+StartIn2=$(AppPath)
+Key2=Icon3
+
+[Package|RouteRiter5040|Package]
+PackageFolder=D:\VB Projects\RR2\Package3
+ProjectFolder=D:\VB Projects\RR2
+ServerSideCab=
+File1=D:\VB Projects\RR2\Package3\setup.exe
+File2=D:\VB Projects\RR2\Package3\Setup.Lst
+File3=D:\VB Projects\RR2\Package3\Route_Riter.CAB
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz
+
+
+[Package|RouteRiter5212|Root]
+SubWizProgID=PDWizard.SetupPkgSubWiz
+BuildFolder=D:\VB Projects\RR2\Package4
+
+[Package|RouteRiter5212|Configure DAO ISAMs]
+Applicable=No
+
+[Package|RouteRiter5212|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|RouteRiter5212|Files Found]
+stuffit.ref=D:\VB Projects\Route_Riter\stuffit.ref
+
+[Package|RouteRiter5212|Files Released]
+route_riter.CHI=
+STKIT432.DLL=
+Tokens.dat=
+langdanish.txt=
+language.txt=
+langspanish.txt=
+langnorwegian.txt=
+langdutch.txt=
+zipdll.dll=
+unzdll.dll=
+zipit.dll=
+decompw.exe=
+Route_RiterFR.CHI=
+keepme.txt=
+newshape.tms=
+SView.CHI=
+
+[Package|RouteRiter5212|Missing Dependency Information]
+C:\WINDOWS\system32\vsflex7l.ocx=
+D:\VB Projects\Route_Riter\SetupFiles\DecompW.exe=
+D:\VB Projects\Route_Riter\SetupFiles\zlib.dll=
+D:\VB Projects\Route_Riter\SetupFiles\WBDCH34I.DLL=
+D:\VB Projects\Route_Riter\SetupFiles\WWHUG34I.DLL=
+C:\WINDOWS\system32\VSPRINT7.ocx=
+D:\VB Projects\Route_Riter\SetupFiles\DecompT.exe=
+D:\VB Code\DecompW\VBZip\VBZip_Control.ocx=
+D:\VB Projects\Route_Riter\Unzdll.dll=
+D:\VB Projects\Route_Riter\Zipdll.dll=
+C:\WINDOWS\system32\VBZip_Control.ocx=
+C:\Program Files\VideoSoft\Shared Files\VSPRINT7.ocx=
+C:\Program Files\VideoSoft\Shared Files\vsflex7L.ocx=
+C:\Program Files\Your Company Name\Your Product Name\vsflex7L.ocx=
+C:\Program Files\Your Company Name\Your Product Name\VSPRINT7.ocx=
+D:\SAWZip\SAWZip.tlb=
+C:\WINDOWS\system32\SAWZip.dll=
+C:\WINDOWS\system32\SAWZip.tlb=
+C:\WINDOWS\system32\STKIT432.DLL=
+C:\Program Files\VideoSoft\Shared Files\Vsflex7.ocx=
+D:\VB Code\SAWZipNG\SAWZipNG.tlb=
+D:\VB Code\SAWZipNG\SAWZipNG.dll=
+C:\WINDOWS\system32\mwacevb.dll=
+C:\WINDOWS\system32\mwgfxvb.dll=
+D:\VB Projects\Route_Riter\mwace.dll=
+D:\VB Projects\Route_Riter\SView.exe=
+D:\VB Projects\RR2\TView.exe=
+D:\VB Projects\RR2\SView.exe=
+C:\Program Files\MSTS Shape Viewer\trainlib.ocx=
+C:\WINDOWS\system32\dx8vb.dll=
+C:\WINDOWS\system32\Vsflex7.ocx=
+C:\WINDOWS\system32\SAWZipNG.tlb=
+D:\VB Projects\RR2\mwacevb.dll=
+D:\VB Projects\RR2\zlib.dll=
+D:\VB Projects\RR2\mwace.dll=
+C:\WINDOWS\system32\SAWZipNG.dll=
+D:\VB Projects\RR2\TGATool2.exe=
+D:\VB Projects\RR2\SViewRR.exe=
+
+[Package|RouteRiter5212|Out-of-Date Dependency Information]
+C:\WINDOWS\system32\COMDLG32.OCX=
+C:\WINDOWS\system32\scrrun.dll=
+C:\WINDOWS\system32\MSCOMCTL.OCX=
+
+[Package|RouteRiter5212|Files Added]
+d:\vb projects\route_riter\stuffit.ref=
+d:\vb projects\route_riter\route_riter.chm=
+d:\vb projects\route_riter\setupfiles\reffilestart.txt=
+d:\vb projects\route_riter\setupfiles\acecomp.exe=
+d:\vb projects\route_riter\setupfiles\zlib.dll=
+d:\vb projects\route_riter\setupfiles\wbdch34i.dll=
+d:\vb projects\route_riter\setupfiles\wtokens.dat=
+d:\vb projects\route_riter\setupfiles\wwhug34i.dll=
+d:\vb projects\route_riter\setupfiles\decompt.exe=
+d:\vb projects\route_riter\setupfiles\terrain.dat=
+d:\vb projects\route_riter\lang_spanish.txt=
+d:\vb projects\route_riter\lang_danish.txt=
+d:\vb projects\route_riter\lang_dutch.txt=
+d:\vb projects\route_riter\lang_english.txt=
+d:\vb projects\route_riter\lang_french.txt=
+d:\vb projects\route_riter\lang_norwegian.txt=
+d:\vb projects\route_riter\stuffitpack2\ezstuff4.bat=
+d:\vb projects\route_riter\suggested_readme.txt=
+c:\windows\system32\sawzip.dll=
+d:\vb projects\route_riter\stuffitpack2a.zip=
+d:\vb code\sawzipng\sawzipng.dll=
+D:\VB Projects\Route_Riter\Route_RiterFR.chm=
+D:\VB Code\SAWZipNG2\SAWZipNG.dll=
+D:\VB Projects\Route_Riter\StuffitPack.zip=
+C:\WINDOWS\system32\SAWZipNG.dll=
+D:\VB Projects\Route_Riter\mwace.dll=
+D:\VB Projects\Route_Riter\SView.exe=
+C:\WINDOWS\system32\mwace.dll=
+D:\VB Projects\RR2\TView.exe=
+D:\VB Projects\RR2\SView.exe=
+D:\VB Projects\RR2\Lang_Spanish.txt=
+D:\VB Projects\RR2\Lang_Norwegian.txt=
+D:\VB Projects\RR2\Lang_Danish.txt=
+D:\VB Projects\RR2\Lang_Deutsch.txt=
+D:\VB Projects\RR2\Lang_Dutch.txt=
+D:\VB Projects\RR2\Lang_English.txt=
+D:\VB Projects\RR2\Lang_French.txt=
+D:\VB Projects\RR2\mwace.dll=
+D:\VB Projects\RR2\grid.bmp=
+D:\VB Projects\RR2\sky.jpg=
+D:\VB Projects\RR2\SView.chm=
+D:\VB Projects\RR2\grass.bmp=
+D:\VB Projects\RR2\StuffitPack.zip=
+C:\WINDOWS\system32\trainlib.lib=
+C:\WINDOWS\system32\trainlib.DEP=
+C:\WINDOWS\system32\trainlib.exp=
+D:\VB Projects\RR2\liesmich.txt=
+D:\VB Projects\RR2\Ballast.ace=
+D:\VB Projects\RR2\Blue Daze.jpg=
+D:\VB Projects\RR2\Blue Velvet Crush.jpg=
+D:\VB Projects\RR2\grassold.bmp=
+D:\VB Projects\RR2\Lang_français.txt=
+D:\VB Projects\RR2\PicFormat32.dll=
+D:\VB Projects\RR2\Midday vision.jpg=
+D:\VB Projects\RR2\Morning Bijou.jpg=
+D:\VB Projects\RR2\TGATool2.exe=
+D:\VB Projects\RR2\Summer's Day.jpg=
+D:\VB Projects\RR2\SViewRR.exe=
+D:\VB Projects\RR2\TC_Displaybase.s=
+C:\WINDOWS\system32\SAWZipNG.tlb=
+
+[Package|RouteRiter5212|Files Removed]
+c:\windows\system32\hh.exe=
+d:\vb projects\route_riter\setupfiles\keepme.txt=
+d:\vb projects\route_riter\zipit.dll=
+d:\vb projects\route_riter\zipdll.dll=
+c:\windows\system32\sawzip.dll=
+d:\vb projects\route_riter\newshape.tms=
+c:\windows\system32\msvcrt.dll=
+c:\windows\system32\mwgfxvb.dll=
+c:\windows\hh.exe=
+d:\vb projects\route_riter\setupfiles\acecomp.exe=
+d:\program files\microsoft visual studio\vb98\wizards\pdwizard\redist\msvcrt.dll=
+
+[Package|RouteRiter5212|Files In Project]
+C:\WINDOWS\SYSTEM32\msvbvm60.dll=Yes
+C:\WINDOWS\SYSTEM32\hhctrl.ocx=Yes
+C:\WINDOWS\SYSTEM32\itss.dll=Yes
+C:\WINDOWS\SYSTEM32\itircl.dll=Yes
+C:\WINDOWS\SYSTEM32\RICHTX32.OCX=Yes
+C:\WINDOWS\SYSTEM32\mscomctl.ocx=Yes
+C:\WINDOWS\SYSTEM32\COMDLG32.OCX=Yes
+C:\WINDOWS\SYSTEM32\VB6STKIT.DLL=Yes
+D:\VB Projects\Route_Riter\route_riter.chm=Yes
+D:\VB Projects\Route_Riter\SetupFiles\RefFileStart.txt=Yes
+D:\VB Projects\Route_Riter\SetupFiles\acecomp.exe=Yes
+C:\WINDOWS\system32\TABCTL32.OCX=Yes
+C:\WINDOWS\system32\COMCTL32.OCX=Yes
+C:\WINDOWS\system32\STKIT432.DLL=Yes
+C:\WINDOWS\system32\Vsflex7.ocx=Yes
+C:\WINDOWS\system32\scrrun.dll=Yes
+D:\VB Projects\Route_Riter\stuffit.ref=Yes
+C:\WINDOWS\system32\mwgfxvb.dll=Yes
+C:\WINDOWS\system32\SAWZipNG.dll=Yes
+D:\VB Projects\RR2\Route_Riter.exe=Yes
+D:\VB Projects\RR2\zlib.dll=Yes
+D:\VB Projects\RR2\mwacevb.dll=Yes
+D:\VB Projects\RR2\Lang_Spanish.txt=Yes
+D:\VB Projects\RR2\Lang_Norwegian.txt=Yes
+D:\VB Projects\RR2\Lang_Danish.txt=Yes
+D:\VB Projects\RR2\Lang_Dutch.txt=Yes
+D:\VB Projects\RR2\Lang_English.txt=Yes
+D:\VB Projects\RR2\grid.bmp=Yes
+D:\VB Projects\RR2\grass.bmp=Yes
+D:\VB Projects\RR2\StuffitPack.zip=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+C:\WINDOWS\system32\VSPRINT7.ocx=Yes
+C:\WINDOWS\system32\vsflex7L.ocx=Yes
+C:\WINDOWS\system32\dx8vb.dll=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\RICHED32.DLL=Yes
+C:\Program Files\MSTS Shape Viewer\trainlib.ocx=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
+D:\VB Projects\RR2\Lang_Deutsch.txt=Yes
+D:\VB Projects\RR2\liesmich.txt=Yes
+C:\WINDOWS\system32\hh.exe=No
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MSVCRT.DLL=No
+D:\VB Projects\RR2\Ballast.ace=Yes
+D:\VB Projects\RR2\Blue Daze.jpg=Yes
+D:\VB Projects\RR2\Blue Velvet Crush.jpg=Yes
+D:\VB Projects\RR2\grassold.bmp=Yes
+D:\VB Projects\RR2\Lang_français.txt=Yes
+D:\VB Projects\RR2\PicFormat32.dll=Yes
+D:\VB Projects\RR2\Midday vision.jpg=Yes
+D:\VB Projects\RR2\Morning Bijou.jpg=Yes
+D:\VB Projects\RR2\TGATool2.exe=Yes
+D:\VB Projects\RR2\Summer's Day.jpg=Yes
+D:\VB Projects\RR2\SViewRR.exe=Yes
+D:\VB Projects\RR2\TC_Displaybase.s=Yes
+C:\WINDOWS\system32\SAWZipNG.tlb=Yes
+
+[Package|RouteRiter5212|Configure Registry Files]
+Applicable=No
+
+[Package|RouteRiter5212|Configure Remote Servers]
+Applicable=No
+
+[Package|RouteRiter5212|Install Locations]
+D:\VB Projects\Route_Riter\Route_Riter.exe=$(AppPath)
+C:\WINDOWS\SYSTEM32\msvbvm60.dll=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM32\STKIT432.DLL=$(WinSysPath)
+C:\WINDOWS\SYSTEM32\hhctrl.ocx=$(WinSysPath)
+C:\WINDOWS\SYSTEM32\itss.dll=$(WinSysPath)
+C:\WINDOWS\SYSTEM32\itircl.dll=$(WinSysPath)
+C:\WINDOWS\SYSTEM32\hh.exe=$(WinSysPath)
+C:\WINDOWS\SYSTEM32\RICHTX32.OCX=$(WinSysPath)
+C:\WINDOWS\SYSTEM32\mscomctl.ocx=$(WinSysPath)
+C:\WINDOWS\SYSTEM32\COMDLG32.OCX=$(WinSysPath)
+C:\WINDOWS\SYSTEM32\VsVIEW3.ocx=$(WinSysPath)
+C:\WINDOWS\SYSTEM32\Vsflex7L.ocx=$(WinSysPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+C:\WINDOWS\SYSTEM32\VB6STKIT.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+D:\VB Projects\Route_Riter\stuffitpack2\stuffit.ref=$(AppPath)\stuffitpack2
+D:\VB Projects\Route_Riter\route_riter.chm=$(AppPath)
+D:\VB Projects\Route_Riter\langDutch.txt=$(AppPath)
+D:\VB Projects\Route_Riter\LangNorwegian.txt=$(AppPath)
+D:\VB Projects\Route_Riter\langSpanish.txt=$(AppPath)
+D:\VB Projects\Route_Riter\language.txt=$(AppPath)
+D:\VB Projects\Route_Riter\newshape.tms=$(AppPath)
+D:\VB Projects\Route_Riter\SetupFiles\RefFileStart.txt=$(AppPath)\SetupFiles
+D:\VB Projects\Route_Riter\SetupFiles\acecomp.exe=$(AppPath)\SetupFiles
+D:\VB Projects\Route_Riter\SetupFiles\KeepMe.txt=$(AppPath)\SetupFiles
+D:\VB Projects\Route_Riter\Route_Riter2.exe=$(AppPath)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=$(WinSysPathSysFile)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=$(WinSysPathSysFile)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=$(WinSysPathSysFile)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=$(WinSysPathSysFile)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\hh.exe=$(WinSysPath)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\RICHED32.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\system32\mfc42.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\msvcrt.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\TABCTL32.OCX=$(WinSysPath)
+C:\WINDOWS\system32\COMCTL32.OCX=$(WinSysPath)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+D:\VB Projects\Route_Riter\SetupFiles\DecompW.exe=$(AppPath)\SetupFiles
+D:\VB Projects\Route_Riter\SetupFiles\Tokens.dat=$(AppPath)\SetupFiles
+D:\VB Projects\Route_Riter\SetupFiles\zlib.dll=$(WinSysPath)
+D:\VB Projects\Route_Riter\SetupFiles\WBDCH34I.DLL=$(AppPath)\setupfiles
+D:\VB Projects\Route_Riter\SetupFiles\WTokens.dat=$(AppPath)\setupfiles
+D:\VB Projects\Route_Riter\SetupFiles\WWHUG34I.DLL=$(AppPath)\setupfiles
+C:\WINDOWS\system32\VSPRINT7.ocx=$(WinSysPath)
+D:\VB Projects\Route_Riter\SetupFiles\DecompT.exe=$(AppPath)\SetupFiles
+D:\VB Projects\Route_Riter\SetupFiles\terrain.dat=$(AppPath)\SetupFiles
+D:\VB Projects\Route_Riter\Langdanish.txt=$(AppPath)
+D:\VB Code\DecompW\VBZip\VBZip_Control.ocx=$(WinSysPath)
+D:\VB Projects\Route_Riter\Zipit.dll=$(WinSysPath)
+D:\VB Projects\Route_Riter\Unzdll.dll=$(WinSysPath)
+D:\VB Projects\Route_Riter\Zipdll.dll=$(WinSysPath)
+C:\WINDOWS\system32\VBZip_Control.ocx=$(WinSysPath)
+D:\VB Projects\Route_Riter\Lang_Spanish.txt=$(AppPath)
+D:\VB Projects\Route_Riter\Lang_Danish.txt=$(AppPath)
+D:\VB Projects\Route_Riter\Lang_Dutch.txt=$(AppPath)
+D:\VB Projects\Route_Riter\Lang_English.txt=$(AppPath)
+D:\VB Projects\Route_Riter\Lang_French.txt=$(AppPath)
+D:\VB Projects\Route_Riter\Lang_Norwegian.txt=$(AppPath)
+D:\VB Projects\Route_Riter\stuffitpack2\EZstuff4.bat=$(AppPath)\stuffitpack2
+D:\Program Files\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=$(WinSysPathSysFile)
+D:\Program Files\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=$(WinSysPathSysFile)
+D:\Program Files\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=$(WinSysPathSysFile)
+D:\Program Files\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=$(WinSysPathSysFile)
+D:\Program Files\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\Program Files\VideoSoft\Shared Files\vsflex7L.ocx=$(WinSysPath)
+C:\Program Files\VideoSoft\Shared Files\VSPRINT7.ocx=$(WinSysPath)
+D:\Program Files\VB98\Wizards\PDWizard\Redist\RICHED32.DLL=$(WinSysPathSysFile)
+D:\Program Files\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+D:\Program Files\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+D:\Program Files\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+D:\VB Projects\Route_Riter\Suggested_ReadMe.txt=$(AppPath)
+C:\Program Files\Your Company Name\Your Product Name\VSPRINT7.ocx=$(WinSysPath)
+C:\Program Files\Your Company Name\Your Product Name\vsflex7L.ocx=$(WinSysPath)
+D:\VB Projects\RR2\Route_Riter.exe=$(AppPath)
+D:\SAWZip\SAWZip.tlb=$(WinSysPath)
+C:\WINDOWS\system32\SAWZip.dll=$(WinSysPath)
+D:\VB Projects\RR4\Route_Riter.exe=$(AppPath)
+C:\WINDOWS\system32\SAWZip.tlb=$(WinSysPath)
+D:\VB Projects\Route_Riter\stuffitpack2a.zip=$(AppPath)
+D:\VB Code\SAWZipNG\SAWZipNG.tlb=$(WinSysPath)
+C:\Program Files\VideoSoft\Shared Files\Vsflex7.ocx=$(WinSysPath)
+D:\VB Code\SAWZipNG\SAWZipNG.dll=$(WinSysPath)
+D:\VB Projects\Route_Riter\zlib.dll=$(WinSysPath)
+D:\VB Code\SAWZipNG2\SAWZipNG.tlb=$(WinSysPath)
+C:\WINDOWS\system32\Vsflex7.ocx=$(WinSysPath)
+C:\WINDOWS\system32\scrrun.dll=$(WinSysPath)
+D:\VB Projects\Route_Riter\Route_RiterFR.chm=$(AppPath)
+D:\VB Code\SAWZipNG2\SAWZipNG.dll=$(WinSysPath)
+C:\WINDOWS\system32\SAWZipNG.tlb=$(WinSysPath)
+D:\VB Projects\Route_Riter\stuffitpack2a\stuffit.ref=$(AppPath)\stuffitpack2a
+D:\VB Projects\Route_Riter\stuffit.ref=$(AppPath)
+D:\VB Projects\Route_Riter\StuffitPack.zip=$(AppPath)
+C:\WINDOWS\system32\SAWZipNG.dll=$(WinSysPath)
+C:\WINDOWS\system32\mwacevb.dll=$(WinSysPath)
+D:\VB Projects\Route_Riter\mwace.dll=$(WinSysPath)
+C:\WINDOWS\system32\mwgfxvb.dll=$(WinSysPath)
+D:\VB Projects\Route_Riter\mwacevb.dll=$(AppPath)
+D:\VB Code\SAWZipNG2_new\SAWZipNG.tlb=$(WinSysPath)
+D:\VB Projects\Route_Riter\SView.exe=$(AppPath)
+C:\WINDOWS\system32\mwace.dll=$(AppPath)
+D:\VB Projects\RR2\zlib.dll=$(WinSysPath)
+D:\VB Projects\RR2\mwacevb.dll=$(WinSysPath)
+D:\VB Projects\RR2\TView.exe=$(AppPath)
+D:\VB Projects\RR2\SView.exe=$(AppPath)
+D:\VB Projects\RR2\Lang_Spanish.txt=$(AppPath)
+D:\VB Projects\RR2\Lang_Norwegian.txt=$(AppPath)
+D:\VB Projects\RR2\Lang_Danish.txt=$(AppPath)
+D:\VB Projects\RR2\Lang_Deutsch.txt=$(AppPath)
+D:\VB Projects\RR2\Lang_Dutch.txt=$(AppPath)
+D:\VB Projects\RR2\Lang_English.txt=$(AppPath)
+D:\VB Projects\RR2\Lang_French.txt=$(AppPath)
+D:\VB Projects\RR2\mwace.dll=$(AppPath)
+D:\VB Projects\RR2\grid.bmp=$(AppPath)
+D:\VB Projects\RR2\sky.jpg=$(AppPath)
+D:\VB Projects\RR2\SView.chm=$(AppPath)
+D:\VB Projects\RR2\grass.bmp=$(AppPath)
+D:\VB Projects\RR2\StuffitPack.zip=$(AppPath)
+C:\WINDOWS\system32\dx8vb.dll=$(WinSysPath)
+C:\Program Files\MSTS Shape Viewer\trainlib.ocx=$(WinSysPath)
+C:\WINDOWS\system32\trainlib.lib=$(AppPath)
+C:\WINDOWS\system32\trainlib.DEP=$(AppPath)
+C:\WINDOWS\system32\trainlib.exp=$(AppPath)
+D:\VB Projects\RR2\liesmich.txt=$(AppPath)
+D:\VB Projects\RR2\Ballast.ace=$(AppPath)
+D:\VB Projects\RR2\Blue Daze.jpg=$(AppPath)
+D:\VB Projects\RR2\Blue Velvet Crush.jpg=$(AppPath)
+D:\VB Projects\RR2\grassold.bmp=$(AppPath)
+D:\VB Projects\RR2\Lang_français.txt=$(AppPath)
+D:\VB Projects\RR2\PicFormat32.dll=$(WinSysPath)
+D:\VB Projects\RR2\Midday vision.jpg=$(AppPath)
+D:\VB Projects\RR2\Morning Bijou.jpg=$(AppPath)
+D:\VB Projects\RR2\TGATool2.exe=$(AppPath)
+D:\VB Projects\RR2\Summer's Day.jpg=$(AppPath)
+D:\VB Projects\RR2\SViewRR.exe=$(AppPath)
+D:\VB Projects\RR2\TC_Displaybase.s=$(AppPath)
+
+[Package|RouteRiter5212|Configure Shared Files]
+Applicable=Yes
+D:\VB Projects\Route_Riter\Route_Riter.exe=No
+D:\VB Projects\Route_Riter\stuffitpack2\stuffit.ref=No
+D:\VB Projects\Route_Riter\route_riter.chm=No
+D:\VB Projects\Route_Riter\langDutch.txt=No
+D:\VB Projects\Route_Riter\LangNorwegian.txt=No
+D:\VB Projects\Route_Riter\langSpanish.txt=No
+D:\VB Projects\Route_Riter\language.txt=No
+D:\VB Projects\Route_Riter\newshape.tms=No
+D:\VB Projects\Route_Riter\SetupFiles\RefFileStart.txt=No
+D:\VB Projects\Route_Riter\SetupFiles\acecomp.exe=Yes
+D:\VB Projects\Route_Riter\SetupFiles\KeepMe.txt=No
+D:\VB Projects\Route_Riter\Route_Riter2.exe=No
+D:\VB Projects\Route_Riter\SetupFiles\DecompW.exe=No
+D:\VB Projects\Route_Riter\SetupFiles\Tokens.dat=No
+D:\VB Projects\Route_Riter\SetupFiles\WTokens.dat=Yes
+D:\VB Projects\Route_Riter\SetupFiles\zlib.dll=Yes
+D:\VB Projects\Route_Riter\SetupFiles\WBDCH34I.DLL=Yes
+D:\VB Projects\Route_Riter\SetupFiles\WWHUG34I.DLL=Yes
+D:\VB Projects\Route_Riter\SetupFiles\DecompT.exe=No
+D:\VB Projects\Route_Riter\SetupFiles\terrain.dat=Yes
+D:\VB Projects\Route_Riter\Langdanish.txt=No
+D:\VB Projects\Route_Riter\Lang_Spanish.txt=No
+D:\VB Projects\Route_Riter\Lang_Danish.txt=No
+D:\VB Projects\Route_Riter\Lang_Dutch.txt=No
+D:\VB Projects\Route_Riter\Lang_English.txt=No
+D:\VB Projects\Route_Riter\Lang_French.txt=No
+D:\VB Projects\Route_Riter\Lang_Norwegian.txt=No
+D:\VB Projects\Route_Riter\stuffitpack2\EZstuff4.bat=No
+D:\VB Projects\Route_Riter\Suggested_ReadMe.txt=No
+D:\VB Projects\RR2\Route_Riter.exe=No
+D:\VB Projects\RR4\Route_Riter.exe=No
+D:\VB Projects\Route_Riter\stuffitpack2a.zip=No
+D:\VB Projects\Route_Riter\Route_RiterFR.chm=No
+D:\VB Projects\Route_Riter\stuffitpack2a\stuffit.ref=No
+D:\VB Projects\Route_Riter\stuffit.ref=No
+D:\VB Projects\Route_Riter\StuffitPack.zip=No
+C:\WINDOWS\system32\mwgfxvb.dll=No
+D:\VB Projects\Route_Riter\mwacevb.dll=No
+D:\VB Projects\Route_Riter\SView.exe=No
+C:\WINDOWS\system32\mwace.dll=No
+D:\VB Projects\RR2\mwacevb.dll=Yes
+D:\VB Projects\RR2\TView.exe=No
+D:\VB Projects\RR2\SView.exe=No
+D:\VB Projects\RR2\Lang_Spanish.txt=No
+D:\VB Projects\RR2\Lang_Norwegian.txt=No
+D:\VB Projects\RR2\Lang_Danish.txt=No
+D:\VB Projects\RR2\Lang_Deutsch.txt=No
+D:\VB Projects\RR2\Lang_Dutch.txt=No
+D:\VB Projects\RR2\Lang_English.txt=No
+D:\VB Projects\RR2\Lang_French.txt=No
+D:\VB Projects\RR2\mwace.dll=Yes
+D:\VB Projects\RR2\grid.bmp=No
+D:\VB Projects\RR2\sky.jpg=No
+D:\VB Projects\RR2\SView.chm=No
+D:\VB Projects\RR2\grass.bmp=No
+D:\VB Projects\RR2\StuffitPack.zip=No
+C:\WINDOWS\system32\trainlib.lib=No
+C:\WINDOWS\system32\trainlib.DEP=No
+C:\WINDOWS\system32\trainlib.exp=No
+D:\VB Projects\RR2\liesmich.txt=No
+D:\VB Projects\RR2\Ballast.ace=No
+D:\VB Projects\RR2\Blue Daze.jpg=No
+D:\VB Projects\RR2\Blue Velvet Crush.jpg=No
+D:\VB Projects\RR2\grassold.bmp=No
+D:\VB Projects\RR2\Lang_français.txt=No
+D:\VB Projects\RR2\Midday vision.jpg=No
+D:\VB Projects\RR2\Morning Bijou.jpg=No
+D:\VB Projects\RR2\TGATool2.exe=No
+D:\VB Projects\RR2\Summer's Day.jpg=No
+D:\VB Projects\RR2\SViewRR.exe=No
+D:\VB Projects\RR2\TC_Displaybase.s=No
+
+[Package|RouteRiter5212|Distribution]
+Type=single
+Size=
+Title=Route_Riter
+
+[Package|RouteRiter5212|IconGroups]
+Group0=Route_Riter
+PrivateGroup0=-1
+Parent0=$(Programs)
+
+[Package|RouteRiter5212|Route_Riter]
+Icon1=Route_Riter.exe
+Title1=Route_Riter
+StartIn1=$(AppPath)
+Key1=Icon1
+Icon2=route_riter.chm
+Title2=RouteRiter Help
+StartIn2=$(AppPath)
+Key2=Icon3
+
+[Package|RouteRiter5212|Package]
+PackageFolder=D:\VB Projects\RR2\Package4
+ProjectFolder=D:\VB Projects\RR2
+ServerSideCab=
+File1=D:\VB Projects\RR2\Package4\setup.exe
+File2=D:\VB Projects\RR2\Package4\Setup.Lst
+File3=D:\VB Projects\RR2\Package4\Route_Riter.CAB
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz
+
+
+[Package|Dep File 1|Root]
+SubWizProgID=PDWizard.DepPkgSubWiz
+BuildFolder=D:\VB Projects\RR2\Package5
+
+[Package|Dep File 1|Configure DAO ISAMs]
+Applicable=No
+
+[Package|Dep File 1|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|Dep File 1|Files Found]
+stuffit.ref=D:\VB Projects\Route_Riter\stuffit.ref
+
+[Package|Dep File 1|Files Released]
+route_riter.CHI=
+STKIT432.DLL=
+Tokens.dat=
+langdanish.txt=
+language.txt=
+langspanish.txt=
+langnorwegian.txt=
+langdutch.txt=
+zipdll.dll=
+unzdll.dll=
+zipit.dll=
+decompw.exe=
+Route_RiterFR.CHI=
+keepme.txt=
+newshape.tms=
+SView.CHI=
+
+[Package|Dep File 1|Missing Dependency Information]
+C:\WINDOWS\system32\vsflex7l.ocx=
+D:\VB Projects\Route_Riter\SetupFiles\DecompW.exe=
+D:\VB Projects\Route_Riter\SetupFiles\zlib.dll=
+D:\VB Projects\Route_Riter\SetupFiles\WBDCH34I.DLL=
+D:\VB Projects\Route_Riter\SetupFiles\WWHUG34I.DLL=
+C:\WINDOWS\system32\VSPRINT7.ocx=
+D:\VB Projects\Route_Riter\SetupFiles\DecompT.exe=
+D:\VB Code\DecompW\VBZip\VBZip_Control.ocx=
+D:\VB Projects\Route_Riter\Unzdll.dll=
+D:\VB Projects\Route_Riter\Zipdll.dll=
+C:\WINDOWS\system32\VBZip_Control.ocx=
+C:\Program Files\VideoSoft\Shared Files\VSPRINT7.ocx=
+C:\Program Files\VideoSoft\Shared Files\vsflex7L.ocx=
+C:\Program Files\Your Company Name\Your Product Name\vsflex7L.ocx=
+C:\Program Files\Your Company Name\Your Product Name\VSPRINT7.ocx=
+D:\SAWZip\SAWZip.tlb=
+C:\WINDOWS\system32\SAWZip.dll=
+C:\WINDOWS\system32\SAWZip.tlb=
+C:\WINDOWS\system32\STKIT432.DLL=
+C:\Program Files\VideoSoft\Shared Files\Vsflex7.ocx=
+D:\VB Code\SAWZipNG\SAWZipNG.tlb=
+D:\VB Code\SAWZipNG\SAWZipNG.dll=
+C:\WINDOWS\system32\mwacevb.dll=
+C:\WINDOWS\system32\mwgfxvb.dll=
+D:\VB Projects\Route_Riter\mwace.dll=
+D:\VB Projects\Route_Riter\SView.exe=
+D:\VB Projects\RR2\TView.exe=
+D:\VB Projects\RR2\SView.exe=
+C:\Program Files\MSTS Shape Viewer\trainlib.ocx=
+C:\WINDOWS\system32\dx8vb.dll=
+C:\WINDOWS\system32\Vsflex7.ocx=
+C:\WINDOWS\system32\SAWZipNG.tlb=
+D:\VB Projects\RR2\mwacevb.dll=
+D:\VB Projects\RR2\zlib.dll=
+D:\VB Projects\RR2\mwace.dll=
+C:\WINDOWS\system32\SAWZipNG.dll=
+D:\VB Projects\RR2\TGATool2.exe=
+D:\VB Projects\RR2\SViewRR.exe=
+C:\WINDOWS\system32\mwgfx.dll=
+
+[Package|Dep File 1|Out-of-Date Dependency Information]
+C:\WINDOWS\system32\COMDLG32.OCX=
+C:\WINDOWS\system32\scrrun.dll=
+C:\WINDOWS\system32\MSCOMCTL.OCX=
+C:\WINDOWS\system32\trainlib.ocx=
+
+[Package|Dep File 1|Files Added]
+d:\vb projects\route_riter\stuffit.ref=
+d:\vb projects\route_riter\route_riter.chm=
+d:\vb projects\route_riter\setupfiles\reffilestart.txt=
+d:\vb projects\route_riter\setupfiles\acecomp.exe=
+d:\vb projects\route_riter\setupfiles\zlib.dll=
+d:\vb projects\route_riter\setupfiles\wbdch34i.dll=
+d:\vb projects\route_riter\setupfiles\wtokens.dat=
+d:\vb projects\route_riter\setupfiles\wwhug34i.dll=
+d:\vb projects\route_riter\setupfiles\decompt.exe=
+d:\vb projects\route_riter\setupfiles\terrain.dat=
+d:\vb projects\route_riter\lang_spanish.txt=
+d:\vb projects\route_riter\lang_danish.txt=
+d:\vb projects\route_riter\lang_dutch.txt=
+d:\vb projects\route_riter\lang_english.txt=
+d:\vb projects\route_riter\lang_french.txt=
+d:\vb projects\route_riter\lang_norwegian.txt=
+d:\vb projects\route_riter\stuffitpack2\ezstuff4.bat=
+d:\vb projects\route_riter\suggested_readme.txt=
+c:\windows\system32\sawzip.dll=
+d:\vb projects\route_riter\stuffitpack2a.zip=
+d:\vb code\sawzipng\sawzipng.dll=
+D:\VB Projects\Route_Riter\Route_RiterFR.chm=
+D:\VB Code\SAWZipNG2\SAWZipNG.dll=
+D:\VB Projects\Route_Riter\StuffitPack.zip=
+C:\WINDOWS\system32\SAWZipNG.dll=
+D:\VB Projects\Route_Riter\mwace.dll=
+D:\VB Projects\Route_Riter\SView.exe=
+C:\WINDOWS\system32\mwace.dll=
+D:\VB Projects\RR2\TView.exe=
+D:\VB Projects\RR2\SView.exe=
+D:\VB Projects\RR2\Lang_Spanish.txt=
+D:\VB Projects\RR2\Lang_Norwegian.txt=
+D:\VB Projects\RR2\Lang_Danish.txt=
+D:\VB Projects\RR2\Lang_Deutsch.txt=
+D:\VB Projects\RR2\Lang_Dutch.txt=
+D:\VB Projects\RR2\Lang_English.txt=
+D:\VB Projects\RR2\Lang_French.txt=
+D:\VB Projects\RR2\mwace.dll=
+D:\VB Projects\RR2\grid.bmp=
+D:\VB Projects\RR2\sky.jpg=
+D:\VB Projects\RR2\SView.chm=
+D:\VB Projects\RR2\grass.bmp=
+D:\VB Projects\RR2\StuffitPack.zip=
+C:\WINDOWS\system32\trainlib.lib=
+C:\WINDOWS\system32\trainlib.DEP=
+C:\WINDOWS\system32\trainlib.exp=
+D:\VB Projects\RR2\liesmich.txt=
+D:\VB Projects\RR2\Ballast.ace=
+D:\VB Projects\RR2\Blue Daze.jpg=
+D:\VB Projects\RR2\Blue Velvet Crush.jpg=
+D:\VB Projects\RR2\grassold.bmp=
+D:\VB Projects\RR2\Lang_français.txt=
+D:\VB Projects\RR2\PicFormat32.dll=
+D:\VB Projects\RR2\Midday vision.jpg=
+D:\VB Projects\RR2\Morning Bijou.jpg=
+D:\VB Projects\RR2\TGATool2.exe=
+D:\VB Projects\RR2\Summer's Day.jpg=
+D:\VB Projects\RR2\SViewRR.exe=
+D:\VB Projects\RR2\TC_Displaybase.s=
+C:\WINDOWS\system32\SAWZipNG.tlb=
+D:\VB Projects\RR2\Rails.ace=
+D:\VB Projects\RR2\skyNSWE.jpg=
+C:\WINDOWS\system32\mwgfx.dll=
+
+[Package|Dep File 1|Files Removed]
+c:\windows\system32\hh.exe=
+d:\vb projects\route_riter\setupfiles\keepme.txt=
+d:\vb projects\route_riter\zipit.dll=
+d:\vb projects\route_riter\zipdll.dll=
+c:\windows\system32\sawzip.dll=
+d:\vb projects\route_riter\newshape.tms=
+c:\windows\system32\msvcrt.dll=
+c:\windows\hh.exe=
+d:\vb projects\route_riter\setupfiles\acecomp.exe=
+d:\program files\microsoft visual studio\vb98\wizards\pdwizard\redist\msvcrt.dll=
+
+[Package|Dep File 1|Files In Project]
+C:\WINDOWS\SYSTEM32\msvbvm60.dll=Yes
+C:\WINDOWS\SYSTEM32\hhctrl.ocx=Yes
+C:\WINDOWS\SYSTEM32\itss.dll=Yes
+C:\WINDOWS\SYSTEM32\itircl.dll=Yes
+C:\WINDOWS\SYSTEM32\RICHTX32.OCX=Yes
+C:\WINDOWS\SYSTEM32\mscomctl.ocx=Yes
+C:\WINDOWS\SYSTEM32\COMDLG32.OCX=Yes
+D:\VB Projects\Route_Riter\route_riter.chm=Yes
+D:\VB Projects\Route_Riter\SetupFiles\RefFileStart.txt=Yes
+D:\VB Projects\Route_Riter\SetupFiles\acecomp.exe=No
+C:\WINDOWS\system32\TABCTL32.OCX=Yes
+C:\WINDOWS\system32\COMCTL32.OCX=Yes
+C:\WINDOWS\system32\STKIT432.DLL=Yes
+C:\WINDOWS\system32\Vsflex7.ocx=Yes
+C:\WINDOWS\system32\scrrun.dll=Yes
+D:\VB Projects\Route_Riter\stuffit.ref=Yes
+C:\WINDOWS\system32\mwgfxvb.dll=Yes
+C:\WINDOWS\system32\SAWZipNG.dll=Yes
+D:\VB Projects\RR2\Route_Riter.exe=Yes
+D:\VB Projects\RR2\zlib.dll=Yes
+D:\VB Projects\RR2\mwacevb.dll=Yes
+D:\VB Projects\RR2\Lang_Spanish.txt=Yes
+D:\VB Projects\RR2\Lang_Norwegian.txt=Yes
+D:\VB Projects\RR2\Lang_Danish.txt=Yes
+D:\VB Projects\RR2\Lang_Dutch.txt=Yes
+D:\VB Projects\RR2\Lang_English.txt=Yes
+D:\VB Projects\RR2\grid.bmp=Yes
+D:\VB Projects\RR2\grass.bmp=Yes
+D:\VB Projects\RR2\StuffitPack.zip=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+C:\WINDOWS\system32\VSPRINT7.ocx=Yes
+C:\WINDOWS\system32\vsflex7L.ocx=Yes
+C:\WINDOWS\system32\dx8vb.dll=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\RICHED32.DLL=Yes
+D:\VB Projects\RR2\Lang_Deutsch.txt=Yes
+D:\VB Projects\RR2\liesmich.txt=Yes
+C:\WINDOWS\system32\hh.exe=No
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MSVCRT.DLL=No
+D:\VB Projects\RR2\Ballast.ace=Yes
+D:\VB Projects\RR2\Blue Daze.jpg=Yes
+D:\VB Projects\RR2\Blue Velvet Crush.jpg=Yes
+D:\VB Projects\RR2\grassold.bmp=Yes
+D:\VB Projects\RR2\Lang_français.txt=Yes
+D:\VB Projects\RR2\PicFormat32.dll=Yes
+D:\VB Projects\RR2\Midday vision.jpg=Yes
+D:\VB Projects\RR2\Morning Bijou.jpg=Yes
+D:\VB Projects\RR2\TGATool2.exe=Yes
+D:\VB Projects\RR2\Summer's Day.jpg=Yes
+D:\VB Projects\RR2\SViewRR.exe=Yes
+C:\WINDOWS\system32\SAWZipNG.tlb=Yes
+C:\WINDOWS\system32\trainlib.ocx=Yes
+C:\WINDOWS\system32\msstkprp.dll=Yes
+D:\VB Projects\RR2\Rails.ace=Yes
+D:\VB Projects\RR2\TView.exe=Yes
+D:\VB Projects\RR2\sky.jpg=Yes
+D:\VB Projects\RR2\skyNSWE.jpg=Yes
+D:\VB Projects\RR2\SView.chm=Yes
+C:\WINDOWS\system32\mwace.dll=Yes
+C:\WINDOWS\system32\mwgfx.dll=Yes
+
+[Package|Dep File 1|Configure Registry Files]
+Applicable=No
+
+[Package|Dep File 1|Configure Remote Servers]
+Applicable=No
+
+[Package|Dep File 1|Install Locations]
+D:\VB Projects\Route_Riter\Route_Riter.exe=$(AppPath)
+C:\WINDOWS\SYSTEM32\msvbvm60.dll=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM32\STKIT432.DLL=$(WinSysPath)
+C:\WINDOWS\SYSTEM32\hhctrl.ocx=$(WinSysPath)
+C:\WINDOWS\SYSTEM32\itss.dll=$(WinSysPath)
+C:\WINDOWS\SYSTEM32\itircl.dll=$(WinSysPath)
+C:\WINDOWS\SYSTEM32\hh.exe=$(WinSysPath)
+C:\WINDOWS\SYSTEM32\RICHTX32.OCX=$(WinSysPath)
+C:\WINDOWS\SYSTEM32\mscomctl.ocx=$(WinSysPath)
+C:\WINDOWS\SYSTEM32\COMDLG32.OCX=$(WinSysPath)
+C:\WINDOWS\SYSTEM32\VsVIEW3.ocx=$(WinSysPath)
+C:\WINDOWS\SYSTEM32\Vsflex7L.ocx=$(WinSysPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+C:\WINDOWS\SYSTEM32\VB6STKIT.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+D:\VB Projects\Route_Riter\stuffitpack2\stuffit.ref=$(AppPath)\stuffitpack2
+D:\VB Projects\Route_Riter\route_riter.chm=$(AppPath)
+D:\VB Projects\Route_Riter\langDutch.txt=$(AppPath)
+D:\VB Projects\Route_Riter\LangNorwegian.txt=$(AppPath)
+D:\VB Projects\Route_Riter\langSpanish.txt=$(AppPath)
+D:\VB Projects\Route_Riter\language.txt=$(AppPath)
+D:\VB Projects\Route_Riter\newshape.tms=$(AppPath)
+D:\VB Projects\Route_Riter\SetupFiles\RefFileStart.txt=$(AppPath)\SetupFiles
+D:\VB Projects\Route_Riter\SetupFiles\acecomp.exe=$(AppPath)\SetupFiles
+D:\VB Projects\Route_Riter\SetupFiles\KeepMe.txt=$(AppPath)\SetupFiles
+D:\VB Projects\Route_Riter\Route_Riter2.exe=$(AppPath)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=$(WinSysPathSysFile)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=$(WinSysPathSysFile)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=$(WinSysPathSysFile)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=$(WinSysPathSysFile)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\hh.exe=$(WinSysPath)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\RICHED32.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\system32\mfc42.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\msvcrt.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\TABCTL32.OCX=$(WinSysPath)
+C:\WINDOWS\system32\COMCTL32.OCX=$(WinSysPath)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+D:\VB Projects\Route_Riter\SetupFiles\DecompW.exe=$(AppPath)\SetupFiles
+D:\VB Projects\Route_Riter\SetupFiles\Tokens.dat=$(AppPath)\SetupFiles
+D:\VB Projects\Route_Riter\SetupFiles\zlib.dll=$(WinSysPath)
+D:\VB Projects\Route_Riter\SetupFiles\WBDCH34I.DLL=$(AppPath)\setupfiles
+D:\VB Projects\Route_Riter\SetupFiles\WTokens.dat=$(AppPath)\setupfiles
+D:\VB Projects\Route_Riter\SetupFiles\WWHUG34I.DLL=$(AppPath)\setupfiles
+C:\WINDOWS\system32\VSPRINT7.ocx=$(WinSysPath)
+D:\VB Projects\Route_Riter\SetupFiles\DecompT.exe=$(AppPath)\SetupFiles
+D:\VB Projects\Route_Riter\SetupFiles\terrain.dat=$(AppPath)\SetupFiles
+D:\VB Projects\Route_Riter\Langdanish.txt=$(AppPath)
+D:\VB Code\DecompW\VBZip\VBZip_Control.ocx=$(WinSysPath)
+D:\VB Projects\Route_Riter\Zipit.dll=$(WinSysPath)
+D:\VB Projects\Route_Riter\Unzdll.dll=$(WinSysPath)
+D:\VB Projects\Route_Riter\Zipdll.dll=$(WinSysPath)
+C:\WINDOWS\system32\VBZip_Control.ocx=$(WinSysPath)
+D:\VB Projects\Route_Riter\Lang_Spanish.txt=$(AppPath)
+D:\VB Projects\Route_Riter\Lang_Danish.txt=$(AppPath)
+D:\VB Projects\Route_Riter\Lang_Dutch.txt=$(AppPath)
+D:\VB Projects\Route_Riter\Lang_English.txt=$(AppPath)
+D:\VB Projects\Route_Riter\Lang_French.txt=$(AppPath)
+D:\VB Projects\Route_Riter\Lang_Norwegian.txt=$(AppPath)
+D:\VB Projects\Route_Riter\stuffitpack2\EZstuff4.bat=$(AppPath)\stuffitpack2
+D:\Program Files\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=$(WinSysPathSysFile)
+D:\Program Files\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=$(WinSysPathSysFile)
+D:\Program Files\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=$(WinSysPathSysFile)
+D:\Program Files\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=$(WinSysPathSysFile)
+D:\Program Files\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\Program Files\VideoSoft\Shared Files\vsflex7L.ocx=$(WinSysPath)
+C:\Program Files\VideoSoft\Shared Files\VSPRINT7.ocx=$(WinSysPath)
+D:\Program Files\VB98\Wizards\PDWizard\Redist\RICHED32.DLL=$(WinSysPathSysFile)
+D:\Program Files\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+D:\Program Files\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+D:\Program Files\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+D:\VB Projects\Route_Riter\Suggested_ReadMe.txt=$(AppPath)
+C:\Program Files\Your Company Name\Your Product Name\VSPRINT7.ocx=$(WinSysPath)
+C:\Program Files\Your Company Name\Your Product Name\vsflex7L.ocx=$(WinSysPath)
+D:\VB Projects\RR2\Route_Riter.exe=$(AppPath)
+D:\SAWZip\SAWZip.tlb=$(WinSysPath)
+C:\WINDOWS\system32\SAWZip.dll=$(WinSysPath)
+D:\VB Projects\RR4\Route_Riter.exe=$(AppPath)
+C:\WINDOWS\system32\SAWZip.tlb=$(WinSysPath)
+D:\VB Projects\Route_Riter\stuffitpack2a.zip=$(AppPath)
+D:\VB Code\SAWZipNG\SAWZipNG.tlb=$(WinSysPath)
+C:\Program Files\VideoSoft\Shared Files\Vsflex7.ocx=$(WinSysPath)
+D:\VB Code\SAWZipNG\SAWZipNG.dll=$(WinSysPath)
+D:\VB Projects\Route_Riter\zlib.dll=$(WinSysPath)
+D:\VB Code\SAWZipNG2\SAWZipNG.tlb=$(WinSysPath)
+C:\WINDOWS\system32\Vsflex7.ocx=$(WinSysPath)
+C:\WINDOWS\system32\scrrun.dll=$(WinSysPath)
+D:\VB Projects\Route_Riter\Route_RiterFR.chm=$(AppPath)
+D:\VB Code\SAWZipNG2\SAWZipNG.dll=$(WinSysPath)
+C:\WINDOWS\system32\SAWZipNG.tlb=$(WinSysPath)
+D:\VB Projects\Route_Riter\stuffitpack2a\stuffit.ref=$(AppPath)\stuffitpack2a
+D:\VB Projects\Route_Riter\stuffit.ref=$(AppPath)
+D:\VB Projects\Route_Riter\StuffitPack.zip=$(AppPath)
+C:\WINDOWS\system32\SAWZipNG.dll=$(WinSysPath)
+C:\WINDOWS\system32\mwacevb.dll=$(WinSysPath)
+D:\VB Projects\Route_Riter\mwace.dll=$(WinSysPath)
+C:\WINDOWS\system32\mwgfxvb.dll=$(WinSysPath)
+D:\VB Projects\Route_Riter\mwacevb.dll=$(AppPath)
+D:\VB Code\SAWZipNG2_new\SAWZipNG.tlb=$(WinSysPath)
+D:\VB Projects\Route_Riter\SView.exe=$(AppPath)
+C:\WINDOWS\system32\mwace.dll=$(AppPath)
+D:\VB Projects\RR2\zlib.dll=$(WinSysPath)
+D:\VB Projects\RR2\mwacevb.dll=$(WinSysPath)
+D:\VB Projects\RR2\TView.exe=$(AppPath)
+D:\VB Projects\RR2\SView.exe=$(AppPath)
+D:\VB Projects\RR2\Lang_Spanish.txt=$(AppPath)
+D:\VB Projects\RR2\Lang_Norwegian.txt=$(AppPath)
+D:\VB Projects\RR2\Lang_Danish.txt=$(AppPath)
+D:\VB Projects\RR2\Lang_Deutsch.txt=$(AppPath)
+D:\VB Projects\RR2\Lang_Dutch.txt=$(AppPath)
+D:\VB Projects\RR2\Lang_English.txt=$(AppPath)
+D:\VB Projects\RR2\Lang_French.txt=$(AppPath)
+D:\VB Projects\RR2\mwace.dll=$(AppPath)
+D:\VB Projects\RR2\grid.bmp=$(AppPath)
+D:\VB Projects\RR2\sky.jpg=$(AppPath)
+D:\VB Projects\RR2\SView.chm=$(AppPath)
+D:\VB Projects\RR2\grass.bmp=$(AppPath)
+D:\VB Projects\RR2\StuffitPack.zip=$(AppPath)
+C:\WINDOWS\system32\dx8vb.dll=$(WinSysPath)
+C:\Program Files\MSTS Shape Viewer\trainlib.ocx=$(WinSysPath)
+C:\WINDOWS\system32\trainlib.lib=$(AppPath)
+C:\WINDOWS\system32\trainlib.DEP=$(AppPath)
+C:\WINDOWS\system32\trainlib.exp=$(AppPath)
+D:\VB Projects\RR2\liesmich.txt=$(AppPath)
+D:\VB Projects\RR2\Ballast.ace=$(AppPath)
+D:\VB Projects\RR2\Blue Daze.jpg=$(AppPath)
+D:\VB Projects\RR2\Blue Velvet Crush.jpg=$(AppPath)
+D:\VB Projects\RR2\grassold.bmp=$(AppPath)
+D:\VB Projects\RR2\Lang_français.txt=$(AppPath)
+D:\VB Projects\RR2\PicFormat32.dll=$(WinSysPath)
+D:\VB Projects\RR2\Midday vision.jpg=$(AppPath)
+D:\VB Projects\RR2\Morning Bijou.jpg=$(AppPath)
+D:\VB Projects\RR2\TGATool2.exe=$(AppPath)
+D:\VB Projects\RR2\Summer's Day.jpg=$(AppPath)
+D:\VB Projects\RR2\SViewRR.exe=$(AppPath)
+D:\VB Projects\RR2\TC_Displaybase.s=$(AppPath)
+C:\WINDOWS\system32\trainlib.ocx=$(AppPath)
+C:\WINDOWS\system32\msstkprp.dll=$(WinSysPath)
+D:\VB Projects\RR2\Rails.ace=$(AppPath)
+D:\VB Projects\RR2\skyNSWE.jpg=$(AppPath)
+C:\WINDOWS\system32\mwgfx.dll=$(AppPath)
+
+[Package|Dep File 1|Configure Shared Files]
+Applicable=Yes
+D:\VB Projects\Route_Riter\Route_Riter.exe=No
+D:\VB Projects\Route_Riter\stuffitpack2\stuffit.ref=No
+D:\VB Projects\Route_Riter\route_riter.chm=No
+D:\VB Projects\Route_Riter\langDutch.txt=No
+D:\VB Projects\Route_Riter\LangNorwegian.txt=No
+D:\VB Projects\Route_Riter\langSpanish.txt=No
+D:\VB Projects\Route_Riter\language.txt=No
+D:\VB Projects\Route_Riter\newshape.tms=No
+D:\VB Projects\Route_Riter\SetupFiles\RefFileStart.txt=No
+D:\VB Projects\Route_Riter\SetupFiles\acecomp.exe=Yes
+D:\VB Projects\Route_Riter\SetupFiles\KeepMe.txt=No
+D:\VB Projects\Route_Riter\Route_Riter2.exe=No
+D:\VB Projects\Route_Riter\SetupFiles\DecompW.exe=No
+D:\VB Projects\Route_Riter\SetupFiles\Tokens.dat=No
+D:\VB Projects\Route_Riter\SetupFiles\WTokens.dat=Yes
+D:\VB Projects\Route_Riter\SetupFiles\zlib.dll=Yes
+D:\VB Projects\Route_Riter\SetupFiles\WBDCH34I.DLL=Yes
+D:\VB Projects\Route_Riter\SetupFiles\WWHUG34I.DLL=Yes
+D:\VB Projects\Route_Riter\SetupFiles\DecompT.exe=No
+D:\VB Projects\Route_Riter\SetupFiles\terrain.dat=Yes
+D:\VB Projects\Route_Riter\Langdanish.txt=No
+D:\VB Projects\Route_Riter\Lang_Spanish.txt=No
+D:\VB Projects\Route_Riter\Lang_Danish.txt=No
+D:\VB Projects\Route_Riter\Lang_Dutch.txt=No
+D:\VB Projects\Route_Riter\Lang_English.txt=No
+D:\VB Projects\Route_Riter\Lang_French.txt=No
+D:\VB Projects\Route_Riter\Lang_Norwegian.txt=No
+D:\VB Projects\Route_Riter\stuffitpack2\EZstuff4.bat=No
+D:\VB Projects\Route_Riter\Suggested_ReadMe.txt=No
+D:\VB Projects\RR2\Route_Riter.exe=No
+D:\VB Projects\RR4\Route_Riter.exe=No
+D:\VB Projects\Route_Riter\stuffitpack2a.zip=No
+D:\VB Projects\Route_Riter\Route_RiterFR.chm=No
+D:\VB Projects\Route_Riter\stuffitpack2a\stuffit.ref=No
+D:\VB Projects\Route_Riter\stuffit.ref=No
+D:\VB Projects\Route_Riter\StuffitPack.zip=No
+C:\WINDOWS\system32\mwgfxvb.dll=No
+D:\VB Projects\Route_Riter\mwacevb.dll=No
+D:\VB Projects\Route_Riter\SView.exe=No
+C:\WINDOWS\system32\mwace.dll=No
+D:\VB Projects\RR2\mwacevb.dll=Yes
+D:\VB Projects\RR2\TView.exe=No
+D:\VB Projects\RR2\SView.exe=No
+D:\VB Projects\RR2\Lang_Spanish.txt=No
+D:\VB Projects\RR2\Lang_Norwegian.txt=No
+D:\VB Projects\RR2\Lang_Danish.txt=No
+D:\VB Projects\RR2\Lang_Deutsch.txt=No
+D:\VB Projects\RR2\Lang_Dutch.txt=No
+D:\VB Projects\RR2\Lang_English.txt=No
+D:\VB Projects\RR2\Lang_French.txt=No
+D:\VB Projects\RR2\mwace.dll=Yes
+D:\VB Projects\RR2\grid.bmp=No
+D:\VB Projects\RR2\sky.jpg=No
+D:\VB Projects\RR2\SView.chm=No
+D:\VB Projects\RR2\grass.bmp=No
+D:\VB Projects\RR2\StuffitPack.zip=No
+C:\WINDOWS\system32\trainlib.lib=No
+C:\WINDOWS\system32\trainlib.DEP=No
+C:\WINDOWS\system32\trainlib.exp=No
+D:\VB Projects\RR2\liesmich.txt=No
+D:\VB Projects\RR2\Ballast.ace=No
+D:\VB Projects\RR2\Blue Daze.jpg=No
+D:\VB Projects\RR2\Blue Velvet Crush.jpg=No
+D:\VB Projects\RR2\grassold.bmp=No
+D:\VB Projects\RR2\Lang_français.txt=No
+D:\VB Projects\RR2\Midday vision.jpg=No
+D:\VB Projects\RR2\Morning Bijou.jpg=No
+D:\VB Projects\RR2\TGATool2.exe=No
+D:\VB Projects\RR2\Summer's Day.jpg=No
+D:\VB Projects\RR2\SViewRR.exe=No
+D:\VB Projects\RR2\TC_Displaybase.s=No
+
+[Package|Dep File 1|Distribution]
+Type=single
+Size=
+Title=Route_Riter
+
+[Package|Dep File 1|IconGroups]
+Group0=Route_Riter
+PrivateGroup0=-1
+Parent0=$(Programs)
+
+[Package|Dep File 1|Route_Riter]
+Icon1=Route_Riter.exe
+Title1=Route_Riter
+StartIn1=$(AppPath)
+Key1=Icon1
+Icon2=route_riter.chm
+Title2=RouteRiter Help
+StartIn2=$(AppPath)
+Key2=Icon3
+
+[Package|Dep File 1|DepFile]
+DepCabFile=Route_Riter.CAB
+DepCabRun=Route_Riter.INF
+
+[Package|Dep File 1|Package]
+PackageFolder=D:\VB Projects\RR2\Package5
+ProjectFolder=D:\VB Projects\RR2
+ServerSideCab=
+File1=D:\VB Projects\RR2\Package5\Route_Riter.DEP
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz
+
+
+[Package|Route_Riter5220|Root]
+SubWizProgID=PDWizard.SetupPkgSubWiz
+BuildFolder=D:\VB Projects\RR2\Package7
+
+[Package|Route_Riter5220|Configure DAO ISAMs]
+Applicable=No
+
+[Package|Route_Riter5220|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|Route_Riter5220|Files Found]
+
+[Package|Route_Riter5220|Files Released]
+route_riter.CHI=
+SView.CHI=
+
+[Package|Route_Riter5220|Missing Dependency Information]
+C:\WINDOWS\system32\mwgfxvb.dll=
+C:\WINDOWS\system32\STKIT432.DLL=
+
+[Package|Route_Riter5220|Out-of-Date Dependency Information]
+C:\WINDOWS\system32\trainlib.ocx=
+C:\WINDOWS\system32\scrrun.dll=
+
+[Package|Route_Riter5220|Files Added]
+D:\VB Projects\RR2\liesmich.txt=
+D:\VB Projects\RR2\Ballast.ace=
+D:\VB Projects\RR2\Blue Daze.jpg=
+D:\VB Projects\RR2\Blue Velvet Crush.jpg=
+D:\VB Projects\RR2\grass.bmp=
+D:\VB Projects\RR2\grassold.bmp=
+D:\VB Projects\RR2\grid.bmp=
+D:\VB Projects\RR2\Lang_Danish.txt=
+D:\VB Projects\RR2\Lang_Deutsch.txt=
+D:\VB Projects\RR2\Lang_Dutch.txt=
+D:\VB Projects\RR2\Lang_English.txt=
+D:\VB Projects\RR2\Lang_français.txt=
+D:\VB Projects\RR2\Lang_Norwegian.txt=
+D:\VB Projects\RR2\Lang_Spanish.txt=
+D:\VB Projects\RR2\TView.exe=
+D:\VB Projects\RR2\Midday vision.jpg=
+D:\VB Projects\RR2\Morning Bijou.jpg=
+D:\VB Projects\RR2\PicFormat32.dll=
+D:\VB Projects\RR2\Rails.ace=
+D:\VB Projects\RR2\sky.jpg=
+D:\VB Projects\RR2\skyNSWE.jpg=
+D:\VB Projects\RR2\stuffit.ref=
+D:\VB Projects\RR2\StuffitPack.zip=
+D:\VB Projects\RR2\Summer's Day.jpg=
+D:\VB Projects\RR2\SView.chm=
+D:\VB Projects\RR2\SViewRR.exe=
+D:\VB Projects\RR2\TGATool2.exe=
+D:\VB Projects\RR2\SetupFiles\RefFileStart.txt=
+C:\WINDOWS\system32\SAWZipNG.tlb=
+C:\WINDOWS\system32\mwgfx.dll=
+C:\WINDOWS\system32\mwace.dll=
+
+[Package|Route_Riter5220|Files Removed]
+c:\windows\system32\hh.exe=
+d:\program files\microsoft visual studio\vb98\wizards\pdwizard\redist\msvcrt.dll=
+
+[Package|Route_Riter5220|Files In Project]
+D:\VB Projects\RR2\Route_Riter.exe=Yes
+C:\WINDOWS\system32\msvbvm60.dll=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+C:\WINDOWS\system32\STKIT432.DLL=Yes
+C:\WINDOWS\system32\hhctrl.ocx=Yes
+C:\WINDOWS\system32\itss.dll=Yes
+C:\WINDOWS\system32\itircl.dll=Yes
+C:\WINDOWS\system32\hh.exe=No
+D:\VB Projects\RR2\zlib.dll=Yes
+C:\WINDOWS\system32\mwgfxvb.dll=Yes
+D:\VB Projects\RR2\mwacevb.dll=Yes
+C:\WINDOWS\system32\VSPRINT7.ocx=Yes
+C:\WINDOWS\system32\vsflex7L.ocx=Yes
+C:\WINDOWS\system32\SAWZipNG.dll=Yes
+C:\WINDOWS\system32\Vsflex7.ocx=Yes
+C:\WINDOWS\system32\scrrun.dll=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MSVCRT.DLL=No
+C:\WINDOWS\system32\dx8vb.dll=Yes
+C:\WINDOWS\system32\RICHTX32.OCX=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\RICHED32.DLL=Yes
+C:\WINDOWS\system32\MSCOMCTL.OCX=Yes
+C:\WINDOWS\system32\COMDLG32.OCX=Yes
+C:\WINDOWS\system32\TABCTL32.OCX=Yes
+C:\WINDOWS\system32\COMCTL32.OCX=Yes
+C:\WINDOWS\system32\trainlib.ocx=Yes
+C:\WINDOWS\system32\msstkprp.dll=Yes
+D:\VB Projects\RR2\route_riter.chm=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
+C:\WINDOWS\system32\VB6STKIT.DLL=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
+D:\VB Projects\RR2\liesmich.txt=Yes
+D:\VB Projects\RR2\Ballast.ace=Yes
+D:\VB Projects\RR2\Blue Daze.jpg=Yes
+D:\VB Projects\RR2\Blue Velvet Crush.jpg=Yes
+D:\VB Projects\RR2\grass.bmp=Yes
+D:\VB Projects\RR2\grassold.bmp=Yes
+D:\VB Projects\RR2\grid.bmp=Yes
+D:\VB Projects\RR2\Lang_Danish.txt=Yes
+D:\VB Projects\RR2\Lang_Deutsch.txt=Yes
+D:\VB Projects\RR2\Lang_Dutch.txt=Yes
+D:\VB Projects\RR2\Lang_English.txt=Yes
+D:\VB Projects\RR2\Lang_français.txt=Yes
+D:\VB Projects\RR2\Lang_Norwegian.txt=Yes
+D:\VB Projects\RR2\Lang_Spanish.txt=Yes
+D:\VB Projects\RR2\TView.exe=Yes
+D:\VB Projects\RR2\Midday vision.jpg=Yes
+D:\VB Projects\RR2\Morning Bijou.jpg=Yes
+D:\VB Projects\RR2\PicFormat32.dll=Yes
+D:\VB Projects\RR2\Rails.ace=Yes
+D:\VB Projects\RR2\sky.jpg=Yes
+D:\VB Projects\RR2\skyNSWE.jpg=Yes
+D:\VB Projects\RR2\stuffit.ref=Yes
+D:\VB Projects\RR2\StuffitPack.zip=Yes
+D:\VB Projects\RR2\Summer's Day.jpg=Yes
+D:\VB Projects\RR2\SView.chm=Yes
+D:\VB Projects\RR2\SViewRR.exe=Yes
+D:\VB Projects\RR2\TGATool2.exe=Yes
+D:\VB Projects\RR2\SetupFiles\RefFileStart.txt=Yes
+C:\WINDOWS\system32\SAWZipNG.tlb=Yes
+C:\WINDOWS\system32\mwgfx.dll=Yes
+C:\WINDOWS\system32\mwace.dll=Yes
+
+[Package|Route_Riter5220|Configure Registry Files]
+Applicable=No
+
+[Package|Route_Riter5220|Configure Remote Servers]
+Applicable=No
+
+[Package|Route_Riter5220|Install Locations]
+D:\VB Projects\RR2\Route_Riter.exe=$(AppPath)
+C:\WINDOWS\system32\msvbvm60.dll=$(WinSysPathSysFile)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=$(WinSysPathSysFile)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=$(WinSysPathSysFile)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=$(WinSysPathSysFile)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=$(WinSysPathSysFile)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\system32\STKIT432.DLL=$(WinSysPath)
+C:\WINDOWS\system32\hhctrl.ocx=$(WinSysPath)
+C:\WINDOWS\system32\itss.dll=$(WinSysPath)
+C:\WINDOWS\system32\itircl.dll=$(WinSysPath)
+D:\VB Projects\RR2\zlib.dll=$(WinSysPath)
+C:\WINDOWS\system32\mwgfxvb.dll=$(WinSysPath)
+D:\VB Projects\RR2\mwacevb.dll=$(WinSysPath)
+C:\WINDOWS\system32\VSPRINT7.ocx=$(WinSysPath)
+C:\WINDOWS\system32\vsflex7L.ocx=$(WinSysPath)
+C:\WINDOWS\system32\SAWZipNG.dll=$(WinSysPath)
+C:\WINDOWS\system32\Vsflex7.ocx=$(WinSysPath)
+C:\WINDOWS\system32\scrrun.dll=$(WinSysPath)
+C:\WINDOWS\system32\dx8vb.dll=$(WinSysPath)
+C:\WINDOWS\system32\RICHTX32.OCX=$(WinSysPath)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\RICHED32.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\system32\MSCOMCTL.OCX=$(WinSysPath)
+C:\WINDOWS\system32\COMDLG32.OCX=$(WinSysPath)
+C:\WINDOWS\system32\TABCTL32.OCX=$(WinSysPath)
+C:\WINDOWS\system32\COMCTL32.OCX=$(WinSysPath)
+C:\WINDOWS\system32\trainlib.ocx=$(WinSysPath)
+C:\WINDOWS\system32\msstkprp.dll=$(WinSysPath)
+D:\VB Projects\RR2\route_riter.chm=$(AppPath)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+C:\WINDOWS\system32\VB6STKIT.DLL=$(WinSysPathSysFile)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+D:\VB Projects\RR2\liesmich.txt=$(AppPath)
+D:\VB Projects\RR2\Ballast.ace=$(AppPath)
+D:\VB Projects\RR2\Blue Daze.jpg=$(AppPath)
+D:\VB Projects\RR2\Blue Velvet Crush.jpg=$(AppPath)
+D:\VB Projects\RR2\grass.bmp=$(AppPath)
+D:\VB Projects\RR2\grassold.bmp=$(AppPath)
+D:\VB Projects\RR2\grid.bmp=$(AppPath)
+D:\VB Projects\RR2\Lang_Danish.txt=$(AppPath)
+D:\VB Projects\RR2\Lang_Deutsch.txt=$(AppPath)
+D:\VB Projects\RR2\Lang_Dutch.txt=$(AppPath)
+D:\VB Projects\RR2\Lang_English.txt=$(AppPath)
+D:\VB Projects\RR2\Lang_français.txt=$(AppPath)
+D:\VB Projects\RR2\Lang_Norwegian.txt=$(AppPath)
+D:\VB Projects\RR2\Lang_Spanish.txt=$(AppPath)
+D:\VB Projects\RR2\TView.exe=$(AppPath)
+D:\VB Projects\RR2\Midday vision.jpg=$(AppPath)
+D:\VB Projects\RR2\Morning Bijou.jpg=$(AppPath)
+D:\VB Projects\RR2\PicFormat32.dll=$(WinSysPath)
+D:\VB Projects\RR2\Rails.ace=$(AppPath)
+D:\VB Projects\RR2\sky.jpg=$(AppPath)
+D:\VB Projects\RR2\skyNSWE.jpg=$(AppPath)
+D:\VB Projects\RR2\stuffit.ref=$(AppPath)
+D:\VB Projects\RR2\StuffitPack.zip=$(AppPath)
+D:\VB Projects\RR2\Summer's Day.jpg=$(AppPath)
+D:\VB Projects\RR2\SView.chm=$(AppPath)
+D:\VB Projects\RR2\SViewRR.exe=$(AppPath)
+D:\VB Projects\RR2\TGATool2.exe=$(AppPath)
+D:\VB Projects\RR2\SetupFiles\RefFileStart.txt=$(AppPath)\SetUpFiles
+C:\WINDOWS\system32\SAWZipNG.tlb=$(WinSysPath)
+C:\WINDOWS\system32\mwgfx.dll=$(WinSysPath)
+C:\WINDOWS\system32\mwace.dll=$(WinSysPath)
+
+[Package|Route_Riter5220|Configure Shared Files]
+Applicable=Yes
+D:\VB Projects\RR2\Route_Riter.exe=No
+D:\VB Projects\RR2\route_riter.chm=No
+D:\VB Projects\RR2\liesmich.txt=No
+D:\VB Projects\RR2\Ballast.ace=No
+D:\VB Projects\RR2\Blue Daze.jpg=No
+D:\VB Projects\RR2\Blue Velvet Crush.jpg=No
+D:\VB Projects\RR2\grass.bmp=No
+D:\VB Projects\RR2\grassold.bmp=No
+D:\VB Projects\RR2\grid.bmp=No
+D:\VB Projects\RR2\Lang_Danish.txt=No
+D:\VB Projects\RR2\Lang_Deutsch.txt=No
+D:\VB Projects\RR2\Lang_Dutch.txt=No
+D:\VB Projects\RR2\Lang_English.txt=No
+D:\VB Projects\RR2\Lang_français.txt=No
+D:\VB Projects\RR2\Lang_Norwegian.txt=No
+D:\VB Projects\RR2\Lang_Spanish.txt=No
+D:\VB Projects\RR2\TView.exe=No
+D:\VB Projects\RR2\Midday vision.jpg=No
+D:\VB Projects\RR2\Morning Bijou.jpg=No
+D:\VB Projects\RR2\Rails.ace=No
+D:\VB Projects\RR2\sky.jpg=No
+D:\VB Projects\RR2\skyNSWE.jpg=No
+D:\VB Projects\RR2\stuffit.ref=No
+D:\VB Projects\RR2\StuffitPack.zip=No
+D:\VB Projects\RR2\Summer's Day.jpg=No
+D:\VB Projects\RR2\SView.chm=No
+D:\VB Projects\RR2\SViewRR.exe=No
+D:\VB Projects\RR2\TGATool2.exe=No
+D:\VB Projects\RR2\SetupFiles\RefFileStart.txt=No
+
+[Package|Route_Riter5220|Distribution]
+Type=single
+Size=
+Title=Route_Riter
+
+[Package|Route_Riter5220|IconGroups]
+Group0=Route_Riter
+PrivateGroup0=-1
+Parent0=$(Programs)
+
+[Package|Route_Riter5220|Route_Riter]
+Icon1=Route_Riter.exe
+Title1=Route_Riter
+StartIn1=$(AppPath)
+Key1=Icon1
+Icon2=route_riter.chm
+Title2=RouteRiter Help
+StartIn2=$(AppPath)
+Key2=Icon3
+Icon3=SView.chm
+Title3=ShapeView Help
+StartIn3=$(AppPath)
+Key3=Icon4
+
+[Package|Route_Riter5220|Package]
+PackageFolder=D:\VB Projects\RR2\Package7
+ProjectFolder=D:\VB Projects\RR2
+ServerSideCab=
+File1=D:\VB Projects\RR2\Package7\setup.exe
+File2=D:\VB Projects\RR2\Package7\Setup.Lst
+File3=D:\VB Projects\RR2\Package7\Route_Riter.CAB
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz
+
+[Package|Route_Riter5220a|Root]
+SubWizProgID=PDWizard.SetupPkgSubWiz
+BuildFolder=D:\VB Projects\RR2\Package7
+
+[Package|Route_Riter5220a|Configure DAO ISAMs]
+Applicable=No
+
+[Package|Route_Riter5220a|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|Route_Riter5220a|Files Found]
+
+[Package|Route_Riter5220a|Files Released]
+route_riter.CHI=
+SView.CHI=
+
+[Package|Route_Riter5220a|Missing Dependency Information]
+C:\WINDOWS\system32\mwgfxvb.dll=
+C:\WINDOWS\system32\STKIT432.DLL=
+
+[Package|Route_Riter5220a|Out-of-Date Dependency Information]
+C:\WINDOWS\system32\trainlib.ocx=
+C:\WINDOWS\system32\scrrun.dll=
+
+[Package|Route_Riter5220a|Files Added]
+d:\vb projects\rr2\liesmich.txt=
+d:\vb projects\rr2\ballast.ace=
+d:\vb projects\rr2\blue daze.jpg=
+d:\vb projects\rr2\blue velvet crush.jpg=
+d:\vb projects\rr2\grass.bmp=
+d:\vb projects\rr2\grassold.bmp=
+d:\vb projects\rr2\grid.bmp=
+d:\vb projects\rr2\lang_danish.txt=
+d:\vb projects\rr2\lang_deutsch.txt=
+d:\vb projects\rr2\lang_dutch.txt=
+d:\vb projects\rr2\lang_english.txt=
+d:\vb projects\rr2\lang_français.txt=
+d:\vb projects\rr2\lang_norwegian.txt=
+d:\vb projects\rr2\lang_spanish.txt=
+d:\vb projects\rr2\tview.exe=
+d:\vb projects\rr2\midday vision.jpg=
+d:\vb projects\rr2\morning bijou.jpg=
+d:\vb projects\rr2\picformat32.dll=
+d:\vb projects\rr2\rails.ace=
+d:\vb projects\rr2\sky.jpg=
+d:\vb projects\rr2\skynswe.jpg=
+d:\vb projects\rr2\stuffit.ref=
+d:\vb projects\rr2\stuffitpack.zip=
+d:\vb projects\rr2\summer's day.jpg=
+d:\vb projects\rr2\sview.chm=
+d:\vb projects\rr2\sviewrr.exe=
+d:\vb projects\rr2\tgatool2.exe=
+d:\vb projects\rr2\setupfiles\reffilestart.txt=
+c:\windows\system32\sawzipng.tlb=
+c:\windows\system32\mwgfx.dll=
+c:\windows\system32\mwace.dll=
+D:\VB Projects\RR2\TC_Displaybase.s=
+
+[Package|Route_Riter5220a|Files Removed]
+c:\windows\system32\hh.exe=
+d:\program files\microsoft visual studio\vb98\wizards\pdwizard\redist\msvcrt.dll=
+
+[Package|Route_Riter5220a|Files In Project]
+D:\VB Projects\RR2\Route_Riter.exe=Yes
+C:\WINDOWS\system32\msvbvm60.dll=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+C:\WINDOWS\system32\STKIT432.DLL=Yes
+C:\WINDOWS\system32\hhctrl.ocx=Yes
+C:\WINDOWS\system32\itss.dll=Yes
+C:\WINDOWS\system32\itircl.dll=Yes
+C:\WINDOWS\system32\hh.exe=No
+D:\VB Projects\RR2\zlib.dll=Yes
+C:\WINDOWS\system32\mwgfxvb.dll=Yes
+D:\VB Projects\RR2\mwacevb.dll=Yes
+C:\WINDOWS\system32\VSPRINT7.ocx=Yes
+C:\WINDOWS\system32\vsflex7L.ocx=Yes
+C:\WINDOWS\system32\SAWZipNG.dll=Yes
+C:\WINDOWS\system32\Vsflex7.ocx=Yes
+C:\WINDOWS\system32\scrrun.dll=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MSVCRT.DLL=No
+C:\WINDOWS\system32\dx8vb.dll=Yes
+C:\WINDOWS\system32\RICHTX32.OCX=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\RICHED32.DLL=Yes
+C:\WINDOWS\system32\MSCOMCTL.OCX=Yes
+C:\WINDOWS\system32\COMDLG32.OCX=Yes
+C:\WINDOWS\system32\TABCTL32.OCX=Yes
+C:\WINDOWS\system32\COMCTL32.OCX=Yes
+C:\WINDOWS\system32\trainlib.ocx=Yes
+C:\WINDOWS\system32\msstkprp.dll=Yes
+D:\VB Projects\RR2\route_riter.chm=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
+C:\WINDOWS\system32\VB6STKIT.DLL=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
+D:\VB Projects\RR2\liesmich.txt=Yes
+D:\VB Projects\RR2\Ballast.ace=Yes
+D:\VB Projects\RR2\Blue Daze.jpg=Yes
+D:\VB Projects\RR2\Blue Velvet Crush.jpg=Yes
+D:\VB Projects\RR2\grass.bmp=Yes
+D:\VB Projects\RR2\grassold.bmp=Yes
+D:\VB Projects\RR2\grid.bmp=Yes
+D:\VB Projects\RR2\Lang_Danish.txt=Yes
+D:\VB Projects\RR2\Lang_Deutsch.txt=Yes
+D:\VB Projects\RR2\Lang_Dutch.txt=Yes
+D:\VB Projects\RR2\Lang_English.txt=Yes
+D:\VB Projects\RR2\Lang_français.txt=Yes
+D:\VB Projects\RR2\Lang_Norwegian.txt=Yes
+D:\VB Projects\RR2\Lang_Spanish.txt=Yes
+D:\VB Projects\RR2\TView.exe=Yes
+D:\VB Projects\RR2\Midday vision.jpg=Yes
+D:\VB Projects\RR2\Morning Bijou.jpg=Yes
+D:\VB Projects\RR2\PicFormat32.dll=Yes
+D:\VB Projects\RR2\Rails.ace=Yes
+D:\VB Projects\RR2\sky.jpg=Yes
+D:\VB Projects\RR2\skyNSWE.jpg=Yes
+D:\VB Projects\RR2\stuffit.ref=Yes
+D:\VB Projects\RR2\StuffitPack.zip=Yes
+D:\VB Projects\RR2\Summer's Day.jpg=Yes
+D:\VB Projects\RR2\SView.chm=Yes
+D:\VB Projects\RR2\SViewRR.exe=Yes
+D:\VB Projects\RR2\TGATool2.exe=Yes
+D:\VB Projects\RR2\SetupFiles\RefFileStart.txt=Yes
+C:\WINDOWS\system32\SAWZipNG.tlb=Yes
+C:\WINDOWS\system32\mwgfx.dll=Yes
+C:\WINDOWS\system32\mwace.dll=Yes
+D:\VB Projects\RR2\TC_Displaybase.s=Yes
+
+[Package|Route_Riter5220a|Configure Registry Files]
+Applicable=No
+
+[Package|Route_Riter5220a|Configure Remote Servers]
+Applicable=No
+
+[Package|Route_Riter5220a|Install Locations]
+D:\VB Projects\RR2\Route_Riter.exe=$(AppPath)
+C:\WINDOWS\system32\msvbvm60.dll=$(WinSysPathSysFile)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=$(WinSysPathSysFile)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=$(WinSysPathSysFile)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=$(WinSysPathSysFile)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=$(WinSysPathSysFile)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\system32\STKIT432.DLL=$(WinSysPath)
+C:\WINDOWS\system32\hhctrl.ocx=$(WinSysPath)
+C:\WINDOWS\system32\itss.dll=$(WinSysPath)
+C:\WINDOWS\system32\itircl.dll=$(WinSysPath)
+D:\VB Projects\RR2\zlib.dll=$(WinSysPath)
+C:\WINDOWS\system32\mwgfxvb.dll=$(WinSysPath)
+D:\VB Projects\RR2\mwacevb.dll=$(WinSysPath)
+C:\WINDOWS\system32\VSPRINT7.ocx=$(WinSysPath)
+C:\WINDOWS\system32\vsflex7L.ocx=$(WinSysPath)
+C:\WINDOWS\system32\SAWZipNG.dll=$(WinSysPath)
+C:\WINDOWS\system32\Vsflex7.ocx=$(WinSysPath)
+C:\WINDOWS\system32\scrrun.dll=$(WinSysPath)
+C:\WINDOWS\system32\dx8vb.dll=$(WinSysPath)
+C:\WINDOWS\system32\RICHTX32.OCX=$(WinSysPath)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\RICHED32.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\system32\MSCOMCTL.OCX=$(WinSysPath)
+C:\WINDOWS\system32\COMDLG32.OCX=$(WinSysPath)
+C:\WINDOWS\system32\TABCTL32.OCX=$(WinSysPath)
+C:\WINDOWS\system32\COMCTL32.OCX=$(WinSysPath)
+C:\WINDOWS\system32\trainlib.ocx=$(WinSysPath)
+C:\WINDOWS\system32\msstkprp.dll=$(WinSysPath)
+D:\VB Projects\RR2\route_riter.chm=$(AppPath)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+C:\WINDOWS\system32\VB6STKIT.DLL=$(WinSysPathSysFile)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+D:\VB Projects\RR2\liesmich.txt=$(AppPath)
+D:\VB Projects\RR2\Ballast.ace=$(AppPath)
+D:\VB Projects\RR2\Blue Daze.jpg=$(AppPath)
+D:\VB Projects\RR2\Blue Velvet Crush.jpg=$(AppPath)
+D:\VB Projects\RR2\grass.bmp=$(AppPath)
+D:\VB Projects\RR2\grassold.bmp=$(AppPath)
+D:\VB Projects\RR2\grid.bmp=$(AppPath)
+D:\VB Projects\RR2\Lang_Danish.txt=$(AppPath)
+D:\VB Projects\RR2\Lang_Deutsch.txt=$(AppPath)
+D:\VB Projects\RR2\Lang_Dutch.txt=$(AppPath)
+D:\VB Projects\RR2\Lang_English.txt=$(AppPath)
+D:\VB Projects\RR2\Lang_français.txt=$(AppPath)
+D:\VB Projects\RR2\Lang_Norwegian.txt=$(AppPath)
+D:\VB Projects\RR2\Lang_Spanish.txt=$(AppPath)
+D:\VB Projects\RR2\TView.exe=$(AppPath)
+D:\VB Projects\RR2\Midday vision.jpg=$(AppPath)
+D:\VB Projects\RR2\Morning Bijou.jpg=$(AppPath)
+D:\VB Projects\RR2\PicFormat32.dll=$(WinSysPath)
+D:\VB Projects\RR2\Rails.ace=$(AppPath)
+D:\VB Projects\RR2\sky.jpg=$(AppPath)
+D:\VB Projects\RR2\skyNSWE.jpg=$(AppPath)
+D:\VB Projects\RR2\stuffit.ref=$(AppPath)
+D:\VB Projects\RR2\StuffitPack.zip=$(AppPath)
+D:\VB Projects\RR2\Summer's Day.jpg=$(AppPath)
+D:\VB Projects\RR2\SView.chm=$(AppPath)
+D:\VB Projects\RR2\SViewRR.exe=$(AppPath)
+D:\VB Projects\RR2\TGATool2.exe=$(AppPath)
+D:\VB Projects\RR2\SetupFiles\RefFileStart.txt=$(AppPath)\SetUpFiles
+C:\WINDOWS\system32\SAWZipNG.tlb=$(WinSysPath)
+C:\WINDOWS\system32\mwgfx.dll=$(WinSysPath)
+C:\WINDOWS\system32\mwace.dll=$(WinSysPath)
+D:\VB Projects\RR2\TC_Displaybase.s=$(AppPath)
+
+[Package|Route_Riter5220a|Configure Shared Files]
+Applicable=Yes
+D:\VB Projects\RR2\Route_Riter.exe=No
+D:\VB Projects\RR2\route_riter.chm=No
+D:\VB Projects\RR2\liesmich.txt=No
+D:\VB Projects\RR2\Ballast.ace=No
+D:\VB Projects\RR2\Blue Daze.jpg=No
+D:\VB Projects\RR2\Blue Velvet Crush.jpg=No
+D:\VB Projects\RR2\grass.bmp=No
+D:\VB Projects\RR2\grassold.bmp=No
+D:\VB Projects\RR2\grid.bmp=No
+D:\VB Projects\RR2\Lang_Danish.txt=No
+D:\VB Projects\RR2\Lang_Deutsch.txt=No
+D:\VB Projects\RR2\Lang_Dutch.txt=No
+D:\VB Projects\RR2\Lang_English.txt=No
+D:\VB Projects\RR2\Lang_français.txt=No
+D:\VB Projects\RR2\Lang_Norwegian.txt=No
+D:\VB Projects\RR2\Lang_Spanish.txt=No
+D:\VB Projects\RR2\TView.exe=No
+D:\VB Projects\RR2\Midday vision.jpg=No
+D:\VB Projects\RR2\Morning Bijou.jpg=No
+D:\VB Projects\RR2\Rails.ace=No
+D:\VB Projects\RR2\sky.jpg=No
+D:\VB Projects\RR2\skyNSWE.jpg=No
+D:\VB Projects\RR2\stuffit.ref=No
+D:\VB Projects\RR2\StuffitPack.zip=No
+D:\VB Projects\RR2\Summer's Day.jpg=No
+D:\VB Projects\RR2\SView.chm=No
+D:\VB Projects\RR2\SViewRR.exe=No
+D:\VB Projects\RR2\TGATool2.exe=No
+D:\VB Projects\RR2\SetupFiles\RefFileStart.txt=No
+D:\VB Projects\RR2\TC_Displaybase.s=No
+
+[Package|Route_Riter5220a|Distribution]
+Type=single
+Size=
+Title=Route_Riter
+
+[Package|Route_Riter5220a|Package]
+PackageFolder=D:\VB Projects\RR2\Package7
+ProjectFolder=D:\VB Projects\RR2
+ServerSideCab=
+File1=D:\VB Projects\RR2\Package7\setup.exe
+File2=D:\VB Projects\RR2\Package7\Setup.Lst
+File3=D:\VB Projects\RR2\Package7\Route_Riter.CAB
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz
+
+[Package|Route_Riter5220a|IconGroups]
+Group0=Route_Riter
+PrivateGroup0=-1
+Parent0=$(Programs)
+
+[Package|Route_Riter5220a|Route_Riter]
+Icon1=Route_Riter.exe
+Title1=Route_Riter
+StartIn1=$(AppPath)
+Key1=Icon1
+Icon2=route_riter.chm
+Title2=RouteRiter Help
+StartIn2=$(AppPath)
+Key2=Icon3
+Icon3=SView.chm
+Title3=ShapeView Help
+StartIn3=$(AppPath)
+Key3=Icon4

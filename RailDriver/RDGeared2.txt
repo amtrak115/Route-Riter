@@ -1,0 +1,13 @@
+
+
+        TrainBrakesControllerMaxApplicationRate( 20 )
+        TrainBrakesControllerMaxReleaseRate( 80 )
+        TrainBrakesControllerEmergencyApplicationRate( 30 )
+        TrainBrakesControllerMinSystemPressure( 0 )
+        TrainBrakesControllerMaxSystemPressure( 90 )
+        TrainBrakesControllerEmergencyBrakeTimePenalty( 0 )
+        TrainBrakesControllerFullServicePressureDrop( 26 )
+
+        BrakesTrainBrakeType( "Air_twin_pipe" )
+        BrakesEngineControllers( "Train" )
+

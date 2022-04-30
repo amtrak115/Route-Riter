@@ -1,0 +1,10 @@
+SHAPES\BA_Bld_Brownstone-Group_3-1.sD does not have a valid 'Shape' entry and must be corrected
+SHAPES\BA_ROW_Wall-050.sD does not have a valid 'Shape' entry and must be corrected
+SHAPES\BA_ROW_Wall-100.sD does not have a valid 'Shape' entry and must be corrected
+SHAPES\GF_Milw.SD does not have a valid 'Shape' entry and must be corrected
+SHAPES\GF_REA.sd does not have a valid 'Shape' entry and must be corrected
+SHAPES\gn_bigsandyhigh.sD does not have a valid 'Shape' entry and must be corrected
+SHAPES\gn_greatfalls_coaltower.sD does not have a valid 'Shape' entry and must be corrected
+SHAPES\GN_Shelby_Enghouse.sD does not have a valid 'Shape' entry and must be corrected
+SHAPES\Inverness_elev5.SD does not have a valid 'Shape' entry and must be corrected
+Shapes\AisGill.sd does not have a valid 'Shape' entry and must be corrected

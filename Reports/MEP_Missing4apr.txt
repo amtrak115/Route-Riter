@@ -1,0 +1,56 @@
+
+
+Transfer Snow file 14a_coal.ace was missing, the summer texture has been used instead
+Shape file cessnab_landing.s is missing from your route, no alternative is available in the other installed routes.
+Shape file cessnar_flyover.s is missing from your route, no alternative is available in the other installed routes.
+Shape file cessnay_anim.s is missing from your route, no alternative is available in the other installed routes.
+Shape file cessnay_flyover.s is missing from your route, no alternative is available in the other installed routes.
+Shape file coveredwallbrick10m.s is missing from your route, no alternative is available in the other installed routes.
+Shape file coveredwallbrick50m.s is missing from your route, no alternative is available in the other installed routes.
+Shape file coveredwallstone10m.s is missing from your route, no alternative is available in the other installed routes.
+Shape file coveredwallstone50m.s is missing from your route, no alternative is available in the other installed routes.
+Shape file dwcarsbillboard.s is missing from your route, no alternative is available in the other installed routes.
+Shape file dwcoachmarsposter.s is missing from your route, no alternative is available in the other installed routes.
+Shape file dwconcposter.s is missing from your route, no alternative is available in the other installed routes.
+Shape file dwhunstposter.s is missing from your route, no alternative is available in the other installed routes.
+Shape file dwspacedustposter.s is missing from your route, no alternative is available in the other installed routes.
+Shape file fcwmill.s is missing from your route, no alternative is available in the other installed routes.
+Shape file fcwmilldeck.s is missing from your route, no alternative is available in the other installed routes.
+Shape file flift1+driver.s is missing from your route, no alternative is available in the other installed routes.
+Shape file flift2+driver.s is missing from your route, no alternative is available in the other installed routes.
+Shape file forkliftlowered.s is missing from your route, no alternative is available in the other installed routes.
+Shape Definition (SD) file cessnab_landing.sd is missing from your route, no alternative is available in the other installed routes.
+Shape Definition (SD) file cessnar_flyover.sd is missing from your route, no alternative is available in the other installed routes.
+Shape Definition (SD) file cessnay_anim.sd is missing from your route, no alternative is available in the other installed routes.
+Shape Definition (SD) file cessnay_flyover.sd is missing from your route, no alternative is available in the other installed routes.
+Shape Definition (SD) file coveredwallbrick10m.sd is missing from your route, no alternative is available in the other installed routes.
+Shape Definition (SD) file coveredwallbrick50m.sd is missing from your route, no alternative is available in the other installed routes.
+Shape Definition (SD) file coveredwallstone10m.sd is missing from your route, no alternative is available in the other installed routes.
+Shape Definition (SD) file coveredwallstone50m.sd is missing from your route, no alternative is available in the other installed routes.
+Shape Definition (SD) file dwcarsbillboard.sd is missing from your route, no alternative is available in the other installed routes.
+Shape Definition (SD) file dwcoachmarsposter.sd is missing from your route, no alternative is available in the other installed routes.
+Shape Definition (SD) file dwconcposter.sd is missing from your route, no alternative is available in the other installed routes.
+Missing texture file dwhunstposter.ace referred by dwessobill.s was not found in your Default routes.
+Shape Definition (SD) file dwhunstposter.sd is missing from your route, no alternative is available in the other installed routes.
+Shape Definition (SD) file dwspacedustposter.sd is missing from your route, no alternative is available in the other installed routes.
+Shape Definition (SD) file fcwmilldeck.sd is missing from your route, no alternative is available in the other installed routes.
+Missing texture file fcwmill.ace referred by fcwmillr.s was not found in your Default routes.
+Missing texture file snow\fcwmill.ace referred by fcwmillr.s was not found in your Default routes.
+Missing texture file night\fcwmill.ace referred by fcwmillr.s was not found in your Default routes.
+Missing texture file fcwmill2.ace referred by fcwmillr.s was not found in your Default routes.
+Missing texture file snow\fcwmill2.ace referred by fcwmillr.s was not found in your Default routes.
+Missing texture file night\fcwmill2.ace referred by fcwmillr.s was not found in your Default routes.
+Missing texture file fcwmill1.ace referred by fcwmillr.s was not found in your Default routes.
+Missing texture file snow\fcwmill1.ace referred by fcwmillr.s was not found in your Default routes.
+Missing texture file night\fcwmill1.ace referred by fcwmillr.s was not found in your Default routes.
+Shape Definition (SD) file flift1+driver.sd is missing from your route, no alternative is available in the other installed routes.
+Shape Definition (SD) file flift2+driver.sd is missing from your route, no alternative is available in the other installed routes.
+Shape Definition (SD) file forkliftlowered.sd is missing from your route, no alternative is available in the other installed routes.
+Sound file Cessna_Engine_Idle.sms is missing from your route, no alternative is available in the other installed routes. Called by D:\MEP\Train Simulator\Routes\MidEastPlus\world\w-006065+014991.ws
+Sound file Cessna_Engine_Idle.sms is missing from your route, no alternative is available in the other installed routes. Called by 
+Sound file x_ja_points.wav is missing from your route, no alternative is available in the other installed routes. Called by D:\MEP\Train Simulator\Routes\MidEastPlus\Sound\MepSteamTrack10Ex.sms
+
+
+
+
+ERRORS WERE NOTED, DO NOT COMPACT ROUTE UNTIL ANY MISSING FILES ARE REPLACED.

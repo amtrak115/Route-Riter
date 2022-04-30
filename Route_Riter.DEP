@@ -1,0 +1,83 @@
+[Version]
+Version=5.2.0.18
+
+[Route_Riter.exe <0009>]
+Dest=$(AppPath)
+Date=22/05/2004
+Time=09:17
+Version=5.2.0.18
+CABFilename=Route_Riter.CAB
+CABINFFile=Route_Riter.INF
+Uses1=msvbvm60.dll
+Uses2=OLEAUT32.DLL
+Uses3=OLEPRO32.DLL
+Uses4=ASYCFILT.DLL
+Uses5=STDOLE2.TLB
+Uses6=COMCAT.DLL
+Uses7=STKIT432.DLL
+Uses8=hhctrl.ocx
+Uses9=zlib.dll
+Uses10=mwgfxvb.dll
+Uses11=mwacevb.dll
+Uses12=VSPRINT7.ocx
+Uses13=vsflex7L.ocx
+Uses14=SAWZipNG.dll
+Uses15=Vsflex7.ocx
+Uses16=scrrun.dll
+Uses17=dx8vb.dll
+Uses18=RICHTX32.OCX
+Uses19=MSCOMCTL.OCX
+Uses20=COMDLG32.OCX
+Uses21=TABCTL32.OCX
+Uses22=COMCTL32.OCX
+Uses23=trainlib.ocx
+Uses24=stuffit.ref
+Uses25=route_riter.chm
+Uses26=RefFileStart.txt
+Uses27=Lang_Spanish.txt
+Uses28=Ballast.ace
+Uses29=Blue Daze.jpg
+Uses30=Blue Velvet Crush.jpg
+Uses31=grass.bmp
+Uses32=grassold.bmp
+Uses33=grid.bmp
+Uses34=Lang_Danish.txt
+Uses35=Lang_Deutsch.txt
+Uses36=Lang_Dutch.txt
+Uses37=Lang_English.txt
+Uses38=Lang_français.txt
+Uses39=Lang_Norwegian.txt
+Uses40=Rails.ace
+Uses41=liesmich.txt
+Uses42=Midday vision.jpg
+Uses43=Morning Bijou.jpg
+Uses44=PicFormat32.dll
+Uses45=TView.exe
+Uses46=sky.jpg
+Uses47=skyNSWE.jpg
+Uses48=StuffitPack.zip
+Uses49=Summer's Day.jpg
+Uses50=SView.chm
+Uses51=SViewRR.exe
+Uses52=TGATool2.exe
+Uses53=mwace.dll
+Uses54=mwgfx.dll
+Uses55=SAWZipNG.tlb
+
+[STKIT432.DLL <0009>]
+Dest=$(WinSysPath)
+Date=19/12/1995
+Time=10:35
+Version=4.0.2422.0
+
+[mwgfxvb.dll <0009>]
+Dest=$(WinSysPath)
+Date=26/03/2004
+Time=19:29
+Version=4.0.0.165
+
+[mwgfx.dll <0009>]
+Dest=$(AppPath)
+Date=5/04/2004
+Time=19:37
+Version=4.0.0.170

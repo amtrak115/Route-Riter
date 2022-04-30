@@ -1,0 +1,564 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+
+<HEAD>
+	<META NAME="GENERATOR" Content="Visual Page 1.0 for Windows">
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html;CHARSET=iso-8859-1">
+	<TITLE>TgaTool2 Help File</TITLE>
+</HEAD>
+
+<BODY BACKGROUND="paper.gif">
+
+<CENTER>
+<P>
+<TABLE BORDER="0" WIDTH="100%">
+	<TR>
+		<TD WIDTH="45%">
+			<P ALIGN="CENTER"><IMG SRC="logo.gif" WIDTH="252" HEIGHT="192" ALIGN="BOTTOM" BORDER="0">
+		</TD>
+		<TD WIDTH="55%">
+			<P><FONT SIZE="6"><I><B>TGATool2<BR>
+			<BR>
+			</B></I></FONT><B>A tool for working with Trainsim Textures</B></P>
+			<P ALIGN="CENTER"><B>from MW Graphics</B>
+		</TD>
+	</TR>
+</TABLE>
+<BR>
+
+<TABLE BORDER="0" WIDTH="100%">
+	<TR>
+		<TD WIDTH="49%" VALIGN="TOP">
+			<P ALIGN="RIGHT"><A HREF="#Introduction">Introduction</A><BR>
+			<A HREF="#USING....">Opening a File</A><BR>
+			<A HREF="#Supported Formats">Supported Formats</A><BR>
+			<A HREF="#edit the data">Editing the Image and Alpha</A><BR>
+			<A HREF="#SAVING">Saving as Targa</A><BR>
+			<A HREF="#EXPORTING">Exporting as BMP<BR>
+			Exporting as ACE<BR>
+			</A><A HREF="#ADDING ALPHA">Creating an Alpha Channel</A><A HREF="#EXPORTING"><BR>
+			</A><A HREF="#Registering TgaTool2 with Window">Setting as the default program for ACE</A>
+		</TD>
+		<TD WIDTH="3%">&nbsp;</TD>
+		<TD WIDTH="48%" VALIGN="TOP"><A HREF="#Drag and Drop">Drag &amp; Drop</A><A HREF="#EDITING ALPHA"><BR>
+			Alpha Tips</A><BR>
+			<A HREF="#Preferences">Preferences</A><BR>
+			<A HREF="#Troubleshooting">Troubleshooting</A><BR>
+			<A HREF="#MAKEACE">MakeAce<BR>
+			</A><A HREF="#MakeAce Version">MakeAce Versions<BR>
+			</A><A HREF="#Error in MakeAce?">MakeAce Errors<BR>
+			</A><A HREF="#Copyrights">Copyrights<BR>
+			</A><A HREF="#Contacts">Contacts</A></TD>
+	</TR>
+</TABLE>
+
+<HR ALIGN="CENTER">
+
+<HR ALIGN="CENTER">
+<A NAME="Introduction"></A><B>Introduction</B></P>
+</CENTER>
+<P>TgaTool started life as a simple tool for editing Targa files using any Paint program. Because very few paint
+programs directly support Alpha channels it was necessary to create a program that would let you split the 32 bit
+Targa information into seperate (and seperately-editable) files that could be handled even by MSPaint. The tool
+also needed to recombine the data when you saved so that you could create new Targa files still containing all
+the RGB and Alpha data. TgaTool works by seperating the 32 bit RGBA data into 2 files. One 24 bit file containg
+the RGB data and one 8 bit (256 greyscale) file containing the alpha data. These can be sent to whatever Paint
+program you have selected where they can be edited normally. Once the paint program has finished editing TgaTool
+will replace its displayed data with the new, edited, version.</P>
+<P>When Trainsim came along it provided many sample textures in Targa and Bmp format. These are not actually used
+in Trainsim but are able to be converted to the correct ACE format using the tools supplied with the game. However
+this meant the only textures you could modify were the ones they had provided Targa or Bmp templates for.</P>
+<P>Once the Ace format had been decoded it was possible to add the facility to open Ace textures and save them
+out as new Targa or Bmp templates for later editing. It is also possible to edit any of the formats directly in
+TgaTool2 by passing the data back and forth between TgaTool2 and any paint program. As there are still very few
+paint programs that correctly support Alpha channels TgaTool2 makes it possible to edit these textures in any paint
+program (including the free MSPaint program that is included with Windows).</P>
+<CENTER>
+<P>
+<HR ALIGN="CENTER">
+<A NAME="USING...."></A><B>Opening a File....</B></P>
+</CENTER>
+<P>Use the File menu to Load Images in Targa, Bmp or Ace format. When the File dialog appears you can use the &quot;Files
+of type...&quot; option to select which type of files you wish to open.</P>
+<P>Upon loading any type of file the Main image will be displayed in the main part of the window. If any Alpha
+channel is found this will be displayed in the smaller thumbnail to the right of the window.</P>
+<CENTER>
+<P>
+<HR ALIGN="CENTER">
+<A NAME="Supported Formats"></A><B>Supported Formats</B></P>
+</CENTER>
+<P ALIGN="CENTER">TgaTool2 will load the following Formats</P>
+<CENTER>
+<P>
+<TABLE BORDER="0" WIDTH="85%">
+	<TR>
+		<TD WIDTH="28%" VALIGN="TOP">
+			<P ALIGN="RIGHT"><B>TGA</B>
+		</TD>
+		<TD WIDTH="2%" VALIGN="TOP">
+			<P ALIGN="CENTER">-
+		</TD>
+		<TD WIDTH="70%" VALIGN="TOP">Targa 24 bit and 32 bit formats (uncompressed only!). Alpha channel supported.</TD>
+	</TR>
+	<TR>
+		<TD WIDTH="28%" VALIGN="TOP">
+			<P ALIGN="RIGHT"><B>ACE</B>
+		</TD>
+		<TD WIDTH="2%" VALIGN="TOP">
+			<P ALIGN="CENTER">-
+		</TD>
+		<TD WIDTH="70%" VALIGN="TOP">All formats of Ace Trainsim texture. Alpha channel supported. Compressed images and DXT1 supported.</TD>
+	</TR>
+	<TR>
+		<TD WIDTH="28%" VALIGN="TOP">
+			<P ALIGN="RIGHT"><B>BMP</B>
+		</TD>
+		<TD WIDTH="2%" VALIGN="TOP">
+			<P ALIGN="CENTER">-
+		</TD>
+		<TD WIDTH="70%" VALIGN="TOP">24 bit Standard Windows Bitmaps. No Alpha</TD>
+	</TR>
+	<TR>
+		<TD WIDTH="28%" VALIGN="TOP">
+			<P ALIGN="RIGHT"><B>TRAINZ</B>
+		</TD>
+		<TD WIDTH="2%" VALIGN="TOP">
+			<P ALIGN="CENTER">-
+		</TD>
+		<TD WIDTH="70%" VALIGN="TOP">Experimental option. Seems to load most examples.</TD>
+	</TR>
+</TABLE>
+</P>
+</CENTER>
+<CENTER>
+<P>
+<HR ALIGN="CENTER">
+<A NAME="edit the data"></A><B>Editing the Image and Alpha data</B></P>
+</CENTER>
+<P>Edit the main image by either selecting &quot;Send Main Image to Editor&quot; from the Image menu or just Double-click
+on the Image. This will send it to the currently selected editing program (initial default MSPaint). Once finished
+editing Save (not Save As) from the Editing program and your edited version will be displayed when you returnto
+the TgaTool2 window. With most Paint programs the quickest and easiest way to ensure you correctly save your edited
+file is to just close the Paint program. It should then pop up a message asking if you wish to save the changed
+image and saying Yes or OK to this will correctly save it so that TgaTool2 can locate and reload the data.<BR>
+<BR>
+Follow a similar process to edit the Alpha channel.</P>
+<CENTER>
+<P>
+<HR ALIGN="CENTER">
+<A NAME="SAVING"></A><B>Saving a Targa File</B></P>
+</CENTER>
+<P>Using Save from the File menu will let you save a new Targa version of the Image (with Alpha if present). If
+your initially loaded image was a Targa file then this will be overwritten by the new version. If you originally
+loaded a BMP or ACE image then you will be prompted for a Targa file to save the data to. Note that &quot;Save&quot;
+and &quot;Save As&quot; will only save Targa files. If you wish to save a BMP or ACE version of your image then
+you should select the appropriate option from the &quot;Export&quot; menu.</P>
+<CENTER>
+<P>
+<HR ALIGN="CENTER">
+<A NAME="EXPORTING"></A><B>Exporting other Formats</B></P>
+</CENTER>
+<P><BR>
+The Export menu gives options to save a copy in several formats.</P>
+<CENTER>
+<P>
+<TABLE BORDER="0" WIDTH="84%">
+	<TR>
+		<TD WIDTH="30%" VALIGN="TOP">
+			<P ALIGN="RIGHT"><B>Bmp (no Alpha)</B>
+		</TD>
+		<TD WIDTH="2%">&nbsp;</TD>
+		<TD WIDTH="68%"><FONT SIZE="2">This will export a standard Bmp version of the Main Image. Bmp images can not contain any Alpha
+			information</FONT></TD>
+	</TR>
+	<TR>
+		<TD WIDTH="30%" VALIGN="TOP">
+			<P ALIGN="RIGHT"><B>Ace (no Alpha)</B>
+		</TD>
+		<TD WIDTH="2%">&nbsp;</TD>
+		<TD WIDTH="68%"><FONT SIZE="2">This will export an Ace version of the main image using the Ace 24 bit format which contains no
+			Alpha data</FONT></TD>
+	</TR>
+	<TR>
+		<TD WIDTH="30%" VALIGN="TOP">
+			<P ALIGN="RIGHT"><B>Ace(Alpha)</B>
+		</TD>
+		<TD WIDTH="2%">&nbsp;</TD>
+		<TD WIDTH="68%"><FONT SIZE="2">This will export the main image and the Alpha (as 8 bit) in the Ace 32 bit Alpha format.</FONT></TD>
+	</TR>
+	<TR>
+		<TD WIDTH="30%" VALIGN="TOP">
+			<P ALIGN="RIGHT"><B>Ace(-trans)</B>
+		</TD>
+		<TD WIDTH="2%">&nbsp;</TD>
+		<TD WIDTH="68%"><FONT SIZE="2">This will export the main image and Alpha (as 1 bit) in the Ace &quot;24 bit + Transparency&quot;
+			format.</FONT></TD>
+	</TR>
+</TABLE>
+</P>
+</CENTER>
+<CENTER>
+<P>
+<HR ALIGN="CENTER">
+<A NAME="ADDING ALPHA"></A><B>Adding Alpha</B></P>
+</CENTER>
+<P><BR>
+Many images do not have an alpha channel. If, as part of the editing process, you wish to add an alpha channel
+so that transparencies can be included then you can use the buttons under the Alpha thumbnail to create the alpha
+channel.<BR>
+<BR>
+&quot;Create Alpha Channel&quot; will create a blank (fully opaque) alpha channel which you can then edit to add
+transparent areas.<BR>
+<BR>
+&quot;Create Alpha Template&quot; will create an alpha channel as a greyscale copy of the main image. This will
+make it easier to see exactly where you want to apply the transparency. Once the transparent areas have been painted
+in black you will need to paint over the non-transparent areas in white.</P>
+<CENTER>
+<P>
+<HR ALIGN="CENTER">
+<A NAME="EDITING ALPHA"></A><B>Alpha Tips</B></P>
+</CENTER>
+<P><BR>
+When you send the alpha channel to your paint program for editing you should think of it as a transparency map
+that is applied to the actual pixels in the main image. Each point on the alpha will correspond to the same point
+on the main image and the grey level will decide how much transparency is applied to the main image at that point.
+Black will give fully-transparent. White will give fully opaque and any shade of grey inbetween will give a partial
+transparency based on what level it is between White and Black.<BR>
+<BR>
+Note also that the actual transparency included when you export in ACE format depends on the type of ACE you select.
+Ace(Alpha) will use all the transparency if possible. Ace(-trans) will convert the alpha to 1-bit (ie just on or
+off) and Ace(no alpha) will not use the alpha channel at all.</P>
+<P><BR>
+There are further restrictions imposed by MakeAce. It will only allow full alpha for images that are square and
+no bigger than 512x512. All other sizes will be treated as if they were -trans.</P>
+<CENTER>
+<P>
+<HR ALIGN="CENTER">
+<A NAME="Troubleshooting"></A><B>Troubleshooting</B></P>
+</CENTER>
+<P>There are some common problems you may encounter while using TgaTool2. Often these are the result of incorrect
+setup and can easily be cured.</P>
+<CENTER>
+<P>
+<TABLE BORDER="0" WIDTH="90%">
+	<TR>
+		<TD WIDTH="36%" VALIGN="TOP">
+<HR ALIGN="CENTER">
+<FONT SIZE="2"><B>Ace files come out a different size to the original image</B></FONT></TD>
+		<TD WIDTH="2%" VALIGN="TOP">&nbsp;</TD>
+		<TD WIDTH="62%" VALIGN="TOP">
+<HR ALIGN="CENTER">
+<FONT SIZE="2">Check your </FONT><A HREF="#MakeAce Version"><FONT SIZE="2">version</FONT></A><FONT SIZE="2"> of
+			Makeace. The original Makeace will only create square textures that are a &quot;power of 2&quot; in size. It will
+			also only create a maximum size of 512x512. If you have one of the later versions installed then ensure that the
+			same version is selected in TgaTool2.</FONT></TD>
+	</TR>
+	<TR>
+		<TD WIDTH="36%" VALIGN="TOP">
+<HR ALIGN="CENTER">
+<FONT SIZE="2"><B>When you export an Ace file and then go and look at it you still see the original image.</B></FONT></TD>
+		<TD WIDTH="2%" VALIGN="TOP">&nbsp;</TD>
+		<TD WIDTH="62%" VALIGN="TOP">
+<HR ALIGN="CENTER">
+<FONT SIZE="2">1/ check that you are actually saving the Ace file to the correct location. You need to overwrite
+			the original file in the appropriate folder in Trainsim.<BR>
+			<BR>
+			2/ MakeAce may have failed to create a new version. This could be because the original is &quot;Read only&quot;
+			or because your </FONT><A HREF="#MakeAce Version"><FONT SIZE="2">version</FONT></A><FONT SIZE="2"> of MakeAce is
+			not capable of creating the particular size or format you have selected.<BR>
+			<BR>
+			3/ MakeAce may have stopped working entirely. Try the </FONT><A HREF="#Error in MakeAce?"><FONT SIZE="2">error</FONT></A><FONT
+			SIZE="2"> correction tips for MakeAce.</FONT></TD>
+	</TR>
+	<TR>
+		<TD WIDTH="36%" VALIGN="TOP">
+<HR ALIGN="CENTER">
+<FONT SIZE="2"><B>When you use the &quot;Send to Editor&quot; options nothing happens</B></FONT></TD>
+		<TD WIDTH="2%" VALIGN="TOP">&nbsp;</TD>
+		<TD WIDTH="62%" VALIGN="TOP">
+<HR ALIGN="CENTER">
+<FONT SIZE="2">This will happen if the Editor program selection is not set up correctly. From the Prefs menu use
+			&quot;Select Editing Program&quot; and browse to the actual executable of the chosen paint program. Note that this
+			must be the actual exe file (eg PSP.EXE for PaintShopPro) and not a Shortcut or link.<BR>
+			<BR>
+			To ensure that the actual &quot;Send to..&quot; functions work you can click &quot;Reset Editor to MSPaint&quot;
+			in the Prefs menu. This will set TgaTool2 to use the default windows Paint program</FONT></TD>
+	</TR>
+	<TR>
+		<TD WIDTH="36%" VALIGN="TOP">
+<HR ALIGN="CENTER">
+<FONT SIZE="2"><B>You have set the editor to be a valid Paint program but when you use &quot;Send to..&quot; you
+			just get the paint program opening with no image loaded</B></FONT></TD>
+		<TD WIDTH="2%">&nbsp;</TD>
+		<TD WIDTH="62%" VALIGN="TOP">
+<HR ALIGN="CENTER">
+<FONT SIZE="2">Some Paint programs do not accept a filename on the commandline. These cannot be used with TgaTool2.<BR>
+			<BR>
+			All the main popular Paint programs will function correctly but there may well be some Photo programs that aren`t
+			set up to work this way. <BR>
+			<BR>
+			Reset the Editor to MSPaint or try another paint program.</FONT></TD>
+	</TR>
+	<TR>
+		<TD WIDTH="36%" VALIGN="TOP">
+<HR ALIGN="CENTER">
+<FONT SIZE="2"><B>You can successfully send your image to the editor program but when you try to save the edited
+			image the Paint program refuses to do a plain &quot;save&quot; and attempts to enforce a new format on the data.</B></FONT></TD>
+		<TD WIDTH="2%">&nbsp;</TD>
+		<TD WIDTH="62%" VALIGN="TOP">
+<HR ALIGN="CENTER">
+<FONT SIZE="2">Some Paint programs try to enforce their own internal format on saved images. These cannot be used
+			with TgaTool2.</FONT><BR>
+			<BR>
+			<FONT SIZE="2">Reset the Editor to MSPaint or try another paint program.</FONT></TD>
+	</TR>
+	<TR>
+		<TD WIDTH="36%" VALIGN="TOP">
+<HR ALIGN="CENTER">
+<FONT SIZE="2"><B>When I check my new texture in Trainsim it has lost all the transparency that was present in
+			the original version</B></FONT></TD>
+		<TD WIDTH="2%" VALIGN="TOP">&nbsp;</TD>
+		<TD WIDTH="62%" VALIGN="TOP">
+<HR ALIGN="CENTER">
+<FONT SIZE="2">The transparency is contained in the </FONT><A HREF="#EDITING ALPHA"><FONT SIZE="2">alpha</FONT></A><FONT
+			SIZE="2"> channel. If you are editing an original texture and you see a greyscale thumbnail on the right of the
+			TgaTool2 window then this texture contains an alpha channel.<BR>
+			<BR>
+			To preserve the Alpha you need to </FONT><A HREF="#EXPORTING"><FONT SIZE="2">export</FONT></A><FONT SIZE="2"> using
+			the &quot;Ace (Alpha)&quot; or &quot;Ace (-trans)&quot; options. <BR>
+			<BR>
+			If you save the texture as a Targa file and then edit this Targa in a paint program it is likely that this will
+			destroy the Alpha channel. Very few Paint programs support Alpha.<BR>
+			<BR>
+			If you export the image as a BMP file for external editing then you will lose all the Alpha channel.</FONT></TD>
+	</TR>
+	<TR>
+		<TD WIDTH="36%" VALIGN="TOP">
+<HR ALIGN="CENTER">
+<FONT SIZE="2"><B>When you load a Targa file you find it displays in TgaTool2 as a garbled mess</B></FONT></TD>
+		<TD WIDTH="2%" VALIGN="TOP">&nbsp;</TD>
+		<TD WIDTH="62%" VALIGN="TOP">
+<HR ALIGN="CENTER">
+<FONT SIZE="2">TgaTool2 will only correctly load uncompressed 24 bit and 32 bit Targa files. Garbled data is a
+			sign that the file is compressed (or possibly 8 bit). <BR>
+			<BR>
+			Most paint programs that support Targa will let you save in compressed or uncompressed format. Always save a file
+			that is intended for use with TgaTool2 in uncompressed format. Never use 8 bit format.</FONT></TD>
+	</TR>
+</TABLE>
+</P>
+</CENTER>
+<CENTER>
+<P>
+<HR ALIGN="CENTER">
+<A NAME="MAKEACE"></A><B>MakeAce</B></P>
+</CENTER>
+<P>The program utilises MakeAce to Export Ace format textures. It should have Automatically located your copy of
+this program but if you get an error message when exporting Ace then you will need to use the Prefs menu to browse
+to the correct location.<BR>
+<BR>
+If you have an updated version of MakeAce then you should set the appropiate version (see below) in the box under
+the Alpha Display. This will enable the later options to create Ace images in sizes other than the square power-of-2
+allowed by the initial version. <BR>
+When Ace files are being created that are not Square and Power of 2 then only a 1 bit Alpha will be created even
+if Full Alpha is available.<BR>
+<BR>
+If you tick the &quot;Compress Ace Files&quot; option then exported Ace files will be compressed if possible.<BR>
+If you have the &quot;Patch #1 MakeAce&quot; installed then you will be able to select the option of DXT compression.
+This will only be used if the image is an appropriate square size,</P>
+<CENTER>
+<P>
+<HR ALIGN="CENTER">
+<A NAME="MakeAce Version"></A><B>MakeAce Version</B></P>
+</CENTER>
+<P>There are currently 3 versions of Makeace available. Each with different capabilities. You must tell TgaTool2
+which version you are using so it can operate correctly when Exporting Ace format files</P>
+<CENTER>
+<P>
+<TABLE BORDER="1" WIDTH="82%">
+	<TR>
+		<TD WIDTH="34%">
+			<P ALIGN="CENTER"><B>&quot;Standard MakeAce&quot;</B>
+		</TD>
+		<TD WIDTH="66%"><FONT SIZE="2">This is the version that came with Trainsim. This can only create Ace textures that are square and
+			in one of the following sizes -32x32, 64x64, 128,128, 256x256 or 512x512</FONT></TD>
+	</TR>
+	<TR>
+		<TD WIDTH="34%">
+			<P ALIGN="CENTER"><B>&quot;Updated MakeAce&quot;</B>
+		</TD>
+		<TD WIDTH="66%"><FONT SIZE="2">This was released after Trainsim as an update package along with updated versions of Conv3ds and
+			FFEdit. This can create Ace files in any size up to 1024x1024</FONT></TD>
+	</TR>
+	<TR>
+		<TD WIDTH="34%">
+			<P ALIGN="CENTER"><B>&quot;Patch #1 MakeAce&quot;</B>
+		</TD>
+		<TD WIDTH="66%"><FONT SIZE="2">This was released as part of a complete Patch for Trainsim along with lots of other updates and
+			fixes. This version adds built-in zlib compression and also the option of DXT Compression (only for Square textures
+			in &quot;power of 2&quot; sizes)<BR>
+			Note that DXT will only be used for Ace (No Alpha) and Ace (-trans) and only with square &quot;power of 2&quot;
+			sized images.</FONT></TD>
+	</TR>
+</TABLE>
+</P>
+</CENTER>
+<P>It is important that the MakeAce version you set in TgaTool2 corresponds to the actual version of MakeAce you
+have installed. Each version requires different parameters so setting the wrong one may result in failure to create
+an output file.</P>
+<P>The Patch#1 MakeAce upgrade also includes a Windows version (MakeAceWin.exe). This should <B>not</B> be used
+in conjunction with TgaTool2. Use the console version (MakeAce.exe) with TgaTool2 and use MakeAceWin as an alternative
+standalone converting program. There is a restriction in the commandline MakeAce that means that any non-square
+images or images larger than 512x512 will only be created with a -trans (1 bit) Alpha even if full alpha is chosen
+as the export option. For these images the only way to get a full alpha is to use MakeAceWin. You should save as
+Targa version of your image from TgaTool2 and then use MakeAceWin to convert the Targa to Ace with full alpha.</P>
+<CENTER>
+<P>
+<HR ALIGN="CENTER">
+<A NAME="Drag and Drop"></A><B>Drag and Drop</B></P>
+</CENTER>
+<P>TgaTool2 supports the drag and drop of files. If you have TgaTool2 open you can cause it to load a file by dragging
+the file icon from Windows Explorer and dropping it on the TgaTool2 window.</P>
+<CENTER>
+<P>
+<HR ALIGN="CENTER">
+<A NAME="Registering TgaTool2 with Window"></A><B>Registering TgaTool2 with Windows</B></P>
+</CENTER>
+<P>You may if you wish set it so that Windows will use TgaTool2 as the default program for opening ACE Files. This
+can be done from the Prefs menu where there are 2 options. One to Register ACE to TgaTool2 and the other to delete
+the association.<BR>
+This will remove any existing association for ACE so you may not wish to do this. <BR>
+ACE is also the file extension used by a particular compression format (similar to ZIP) so there are possibilities
+for confusion.</P>
+<P>If you Register TgaTool2 in this way then you will see that Ace files now show up with the TgaTool2 Icon. Opening
+any of these files in Windows Explorer will cause TgaTool2 to start up with the Ace image loaded.</P>
+<CENTER>
+<P>
+<HR ALIGN="CENTER">
+<A NAME="Error in MakeAce?"></A><B>Error in MakeAce?</B></P>
+</CENTER>
+<P>MakeAce has not proved to be one of the most unbreakable programs ever. It has been known to suddenly stop working
+for no apparent reason. In fact it uses many DirectX functions internally so changes to your DirectX setup (which
+may be made by other programs without telling you) can stop it working.</P>
+<P>If you get an error dialog when exporting in Ace format then MakeAce has done its trick of getting messed up
+by some change in DirectX or the installation of a new Graphics card.</P>
+<P>To get it working again you need to run the DXDIAG program (select Run from the Windows Start menu and type
+DXDIAG). Go to the Display tab and disable DirectDraw Accelleration. MakeAce should now start working again. You
+can then re-enable DirectDraw Accelleration and it should still continue to work.</P>
+<CENTER>
+<P>
+<HR ALIGN="CENTER">
+<A NAME="Preferences"></A><B>Preferences</B></P>
+</CENTER>
+<P>There are several options that can be altered in TgaTool2 in order to set things up to suit your setup and your
+preferred way of working.</P>
+<P>Some of them are visible as checkboxes and selection lists on the right hand side of the window. Use these to
+set your Makeace <A HREF="#MakeAce Version">version</A> and whether or not you want to use <A HREF="#MAKEACE">compression</A>
+or DXT-compression on exported Ace images.</P>
+<P>The other Preferences options are available on the Prefs Menu.</P>
+<CENTER>
+<P>
+<TABLE BORDER="0" WIDTH="73%">
+	<TR>
+		<TD WIDTH="33%" VALIGN="TOP">
+			<P ALIGN="RIGHT"><B>Select Editing Program</B>
+		</TD>
+		<TD WIDTH="2%" VALIGN="TOP">&nbsp;</TD>
+		<TD WIDTH="65%" VALIGN="TOP"><FONT SIZE="2">Use this option to set which Paint program you wish to use in conjunction with TgaTool2. This program
+			will be called up when you Send the Main Image or the Alpha channel for editing.</FONT></TD>
+	</TR>
+	<TR>
+		<TD WIDTH="33%" VALIGN="TOP">
+			<P ALIGN="RIGHT"><B>Reset Editor to MSPaint</B>
+		</TD>
+		<TD WIDTH="2%" VALIGN="TOP">&nbsp;</TD>
+		<TD WIDTH="65%" VALIGN="TOP"><FONT SIZE="2">Use this option to set TgaTool2 to use the MSPaint program provided as standard with all versions
+			of Windows</FONT></TD>
+	</TR>
+	<TR>
+		<TD WIDTH="33%" VALIGN="TOP">
+			<P ALIGN="RIGHT"><B>Locate MakeAce</B>
+		</TD>
+		<TD WIDTH="2%" VALIGN="TOP">&nbsp;</TD>
+		<TD WIDTH="65%" VALIGN="TOP"><FONT SIZE="2">Use this option to tell TgaTool2 where to find the MakeAce program (used to export ACE files). Normally
+			TgaTool2 will have located it correctly when first installed but if you have trouble exporting ACE files then you
+			should use this to make sure TgaTool2 is looking in the correct place</FONT></TD>
+	</TR>
+	<TR>
+		<TD WIDTH="33%" VALIGN="TOP">
+			<P ALIGN="RIGHT"><B>Register ACE to TgaTool2</B>
+		</TD>
+		<TD WIDTH="2%" VALIGN="TOP">&nbsp;</TD>
+		<TD WIDTH="65%" VALIGN="TOP"><FONT SIZE="2">see the </FONT><A HREF="#Registering TgaTool2 with Window"><FONT SIZE="2">Registering</FONT></A><FONT
+			SIZE="2"> section for more details</FONT></TD>
+	</TR>
+	<TR>
+		<TD WIDTH="33%" VALIGN="TOP">
+			<P ALIGN="RIGHT"><B>UnRegister ACE</B>
+		</TD>
+		<TD WIDTH="2%" VALIGN="TOP">&nbsp;</TD>
+		<TD WIDTH="65%" VALIGN="TOP"><FONT SIZE="2">see the </FONT><A HREF="#Registering TgaTool2 with Window"><FONT SIZE="2">Registering</FONT></A><FONT
+			SIZE="2"> section for more details</FONT></TD>
+	</TR>
+	<TR>
+		<TD WIDTH="33%" VALIGN="TOP">
+			<P ALIGN="RIGHT"><B>Set Temporary files location</B>
+		</TD>
+		<TD WIDTH="2%" VALIGN="TOP">&nbsp;</TD>
+		<TD WIDTH="65%" VALIGN="TOP"><FONT SIZE="2">TgaTool2 will normally use the system TEMP folder for the storing of the temporary files it creates.
+			You can use this option to specify an alternative location. This can be useful if you want to be able to access
+			the Image and Alpha data directly.<BR>
+			<BR>
+			The dialog that appears will let you browse to any folder on any of your drives. It will also let you set the location
+			back to the system TEMP location if required.</FONT></TD>
+	</TR>
+	<TR>
+		<TD WIDTH="33%" VALIGN="TOP">
+			<P ALIGN="RIGHT"><B>Use Old &quot;Send to Editor&quot;</B>
+		</TD>
+		<TD WIDTH="2%" VALIGN="TOP">&nbsp;</TD>
+		<TD WIDTH="65%" VALIGN="TOP"><FONT SIZE="1">By default TgaTool2 will run your selected Paint Program as a sub-process. This means that TgaTool2
+			will be disabled until you have finished your editing and closed down the Paint program. It will then automatically
+			update the displayed images if you have made any changes.<BR>
+			<BR>
+			Previous versions of TgaTool2 used a simpler method that just set the paint program running and then carried on.
+			After you had finished your editing then you had to tell TgaTool2 to update its displayed data yourself.<BR>
+			<BR>
+			Some people may prefer to use the &quot;Old&quot; method. Ticking this menu option will cause TgaTool2 to perform
+			the Send to Editor functions in the old way. When you wish to update the displayed data with your edited data you
+			must select the &quot;Reload Data&quot; optionb from the Image menu</FONT></TD>
+	</TR>
+</TABLE>
+</P>
+</CENTER>
+<CENTER>
+<P>
+<HR ALIGN="CENTER">
+<A NAME="Copyrights"></A><B>Copyrights</B></P>
+</CENTER>
+<P>TgaTool2 is copyright (c) 2001-2003 Martin Wright.</P>
+<P>TgaTool2.exe is provided free of charge for personal use. You may not redistribute the program in any form.
+The latest version will always be available from the MW Graphics <A HREF="http://fly.to/mwgfx/">Website</A>.</P>
+<P>If you wish to provide a link on your website for people to obtain TgaTool2 from the MW Graphics site then it
+is better if you link to the main page rather than directly to the TgaTool2 page or to the download file itself.
+Pages move. Downloads change filenames. The only guarantee is that there will be a link to the latest TgaTool2
+on the main page.</P>
+<P>TgaTool2 can be used freely for the conversion and editing of textures for Train simulator. Please note that
+unless you are editing textures you have created yourself you are bound by the copyrights of the original creator
+of the file. You should not redistribute edited versions of other people`s textures (however much you may have
+changed them) without obtaining the permission of the original creator.</P>
+<CENTER>
+<P>
+<HR ALIGN="CENTER">
+<A NAME="Contacts"></A><B>Contacts</B></P>
+</CENTER>
+<P ALIGN="CENTER"><B>Email</B></P>
+<P ALIGN="CENTER"><A HREF="mailto:mnwright@btinternet.com">mnwright@btinternet.com</A></P>
+<P ALIGN="CENTER"><B>Website</B></P>
+<P ALIGN="CENTER"><A HREF="http://fly.to/mwgfx/">http://fly.to/mwgfx/</A></P>
+
+<P ALIGN="CENTER"><A HREF="http://www.mnwright.btinternet.co.uk/">http://www.mnwright.btinternet.co.uk/</A>
+
+</BODY>
+
+</HTML>

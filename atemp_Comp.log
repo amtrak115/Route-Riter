@@ -1,0 +1,24 @@
+TS DB-Utility - Vers.: 3.2.148 
+All Rights Reserved.
+Copyright (C) 2003,2004,2005 by ...CarlosHR...
+PgmDate: 22.11.2005
+
+Function called from >> OS-system:'windows xp', Version:5.1 <<
+Java-system   >> Java-JRE :'sun microsystems inc.', Version:1.5.0_05 <<
+>>TSUtil 'cmp' '-t' '-inplace' 'e:\Trainsim2\Train Simulator\Routes\atemp' 'D:\VB Projects\RR6\atemp_Comp.log'<<
+
+Files of 'e:\Trainsim2\Train Simulator\Routes\atemp' are reduced and compressed!
+   ( 03.12.2005 09:39:47 )
+
+Route-name   : 'atemp'
+TS Systempath: 'e:\Trainsim2\Train Simulator'
+TS Route-path: 'e:\Trainsim2\Train Simulator\Routes\atemp'
+
+File 0044: 'e:\Trainsim2\Train Simulator\Routes\atemp\Tiles\-019a8ea0.t'
+    O-->'        1 file(s) copied.'
+File 0563: 'e:\Trainsim2\Train Simulator\Routes\atemp\Tiles\-019a8ea4.t'
+    O-->'        1 file(s) copied.'
+
+  0002 Files processed!
+  0000 Errors in Conversion found!
+Program ended after 2 Files!

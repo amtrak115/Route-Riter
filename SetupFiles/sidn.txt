@@ -1,0 +1,9 @@
+// sidn.txt
+// Binary ID range values
+
+SIDN_CORE       = 0x0000                // Core starts at zero
+SIDN_CORE_DEMO	= 0x0001		// Demo definitions
+SIDN_APACHE2	= 0x0002		// Team Apache 2
+SIDN_JUMPRUNNER	= 0x0003		// Jump Runner
+SIDN_TRAIN      = 0x0004                // Train
+SIDN_MAX        = 0x0005                // Highest Simis ID number
