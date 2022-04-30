@@ -54,39 +54,30 @@ Attribute VB_Exposed = False
 Option Explicit
 
 Private Sub CancelButton_Click()
-booRaildriver = False
-Unload Me
+    booRaildriver = False
+    Unload Me
 End Sub
 
 Private Sub Form_Load()
-Dim strCap As String
+    Dim strCap As String
 
-strCap = "Warning: This option changes some registry settings, if you are not happy with this, then please click CANCEL" & vbCrLf & vbCrLf
-strCap = strCap & "Otherwise, select the instance of MSTS you wish to use with Raildriver, then click OK"
-Label1.Caption = strCap
-booRaildriver = True
-
-
+    strCap = "Warning: This option changes some registry settings, if you are not happy with this, then please click CANCEL" & vbCrLf & vbCrLf
+    strCap = strCap & "Otherwise, select the instance of MSTS you wish to use with Raildriver, then click OK"
+    Label1.Caption = strCap
+    booRaildriver = True
 End Sub
-
 
 Private Sub OKButton_Click()
-Dim strNew As String
+    Dim strNew As String
 
-strNew = Text1.Text & Chr$(0)
-
-Call SetKeyValue(HKEY_LOCAL_MACHINE, "Software\Microsoft\Microsoft Games\Train Simulator\1.0", "Path", strNew, REG_SZ)
-DoEvents
-
-Call SetKeyValue(HKEY_LOCAL_MACHINE, "Software\Microsoft\Microsoft Games\Train Simulator\1.0", "EXE Path", strNew, REG_SZ)
-
-Unload Me
+    strNew = Text1.Text & Chr$(0)
+    Call SetKeyValue(HKEY_LOCAL_MACHINE, "Software\Microsoft\Microsoft Games\Train Simulator\1.0", "Path", strNew, REG_SZ)
+    DoEvents
+    Call SetKeyValue(HKEY_LOCAL_MACHINE, "Software\Microsoft\Microsoft Games\Train Simulator\1.0", "EXE Path", strNew, REG_SZ)
+    Unload Me
 End Sub
-
 
 Private Sub Text1_Change()
-OKButton.Visible = True
-
+    OKButton.Visible = True
 End Sub
-
 

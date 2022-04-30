@@ -52,31 +52,36 @@ Option Explicit
 '           alternative to the WFDPointer() function
 '##############################################################################################
 
-Private Declare Function FindFirstFile Lib "kernel32" Alias "FindFirstFileA" (ByVal lpFileName As String, lpFindFileData As WIN32_FIND_DATA) As Long
-Private Declare Function FindNextFile Lib "kernel32" Alias "FindNextFileA" (ByVal hFindFile As Long, lpFindFileData As WIN32_FIND_DATA) As Long
+Private Declare Function FindFirstFile _
+                Lib "kernel32" _
+                Alias "FindFirstFileA" (ByVal lpFileName As String, lpFindFileData As WIN32_FIND_DATA) As Long
+Private Declare Function FindNextFile _
+                Lib "kernel32" _
+                Alias "FindNextFileA" (ByVal hFindFile As Long, lpFindFileData As WIN32_FIND_DATA) As Long
 Private Declare Function FindClose Lib "kernel32" (ByVal hFindFile As Long) As Long
-Private Declare Function FileTimeToSystemTime Lib "kernel32" (lpFileTime As FILETIME, lpSystemTime As SYSTEMTIME) As Long
+Private Declare Function FileTimeToSystemTime _
+                Lib "kernel32" (lpFileTime As FILETIME, lpSystemTime As SYSTEMTIME) As Long
 
-Private Const MAX_PATH As Long = 260
-Private Const INVALID_HANDLE_VALUE As Long = -1
+Private Const MAX_PATH                  As Long = 260
+Private Const INVALID_HANDLE_VALUE      As Long = -1
 
-Private Const FILE_ATTRIBUTE_ARCHIVE As Long = &H20
+Private Const FILE_ATTRIBUTE_ARCHIVE    As Long = &H20
 Private Const FILE_ATTRIBUTE_COMPRESSED As Long = &H800
-Private Const FILE_ATTRIBUTE_DIRECTORY As Long = &H10
-Private Const FILE_ATTRIBUTE_HIDDEN As Long = &H2
-Private Const FILE_ATTRIBUTE_NORMAL As Long = &H80
-Private Const FILE_ATTRIBUTE_READONLY As Long = &H1
-Private Const FILE_ATTRIBUTE_SYSTEM As Long = &H4
-Private Const NULL_CHAR As Long = 0
-Private Const EXT_SEPERATOR_CHAR As String = "."
-Private Const MASK_SEPERATOR_CHAR As String = ";"
+Private Const FILE_ATTRIBUTE_DIRECTORY  As Long = &H10
+Private Const FILE_ATTRIBUTE_HIDDEN     As Long = &H2
+Private Const FILE_ATTRIBUTE_NORMAL     As Long = &H80
+Private Const FILE_ATTRIBUTE_READONLY   As Long = &H1
+Private Const FILE_ATTRIBUTE_SYSTEM     As Long = &H4
+Private Const NULL_CHAR                 As Long = 0
+Private Const EXT_SEPERATOR_CHAR        As String = "."
+Private Const MASK_SEPERATOR_CHAR       As String = ";"
 
-Private Const ALL_FILES As String = "*.*"
-Private Const PARENT_DIR As String = "."
-Private Const ROOT_DIR As String = ".."
+Private Const ALL_FILES                 As String = "*.*"
+Private Const PARENT_DIR                As String = "."
+Private Const ROOT_DIR                  As String = ".."
 
-Private Const DIR_KEY As String = "1"
-Private Const FILE_KEY As String = "0"
+Private Const DIR_KEY                   As String = "1"
+Private Const FILE_KEY                  As String = "0"
 
 Private Type SYSTEMTIME
     wYear             As Integer
@@ -113,39 +118,38 @@ Public Enum DateTypeEnum
     LastAccessed = 2
 End Enum
 
-Private mWFD As WIN32_FIND_DATA
+Private mWFD             As WIN32_FIND_DATA
 
-Private mFromDate As Date
-Private mToDate As Date
-Private mMaximumSize As Long
-Private mMinimumSize As Long
+Private mFromDate        As Date
+Private mToDate          As Date
+Private mMaximumSize     As Long
+Private mMinimumSize     As Long
 
-Private mArchive As Boolean
-Private mCompressed As Boolean
-Private mFolder As Boolean
-Private mHidden As Boolean
-Private mNormal As Boolean
-Private mReadOnly As Boolean
-Private mSystem As Boolean
-Private mFilter As String
+Private mArchive         As Boolean
+Private mCompressed      As Boolean
+Private mFolder          As Boolean
+Private mHidden          As Boolean
+Private mNormal          As Boolean
+Private mReadOnly        As Boolean
+Private mSystem          As Boolean
+Private mFilter          As String
 
-Private mDirCount As Long
-Private mFileCount As Long
-Private mDateType As DateTypeEnum
-Private mDateCheck As Integer
-Private mSizeCheck As Integer
-Private mCancelScan As Boolean
-Private mExtendedDetail As Boolean
+Private mDirCount        As Long
+Private mFileCount       As Long
+Private mDateType        As DateTypeEnum
+Private mDateCheck       As Integer
+Private mSizeCheck       As Integer
+Private mCancelScan      As Boolean
+Private mExtendedDetail  As Boolean
 Private mPatternMatching As Boolean
-Private mSorted As Boolean
-Private mFilters() As String
+Private mSorted          As Boolean
+Private mFilters()       As String
 
 Public Event DirMatch(Directory As String, Path As String)
 Public Event FileMatch(Filename As String, Path As String)
 
 Public Event DirMatchEx(Directory As String, Path As String, Attributes As Long, LastWriteTime As Date, CreationTime As Date, LastAccessTime As Date)
 Public Event FileMatchEx(Filename As String, Path As String, FileSize As Long, Attributes As Long, LastWriteTime As Date, CreationTime As Date, LastAccessTime As Date)
-
 
 Public Property Get Archive() As Boolean
     Archive = mArchive
@@ -184,9 +188,7 @@ Public Property Get DirCount() As Long
 End Property
 
 Private Function DirectScan(Path As String, SubFolders As Boolean) As Long
-    '##############################################################################################
-    'This scans a path (and optionally subfolders) for all files that match
-    'the Filter
+    'This scans a path (and optionally subfolders) for all files that match the Filter
     
     Dim colDirs As Collection
     Dim lCount As Long
@@ -272,11 +274,11 @@ Private Function FileMatches(udtWFD As WIN32_FIND_DATA) As Boolean
     '##############################################################################################
     
     Dim dtFileDate As Date
-    Dim nFilter As Integer
-    Dim nPos As Integer
-    Dim bFolder As Boolean
-    Dim bOK As Boolean
-    Dim sExt As String
+    Dim nFilter    As Integer
+    Dim nPos       As Integer
+    Dim bFolder    As Boolean
+    Dim bOK        As Boolean
+    Dim sExt       As String
     
     bFolder = (udtWFD.dwFileAttributes And FILE_ATTRIBUTE_DIRECTORY)
     
@@ -402,7 +404,7 @@ Private Function FormatFileDate(CT As FILETIME) As String
     Const SHORT_DATE = "Short Date"
     Const SHORT_TIME = "Short Time"
     
-    Dim ST As SYSTEMTIME
+    Dim ST    As SYSTEMTIME
     Dim ds(1) As Single
        
     If FileTimeToSystemTime(CT, ST) Then
@@ -467,12 +469,12 @@ Private Function SortedScan(Path As String, SubFolders As Boolean)
     'the Filter. The difference between this and DirectScan is that it sorts
     'the files before raising Events - it is therefore slower than DirectScan
     
-    Dim lCount As Long
-    Dim hFile As Long
-    Dim nCount As Integer
-    Dim nFile As Integer
-    Dim bOK As Boolean
-    Dim sFile As String
+    Dim lCount   As Long
+    Dim hFile    As Long
+    Dim nCount   As Integer
+    Dim nFile    As Integer
+    Dim bOK      As Boolean
+    Dim sFile    As String
     Dim sFiles() As String
     
     If mCancelScan Then
@@ -561,7 +563,7 @@ End Function
 
 Private Sub SortStrings(sArray() As String, ByVal nFirst As Integer, ByVal nLast As Integer)
     Dim nBoundary As Integer
-    Dim nIndex As Integer
+    Dim nIndex    As Integer
 
     If nLast <= nFirst Then Exit Sub
 

@@ -65,56 +65,49 @@ Attribute VB_Exposed = False
 Option Explicit
 
 Private Sub CancelButton_Click()
-intResponse = 3
-Unload Me
-
+    intResponse = 3
+    Unload Me
 End Sub
 
 Private Sub Command1_Click()
-intResponse = 4
-Unload Me
+    intResponse = 4
+    Unload Me
 End Sub
-
-
 
 Private Sub Form_Load()
-
-If booExact = False Then
-Label1.Caption = strResponse
-DoEvents
-Me.Caption = Lang(223)
-OKButton(0).Caption = Lang(224)
-OKButton(1).Caption = Lang(225)
-CancelButton.Caption = Lang(226)
-Else
-Label1.Caption = strResponse
-DoEvents
-Me.Caption = "Route_Riter"
-OKButton(0).Caption = Lang(411)
-OKButton(1).Caption = Lang(419)
-CancelButton.Visible = True
-CancelButton.Caption = "Keep All"
-Command1.Visible = True
-Command1.Caption = "Replace All"
-End If
-'If intResponse = 2 Then
-'Unload Me
-'End If
-'If intResponse = 4 Then
-'Unload Me
-'End If
+    If booExact = False Then
+        Label1.Caption = strResponse
+        DoEvents
+        Me.Caption = Lang(223)
+        OKButton(0).Caption = Lang(224)
+        OKButton(1).Caption = Lang(225)
+        CancelButton.Caption = Lang(226)
+    Else
+        Label1.Caption = strResponse
+        DoEvents
+        Me.Caption = "Route_Riter"
+        OKButton(0).Caption = Lang(411)
+        OKButton(1).Caption = Lang(419)
+        CancelButton.Visible = True
+        CancelButton.Caption = "Keep All"
+        Command1.Visible = True
+        Command1.Caption = "Replace All"
+    End If
+    'If intResponse = 2 Then
+    'Unload Me
+    'End If
+    'If intResponse = 4 Then
+    'Unload Me
+    'End If
 End Sub
 
-
 Private Sub OKButton_Click(Index As Integer)
-If Index = 0 Then
-intResponse = 1
-ElseIf Index = 1 Then
-intResponse = 2
-End If
-Unload Me
-
-
+    If Index = 0 Then
+        intResponse = 1
+    ElseIf Index = 1 Then
+        intResponse = 2
+    End If
+    Unload Me
 End Sub
 
 

@@ -21,29 +21,17 @@ Public Function SetHTMLHelpStrings(ByVal intSelHelpFile As Integer) As String
   ' include the application path
   Select Case intSelHelpFile
   Case 1
-    SetHTMLHelpStrings = App.path & _
-       "\route_riter.chm"
-  'Case 2
-  '  SetHTMLHelpStrings = App.Path & _
-  '     "\HelpTutorial.chm"
+    SetHTMLHelpStrings = App.Path & "\route_riter.chm"
+  Case 2
+    SetHTMLHelpStrings = App.Path & "\route_riter.chm::/FAQ.htm"
   End Select
 
 End Function
 
-'
-'End Sub
-'
-'
-Public Sub HTMLHelpContents(ByVal intHelpFile As Integer, _
-    strWindow As String)
+Public Sub HTMLHelpContents(ByVal intHelpFile As Integer, strWindow As String)
 '
 '  ' Force the Help window to display
 '  ' the Contents file (*.hhc) in the left pane
-  HtmlHelp hwnd, SetHTMLHelpStrings(intHelpFile) _
-         & ">" & strWindow, HH_DISPLAY_TOC, 0
-'
+    HtmlHelp hwnd, SetHTMLHelpStrings(intHelpFile) & ">" & strWindow, HH_DISPLAY_TOC, 0
 End Sub
-'
-'
-'
-'
+

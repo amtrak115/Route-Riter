@@ -92,79 +92,71 @@ Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
-Private Sub Command1_Click()
-frmInternet.Hide
+Option Explicit
 
-'Unload Me
+Private Sub Command1_Click()
+    frmInternet.Hide
 End Sub
 
 Private Sub Command2_Click(Index As Integer)
-On Error GoTo Errtrap
-Select Case Index
-Case 0
-WebBrowser1.GoBack
-Case 1
-WebBrowser1.GoHome
-Case 2
-WebBrowser1.GoForward
-End Select
-Exit Sub
-Errtrap:
-Exit Sub
+    On Error GoTo errtrap
+    Select Case Index
+    Case 0
+        WebBrowser1.GoBack
+    Case 1
+        WebBrowser1.GoHome
+    Case 2
+        WebBrowser1.GoForward
+    End Select
+    Exit Sub
+errtrap:
+    Exit Sub
 End Sub
-
 
 Private Sub Form_Load()
-On Error GoTo Errtrap
-
-WebBrowser1.Top = 120
-WebBrowser1.width = Me.width - 200
-WebBrowser1.height = Me.height - 400
-
-If flagInternet = 1 Then
-WebBrowser1.Navigate "https://www.paypal.com/xclick/business=agene%40optusnet.com.au&item_name=Route_Riter+Payment&no_shipping=0&no_note=1&tax=0&currency_code=USD&lc=AU"
-
-ElseIf flagInternet = 2 Then
-WebBrowser1.Navigate "http://www.rstools.info/route_riter.html#RRv7"
-'
-ElseIf flagInternet = 3 Then
-WebBrowser1.Navigate "http://www.rstools.info/faq.html"
-ElseIf flagInternet = 4 Then
-WebBrowser1.Navigate "http://www.rstools.info/index.html"
-
-End If
-Exit Sub
-Errtrap:
-
-
+    On Error GoTo errtrap
+    
+    WebBrowser1.Top = 120
+    WebBrowser1.width = Me.width - 200
+    WebBrowser1.height = Me.height - 400
+    
+    If flagInternet = 1 Then
+        WebBrowser1.Navigate "http://www.digital-rails.us"
+    ElseIf flagInternet = 2 Then
+        WebBrowser1.Navigate "http://www.digital-rails.us/route_riter.html"
+    ElseIf flagInternet = 3 Then
+        WebBrowser1.Navigate "http://www.rstools.info/faq.html"
+    ElseIf flagInternet = 4 Then
+        WebBrowser1.Navigate "http://www.rstools.info/index.html"
+    End If
+    Exit Sub
+errtrap:
 End Sub
-
 
 Private Sub Form_Resize()
-Dim i As Integer
-On Error GoTo Errtrap
-WebBrowser1.Left = 300
-WebBrowser1.Top = 400
-WebBrowser1.width = Me.width - 800
-WebBrowser1.height = Me.height - 2000
-Command1.Top = WebBrowser1.Top + WebBrowser1.height + 200
-'Command1.Left = Me.width / 2 - Command1.width / 2
-For i = 0 To 2
-Command2(i).Top = Command1.Top
-Next i
-Text1.Top = Command1.Top
-Label1.Top = Command1.Top
-Exit Sub
-Errtrap:
-If Err = 380 Then Exit Sub
+    Dim i As Integer
+    On Error GoTo errtrap
+    WebBrowser1.Left = 300
+    WebBrowser1.Top = 400
+    WebBrowser1.width = Me.width - 800
+    WebBrowser1.height = Me.height - 2000
+    Command1.Top = WebBrowser1.Top + WebBrowser1.height + 200
+    'Command1.Left = Me.width / 2 - Command1.width / 2
+    For i = 0 To 2
+        Command2(i).Top = Command1.Top
+    Next i
+    Text1.Top = Command1.Top
+    Label1.Top = Command1.Top
+    Exit Sub
+errtrap:
+    If Err = 380 Then Exit Sub
 End Sub
 
-
 Private Sub Text1_KeyDown(KeyCode As Integer, Shift As Integer)
-If KeyCode = 13 Then
-WebBrowser1.Navigate Text1.Text
-DoEvents
-End If
+    If KeyCode = 13 Then
+        WebBrowser1.Navigate Text1.Text
+        DoEvents
+    End If
 End Sub
 
 

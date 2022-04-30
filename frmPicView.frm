@@ -3,8 +3,8 @@ Object = "{F9043C88-F6F2-101A-A3C9-08002B2F49FB}#1.2#0"; "comdlg32.ocx"
 Begin VB.Form frmPicView 
    Caption         =   "PicView"
    ClientHeight    =   5145
-   ClientLeft      =   225
-   ClientTop       =   825
+   ClientLeft      =   165
+   ClientTop       =   855
    ClientWidth     =   8790
    Icon            =   "frmPicView.frx":0000
    LinkTopic       =   "Form1"
@@ -88,28 +88,30 @@ Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
+Option Explicit
+
 Dim strPicDir As String
+Dim tempfolder As String
 
 Private Sub ShowPix()
-Dim sFile As String
+    Dim sFile As String
     Dim tFile As String
     Dim res As Long
     Dim p As Pic
     Dim aComment As String
     Dim i As Integer
-    Dim z As Integer
+    Dim Z As Integer
     
-        sFile = strPicView
-        
+    sFile = strPicView
     
     'ToDo: add code to process the opened file
-    tFile = "c:\temp.bmp"
+    tFile = tempfolder & "\temp.bmp"
     
     'call the mwgfx.dll routine
     res = anytobmps(sFile, tFile, p, 0, 0)
     
     If p.width > 800 Then
-    z = WinImageSize(tFile)
+        Z = WinImageSize(tFile)
     End If
     Picture1.AutoSize = True
     Picture1.Picture = LoadPicture(tFile)
@@ -122,16 +124,13 @@ Dim sFile As String
     Next i
            
     Caption = "PicView - " + aComment + " (" + str(p.width) + "x" + str(p.height) + "x" + str(p.depth) + ")"
-    
-
 End Sub
-
 
 Private Sub flip_Click()
     Dim tFile As String
-    Dim p As Pic
+    Dim p     As Pic
         
-    tFile = "c:\temp.bmp"
+    tFile = tempfolder & "\temp.bmp"
        
     'call the mwgfx.dll routine
     Call bmprocess(tFile, tFile, p, 106)
@@ -139,53 +138,57 @@ Private Sub flip_Click()
     Picture1.Picture = LoadPicture(tFile)
     Picture1.Align = 3
     Picture1.Align = 1
-
 End Sub
 
 Private Sub Form_Load()
-Dim x As Integer
+    Dim x As Integer
 
-    Me.Left = GetSetting(App.Title, "Settings", "MainLeft", 1000)
-    Me.Top = GetSetting(App.Title, "Settings", "MainTop", 1000)
-    Me.width = GetSetting(App.Title, "Settings", "MainWidth", 12800)
-    Me.height = GetSetting(App.Title, "Settings", "MainHeight", 8000)
+'    Me.Left = GetSetting(App.Title, "Settings", "MainLeft", 1000)
+'    Me.Top = GetSetting(App.Title, "Settings", "MainTop", 1000)
+'    Me.width = GetSetting(App.Title, "Settings", "MainWidth", 12800)
+'    Me.height = GetSetting(App.Title, "Settings", "MainHeight", 8000)
+    tempfolder = Environ("TEMP")
     If strPicView <> vbNullString Then
-    x = InStrRev(strPicView, "\")
-    strPicDir = Left$(strPicView, x - 1)
-    Call ShowPix
- 
+        x = InStrRev(strPicView, "\")
+        strPicDir = Left$(strPicView, x - 1)
+        Call ShowPix
     End If
 End Sub
-
 
 Private Sub Form_Resize()
     Picture1.Align = 3
     Picture1.Align = 1
-
 End Sub
 
 Private Sub Form_Unload(Cancel As Integer)
-'    Dim i As Integer
-'
-'strPicView = vbNullString
-'    'close all sub forms
-'    For i = Forms.Count - 1 To 1 Step -1
-'        Unload Forms(i)
-'    Next
-'    If Me.WindowState <> vbMinimized Then
-'        SaveSetting App.Title, "Settings", "MainLeft", Me.Left
-'        SaveSetting App.Title, "Settings", "MainTop", Me.Top
-'        SaveSetting App.Title, "Settings", "MainWidth", Me.width
-'        SaveSetting App.Title, "Settings", "MainHeight", Me.height
-'    End If
+    '    Dim i As Integer
+    '
+    'strPicView = vbNullString
+    '    'close all sub forms
+    '    For i = Forms.Count - 1 To 1 Step -1
+    '        Unload Forms(i)
+    '    Next
+    '    If Me.WindowState <> vbMinimized Then
+    '        SaveSetting App.Title, "Settings", "MainLeft", Me.Left
+    '        SaveSetting App.Title, "Settings", "MainTop", Me.Top
+    '        SaveSetting App.Title, "Settings", "MainWidth", Me.width
+    '        SaveSetting App.Title, "Settings", "MainHeight", Me.height
+    '    End If
+    On Error GoTo handler
+    Kill tempfolder & "\temp.bmp"
+    Exit Sub
+handler:
+    If Err.Number = 53 Then
+        Resume Next
+    Else
+        Err.Raise Err.Number
+    End If
 End Sub
-
-
 
 Private Sub grey_Click()
     Dim tFile As String
-    Dim p As Pic
-    tFile = "c:\temp.bmp"
+    Dim p     As Pic
+    tFile = tempfolder & "\temp.bmp"
        
     'call the mwgfx.dll routine
     Call bmprocess(tFile, tFile, p, 103)
@@ -193,36 +196,34 @@ Private Sub grey_Click()
     Picture1.Picture = LoadPicture(tFile)
     Picture1.Align = 3
     Picture1.Align = 1
-    
 End Sub
 
 Private Sub mnuAbort_Click()
-booAbort = True
-Unload Me
+    booAbort = True
+    Unload Me
 End Sub
 
 Private Sub mnuBrowser_Click()
-WinImageBrowse ("c:\temp.bmp")
+    WinImageBrowse (tempfolder & "\temp.bmp")
 End Sub
 
 Private Sub mnuFileExit_Click()
     'unload the form
     Unload Me
-
 End Sub
 
 Private Sub mnuFilePrint_Click()
     'ToDo: Add 'mnuFilePrint_Click' code.
-    WinImagePrint ("c:\temp.bmp")
+    WinImagePrint (tempfolder & "\temp.bmp")
 End Sub
 
 Private Sub mnuFileOpen_Click()
-    Dim sFile As String
-    Dim tFile As String
-    Dim res As Long
-    Dim p As Pic
+    Dim sFile    As String
+    Dim tFile    As String
+    Dim res      As Long
+    Dim p        As Pic
     Dim aComment As String
-    Dim i As Integer, x As Integer
+    Dim i        As Integer, x As Integer
     
     With dlgCommonDialog
         .DialogTitle = "Open"
@@ -230,16 +231,16 @@ Private Sub mnuFileOpen_Click()
         'ToDo: set the flags and attributes of the common dialog control
         .Filter = "All Files (*.*)|*.*"
         .ShowOpen
-        If Len(.FileName) = 0 Then
+        If Len(.Filename) = 0 Then
             Exit Sub
         End If
-        sFile = .FileName
+        sFile = .Filename
     End With
     x = InStrRev(sFile, "\")
     strPicDir = Left$(sFile, x - 1)
     
     'ToDo: add code to process the opened file
-    tFile = "c:\temp.bmp"
+    tFile = tempfolder & "\temp.bmp"
     
     'call the mwgfx.dll routine
     res = anytobmps(sFile, tFile, p, 0, 0)
@@ -255,24 +256,22 @@ Private Sub mnuFileOpen_Click()
     Next i
      
     Caption = "PicView - " + aComment + " (" + str(p.width) + "x" + str(p.height) + "x" + str(p.depth) + ")"
-    
-
 End Sub
 
 Private Sub mnuSlide_Click()
-Call WinSlideShow(strPicDir, 3, 0, 0, 0, 0)
+    Call WinSlideShow(strPicDir, 3, 0, 0, 0, 0)
 End Sub
 
 Private Sub Picture1_Click()
-     Dim tFile As String
-     tFile = "c:\temp.bmp"
-     Call WinImageShow(tFile, 0)
+    Dim tFile As String
+    tFile = tempfolder & "\temp.bmp"
+    Call WinImageShow(tFile, 0)
 End Sub
 
 Private Sub rot_Click()
     Dim tFile As String
-    Dim p As Pic
-    tFile = "c:\temp.bmp"
+    Dim p     As Pic
+    tFile = tempfolder & "\temp.bmp"
        
     'call the mwgfx.dll routine
     Call bmprocess(tFile, tFile, p, 100)
@@ -280,5 +279,4 @@ Private Sub rot_Click()
     Picture1.Picture = LoadPicture(tFile)
     Picture1.Align = 3
     Picture1.Align = 1
-
 End Sub

@@ -1088,30 +1088,25 @@ End Sub
 
 End Sub
 
-
-
-
-
-
-
-
-
 Function FileExists(FullFilename As String) As Boolean
-Dim NewFile As Integer
+    Dim NewFile As Integer
 
-   
-   On Error GoTo MakeF
-   NewFile = FreeFile
-        'If file does Not exist, there will be an Error
-        Open FullFilename For Input As #NewFile
-        Close #NewFile
-        'no error, file exists
-        FileExists = True
+    On Error GoTo MakeF
+    NewFile = FreeFile
+    'If file does Not exist, there will be an Error
+    Open FullFilename For Input As #NewFile
+    Close #NewFile
+    'no error, file exists
+    FileExists = True
     Exit Function
 MakeF:
+    If Err.Number = 53 Then
         'error, file does Not exist
         FileExists = False
-    Exit Function
+        Exit Function
+    Else
+        Err.Raise Err.Number
+    End If
 End Function
 Function DirExists(Path As String) As Boolean
     On Error Resume Next

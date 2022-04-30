@@ -64,41 +64,35 @@ Attribute VB_Exposed = False
 Option Explicit
 
 Private Sub CancelButton_Click()
-intResponseSnow = 3
-Unload Me
-
+    intResponseSnow = 3
+    Unload Me
 End Sub
 
 Private Sub Command1_Click()
-intResponseSnow = 4
-Unload Me
+    intResponseSnow = 4
+    Unload Me
 End Sub
-
 
 Private Sub Form_Load()
 
-Label1.Caption = strResponse
-Me.Caption = Lang(227)
-If booTerrtexSnow = False Then
-OKButton(0).Caption = Lang(224)
-OKButton(1).Caption = Lang(225)
-ElseIf booTerrtexSnow = True Then
-OKButton(0).Caption = "Summer"
-OKButton(1).Caption = "Substitute Snow"
-End If
-
-CancelButton.Caption = Lang(226)
+    Label1.Caption = strResponse
+    Me.Caption = Lang(227)
+    If booTerrtexSnow = False Then
+        OKButton(0).Caption = Lang(224)
+        OKButton(1).Caption = Lang(225)
+    ElseIf booTerrtexSnow = True Then
+        OKButton(0).Caption = "Summer"
+        OKButton(1).Caption = "Substitute Snow"
+    End If
+    CancelButton.Caption = Lang(226)
 End Sub
-
 
 Private Sub OKButton_Click(Index As Integer)
-If Index = 0 Then
-intResponseSnow = 1
-ElseIf Index = 1 Then
-intResponseSnow = 2
-End If
-Unload Me
-
+    If Index = 0 Then
+        intResponseSnow = 1
+    ElseIf Index = 1 Then
+        intResponseSnow = 2
+    End If
+    Unload Me
 End Sub
-
 

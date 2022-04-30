@@ -56,74 +56,66 @@ Public LocoCoup() As Long, LocoFCoup() As Long, LocoBrake() As Long, LocoType() 
 Public WagCoup() As Long, WagFCoup() As Long, WagBrake() As Long, WagType() As Long, WagRigid() As Integer, WagFRigid() As Integer
 Public Coupling(0 To 3) As String, Brake(0 To 8) As String, StockType(1 To 8) As String
 Public booReport As Boolean, FCoupling(0 To 3) As String, Rigid(0 To 3) As String, FRigid(0 To 3)
-
-
- 
-
-
 Public LocoSMS() As String
 Public booProBrakes As Boolean, booLSD As Boolean
-Public Function ClearTmp()
-Dim EnvString As String, Indx As Integer
-Dim strTemp As String, strBatFile As String
-
-Indx = 1   ' Initialize index to 1.
-Do
-   EnvString = Environ(Indx)   ' Get environment
-   
-            ' variable.
-   If Left(EnvString, 5) = "TEMP=" Then   ' Check Temp entry.
-      strTemp = Mid(EnvString, 6)
-      Exit Do
-   Else
-      Indx = Indx + 1   ' Not PATH entry,
-   End If   ' so increment.
-Loop Until EnvString = ""
-strBatFile = "DEL Tsutil*.tmp"
-'strBatFile = "dir /p"
-If strBatFile <> vbNullString Then
-
-Open strTemp & "\debug.bat" For Output As #1
-Print #1, strBatFile
-Close #1
-ChDrive Left$(strTemp, 1)
- ChDir strTemp
-
-DoEvents
-Call ShellAndWait("debug.bat", True, vbNormalFocus)
-
-DoEvents
-End If
-
-'ChDrive Left$(strTEMP, 1)
-' ChDir strTEMP
-
-'DoEvents
-'Call ShellAndWait(strBatFile, True, vbNormalFocus)
-
-DoEvents
-
-End Function
+Public Sub ClearTmp()
+    Dim EnvString As String, Indx As Integer
+    Dim strTemp As String, strBatFile As String
+    Dim iBatFile As Integer
+    
+    On Error GoTo errTrap
+'    Indx = 1   ' Initialize index to 1.
+'    Do
+'       EnvString = Environ(Indx)   ' Get environment
+'       If Left(EnvString, 5) = "TEMP=" Then   ' Check Temp entry.
+'          strTemp = Mid(EnvString, 6)
+'          Exit Do
+'       Else
+'          Indx = Indx + 1   ' Not PATH entry,
+'       End If   ' so increment.
+'    Loop Until EnvString = ""
+    strTemp = Environ("TEMP")
+    strBatFile = "DEL Tsutil*.tmp"
+    'strBatFile = "dir /p"
+    If strTemp <> vbNullString Then
+        'iBatFile = FreeFile
+        'Open strTemp & "\debug.bat" For Output As #iBatFile
+        'Print #iBatFile, strBatFile
+        'Close #iBatFile
+        ChDrive Left$(strTemp, 1)
+        ChDir strTemp
+        DoEvents
+        'Call ShellAndWait("debug.bat", True, vbNormalFocus)
+        'Call ShellAndWait(strBatFile, True, vbHide)
+        Kill strTemp & "\Tsutil*.tmp"
+        DoEvents
+    End If
+    Exit Sub
+errTrap:
+    If Err.Number = 53 Then
+        Resume Next
+    Else
+        Err.Raise Err.Number
+    End If
+End Sub
 
 Sub forecap(fornam As String)
-Dim E As Integer
-
-If fornam = vbNullString Then Exit Sub
-
-Mid$(fornam, 1, 1) = UCase(Mid$(fornam, 1, 1))
-For E = 1 To Len(fornam) - 1
-If Mid$(fornam, E, 1) = " " Then
-Mid$(fornam, E + 1, 1) = UCase(Mid$(fornam, E + 1, 1))
-End If
-Next E
-
-
+    Dim E As Integer
+    
+    If fornam = vbNullString Then Exit Sub
+    
+    Mid$(fornam, 1, 1) = UCase(Mid$(fornam, 1, 1))
+    For E = 1 To Len(fornam) - 1
+    If Mid$(fornam, E, 1) = " " Then
+    Mid$(fornam, E + 1, 1) = UCase(Mid$(fornam, E + 1, 1))
+    End If
+    Next E
 End Sub
 
 Public Sub CheckWagonData(strNew As String, Wagname As String, Wagonpath As String, booFound As Boolean)
 Dim x As Integer, Y As Integer, yy As Integer, Z As Integer, strNew2 As String
 
-On Error GoTo Errtrap
+On Error GoTo errTrap
 strNew = Trim$(strNew)
 Z = InStr(strNew, vbLf)
 If Z > 0 Then
@@ -166,7 +158,7 @@ End If
     booFound = True
    End If
    Exit Sub
-Errtrap:
+errTrap:
 Call MsgBox("An Error number " & Err & " occurred in CheckwagonData checking " & strNew _
             & vbCrLf & "Error description: " & Err.Description _
             , vbExclamation, frmGrid)
@@ -176,7 +168,7 @@ End Sub
 Public Sub CheckEngineData(strNew As String, Engname As String, Engpath As String, booFound As Boolean)
 Dim x As Integer, Y As Integer, yy As Integer, Z As Integer, strNew2 As String
 
-On Error GoTo Errtrap
+On Error GoTo errTrap
 strNew = Trim$(strNew)
 Z = InStr(strNew, vbLf)
 If Z > 0 Then
@@ -220,7 +212,7 @@ End If
    booFound = True
 End If
 Exit Sub
-Errtrap:
+errTrap:
 Call MsgBox("An Error number " & Err & " occurred in CheckEngineData checking " & strNew _
             & vbCrLf & "Error description: " & Err.Description _
             , vbExclamation, frmGrid)

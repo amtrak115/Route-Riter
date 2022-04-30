@@ -47,42 +47,36 @@ Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 Private Sub Command1_Click()
-strDelShape = Text1
-If Right$(strDelShape, 2) <> ".s" And Right$(strDelShape, 4) <> ".haz" And Right$(strDelShape, 4) <> ".ace" Then
-strDelShape = strDelShape & ".s"
-
-End If
-Unload Me
-
+    strDelShape = Text1
+    If Right$(strDelShape, 2) <> ".s" And Right$(strDelShape, 4) <> ".haz" And Right$(strDelShape, 4) <> ".ace" Then
+        strDelShape = strDelShape & ".s"
+    End If
+    Unload Me
 End Sub
 Private Sub Command2_Click()
-strDelShape = vbNullString
-Unload Me
-
+    strDelShape = vbNullString
+    Unload Me
 End Sub
-
 
 Private Sub Form_Load()
-Me.Caption = Lang(221)
-Label1.Caption = Lang(222)
-Command1.Caption = Lang(218)
-Command2.Caption = Lang(203)
-If booGetW = True Then
-Command1.Caption = Lang(539)
-frmDelShape.Caption = Lang(540)
-End If
+    Me.Caption = Lang(221)
+    Label1.Caption = Lang(222)
+    Command1.Caption = Lang(218)
+    Command2.Caption = Lang(203)
+    If booGetW = True Then
+        Command1.Caption = Lang(539)
+        frmDelShape.Caption = Lang(540)
+    End If
 End Sub
 
-
-
 Private Sub Text1_KeyDown(KeyCode As Integer, Shift As Integer)
-If KeyCode = 13 Then
-strDelShape = Text1
-If Right$(strDelShape, 2) <> ".s" Then
-strDelShape = strDelShape & ".s"
-End If
-Unload Me
-End If
+    If KeyCode = 13 Then
+        strDelShape = Text1
+        If Right$(strDelShape, 2) <> ".s" Then
+            strDelShape = strDelShape & ".s"
+        End If
+        Unload Me
+    End If
 End Sub
 
 

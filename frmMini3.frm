@@ -89,64 +89,55 @@ Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
+Option Explicit
 Option Compare Text
 
 Dim TrainsetPath As String
 Private Sub Command1_Click()
-
-
-
-If Not DirExists(Text1) Then
-MkDir Text1
-DoEvents
-Else
-Call MsgBox(Text1 & " already exists, you must create a new folder for your Edit Folder.", vbCritical, App.Title)
-Exit Sub
-End If
-
-strEditPath = Text1
-DoEvents
-Unload Me
-
+    If Not DirExists(Text1) Then
+        MkDir Text1
+        DoEvents
+    Else
+        Call MsgBox(Text1 & " already exists, you must create a new folder for your Edit Folder.", vbCritical, App.Title)
+        Exit Sub
+    End If
+    strEditPath = Text1
+    DoEvents
+    Unload Me
 End Sub
 
 Private Sub Command2_Click()
-Unload Me
+    Unload Me
 End Sub
 
-
 Private Sub Dir1_Change()
-If Dir1.path <> Dir1.list(Dir1.ListIndex) Then
-Dir1.path = Dir1.list(Dir1.ListIndex)
-If Right$(Dir1.path, 1) <> "\" Then Dir1.path = Dir1.path & "\"
-End If
-Text1 = Dir1.path
+    If Dir1.Path <> Dir1.List(Dir1.ListIndex) Then
+        Dir1.Path = Dir1.List(Dir1.ListIndex)
+        If Right$(Dir1.Path, 1) <> "\" Then Dir1.Path = Dir1.Path & "\"
+    End If
+    Text1 = Dir1.Path
 End Sub
 
 Private Sub Drive1_Change()
-Dir1.path = Drive1.Drive
-Text1 = Dir1.path
+    Dir1.Path = Drive1.Drive
+    Text1 = Dir1.Path
 End Sub
 
-
 Private Sub Form_Load()
-
-
-TrainsetPath = MSTSPath & "\Trains\Trainset\"
+    TrainsetPath = MSTSPath & "\Trains\Trainset\"
 End Sub
 
 Private Sub Text1_KeyDown(KeyCode As Integer, Shift As Integer)
-If KeyCode = 13 Then
-Command1.value = True
-End If
+    If KeyCode = 13 Then
+        Command1.value = True
+    End If
 End Sub
 
-
 Private Sub Text2_KeyDown(KeyCode As Integer, Shift As Integer)
-If KeyCode = 13 Then
-Text1.Text = Text1.Text & Text2
-MkDir Dir1.path & Text2
-End If
+    If KeyCode = 13 Then
+        Text1.Text = Text1.Text & Text2
+        MkDir Dir1.Path & Text2
+    End If
 End Sub
 
 

@@ -60,93 +60,86 @@ Option Explicit
 Dim strStock(1 To 65) As String, strFriction(1 To 65) As String
 Private Function ReadUniFile(CompleteFilePath As String) As String
 
-Dim length As Long, mytristate As Integer
-Dim MyString As String
-Dim File_obj As Object, The_obj As Object, fileflag As Boolean
+    Dim length   As Long, mytristate As Integer
+    Dim MyString As String
+    Dim File_obj As Object, The_obj As Object, fileflag As Boolean
 
+    Set File_obj = CreateObject("Scripting.FileSystemObject")
+    If Not File_obj.FileExists(CompleteFilePath) Then Exit Function
+    length = FileLen(CompleteFilePath)
+    If length >= 2000000000 Then
+        MsgBox "" & Mid$(CompleteFilePath, InStrRev(CompleteFilePath, "\") + 1) & "" & Lang(401), vbInformation, Me.Caption
+        Exit Function
+    End If
+    mytristate = -1
+    DoEvents 'DISPLAY CATCHES UP WITH PROGGIE
 
-Set File_obj = CreateObject("Scripting.FileSystemObject")
-If Not File_obj.FileExists(CompleteFilePath) Then Exit Function
-length = FileLen(CompleteFilePath)
-If length >= 2000000000 Then
-  MsgBox "" & Mid$(CompleteFilePath, InStrRev(CompleteFilePath, "\") + 1) & "" & Lang(401), vbInformation, Me.Caption
-  Exit Function
-End If
-mytristate = -1
-DoEvents 'DISPLAY CATCHES UP WITH PROGGIE
-
-Set The_obj = File_obj.OpenTextFile(CompleteFilePath, 1, False, mytristate)
-fileflag = True
-MyString = The_obj.ReadAll
-The_obj.Close
-fileflag = False
-ReadUniFile = MyString
+    Set The_obj = File_obj.OpenTextFile(CompleteFilePath, 1, False, mytristate)
+    fileflag = True
+    MyString = The_obj.ReadAll
+    The_obj.Close
+    fileflag = False
+    ReadUniFile = MyString
 End Function
 
-
-
 Private Sub CancelButton_Click()
-Unload Me
+    Unload Me
 End Sub
 
 Private Sub Form_Load()
-Dim MyString As String
-Dim x As Integer, xx As Integer, y As Integer, yy As Integer, booFBR As Boolean
-Dim i As Integer
+    Dim MyString As String
+    Dim x        As Integer, xx As Integer, y As Integer, YY As Integer, booFBR As Boolean
+    Dim i        As Integer
 
-MyString = ReadUniFile(App.path & "\BrakeFiles_Pro\Railcar Friction Values\Friction values.txt")
-booFBR = False
-i = 1
-x = 1
-Do
-x = InStr(x, MyString, "#")
-If x = 0 Then Exit Do
-If Mid(MyString, x + 1, 2) = "##" Then
-booFBR = True
-x = x + 4
-GoTo CarryOn
-End If
-y = InStr(x, MyString, ":")
-strStock(i) = Mid(MyString, x + 1, y - (x + 1))
-If booFBR = False Then
-List1.AddItem strStock(i)
-ElseIf booFBR = True Then
-List2.AddItem strStock(i)
-End If
-xx = InStr(y, MyString, "Comment")
-yy = InStr(xx, MyString, "$")
-strFriction(i) = Mid(MyString, xx, yy - xx)
+    MyString = ReadUniFile(App.Path & "\BrakeFiles_Pro\Railcar Friction Values\Friction values.txt")
+    booFBR = False
+    i = 1
+    x = 1
+    Do
+        x = InStr(x, MyString, "#")
+        If x = 0 Then Exit Do
+        If Mid(MyString, x + 1, 2) = "##" Then
+            booFBR = True
+            x = x + 4
+            GoTo CarryON
+        End If
+        y = InStr(x, MyString, ":")
+        strStock(i) = Mid(MyString, x + 1, y - (x + 1))
+        If booFBR = False Then
+            List1.AddItem strStock(i)
+        ElseIf booFBR = True Then
+            List2.AddItem strStock(i)
+        End If
+        xx = InStr(y, MyString, "Comment")
+        YY = InStr(xx, MyString, "$")
+        strFriction(i) = Mid(MyString, xx, YY - xx)
 
-x = y + 1
-i = i + 1
-CarryOn:
-Loop
-
-
+        x = y + 1
+        i = i + 1
+CarryON:
+    Loop
 
 End Sub
-
 
 Private Sub OKButton_Click()
-Dim i As Integer
+    Dim i As Integer
 
-For i = 0 To List1.ListCount - 1
-If List1.Selected(i) = True Then
-frmEngEdit.Text4.Text = strFriction(i + 1)
-DoEvents
-Exit For
-End If
-Next i
-If List1.SelCount > 0 Then GoTo CarryOn
-For i = 0 To List2.ListCount - 1
-If List2.Selected(i) = True Then
-frmEngEdit.Text4.Text = strFriction(i + 1 + List1.ListCount)
-DoEvents
-Exit For
-End If
-Next i
-CarryOn:
-Unload Me
+    For i = 0 To List1.ListCount - 1
+        If List1.Selected(i) = True Then
+            frmEngEdit.Text4.Text = strFriction(i + 1)
+            DoEvents
+            Exit For
+        End If
+    Next i
+    If List1.SelCount > 0 Then GoTo CarryON
+    For i = 0 To List2.ListCount - 1
+        If List2.Selected(i) = True Then
+            frmEngEdit.Text4.Text = strFriction(i + 1 + List1.ListCount)
+            DoEvents
+            Exit For
+        End If
+    Next i
+CarryON:
+    Unload Me
 End Sub
-
 

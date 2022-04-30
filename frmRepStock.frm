@@ -192,1003 +192,984 @@ Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 Option Compare Text
 Dim MyRow As Integer, MyCol As Integer
-Private Sub GetCoupling(LocoPath As String, flagCoup As Integer, strBrake As String, strType As String, strName As String)
-Dim NewFile As Integer, A$, x As Long, xx As Long, strTender As String
-On Error GoTo Errtrap
+Private Sub GetCoupling(LocoPath As String, _
+                        flagCoup As Integer, _
+                        strBrake As String, _
+                        strType As String, _
+                        strName As String)
+    Dim NewFile As Integer, A$, x As Long, xx As Long, strTender As String
+    On Error GoTo Errtrap
 
-NewFile = FreeFile
-Open LocoPath For Input As #NewFile
-Do While Not EOF(NewFile)
- Line Input #NewFile, A$
+    NewFile = FreeFile
+    Open LocoPath For Input As #NewFile
+    Do While Not EOF(NewFile)
+        Line Input #NewFile, A$
  
- x = InStr(A$, "Type ( Engine )")
- If x > 0 Then strType = "Engine"
- x = InStr(A$, "Type ( Freight )")
- If x > 0 Then strType = "Freight"
- x = InStr(A$, "Type ( Tender )")
- If x > 0 Then strType = "Tender"
- x = InStr(A$, "Type ( Carriage )")
- If x > 0 Then strType = "Carriage"
- x = InStr(A$, "IsTenderRequired")
-If x > 0 Then
-xx = InStr(x, A$, "(")
-xy = InStr(xx, A$, ")")
-strTender = Trim$(Mid$(A$, xx + 1, xy - xx - 1))
-If strTender = "1" Then
-strType = "Engine *"
-End If
-End If
+        x = InStr(A$, "Type ( Engine )")
+        If x > 0 Then strType = "Engine"
+        x = InStr(A$, "Type ( Freight )")
+        If x > 0 Then strType = "Freight"
+        x = InStr(A$, "Type ( Tender )")
+        If x > 0 Then strType = "Tender"
+        x = InStr(A$, "Type ( Carriage )")
+        If x > 0 Then strType = "Carriage"
+        x = InStr(A$, "IsTenderRequired")
+        If x > 0 Then
+            xx = InStr(x, A$, "(")
+            xy = InStr(xx, A$, ")")
+            strTender = Trim$(Mid$(A$, xx + 1, xy - xx - 1))
+            If strTender = "1" Then
+                strType = "Engine *"
+            End If
+        End If
 
-x = InStr(A$, "Type ( Automatic )")
-xx = InStr(A$, "Type ( Chain )")
-If x > 0 Then
-flagCoup = 1
-ElseIf xx > 0 Then
-flagCoup = 2
-End If
+        x = InStr(A$, "Type ( Automatic )")
+        xx = InStr(A$, "Type ( Chain )")
+        If x > 0 Then
+            flagCoup = 1
+        ElseIf xx > 0 Then
+            flagCoup = 2
+        End If
 
-x = InStr(A$, "brakesystemtype")
-If x > 0 Then
+        x = InStr(A$, "brakesystemtype")
+        If x > 0 Then
 
-xx = InStr(x, A$, "(")
-xy = InStr(xx, A$, ")")
-strBrake = Mid$(A$, xx + 1, xy - xx - 1)
-strBrake = Trim$(strBrake)
-If Left$(strBrake, 1) = ChrW$(34) Then
-strBrake = Mid$(strBrake, 2, Len(strBrake) - 2)
-End If
-End If
+            xx = InStr(x, A$, "(")
+            xy = InStr(xx, A$, ")")
+            strBrake = Mid$(A$, xx + 1, xy - xx - 1)
+            strBrake = Trim$(strBrake)
+            If Left$(strBrake, 1) = ChrW$(34) Then
+                strBrake = Mid$(strBrake, 2, Len(strBrake) - 2)
+            End If
+        End If
 
-x = InStr(A$, "Name (")
-If x > 0 Then
-xx = InStr(x, A$, "(")
-xy = InStr(xx, A$, ")")
-strName = Mid$(A$, xx + 1, xy - xx - 1)
-strName = Trim$(strName)
-If Left$(strName, 1) = ChrW$(34) Then
-strName = Mid$(strName, 2, Len(strName) - 2)
-End If
-End If
-Loop
-Close NewFile
+        x = InStr(A$, "Name (")
+        If x > 0 Then
+            xx = InStr(x, A$, "(")
+            xy = InStr(xx, A$, ")")
+            strName = Mid$(A$, xx + 1, xy - xx - 1)
+            strName = Trim$(strName)
+            If Left$(strName, 1) = ChrW$(34) Then
+                strName = Mid$(strName, 2, Len(strName) - 2)
+            End If
+        End If
+    Loop
+    Close NewFile
 
-
-
-
-Exit Sub
+    Exit Sub
 Errtrap:
-Call MsgBox("An error " & Err & " occurred in subroutine 'GetCoupling' please advise" _
-            & vbCrLf & "while checking " & LocoPath _
-            , vbExclamation, App.Title)
-'Resume Next
+    Call MsgBox("An error " & Err & " occurred in subroutine 'GetCoupling' please advise" & vbCrLf & "while checking " & LocoPath, vbExclamation, App.Title)
+    'Resume Next
 
 End Sub
 
-Private Function ConvertStock(CompleteFilePath As String, flagway As Integer, strOldCon As String, strNewCon As String, strStockType As String) As Boolean
-'CONVERTS A FILE FROM UNICODE TO TEXT OR VICE VERSA
-'RETURNS TRUE IF THE PROCESS IS SUCCESSFUL, OTHERWISE IT RETURNS FALSE
-'THE FILE MUST BE < (2^31 - 1) BYTES (2,147,483,647 BYTES)
+Private Function ConvertStock(CompleteFilePath As String, _
+                              flagway As Integer, _
+                              strOldCon As String, _
+                              strNewCon As String, _
+                              strStockType As String) As Boolean
+    'CONVERTS A FILE FROM UNICODE TO TEXT OR VICE VERSA
+    'RETURNS TRUE IF THE PROCESS IS SUCCESSFUL, OTHERWISE IT RETURNS FALSE
+    'THE FILE MUST BE < (2^31 - 1) BYTES (2,147,483,647 BYTES)
 
-On Error GoTo ERRHANDLER
-ConvertStock = False
+    On Error GoTo ERRHANDLER
+    ConvertStock = False
 
-Dim length As Long, mytristate As Integer, outfiletype As Boolean
-Dim MyString As String, tempfile As String, tempfolder As String
-Dim File_obj As Object, The_obj As Object, fileflag As Boolean, xx As Long
-Dim strStart As String, strEnd As String, Y As Long, Z As Long
-Dim strSearch As String, x As Long
-'GET TEMP FOLDER
-tempfolder = Environ("TEMP")
-If tempfolder = vbNullString Then
-  MkDir (Left$(App.Path, 3) & "Temp")
-  tempfolder = Left$(App.Path, 3) & "Temp"
-End If
-If Right$(tempfolder, 1) <> "\" Then tempfolder = tempfolder & "\"
+    Dim length    As Long, mytristate As Integer, outfiletype As Boolean
+    Dim MyString  As String, tempfile As String, tempfolder As String
+    Dim File_obj  As Object, The_obj As Object, fileflag As Boolean, xx As Long
+    Dim strStart  As String, strEnd As String, y As Long, Z As Long
+    Dim strSearch As String, x As Long
+    'GET TEMP FOLDER
+    tempfolder = Environ("TEMP")
+    If tempfolder = vbNullString Then
+        MkDir (Left$(App.Path, 3) & "Temp")
+        tempfolder = Left$(App.Path, 3) & "Temp"
+    End If
+    If Right$(tempfolder, 1) <> "\" Then tempfolder = tempfolder & "\"
 
-Set File_obj = CreateObject("Scripting.FileSystemObject")
-'MAKE SURE THE FILE EXISTS
-If Not File_obj.FileExists(CompleteFilePath) Then Exit Function
-'MAKE SURE THAT THE FILE LENGTH WILL FIT INTO MYSTRING VARIABLE
-length = FileLen(CompleteFilePath)
-If length >= 2000000000 Then
-  MsgBox ChrW$(34) & Mid$(CompleteFilePath, InStrRev(CompleteFilePath, "\") + 1) & ChrW$(34) & Lang(401), vbInformation, frmUtils.Caption
-  Exit Function
-End If
-'DETERMINE OPTION SELECTION
-'TEXT2UNICODE
-If flagway = 1 Then
+    Set File_obj = CreateObject("Scripting.FileSystemObject")
+    'MAKE SURE THE FILE EXISTS
+    If Not File_obj.FileExists(CompleteFilePath) Then Exit Function
+    'MAKE SURE THAT THE FILE LENGTH WILL FIT INTO MYSTRING VARIABLE
+    length = FileLen(CompleteFilePath)
+    If length >= 2000000000 Then
+        MsgBox ChrW$(34) & Mid$(CompleteFilePath, InStrRev(CompleteFilePath, "\") + 1) & ChrW$(34) & Lang(401), vbInformation, frmUtils.Caption
+        Exit Function
+    End If
+    'DETERMINE OPTION SELECTION
+    'TEXT2UNICODE
+    If flagway = 1 Then
   
-  mytristate = 0 'INFILE IS ANSI
-  outfiletype = True 'OUTFILE WILL BE UNICODE
-Else 'UNICODE2TEXT
+        mytristate = 0 'INFILE IS ANSI
+        outfiletype = True 'OUTFILE WILL BE UNICODE
+    Else 'UNICODE2TEXT
   
-  mytristate = -1 'INFILE IS UNICODE
-  outfiletype = False 'OUTFILE WILL BE ANSI
-End If
-DoEvents 'DISPLAY CATCHES UP WITH PROGGIE
+        mytristate = -1 'INFILE IS UNICODE
+        outfiletype = False 'OUTFILE WILL BE ANSI
+    End If
+    DoEvents 'DISPLAY CATCHES UP WITH PROGGIE
 
-'GET FIRST CHAR FROM THE FILE AND CHECK TO SEE IF IT IS ANSI 255 (ÿ)
-Set The_obj = File_obj.OpenTextFile(CompleteFilePath, 1, False, 0)
-fileflag = True
-MyString = The_obj.Read(1)
-The_obj.Close
-fileflag = False
+    'GET FIRST CHAR FROM THE FILE AND CHECK TO SEE IF IT IS ANSI 255 (ÿ)
+    Set The_obj = File_obj.OpenTextFile(CompleteFilePath, 1, False, 0)
+    fileflag = True
+    MyString = The_obj.Read(1)
+    The_obj.Close
+    fileflag = False
 
-'MAKE SURE THE FILE IS UNICODE OR TEXT
-If flagway = 1 Then
-  If Asc(MyString) > 254 Then
-    MsgBox ChrW$(34) & Mid$(CompleteFilePath, InStrRev(CompleteFilePath, "\") + 1) & ChrW$(34) & Lang(402), vbInformation, frmUtils.Caption
-    Exit Function
-  End If
-Else
-  If Asc(MyString) < 254 Then
-    MsgBox ChrW$(34) & Mid$(CompleteFilePath, InStrRev(CompleteFilePath, "\") + 1) & ChrW$(34) & Lang(403), vbInformation, frmUtils.Caption
-    Exit Function
-  End If
-End If
+    'MAKE SURE THE FILE IS UNICODE OR TEXT
+    If flagway = 1 Then
+        If Asc(MyString) > 254 Then
+            MsgBox ChrW$(34) & Mid$(CompleteFilePath, InStrRev(CompleteFilePath, "\") + 1) & ChrW$(34) & Lang(402), vbInformation, frmUtils.Caption
+            Exit Function
+        End If
+    Else
+        If Asc(MyString) < 254 Then
+            MsgBox ChrW$(34) & Mid$(CompleteFilePath, InStrRev(CompleteFilePath, "\") + 1) & ChrW$(34) & Lang(403), vbInformation, frmUtils.Caption
+            Exit Function
+        End If
+    End If
 
-'OPEN THE FILE AND READ IT INTO MEMORY
-Set The_obj = File_obj.OpenTextFile(CompleteFilePath, 1, False, mytristate)
-fileflag = True
-MyString = The_obj.ReadAll
-If strStockType = "eng" Then
-strSearch = "EngineData"
-Else
-strSearch = "WagonData"
-End If
-If flagway = 0 Then
+    'OPEN THE FILE AND READ IT INTO MEMORY
+    Set The_obj = File_obj.OpenTextFile(CompleteFilePath, 1, False, mytristate)
+    fileflag = True
+    MyString = The_obj.ReadAll
+    If strStockType = "eng" Then
+        strSearch = "EngineData"
+    Else
+        strSearch = "WagonData"
+    End If
+    If flagway = 0 Then
 
-Z = InStr(MyString, strSearch)
-
+        Z = InStr(MyString, strSearch)
 
 TryAgain:
-x = InStr(Z, MyString, strOldCon)
+        x = InStr(Z, MyString, strOldCon)
 
-If x = 0 Then GoTo AllFound
-If x - Z > 25 Then
-Z = InStr(Z + 5, MyString, strSearch)
-If Z = 0 Then GoTo AllFound
-GoTo TryAgain
-End If
-strStart = Left$(MyString, x - 1)
-xx = InStrRev(strStart, "(")
-strStart = Left$(strStart, xx)
-strEnd = Mid$(MyString, x + Len(strOldCon))
-Y = InStr(strEnd, vbCr)
-strEnd = Mid$(strEnd, Y - 1)
-MyString = strStart & " " & strNewCon & " " & strEnd
-Z = x + Len(strNewCon)
-GoTo TryAgain
+        If x = 0 Then GoTo AllFound
+        If x - Z > 25 Then
+            Z = InStr(Z + 5, MyString, strSearch)
+            If Z = 0 Then GoTo AllFound
+            GoTo TryAgain
+        End If
+        strStart = Left$(MyString, x - 1)
+        xx = InStrRev(strStart, "(")
+        strStart = Left$(strStart, xx)
+        strEnd = Mid$(MyString, x + Len(strOldCon))
+        y = InStr(strEnd, vbCr)
+        strEnd = Mid$(strEnd, y - 1)
+        MyString = strStart & " " & strNewCon & " " & strEnd
+        Z = x + Len(strNewCon)
+        GoTo TryAgain
 AllFound:
-End If
+    End If
 
-The_obj.Close
-fileflag = False
+    The_obj.Close
+    fileflag = False
 
-'SET THE TEMPFILE NAME AND PATH
-tempfile = tempfolder & _
-      Mid$(CompleteFilePath, InStrRev(CompleteFilePath, "\") + 1) & ".TEMP"
+    'SET THE TEMPFILE NAME AND PATH
+    tempfile = tempfolder & Mid$(CompleteFilePath, InStrRev(CompleteFilePath, "\") + 1) & ".TEMP"
 
-'CREATE TEMP FILE IN TEMP FOLDER AND OVERWRITE A FILE WITH THE SAME NAME
-Set The_obj = File_obj.CreateTextFile(tempfile, True, outfiletype)
-fileflag = True
+    'CREATE TEMP FILE IN TEMP FOLDER AND OVERWRITE A FILE WITH THE SAME NAME
+    Set The_obj = File_obj.CreateTextFile(tempfile, True, outfiletype)
+    fileflag = True
 
-'HANDLE ERROR FROM WRITE IF UNICODE FILE HAS BEEN ALTERED
-On Error Resume Next
-  The_obj.Write (MyString)
-  If Err.Number <> 0 Then
-    If fileflag Then The_obj.Close
-    MyString = vbNullString
-    MsgBox Lang(404), vbExclamation, frmUtils.Caption
+    'HANDLE ERROR FROM WRITE IF UNICODE FILE HAS BEEN ALTERED
+    On Error Resume Next
+    The_obj.Write (MyString)
+    If Err.Number <> 0 Then
+        If fileflag Then The_obj.Close
+        MyString = vbNullString
+        MsgBox Lang(404), vbExclamation, frmUtils.Caption
+        Kill tempfile
+        Exit Function
+    End If
+    On Error GoTo ERRHANDLER
+
+    The_obj.Close
+    fileflag = False
+
+    FileCopy tempfile, CompleteFilePath
     Kill tempfile
-    Exit Function
-  End If
-On Error GoTo ERRHANDLER
-
-The_obj.Close
-fileflag = False
-
-
-FileCopy tempfile, CompleteFilePath
-Kill tempfile
-ConvertStock = True
+    ConvertStock = True
 
 ERRHANDLER:
-  If fileflag Then The_obj.Close
-  MyString = vbNullString
-  If Err.Number <> 0 Then MsgBox "Windows Error #" & Err.Number & vbCrLf & Err.Description, vbExclamation, frmUtils.Caption
+    If fileflag Then The_obj.Close
+    MyString = vbNullString
+    If Err.Number <> 0 Then MsgBox "Windows Error #" & Err.Number & vbCrLf & Err.Description, vbExclamation, frmUtils.Caption
   
 End Function
 
-
-
 Private Sub Command1_Click()
-Dim flagway As Integer, newRow As Integer, newCol As Integer
-Dim strTempCon As String, strStockType As String
-Dim strOldStock As String, strExisting As String, strAct As String
-Dim strGridPath As String
-On Error GoTo Errtrap
-Command1.Enabled = False
+    Dim flagway     As Integer, newRow As Integer, newCol As Integer
+    Dim strTempCon  As String, strStockType As String
+    Dim strOldStock As String, strExisting As String, strAct As String
+    Dim strGridPath As String
+    On Error GoTo Errtrap
+    Command1.Enabled = False
 
-If flagGrid = 2 And Check1.value = 0 Then
-Rem ********* Change rolling stock item ************
-newRow = GridRepCon.row
-newCol = GridRepCon.col
-strOldCon = Left$(Label2(0).Caption, Len(Label2(0).Caption) - 4)
-strStockType = Right$(Label2(0).Caption, 3)
-strNewCon = GridRepCon.Cell(flexcpText)
-strNewCon = Left$(strNewCon, Len(strNewCon) - 4)
-strTempCon = strNewCon
-strNewCon = ChrW$(34) & strNewCon & ChrW$(34)
-GridRepCon.Select newRow, newCol + 1
-strNewPath = GridRepCon.Cell(flexcpText)
-strGridPath = Trim(strNewPath)
-If Left(strGridPath, 1) = ChrW$(34) Then
-strGridPath = Mid(strGridPath, 2)
-End If
-If Right(strGridPath, 1) = ChrW$(34) Then
-strGridPath = Left(strGridPath, Len(strGridPath) - 1)
-End If
-strNewPath = ChrW$(34) & strNewPath & ChrW$(34)
-strNewCon = strNewCon & " " & strNewPath
-Rem ****************
+    If flagGrid = 2 And Check1.value = 0 Then
+        Rem ********* Change rolling stock item ************
+        newRow = GridRepCon.row
+        newCol = GridRepCon.col
+        strOldCon = Left$(Label2(0).Caption, Len(Label2(0).Caption) - 4)
+        strStockType = Right$(Label2(0).Caption, 3)
+        strNewCon = GridRepCon.Cell(flexcpText)
+        strNewCon = Left$(strNewCon, Len(strNewCon) - 4)
+        strTempCon = strNewCon
+        strNewCon = ChrW$(34) & strNewCon & ChrW$(34)
+        GridRepCon.Select newRow, newCol + 1
+        strNewPath = GridRepCon.Cell(flexcpText)
+        strGridPath = Trim(strNewPath)
+        If Left(strGridPath, 1) = ChrW$(34) Then
+            strGridPath = Mid(strGridPath, 2)
+        End If
+        If Right(strGridPath, 1) = ChrW$(34) Then
+            strGridPath = Left(strGridPath, Len(strGridPath) - 1)
+        End If
+        strNewPath = ChrW$(34) & strNewPath & ChrW$(34)
+        strNewCon = strNewCon & " " & strNewPath
+        Rem ****************
 
-frmStock.GridStock.Select MyRow, 0
-strCon = frmStock.GridStock.Cell(flexcpText)
-frmStock.GridStock.Select MyRow, 0
-If Right$(strCon, 3) <> "con" Then
+        frmStock.GridStock.Select MyRow, 0
+        strCon = frmStock.GridStock.Cell(flexcpText)
+        frmStock.GridStock.Select MyRow, 0
+        If Right$(strCon, 3) <> "con" Then
 
-      Call MsgBox("This option only works for Consists," _
-                  & vbCrLf & "           not for Activities." _
-                  , vbExclamation, App.Title)
-Exit Sub
-End If
-'strRoute = frmGrid.Grid1.Cell(flexcpText)
-'strRoute = MSTSPath & "\Routes\" & strRoute
-FileCopy MSTSPath & "\trains\consists\" & strCon, App.Path & "\TempFiles\" & strCon
-DoEvents
+            Call MsgBox("This option only works for Consists," & vbCrLf & "           not for Activities.", vbExclamation, App.Title)
+            Exit Sub
+        End If
+        'strRoute = frmGrid.Grid1.Cell(flexcpText)
+        'strRoute = MSTSPath & "\Routes\" & strRoute
+        FileCopy MSTSPath & "\trains\consists\" & strCon, App.Path & "\TempFiles\" & strCon
+        DoEvents
 
-flagway = 0    'unicode to ascii
-Call ConvertStock(App.Path & "\TempFiles\" & strCon, flagway, strOldCon, strNewCon, strStockType)
+        flagway = 0    'unicode to ascii
+        Call ConvertStock(App.Path & "\TempFiles\" & strCon, flagway, strOldCon, strNewCon, strStockType)
 
-Kill MSTSPath & "\trains\consists\" & strCon
-flagway = 1    'unicode to ascii
-Call ConvertStock(App.Path & "\TempFiles\" & strCon, flagway, strOldCon, strNewCon, strStockType)
-FileCopy App.Path & "\TempFiles\" & strCon, MSTSPath & "\trains\consists\" & strCon
-Kill App.Path & "\TempFiles\" & strCon
-Label3.Caption = "Modified Consist Activated"
-FlagColGreen = True
-frmStock.GridStock.Select MyRow, MyCol
+        Kill MSTSPath & "\trains\consists\" & strCon
+        flagway = 1    'unicode to ascii
+        Call ConvertStock(App.Path & "\TempFiles\" & strCon, flagway, strOldCon, strNewCon, strStockType)
+        FileCopy App.Path & "\TempFiles\" & strCon, MSTSPath & "\trains\consists\" & strCon
+        Kill App.Path & "\TempFiles\" & strCon
+        Label3.Caption = "Modified Consist Activated"
+        FlagColGreen = True
+        frmStock.GridStock.Select MyRow, MyCol
 
-frmStock.GridStock.Cell(flexcpText) = strTempCon & "." & strStockType
-frmStock.GridStock.Select MyRow, 2
-frmStock.GridStock.Cell(flexcpText) = strGridPath
-FlagColGreen = False
-Rem ***************** Activity Change *************
+        frmStock.GridStock.Cell(flexcpText) = strTempCon & "." & strStockType
+        frmStock.GridStock.Select MyRow, 2
+        frmStock.GridStock.Cell(flexcpText) = strGridPath
+        FlagColGreen = False
+        Rem ***************** Activity Change *************
 
-ElseIf flagGrid = 3 Then
+    ElseIf flagGrid = 3 Then
 
-newRow = GridRepCon.row
-newCol = GridRepCon.col
-strOldCon = Left$(Label2(0).Caption, Len(Label2(0).Caption) - 4)
-strStockType = Right$(Label2(0).Caption, 3)
-strNewCon = GridRepCon.Cell(flexcpText)
-strTempCon = strNewCon
-strNewCon = Left$(strNewCon, Len(strNewCon) - 4)
+        newRow = GridRepCon.row
+        newCol = GridRepCon.col
+        strOldCon = Left$(Label2(0).Caption, Len(Label2(0).Caption) - 4)
+        strStockType = Right$(Label2(0).Caption, 3)
+        strNewCon = GridRepCon.Cell(flexcpText)
+        strTempCon = strNewCon
+        strNewCon = Left$(strNewCon, Len(strNewCon) - 4)
 
-strNewCon = ChrW$(34) & strNewCon & ChrW$(34)
-GridRepCon.Select newRow, newCol + 1
-strNewPath = GridRepCon.Cell(flexcpText)
-strNewPath = ChrW$(34) & strNewPath & ChrW$(34)
-strNewCon = strNewCon & " " & strNewPath
-frmGrid.Grid1.Select MyRow, 1
-strCon = frmGrid.Grid1.Cell(flexcpText)
-frmGrid.Grid1.Select MyRow, 0
-strNewRoute = frmGrid.Grid1.Cell(flexcpText)
-RoutePath = MSTSPath & "\Routes\"
-FileCopy RoutePath & strNewRoute & "\Activities\" & strCon, App.Path & "\TempFiles\" & strCon
-DoEvents
-flagway = 0    'unicode to ascii
-Call ConvertStock(App.Path & "\TempFiles\" & strCon, flagway, strOldCon, strNewCon, strStockType)
-DoEvents
-Kill RoutePath & strNewRoute & "\Activities\" & strCon
-DoEvents
-flagway = 1    'unicode to ascii
-Call ConvertStock(App.Path & "\TempFiles\" & strCon, flagway, strOldCon, strNewCon, strStockType)
-FileCopy App.Path & "\TempFiles\" & strCon, RoutePath & strNewRoute & "\Activities\" & strCon
-DoEvents
-Kill App.Path & "\TempFiles\" & strCon
-Label3.Caption = "Activity Modified"
-frmGrid.Grid1.Select MyRow, MyCol
-frmGrid.Grid2.Select ThisRow, 0
-frmGrid.Grid2.FillStyle = flexFillSingle
-frmGrid.Grid2.CellBackColor = vbWhite
-frmGrid.Grid2.Cell(flexcpText) = strTempCon
-ElseIf flagGrid = 4 Then
+        strNewCon = ChrW$(34) & strNewCon & ChrW$(34)
+        GridRepCon.Select newRow, newCol + 1
+        strNewPath = GridRepCon.Cell(flexcpText)
+        strNewPath = ChrW$(34) & strNewPath & ChrW$(34)
+        strNewCon = strNewCon & " " & strNewPath
+        frmGrid.Grid1.Select MyRow, 1
+        strCon = frmGrid.Grid1.Cell(flexcpText)
+        frmGrid.Grid1.Select MyRow, 0
+        strNewRoute = frmGrid.Grid1.Cell(flexcpText)
+        RoutePath = MSTSPath & "\Routes\"
+        FileCopy RoutePath & strNewRoute & "\Activities\" & strCon, App.Path & "\TempFiles\" & strCon
+        DoEvents
+        flagway = 0    'unicode to ascii
+        Call ConvertStock(App.Path & "\TempFiles\" & strCon, flagway, strOldCon, strNewCon, strStockType)
+        DoEvents
+        Kill RoutePath & strNewRoute & "\Activities\" & strCon
+        DoEvents
+        flagway = 1    'unicode to ascii
+        Call ConvertStock(App.Path & "\TempFiles\" & strCon, flagway, strOldCon, strNewCon, strStockType)
+        FileCopy App.Path & "\TempFiles\" & strCon, RoutePath & strNewRoute & "\Activities\" & strCon
+        DoEvents
+        Kill App.Path & "\TempFiles\" & strCon
+        Label3.Caption = "Activity Modified"
+        frmGrid.Grid1.Select MyRow, MyCol
+        frmGrid.Grid2.Select ThisRow, 0
+        frmGrid.Grid2.FillStyle = flexFillSingle
+        frmGrid.Grid2.CellBackColor = vbWhite
+        frmGrid.Grid2.Cell(flexcpText) = strTempCon
+    ElseIf flagGrid = 4 Then
 
-newRow = GridRepCon.row
-newCol = GridRepCon.col
-strOldCon = Left$(Label2(0).Caption, Len(Label2(0).Caption) - 4)
-strStockType = Right$(Label2(0).Caption, 3)
-strNewCon = GridRepCon.Cell(flexcpText)
-strNewCon = Left$(strNewCon, Len(strNewCon) - 4)
-strTempCon = strNewCon
-strNewCon = ChrW$(34) & strNewCon & ChrW$(34)
-GridRepCon.Select newRow, newCol + 1
-strNewPath = GridRepCon.Cell(flexcpText)
-strNewPath = ChrW$(34) & strNewPath & ChrW$(34)
-strNewCon = strNewCon & " " & strNewPath
-frmGrid.Grid1.Select MyRow, 4
-strCon = frmGrid.Grid1.Cell(flexcpText)
-frmGrid.Grid1.Select MyRow, 0
+        newRow = GridRepCon.row
+        newCol = GridRepCon.col
+        strOldCon = Left$(Label2(0).Caption, Len(Label2(0).Caption) - 4)
+        strStockType = Right$(Label2(0).Caption, 3)
+        strNewCon = GridRepCon.Cell(flexcpText)
+        strNewCon = Left$(strNewCon, Len(strNewCon) - 4)
+        strTempCon = strNewCon
+        strNewCon = ChrW$(34) & strNewCon & ChrW$(34)
+        GridRepCon.Select newRow, newCol + 1
+        strNewPath = GridRepCon.Cell(flexcpText)
+        strNewPath = ChrW$(34) & strNewPath & ChrW$(34)
+        strNewCon = strNewCon & " " & strNewPath
+        frmGrid.Grid1.Select MyRow, 4
+        strCon = frmGrid.Grid1.Cell(flexcpText)
+        frmGrid.Grid1.Select MyRow, 0
 
-FileCopy MSTSPath & "\trains\consists\" & strCon, App.Path & "\TempFiles\" & strCon
-DoEvents
+        FileCopy MSTSPath & "\trains\consists\" & strCon, App.Path & "\TempFiles\" & strCon
+        DoEvents
 
-flagway = 0    'unicode to ascii
-Call ConvertStock(App.Path & "\TempFiles\" & strCon, flagway, strOldCon, strNewCon, strStockType)
+        flagway = 0    'unicode to ascii
+        Call ConvertStock(App.Path & "\TempFiles\" & strCon, flagway, strOldCon, strNewCon, strStockType)
 
-Kill MSTSPath & "\trains\consists\" & strCon
-flagway = 1    'unicode to ascii
-Call ConvertStock(App.Path & "\TempFiles\" & strCon, flagway, strOldCon, strNewCon, strStockType)
-FileCopy App.Path & "\TempFiles\" & strCon, MSTSPath & "\trains\consists\" & strCon
-Kill App.Path & "\TempFiles\" & strCon
-Label3.Caption = Lang(548)
-frmGrid.Grid1.Select MyRow, MyCol
-frmGrid.Grid1.FillStyle = flexFillSingle
-frmGrid.Grid1.CellBackColor = vbWhite
+        Kill MSTSPath & "\trains\consists\" & strCon
+        flagway = 1    'unicode to ascii
+        Call ConvertStock(App.Path & "\TempFiles\" & strCon, flagway, strOldCon, strNewCon, strStockType)
+        FileCopy App.Path & "\TempFiles\" & strCon, MSTSPath & "\trains\consists\" & strCon
+        Kill App.Path & "\TempFiles\" & strCon
+        Label3.Caption = Lang(548)
+        frmGrid.Grid1.Select MyRow, MyCol
+        frmGrid.Grid1.FillStyle = flexFillSingle
+        frmGrid.Grid1.CellBackColor = vbWhite
 
-'frmGrid.Grid1.Cell(flexcpText) = strTempCon & ".con"
-ElseIf flagGrid = 5 Then
+        'frmGrid.Grid1.Cell(flexcpText) = strTempCon & ".con"
+    ElseIf flagGrid = 5 Then
 
-newRow = GridRepCon.row
-newCol = GridRepCon.col
-strOldCon = Left$(Label2(0).Caption, Len(Label2(0).Caption) - 4)
-strStockType = Right$(Label2(0).Caption, 3)
-strNewCon = GridRepCon.Cell(flexcpText)
-strNewCon = Left$(strNewCon, Len(strNewCon) - 4)
-strTempCon = strNewCon
-strNewCon = ChrW$(34) & strNewCon & ChrW$(34)
-GridRepCon.Select newRow, newCol + 1
-strNewPath = GridRepCon.Cell(flexcpText)
-strNewPath = ChrW$(34) & strNewPath & ChrW$(34)
-strNewCon = strNewCon & " " & strNewPath
-frmUnusedSrv.GridCon.Select MyRow, 0
-strCon = frmUnusedSrv.GridCon.Cell(flexcpText)
-frmUnusedSrv.GridCon.Select MyRow, 0
+        newRow = GridRepCon.row
+        newCol = GridRepCon.col
+        strOldCon = Left$(Label2(0).Caption, Len(Label2(0).Caption) - 4)
+        strStockType = Right$(Label2(0).Caption, 3)
+        strNewCon = GridRepCon.Cell(flexcpText)
+        strNewCon = Left$(strNewCon, Len(strNewCon) - 4)
+        strTempCon = strNewCon
+        strNewCon = ChrW$(34) & strNewCon & ChrW$(34)
+        GridRepCon.Select newRow, newCol + 1
+        strNewPath = GridRepCon.Cell(flexcpText)
+        strNewPath = ChrW$(34) & strNewPath & ChrW$(34)
+        strNewCon = strNewCon & " " & strNewPath
+        frmUnusedSrv.GridCon.Select MyRow, 0
+        strCon = frmUnusedSrv.GridCon.Cell(flexcpText)
+        frmUnusedSrv.GridCon.Select MyRow, 0
 
-FileCopy MSTSPath & "\trains\consists\" & strCon, App.Path & "\TempFiles\" & strCon
-DoEvents
+        FileCopy MSTSPath & "\trains\consists\" & strCon, App.Path & "\TempFiles\" & strCon
+        DoEvents
 
-flagway = 0    'unicode to ascii
-Call ConvertStock(App.Path & "\TempFiles\" & strCon, flagway, strOldCon, strNewCon, strStockType)
+        flagway = 0    'unicode to ascii
+        Call ConvertStock(App.Path & "\TempFiles\" & strCon, flagway, strOldCon, strNewCon, strStockType)
 
-Kill MSTSPath & "\trains\consists\" & strCon
-flagway = 1    'unicode to ascii
-Call ConvertStock(App.Path & "\TempFiles\" & strCon, flagway, strOldCon, strNewCon, strStockType)
-FileCopy App.Path & "\TempFiles\" & strCon, MSTSPath & "\trains\consists\" & strCon
-Kill App.Path & "\TempFiles\" & strCon
-Label3.Caption = Lang(355)
-frmUnusedSrv.GridCon.Select MyRow, MyCol
+        Kill MSTSPath & "\trains\consists\" & strCon
+        flagway = 1    'unicode to ascii
+        Call ConvertStock(App.Path & "\TempFiles\" & strCon, flagway, strOldCon, strNewCon, strStockType)
+        FileCopy App.Path & "\TempFiles\" & strCon, MSTSPath & "\trains\consists\" & strCon
+        Kill App.Path & "\TempFiles\" & strCon
+        Label3.Caption = Lang(355)
+        frmUnusedSrv.GridCon.Select MyRow, MyCol
 
-Rem *************
-ElseIf flagGrid = 6 Then
-Rem ********* Change rolling stock item ************
-newRow = GridRepCon.row
-newCol = GridRepCon.col
-strOldCon = Left$(Label2(0).Caption, Len(Label2(0).Caption) - 4)
-strStockType = Right$(Label2(0).Caption, 3)
-strNewCon = GridRepCon.Cell(flexcpText)
-strNewCon = Left$(strNewCon, Len(strNewCon) - 4)
-strTempCon = strNewCon
-strNewCon = ChrW$(34) & strNewCon & ChrW$(34)
-GridRepCon.Select newRow, newCol + 1
-strNewPath = GridRepCon.Cell(flexcpText)
-strNewPath = ChrW$(34) & strNewPath & ChrW$(34)
-strNewCon = strNewCon & " " & strNewPath
-Rem ****************
+        Rem *************
+    ElseIf flagGrid = 6 Then
+        Rem ********* Change rolling stock item ************
+        newRow = GridRepCon.row
+        newCol = GridRepCon.col
+        strOldCon = Left$(Label2(0).Caption, Len(Label2(0).Caption) - 4)
+        strStockType = Right$(Label2(0).Caption, 3)
+        strNewCon = GridRepCon.Cell(flexcpText)
+        strNewCon = Left$(strNewCon, Len(strNewCon) - 4)
+        strTempCon = strNewCon
+        strNewCon = ChrW$(34) & strNewCon & ChrW$(34)
+        GridRepCon.Select newRow, newCol + 1
+        strNewPath = GridRepCon.Cell(flexcpText)
+        strNewPath = ChrW$(34) & strNewPath & ChrW$(34)
+        strNewCon = strNewCon & " " & strNewPath
+        Rem ****************
 
-frmStock.Grid3.Select MyRow, 0
-strCon = frmStock.Grid3.Cell(flexcpText)
-frmStock.Grid3.Select MyRow, 0
-If Right$(strCon, 3) <> "con" Then
+        frmStock.Grid3.Select MyRow, 0
+        strCon = frmStock.Grid3.Cell(flexcpText)
+        frmStock.Grid3.Select MyRow, 0
+        If Right$(strCon, 3) <> "con" Then
 
-      Call MsgBox("This option only works for Consists," _
-                  & vbCrLf & "           not for Activities." _
-                  , vbExclamation, App.Title)
-Exit Sub
-End If
-'strRoute = frmGrid.Grid1.Cell(flexcpText)
-'strRoute = MSTSPath & "\Routes\" & strRoute
-FileCopy MSTSPath & "\trains\consists\" & strCon, App.Path & "\TempFiles\" & strCon
-DoEvents
+            Call MsgBox("This option only works for Consists," & vbCrLf & "           not for Activities.", vbExclamation, App.Title)
+            Exit Sub
+        End If
+        'strRoute = frmGrid.Grid1.Cell(flexcpText)
+        'strRoute = MSTSPath & "\Routes\" & strRoute
+        FileCopy MSTSPath & "\trains\consists\" & strCon, App.Path & "\TempFiles\" & strCon
+        DoEvents
 
-flagway = 0    'unicode to ascii
-Call ConvertStock(App.Path & "\TempFiles\" & strCon, flagway, strOldCon, strNewCon, strStockType)
+        flagway = 0    'unicode to ascii
+        Call ConvertStock(App.Path & "\TempFiles\" & strCon, flagway, strOldCon, strNewCon, strStockType)
 
-Kill MSTSPath & "\trains\consists\" & strCon
-flagway = 1    'unicode to ascii
-Call ConvertStock(App.Path & "\TempFiles\" & strCon, flagway, strOldCon, strNewCon, strStockType)
-FileCopy App.Path & "\TempFiles\" & strCon, MSTSPath & "\trains\consists\" & strCon
-Kill App.Path & "\TempFiles\" & strCon
-Label3.Caption = "Modified Consist Activated"
-frmStock.GridStock.Select MyRow, MyCol
-frmStock.GridStock.Cell(flexcpText) = strTempCon & ".con"
+        Kill MSTSPath & "\trains\consists\" & strCon
+        flagway = 1    'unicode to ascii
+        Call ConvertStock(App.Path & "\TempFiles\" & strCon, flagway, strOldCon, strNewCon, strStockType)
+        FileCopy App.Path & "\TempFiles\" & strCon, MSTSPath & "\trains\consists\" & strCon
+        Kill App.Path & "\TempFiles\" & strCon
+        Label3.Caption = "Modified Consist Activated"
+        frmStock.GridStock.Select MyRow, MyCol
+        frmStock.GridStock.Cell(flexcpText) = strTempCon & ".con"
 
-ElseIf flagGrid = 2 And Check1.value = 1 Then
-Rem *********Change in all Consists/Activities ************
+    ElseIf flagGrid = 2 And Check1.value = 1 Then
+        Rem *********Change in all Consists/Activities ************
 
-newRow = GridRepCon.row
-newCol = GridRepCon.col
-strOldCon = Left$(Label2(0).Caption, Len(Label2(0).Caption) - 4)
-strOldStock = Label2(0).Caption
-strStockType = Right$(Label2(0).Caption, 3)
-strNewCon = GridRepCon.Cell(flexcpText)
-strNewCon = Left$(strNewCon, Len(strNewCon) - 4)
-strTempCon = strNewCon
-strNewCon = ChrW$(34) & strNewCon & ChrW$(34)
-GridRepCon.Select newRow, newCol + 1
-strNewPath = GridRepCon.Cell(flexcpText)
-strNewPath = ChrW$(34) & strNewPath & ChrW$(34)
-strNewCon = strNewCon & " " & strNewPath
-Rem ****************
+        newRow = GridRepCon.row
+        newCol = GridRepCon.col
+        strOldCon = Left$(Label2(0).Caption, Len(Label2(0).Caption) - 4)
+        strOldStock = Label2(0).Caption
+        strStockType = Right$(Label2(0).Caption, 3)
+        strNewCon = GridRepCon.Cell(flexcpText)
+        strNewCon = Left$(strNewCon, Len(strNewCon) - 4)
+        strTempCon = strNewCon
+        strNewCon = ChrW$(34) & strNewCon & ChrW$(34)
+        GridRepCon.Select newRow, newCol + 1
+        strNewPath = GridRepCon.Cell(flexcpText)
+        strNewPath = ChrW$(34) & strNewPath & ChrW$(34)
+        strNewCon = strNewCon & " " & strNewPath
+        Rem ****************
 
+        For i = 1 To frmStock.GridStock.Rows - 1
+            frmStock.GridStock.Select i, 3
+            strExisting = frmStock.GridStock.Cell(flexcpText)
+            If strExisting = strOldStock Then
+                frmStock.GridStock.Select i, 0
+                strCon = frmStock.GridStock.Cell(flexcpText)
+                If Right(strCon, 3) = "con" Then
 
-For i = 1 To frmStock.GridStock.Rows - 1
-frmStock.GridStock.Select i, 3
-strExisting = frmStock.GridStock.Cell(flexcpText)
-If strExisting = strOldStock Then
-frmStock.GridStock.Select i, 0
-strCon = frmStock.GridStock.Cell(flexcpText)
-If Right(strCon, 3) = "con" Then
+                    FileCopy MSTSPath & "\trains\consists\" & strCon, App.Path & "\TempFiles\" & strCon
+                    DoEvents
 
-FileCopy MSTSPath & "\trains\consists\" & strCon, App.Path & "\TempFiles\" & strCon
-DoEvents
+                    flagway = 0    'unicode to ascii
+                    Call ConvertStock(App.Path & "\TempFiles\" & strCon, flagway, strOldCon, strNewCon, strStockType)
 
-flagway = 0    'unicode to ascii
-Call ConvertStock(App.Path & "\TempFiles\" & strCon, flagway, strOldCon, strNewCon, strStockType)
+                    Kill MSTSPath & "\trains\consists\" & strCon
+                    flagway = 1    'unicode to ascii
+                    Call ConvertStock(App.Path & "\TempFiles\" & strCon, flagway, strOldCon, strNewCon, strStockType)
+                    FileCopy App.Path & "\TempFiles\" & strCon, MSTSPath & "\trains\consists\" & strCon
+                    Kill App.Path & "\TempFiles\" & strCon
+                    Label3.Caption = "Modified Consist Activated"
+                    frmStock.GridStock.Select i, 3
 
-Kill MSTSPath & "\trains\consists\" & strCon
-flagway = 1    'unicode to ascii
-Call ConvertStock(App.Path & "\TempFiles\" & strCon, flagway, strOldCon, strNewCon, strStockType)
-FileCopy App.Path & "\TempFiles\" & strCon, MSTSPath & "\trains\consists\" & strCon
-Kill App.Path & "\TempFiles\" & strCon
-Label3.Caption = "Modified Consist Activated"
-frmStock.GridStock.Select i, 3
+                    frmStock.GridStock.Cell(flexcpText) = strTempCon & "." & strStockType
 
-frmStock.GridStock.Cell(flexcpText) = strTempCon & "." & strStockType
+                ElseIf Right(strCon, 3) = "act" Then
 
-ElseIf Right(strCon, 3) = "act" Then
+                    frmStock.GridStock.Select i, 12
 
-frmStock.GridStock.Select i, 12
+                    strAct = frmStock.GridStock.Cell(flexcpText)
+                    FileCopy MSTSPath & "\Routes\" & strAct & "\Activities\" & strCon, App.Path & "\TempFiles\" & strCon
+                    DoEvents
 
-strAct = frmStock.GridStock.Cell(flexcpText)
-FileCopy MSTSPath & "\Routes\" & strAct & "\Activities\" & strCon, App.Path & "\TempFiles\" & strCon
-DoEvents
+                    flagway = 0    'unicode to ascii
+                    Call ConvertStock(App.Path & "\TempFiles\" & strCon, flagway, strOldCon, strNewCon, strStockType)
 
-flagway = 0    'unicode to ascii
-Call ConvertStock(App.Path & "\TempFiles\" & strCon, flagway, strOldCon, strNewCon, strStockType)
+                    Kill MSTSPath & "\Routes\" & strAct & "\Activities\" & strCon
+                    flagway = 1    'unicode to ascii
+                    Call ConvertStock(App.Path & "\TempFiles\" & strCon, flagway, strOldCon, strNewCon, strStockType)
+                    FileCopy App.Path & "\TempFiles\" & strCon, MSTSPath & "\Routes\" & strAct & "\Activities\" & strCon
+                    Kill App.Path & "\TempFiles\" & strCon
 
-Kill MSTSPath & "\Routes\" & strAct & "\Activities\" & strCon
-flagway = 1    'unicode to ascii
-Call ConvertStock(App.Path & "\TempFiles\" & strCon, flagway, strOldCon, strNewCon, strStockType)
-FileCopy App.Path & "\TempFiles\" & strCon, MSTSPath & "\Routes\" & strAct & "\Activities\" & strCon
-Kill App.Path & "\TempFiles\" & strCon
+                    frmStock.GridStock.Select i, 3
 
-frmStock.GridStock.Select i, 3
+                    frmStock.GridStock.Cell(flexcpText) = strTempCon & "." & strStockType
+                End If
+            End If
+        Next i
 
-frmStock.GridStock.Cell(flexcpText) = strTempCon & "." & strStockType
-End If
-End If
-Next i
-
-End If
-Exit Sub
+    End If
+    Exit Sub
 Errtrap:
-If Err = 381 Then
-Call MsgBox(Lang(354), vbExclamation, App.Title)
-Exit Sub
-End If
+    If Err = 381 Then
+        Call MsgBox(Lang(354), vbExclamation, App.Title)
+        Exit Sub
+    End If
 End Sub
 
 Private Sub Command2_Click()
-Dim ActName As String
+    Dim ActName As String
 
-If frmGrid.Grid1.col = 1 Then
-ConDown = False
+    If frmGrid.Grid1.col = 1 Then
+        ConDown = False
 
-flagGrid = 3
-frmGrid.Grid1.col = 0
-ActName = frmGrid.Grid1.Cell(flexcpText)
-frmGrid.Grid1.col = 1
-ActName = ActName & "\Activities\" & frmGrid.Grid1.Cell(flexcpText)
-frmGrid.Grid2.Rows = 0
-frmGrid.Grid2.AddItem Lang(634)
-frmGrid.Grid2.Rows = 1
-frmGrid.Grid2.ExplorerBar = flexExSort
-Call LooseConsistsGrid(ActName)
-End If
-Command1.Enabled = True
-Unload Me
+        flagGrid = 3
+        frmGrid.Grid1.col = 0
+        ActName = frmGrid.Grid1.Cell(flexcpText)
+        frmGrid.Grid1.col = 1
+        ActName = ActName & "\Activities\" & frmGrid.Grid1.Cell(flexcpText)
+        frmGrid.Grid2.Rows = 0
+        frmGrid.Grid2.AddItem Lang(634)
+        frmGrid.Grid2.Rows = 1
+        frmGrid.Grid2.ExplorerBar = flexExSort
+        Call LooseConsistsGrid(ActName)
+    End If
+    Command1.Enabled = True
+    Unload Me
 End Sub
-
 
 Private Sub LooseConsistsGrid(ActPath As String)
-Dim x As Integer, tempService As String, strNew As String
-Dim Engname As String, Engpath As String, Wagname As String
-Dim Wagonpath As String, booEntry As Boolean
+    Dim x         As Integer, tempService As String, strNew As String
+    Dim Engname   As String, Engpath As String, Wagname As String
+    Dim Wagonpath As String, booEntry As Boolean
 
+    On Error GoTo Errtrap
 
-On Error GoTo Errtrap
+    MousePointer = 11
+    RoutePath = MSTSPath & "\Routes"
+    TrainsetPath = MSTSPath & "\Trains\Trainset\"
 
-MousePointer = 11
-RoutePath = MSTSPath & "\Routes"
-TrainsetPath = MSTSPath & "\Trains\Trainset\"
+    ActPath = RoutePath & "\" & ActPath
 
-ActPath = RoutePath & "\" & ActPath
-
-
-NewFile = FreeFile
- Open ActPath For Input As #NewFile
- Do While Not EOF(NewFile)
-Line Input #NewFile, A$
+    NewFile = FreeFile
+    Open ActPath For Input As #NewFile
+    Do While Not EOF(NewFile)
+        Line Input #NewFile, A$
  
- Rem ************* Find loose consists - Locos
- tempService = vbNullString
-   x = InStr(A$, "EngineData")
-   strNew = A$
-         If x > 0 Then
-   Call CheckEngineData(strNew, Engname, Engpath, booEntry)
- 
-
+        Rem ************* Find loose consists - Locos
+        tempService = vbNullString
+        x = InStr(A$, "EngineData")
+        strNew = A$
+        If x > 0 Then
+            Call CheckEngineData(strNew, Engname, Engpath, booEntry)
   
-Engname = Engname & ".eng"
-If booEntry = True Then
-If Not FileExists(TrainsetPath & Engpath & "\" & Engname) Then
-  FlagColRed = True
-  If missEng = False Then
-strbadbits = strbadbits & vbCrLf & vbCrLf & Lang(528) & vbCrLf
-missEng = True
-End If
-  strbadbits = strbadbits & vbCrLf & Lang(528) & Engname
-   frmGrid.Grid2.AddItem Engname
-   
+            Engname = Engname & ".eng"
+            If booEntry = True Then
+                If Not FileExists(TrainsetPath & Engpath & "\" & Engname) Then
+                    FlagColRed = True
+                    If missEng = False Then
+                        strbadbits = strbadbits & vbCrLf & vbCrLf & Lang(528) & vbCrLf
+                        missEng = True
+                    End If
+                    strbadbits = strbadbits & vbCrLf & Lang(528) & Engname
+                    frmGrid.Grid2.AddItem Engname
 
-   Else
-   FlagColRed = False
-   frmGrid.Grid2.AddItem Engname
-   End If
+                Else
+                    FlagColRed = False
+                    frmGrid.Grid2.AddItem Engname
+                End If
    
- End If
- End If
- Rem ************* Find loose consists - Wagons
- tempService = vbNullString
-   x = InStr(A$, "WagonData")
-   strNew = A$
-         If x > 0 Then
-   Call CheckWagonData(strNew, Wagname, Wagonpath, booEntry)
-
+            End If
+        End If
+        Rem ************* Find loose consists - Wagons
+        tempService = vbNullString
+        x = InStr(A$, "WagonData")
+        strNew = A$
+        If x > 0 Then
+            Call CheckWagonData(strNew, Wagname, Wagonpath, booEntry)
   
-Wagname = Wagname & ".wag"
- If booEntry = True Then
- If Not FileExists(TrainsetPath & Wagonpath & "\" & Wagname) Then
- FlagColRed = True
- If missWag = False Then
-strbadbits = strbadbits & vbCrLf & vbCrLf & Lang(529) & vbCrLf
-missWag = True
-End If
- strbadbits = strbadbits & vbCrLf & Lang(529) & Wagname
- ' frmgrid.grid2.CellForeColor = vbRed
-   frmGrid.Grid2.AddItem Wagname
-'   frmgrid.grid2.CellBackColor = &HFF
-   Else
-   FlagColRed = False
-   frmGrid.Grid2.AddItem Wagname
-   End If
+            Wagname = Wagname & ".wag"
+            If booEntry = True Then
+                If Not FileExists(TrainsetPath & Wagonpath & "\" & Wagname) Then
+                    FlagColRed = True
+                    If missWag = False Then
+                        strbadbits = strbadbits & vbCrLf & vbCrLf & Lang(529) & vbCrLf
+                        missWag = True
+                    End If
+                    strbadbits = strbadbits & vbCrLf & Lang(529) & Wagname
+                    ' frmgrid.grid2.CellForeColor = vbRed
+                    frmGrid.Grid2.AddItem Wagname
+                    '   frmgrid.grid2.CellBackColor = &HFF
+                Else
+                    FlagColRed = False
+                    frmGrid.Grid2.AddItem Wagname
+                End If
    
- End If
- End If
- Loop
- Close #NewFile
+            End If
+        End If
+    Loop
+    Close #NewFile
 
-MousePointer = 0
-Exit Sub
+    MousePointer = 0
+    Exit Sub
 Errtrap:
 
-Call MsgBox("An error " & Err & " occurred in subroutine 'LooseConsistGrid' please advise" _
-            & vbCrLf & "Support with details of operation being processed." _
-            , vbExclamation, App.Title)
-'Resume Next
+    Call MsgBox("An error " & Err & " occurred in subroutine 'LooseConsistGrid' please advise" & vbCrLf & "Support with details of operation being processed.", vbExclamation, App.Title)
+    'Resume Next
 
 End Sub
-
 
 Private Sub Form_Load()
-Dim i As Integer, tempPath As String, strBrake As String, strType As String, strName As String
-Dim Couple As String, x As Integer
-'MousePointer = 11
+    Dim i      As Integer, tempPath As String, strBrake As String, strType As String, strName As String
+    Dim Couple As String, x As Integer
+    'MousePointer = 11
 
-GridRepCon.BackColor = vbWhite
-Me.Caption = Lang(291)
-If flagGrid = 2 Then
-Check1.Visible = True
-Else
-Check1.Visible = False
-End If
+    GridRepCon.BackColor = vbWhite
+    Me.Caption = Lang(291)
+    If flagGrid = 2 Then
+        Check1.Visible = True
+    Else
+        Check1.Visible = False
+    End If
 
+    If flagGrid = 2 Then
 
-If flagGrid = 2 Then
+        MyRow = frmStock.GridStock.row
+        MyCol = frmStock.GridStock.col
+        strStockType = Right$(frmStock.GridStock.Cell(flexcpText), 3)
+        Label2(0).Caption = frmStock.GridStock.Cell(flexcpText)
+        GridRepCon.width = 9000
+        GridRepCon.Cols = 5
 
-MyRow = frmStock.GridStock.row
-MyCol = frmStock.GridStock.col
-strStockType = Right$(frmStock.GridStock.Cell(flexcpText), 3)
-Label2(0).Caption = frmStock.GridStock.Cell(flexcpText)
-GridRepCon.width = 9000
-GridRepCon.Cols = 5
+        GridRepCon.ExplorerBar = flexExSort
+        If strStockType = "eng" Then
+            Label1.Caption = Lang(356)
+            frmRepStock.Caption = Lang(357)
+            GridRepCon.Select 0, 0
+            GridRepCon.Cell(flexcpText) = Lang(358)
+            GridRepCon.Select 0, 1
+            GridRepCon.Cell(flexcpText) = Lang(293)
 
-GridRepCon.ExplorerBar = flexExSort
-If strStockType = "eng" Then
-Label1.Caption = Lang(356)
-frmRepStock.Caption = Lang(357)
-GridRepCon.Select 0, 0
-GridRepCon.Cell(flexcpText) = Lang(358)
-GridRepCon.Select 0, 1
-GridRepCon.Cell(flexcpText) = Lang(293)
+            GridRepCon.Rows = 1
 
-GridRepCon.Rows = 1
+            For i = 0 To lngLoco - 1
+                tempPath = MSTSPath & "\trains\trainset\" & LocoPath(i) & "\" & Locomotives(i)
+                If Not FileExists(tempPath) Then GoTo TryAnotherLoco
+                Call GetCoupling(tempPath, flagCouple, strBrake, strType, strName)
 
-For i = 0 To lngLoco - 1
-tempPath = MSTSPath & "\trains\trainset\" & LocoPath(i) & "\" & Locomotives(i)
-If Not FileExists(tempPath) Then GoTo TryAnotherLoco
-Call GetCoupling(tempPath, flagCouple, strBrake, strType, strName)
+                Select Case flagCouple
+                Case 1
+                    Couple = "Automatic"
+                Case 2
+                    Couple = "Chain"
+                Case Else
+                    Couple = "Bar"
+                End Select
 
-Select Case flagCouple
-Case 1
-Couple = "Automatic"
-Case 2
-Couple = "Chain"
-Case Else
-Couple = "Bar"
-End Select
-
-If Label2(0).Caption = Locomotives(i) Then
-Label2(1).Caption = Couple
-Label2(2).Caption = strBrake
-Label2(3).Caption = strType
-End If
-GridRepCon.AddItem Locomotives(i) & vbTab & LocoPath(i) & vbTab & Couple & vbTab & strBrake & vbTab & strType
+                If Label2(0).Caption = Locomotives(i) Then
+                    Label2(1).Caption = Couple
+                    Label2(2).Caption = strBrake
+                    Label2(3).Caption = strType
+                End If
+                GridRepCon.AddItem Locomotives(i) & vbTab & LocoPath(i) & vbTab & Couple & vbTab & strBrake & vbTab & strType
 TryAnotherLoco:
-Next i
-Else
-Label1.Caption = Lang(359)
-frmRepCon.Caption = Lang(360)
-GridRepCon.Select 0, 0
-GridRepCon.Cell(flexcpText) = Lang(361)
-GridRepCon.Select 0, 1
-GridRepCon.Cell(flexcpText) = Lang(293)
+            Next i
+        Else
+            Label1.Caption = Lang(359)
+            frmRepCon.Caption = Lang(360)
+            GridRepCon.Select 0, 0
+            GridRepCon.Cell(flexcpText) = Lang(361)
+            GridRepCon.Select 0, 1
+            GridRepCon.Cell(flexcpText) = Lang(293)
 
-GridRepCon.Rows = 1
+            GridRepCon.Rows = 1
 
-For i = 0 To lngWagons - 1
-tempPath = MSTSPath & "\trains\trainset\" & Wagpath(i) & "\" & Wagons(i)
-If Not FileExists(tempPath) Then GoTo TryAnotherWag
-Call GetCoupling(tempPath, flagCouple, strBrake, strType, strName)
-Select Case flagCouple
-Case 1
-Couple = "Automatic"
-Case 2
-Couple = "Chain"
-Case Else
-Couple = "Bar"
-End Select
-If Label2(0).Caption = Wagons(i) Then
-Label2(1).Caption = Couple
-Label2(2).Caption = strBrake
-Label2(3).Caption = strType
-End If
-GridRepCon.AddItem Wagons(i) & vbTab & Wagpath(i) & vbTab & Couple & vbTab & strBrake & vbTab & strType
+            For i = 0 To lngWagons - 1
+                tempPath = MSTSPath & "\trains\trainset\" & Wagpath(i) & "\" & Wagons(i)
+                If Not FileExists(tempPath) Then GoTo TryAnotherWag
+                Call GetCoupling(tempPath, flagCouple, strBrake, strType, strName)
+                Select Case flagCouple
+                Case 1
+                    Couple = "Automatic"
+                Case 2
+                    Couple = "Chain"
+                Case Else
+                    Couple = "Bar"
+                End Select
+                If Label2(0).Caption = Wagons(i) Then
+                    Label2(1).Caption = Couple
+                    Label2(2).Caption = strBrake
+                    Label2(3).Caption = strType
+                End If
+                GridRepCon.AddItem Wagons(i) & vbTab & Wagpath(i) & vbTab & Couple & vbTab & strBrake & vbTab & strType
 TryAnotherWag:
-Next i
-End If
+            Next i
+        End If
 
-ElseIf flagGrid = 3 Then ' ************************************    Activity
-MyRow = frmGrid.Grid1.row
-MyCol = frmGrid.Grid1.col
-strStockType = Right$(frmGrid.Grid2.Cell(flexcpText), 3)
-Label2(0).Caption = frmGrid.Grid2.Cell(flexcpText)
-GridRepCon.width = 9000
-GridRepCon.Cols = 5
+    ElseIf flagGrid = 3 Then ' ************************************    Activity
+        MyRow = frmGrid.Grid1.row
+        MyCol = frmGrid.Grid1.col
+        strStockType = Right$(frmGrid.Grid2.Cell(flexcpText), 3)
+        Label2(0).Caption = frmGrid.Grid2.Cell(flexcpText)
+        GridRepCon.width = 9000
+        GridRepCon.Cols = 5
 
-GridRepCon.ExplorerBar = flexExSort
-If strStockType = "eng" Then
-Label1.Caption = Lang(356)
-frmRepCon.Caption = Lang(362)
-GridRepCon.Select 0, 0
-GridRepCon.Cell(flexcpText) = Lang(358)
-GridRepCon.Select 0, 1
-GridRepCon.Cell(flexcpText) = Lang(293)
+        GridRepCon.ExplorerBar = flexExSort
+        If strStockType = "eng" Then
+            Label1.Caption = Lang(356)
+            frmRepCon.Caption = Lang(362)
+            GridRepCon.Select 0, 0
+            GridRepCon.Cell(flexcpText) = Lang(358)
+            GridRepCon.Select 0, 1
+            GridRepCon.Cell(flexcpText) = Lang(293)
 
-GridRepCon.Rows = 1
+            GridRepCon.Rows = 1
 
-For i = 0 To lngLoco - 1
-tempPath = MSTSPath & "\trains\trainset\" & LocoPath(i) & "\" & Locomotives(i)
+            For i = 0 To lngLoco - 1
+                tempPath = MSTSPath & "\trains\trainset\" & LocoPath(i) & "\" & Locomotives(i)
 
-If Not FileExists(tempPath) Then GoTo TryAnother
-Call GetCoupling(tempPath, flagCouple, strBrake, strType, strName)
-Select Case flagCouple
-Case 1
-Couple = "Automatic"
-Case 2
-Couple = "Chain"
-Case Else
-Couple = "Bar"
-End Select
-If Label2(0).Caption = Locomotives(i) Then
-Label2(1).Caption = Couple
-Label2(2).Caption = strBrake
-Label2(3).Caption = strType
-End If
-GridRepCon.AddItem Locomotives(i) & vbTab & LocoPath(i) & vbTab & Couple & vbTab & strBrake & vbTab & strType
+                If Not FileExists(tempPath) Then GoTo TryAnother
+                Call GetCoupling(tempPath, flagCouple, strBrake, strType, strName)
+                Select Case flagCouple
+                Case 1
+                    Couple = "Automatic"
+                Case 2
+                    Couple = "Chain"
+                Case Else
+                    Couple = "Bar"
+                End Select
+                If Label2(0).Caption = Locomotives(i) Then
+                    Label2(1).Caption = Couple
+                    Label2(2).Caption = strBrake
+                    Label2(3).Caption = strType
+                End If
+                GridRepCon.AddItem Locomotives(i) & vbTab & LocoPath(i) & vbTab & Couple & vbTab & strBrake & vbTab & strType
 TryAnother:
-Next i
-Else
-Label1.Caption = Lang(359)
-frmRepCon.Caption = Lang(363)
-GridRepCon.Select 0, 0
-GridRepCon.Cell(flexcpText) = Lang(361)
-GridRepCon.Select 0, 1
-GridRepCon.Cell(flexcpText) = Lang(293)
+            Next i
+        Else
+            Label1.Caption = Lang(359)
+            frmRepCon.Caption = Lang(363)
+            GridRepCon.Select 0, 0
+            GridRepCon.Cell(flexcpText) = Lang(361)
+            GridRepCon.Select 0, 1
+            GridRepCon.Cell(flexcpText) = Lang(293)
 
-GridRepCon.Rows = 1
+            GridRepCon.Rows = 1
 
-For i = 0 To lngWagons - 1
-tempPath = MSTSPath & "\trains\trainset\" & Wagpath(i) & "\" & Wagons(i)
-If Not FileExists(tempPath) Then GoTo TryAnotherWag2
-Call GetCoupling(tempPath, flagCouple, strBrake, strType, strName)
-Select Case flagCouple
-Case 1
-Couple = "Automatic"
-Case 2
-Couple = "Chain"
-Case Else
-Couple = "Bar"
-End Select
-If Label2(0).Caption = Wagons(i) Then
-Label2(1).Caption = Couple
-Label2(2).Caption = strBrake
-Label2(3).Caption = strType
-End If
-GridRepCon.AddItem Wagons(i) & vbTab & Wagpath(i) & vbTab & Couple & vbTab & strBrake & vbTab & strType
+            For i = 0 To lngWagons - 1
+                tempPath = MSTSPath & "\trains\trainset\" & Wagpath(i) & "\" & Wagons(i)
+                If Not FileExists(tempPath) Then GoTo TryAnotherWag2
+                Call GetCoupling(tempPath, flagCouple, strBrake, strType, strName)
+                Select Case flagCouple
+                Case 1
+                    Couple = "Automatic"
+                Case 2
+                    Couple = "Chain"
+                Case Else
+                    Couple = "Bar"
+                End Select
+                If Label2(0).Caption = Wagons(i) Then
+                    Label2(1).Caption = Couple
+                    Label2(2).Caption = strBrake
+                    Label2(3).Caption = strType
+                End If
+                GridRepCon.AddItem Wagons(i) & vbTab & Wagpath(i) & vbTab & Couple & vbTab & strBrake & vbTab & strType
 TryAnotherWag2:
-Next i
-End If
+            Next i
+        End If
 
-ElseIf flagGrid = 4 Then ' ********************************  Consist
+    ElseIf flagGrid = 4 Then ' ********************************  Consist
 
-MyRow = frmGrid.Grid1.row
-MyCol = frmGrid.Grid1.col
-strStockType = Right$(frmGrid.Grid2.Cell(flexcpText), 3)
-Label2(0).Caption = frmGrid.Grid2.Cell(flexcpText)
-'Call GetCoupling(tempPath, flagCouple, strBrake, strType, strName)
-GridRepCon.width = 9000
-GridRepCon.Cols = 5
+        MyRow = frmGrid.Grid1.row
+        MyCol = frmGrid.Grid1.col
+        strStockType = Right$(frmGrid.Grid2.Cell(flexcpText), 3)
+        Label2(0).Caption = frmGrid.Grid2.Cell(flexcpText)
+        'Call GetCoupling(tempPath, flagCouple, strBrake, strType, strName)
+        GridRepCon.width = 9000
+        GridRepCon.Cols = 5
 
-GridRepCon.ExplorerBar = flexExSort
-If strStockType = "eng" Then
-Label1.Caption = Lang(356)
-frmRepCon.Caption = Lang(357)
-GridRepCon.Select 0, 0
-GridRepCon.Cell(flexcpText) = Lang(358)
-GridRepCon.Select 0, 1
-GridRepCon.Cell(flexcpText) = Lang(293)
+        GridRepCon.ExplorerBar = flexExSort
+        If strStockType = "eng" Then
+            Label1.Caption = Lang(356)
+            frmRepCon.Caption = Lang(357)
+            GridRepCon.Select 0, 0
+            GridRepCon.Cell(flexcpText) = Lang(358)
+            GridRepCon.Select 0, 1
+            GridRepCon.Cell(flexcpText) = Lang(293)
 
-GridRepCon.Rows = 1
+            GridRepCon.Rows = 1
 
-For i = 0 To lngLoco - 1
-tempPath = MSTSPath & "\trains\trainset\" & LocoPath(i) & "\" & Locomotives(i)
-If Not FileExists(tempPath) Then GoTo TryAnotherLoco3
-Call GetCoupling(tempPath, flagCouple, strBrake, strType, strName)
-Select Case flagCouple
-Case 1
-Couple = "Automatic"
-Case 2
-Couple = "Chain"
-Case Else
-Couple = "Bar"
-End Select
-If Label2(0).Caption = Locomotives(i) Then
-Label2(1).Caption = Couple
-Label2(2).Caption = strBrake
-Label2(3).Caption = strType
-End If
-GridRepCon.AddItem Locomotives(i) & vbTab & LocoPath(i) & vbTab & Couple & vbTab & strBrake & vbTab & strType
+            For i = 0 To lngLoco - 1
+                tempPath = MSTSPath & "\trains\trainset\" & LocoPath(i) & "\" & Locomotives(i)
+                If Not FileExists(tempPath) Then GoTo TryAnotherLoco3
+                Call GetCoupling(tempPath, flagCouple, strBrake, strType, strName)
+                Select Case flagCouple
+                Case 1
+                    Couple = "Automatic"
+                Case 2
+                    Couple = "Chain"
+                Case Else
+                    Couple = "Bar"
+                End Select
+                If Label2(0).Caption = Locomotives(i) Then
+                    Label2(1).Caption = Couple
+                    Label2(2).Caption = strBrake
+                    Label2(3).Caption = strType
+                End If
+                GridRepCon.AddItem Locomotives(i) & vbTab & LocoPath(i) & vbTab & Couple & vbTab & strBrake & vbTab & strType
 TryAnotherLoco3:
-Next i
-Else
-Label1.Caption = Lang(359)
-frmRepCon.Caption = Lang(360)
-GridRepCon.Select 0, 0
-GridRepCon.Cell(flexcpText) = Lang(361)
-GridRepCon.Select 0, 1
-GridRepCon.Cell(flexcpText) = Lang(293)
+            Next i
+        Else
+            Label1.Caption = Lang(359)
+            frmRepCon.Caption = Lang(360)
+            GridRepCon.Select 0, 0
+            GridRepCon.Cell(flexcpText) = Lang(361)
+            GridRepCon.Select 0, 1
+            GridRepCon.Cell(flexcpText) = Lang(293)
 
-GridRepCon.Rows = 1
+            GridRepCon.Rows = 1
 
-For i = 0 To lngWagons - 1
-tempPath = MSTSPath & "\trains\trainset\" & Wagpath(i) & "\" & Wagons(i)
-If Not FileExists(tempPath) Then GoTo TryAnotherWag3
-Call GetCoupling(tempPath, flagCouple, strBrake, strType, strName)
-Select Case flagCouple
-Case 1
-Couple = "Automatic"
-Case 2
-Couple = "Chain"
-Case Else
-Couple = "Bar"
-End Select
-If Label2(0).Caption = Wagons(i) Then
-Label2(1).Caption = Couple
-Label2(2).Caption = strBrake
-Label2(3).Caption = strType
-End If
-GridRepCon.AddItem Wagons(i) & vbTab & Wagpath(i) & vbTab & Couple & vbTab & strBrake & vbTab & strType
+            For i = 0 To lngWagons - 1
+                tempPath = MSTSPath & "\trains\trainset\" & Wagpath(i) & "\" & Wagons(i)
+                If Not FileExists(tempPath) Then GoTo TryAnotherWag3
+                Call GetCoupling(tempPath, flagCouple, strBrake, strType, strName)
+                Select Case flagCouple
+                Case 1
+                    Couple = "Automatic"
+                Case 2
+                    Couple = "Chain"
+                Case Else
+                    Couple = "Bar"
+                End Select
+                If Label2(0).Caption = Wagons(i) Then
+                    Label2(1).Caption = Couple
+                    Label2(2).Caption = strBrake
+                    Label2(3).Caption = strType
+                End If
+                GridRepCon.AddItem Wagons(i) & vbTab & Wagpath(i) & vbTab & Couple & vbTab & strBrake & vbTab & strType
 TryAnotherWag3:
-Next i
-End If
-ElseIf flagGrid = 5 Then ' ********************************  Consist
+            Next i
+        End If
+    ElseIf flagGrid = 5 Then ' ********************************  Consist
 
-MyRow = frmUnusedSrv.GridCon.row
-MyCol = frmUnusedSrv.GridCon.col
-strStockType = Right$(frmUnusedSrv.GridLoco.Cell(flexcpText), 3)
-Label2(0).Caption = frmUnusedSrv.GridLoco.Cell(flexcpText)
-GridRepCon.width = 7000
-GridRepCon.Cols = 2
+        MyRow = frmUnusedSrv.GridCon.row
+        MyCol = frmUnusedSrv.GridCon.col
+        strStockType = Right$(frmUnusedSrv.GridLoco.Cell(flexcpText), 3)
+        Label2(0).Caption = frmUnusedSrv.GridLoco.Cell(flexcpText)
+        GridRepCon.width = 7000
+        GridRepCon.Cols = 2
 
-GridRepCon.ExplorerBar = flexExSort
-If strStockType = "eng" Then
-Label1.Caption = Lang(356)
-frmRepCon.Caption = Lang(357)
-GridRepCon.Select 0, 0
-GridRepCon.Cell(flexcpText) = Lang(358)
-GridRepCon.Select 0, 1
-GridRepCon.Cell(flexcpText) = Lang(293)
+        GridRepCon.ExplorerBar = flexExSort
+        If strStockType = "eng" Then
+            Label1.Caption = Lang(356)
+            frmRepCon.Caption = Lang(357)
+            GridRepCon.Select 0, 0
+            GridRepCon.Cell(flexcpText) = Lang(358)
+            GridRepCon.Select 0, 1
+            GridRepCon.Cell(flexcpText) = Lang(293)
 
-GridRepCon.Rows = 1
+            GridRepCon.Rows = 1
 
-For i = 0 To lngLoco - 1
-tempPath = MSTSPath & "\trains\trainset\" & LocoPath(i) & "\" & Locomotives(i)
-If Not FileExists(tempPath) Then GoTo TryAnotherLoco4
-Call GetCoupling(tempPath, flagCouple, strBrake, strType, strName)
-Select Case flagCouple
-Case 1
-Couple = "Automatic"
-Case 2
-Couple = "Chain"
-Case Else
-Couple = "Bar"
-End Select
-If Label2(0).Caption = Locomotives(i) Then
-Label2(1).Caption = Couple
-Label2(2).Caption = strBrake
-Label2(3).Caption = strType
-End If
-GridRepCon.AddItem Locomotives(i) & vbTab & LocoPath(i) & vbTab & Couple & vbTab & strBrake & vbTab & strType
+            For i = 0 To lngLoco - 1
+                tempPath = MSTSPath & "\trains\trainset\" & LocoPath(i) & "\" & Locomotives(i)
+                If Not FileExists(tempPath) Then GoTo TryAnotherLoco4
+                Call GetCoupling(tempPath, flagCouple, strBrake, strType, strName)
+                Select Case flagCouple
+                Case 1
+                    Couple = "Automatic"
+                Case 2
+                    Couple = "Chain"
+                Case Else
+                    Couple = "Bar"
+                End Select
+                If Label2(0).Caption = Locomotives(i) Then
+                    Label2(1).Caption = Couple
+                    Label2(2).Caption = strBrake
+                    Label2(3).Caption = strType
+                End If
+                GridRepCon.AddItem Locomotives(i) & vbTab & LocoPath(i) & vbTab & Couple & vbTab & strBrake & vbTab & strType
 TryAnotherLoco4:
-Next i
-Else
-Label1.Caption = Lang(359)
-frmRepCon.Caption = Lang(360)
-GridRepCon.Select 0, 0
-GridRepCon.Cell(flexcpText) = Lang(361)
-GridRepCon.Select 0, 1
-GridRepCon.Cell(flexcpText) = Lang(293)
+            Next i
+        Else
+            Label1.Caption = Lang(359)
+            frmRepCon.Caption = Lang(360)
+            GridRepCon.Select 0, 0
+            GridRepCon.Cell(flexcpText) = Lang(361)
+            GridRepCon.Select 0, 1
+            GridRepCon.Cell(flexcpText) = Lang(293)
 
-GridRepCon.Rows = 1
+            GridRepCon.Rows = 1
 
-For i = 0 To lngWagons - 1
-tempPath = MSTSPath & "\trains\trainset\" & Wagpath(i) & "\" & Wagons(i)
-If Not FileExists(tempPath) Then GoTo TryAnotherWag4
-Call GetCoupling(tempPath, flagCouple, strBrake, strType, strName)
-Select Case flagCouple
-Case 1
-Couple = "Automatic"
-Case 2
-Couple = "Chain"
-Case Else
-Couple = "Bar"
-End Select
-If Label2(0).Caption = Wagons(i) Then
-Label2(1).Caption = Couple
-Label2(2).Caption = strBrake
-Label2(3).Caption = strType
-End If
-GridRepCon.AddItem Wagons(i) & vbTab & Wagpath(i) & vbTab & Couple & vbTab & strBrake & vbTab & strType
+            For i = 0 To lngWagons - 1
+                tempPath = MSTSPath & "\trains\trainset\" & Wagpath(i) & "\" & Wagons(i)
+                If Not FileExists(tempPath) Then GoTo TryAnotherWag4
+                Call GetCoupling(tempPath, flagCouple, strBrake, strType, strName)
+                Select Case flagCouple
+                Case 1
+                    Couple = "Automatic"
+                Case 2
+                    Couple = "Chain"
+                Case Else
+                    Couple = "Bar"
+                End Select
+                If Label2(0).Caption = Wagons(i) Then
+                    Label2(1).Caption = Couple
+                    Label2(2).Caption = strBrake
+                    Label2(3).Caption = strType
+                End If
+                GridRepCon.AddItem Wagons(i) & vbTab & Wagpath(i) & vbTab & Couple & vbTab & strBrake & vbTab & strType
 TryAnotherWag4:
-Next i
-End If
-Rem ********************* Replace Missing eng/wag in Consist ************
-ElseIf flagGrid = 6 Then
-MyRow = frmStock.Grid3.row
-MyCol = frmStock.Grid3.col
-strStockType = Right$(frmStock.Grid3.Cell(flexcpText), 3)
-x = InStrRev(frmStock.Grid3.Cell(flexcpText), "\")
-Label2(0).Caption = Mid$(frmStock.Grid3.Cell(flexcpText), x + 1)
-'Label2(0).Caption = frmStock.Grid3.Cell(flexcpText)
-GridRepCon.width = 9000
-GridRepCon.Cols = 5
+            Next i
+        End If
+        Rem ********************* Replace Missing eng/wag in Consist ************
+    ElseIf flagGrid = 6 Then
+        MyRow = frmStock.Grid3.row
+        MyCol = frmStock.Grid3.col
+        strStockType = Right$(frmStock.Grid3.Cell(flexcpText), 3)
+        x = InStrRev(frmStock.Grid3.Cell(flexcpText), "\")
+        Label2(0).Caption = Mid$(frmStock.Grid3.Cell(flexcpText), x + 1)
+        'Label2(0).Caption = frmStock.Grid3.Cell(flexcpText)
+        GridRepCon.width = 9000
+        GridRepCon.Cols = 5
 
-GridRepCon.ExplorerBar = flexExSort
-If strStockType = "eng" Then
-Label1.Caption = Lang(356)
-frmRepStock.Caption = Lang(357)
-GridRepCon.Select 0, 0
-GridRepCon.Cell(flexcpText) = Lang(358)
-GridRepCon.Select 0, 1
-GridRepCon.Cell(flexcpText) = Lang(293)
+        GridRepCon.ExplorerBar = flexExSort
+        If strStockType = "eng" Then
+            Label1.Caption = Lang(356)
+            frmRepStock.Caption = Lang(357)
+            GridRepCon.Select 0, 0
+            GridRepCon.Cell(flexcpText) = Lang(358)
+            GridRepCon.Select 0, 1
+            GridRepCon.Cell(flexcpText) = Lang(293)
 
-GridRepCon.Rows = 1
+            GridRepCon.Rows = 1
 
-For i = 0 To lngLoco - 1
-tempPath = MSTSPath & "\trains\trainset\" & LocoPath(i) & "\" & Locomotives(i)
-If Not FileExists(tempPath) Then GoTo TryAnotherLoco6
-Call GetCoupling(tempPath, flagCouple, strBrake, strType, strName)
+            For i = 0 To lngLoco - 1
+                tempPath = MSTSPath & "\trains\trainset\" & LocoPath(i) & "\" & Locomotives(i)
+                If Not FileExists(tempPath) Then GoTo TryAnotherLoco6
+                Call GetCoupling(tempPath, flagCouple, strBrake, strType, strName)
 
-Select Case flagCouple
-Case 1
-Couple = "Automatic"
-Case 2
-Couple = "Chain"
-Case Else
-Couple = "Bar"
-End Select
+                Select Case flagCouple
+                Case 1
+                    Couple = "Automatic"
+                Case 2
+                    Couple = "Chain"
+                Case Else
+                    Couple = "Bar"
+                End Select
 
-If Label2(0).Caption = Locomotives(i) Then
-Label2(1).Caption = Couple
-Label2(2).Caption = strBrake
-Label2(3).Caption = strType
-End If
-GridRepCon.AddItem Locomotives(i) & vbTab & LocoPath(i) & vbTab & Couple & vbTab & strBrake & vbTab & strType
+                If Label2(0).Caption = Locomotives(i) Then
+                    Label2(1).Caption = Couple
+                    Label2(2).Caption = strBrake
+                    Label2(3).Caption = strType
+                End If
+                GridRepCon.AddItem Locomotives(i) & vbTab & LocoPath(i) & vbTab & Couple & vbTab & strBrake & vbTab & strType
 TryAnotherLoco6:
-Next i
-Else
-Label1.Caption = Lang(359)
-frmRepCon.Caption = Lang(360)
-GridRepCon.Select 0, 0
-GridRepCon.Cell(flexcpText) = Lang(361)
-GridRepCon.Select 0, 1
-GridRepCon.Cell(flexcpText) = Lang(293)
+            Next i
+        Else
+            Label1.Caption = Lang(359)
+            frmRepCon.Caption = Lang(360)
+            GridRepCon.Select 0, 0
+            GridRepCon.Cell(flexcpText) = Lang(361)
+            GridRepCon.Select 0, 1
+            GridRepCon.Cell(flexcpText) = Lang(293)
 
-GridRepCon.Rows = 1
+            GridRepCon.Rows = 1
 
-For i = 0 To lngWagons - 1
-tempPath = MSTSPath & "\trains\trainset\" & Wagpath(i) & "\" & Wagons(i)
-If Not FileExists(tempPath) Then GoTo TryAnotherWag6
-Call GetCoupling(tempPath, flagCouple, strBrake, strType, strName)
-Select Case flagCouple
-Case 1
-Couple = "Automatic"
-Case 2
-Couple = "Chain"
-Case Else
-Couple = "Bar"
-End Select
-If Label2(0).Caption = Wagons(i) Then
-Label2(1).Caption = Couple
-Label2(2).Caption = strBrake
-Label2(3).Caption = strType
-End If
-GridRepCon.AddItem Wagons(i) & vbTab & Wagpath(i) & vbTab & Couple & vbTab & strBrake & vbTab & strType
+            For i = 0 To lngWagons - 1
+                tempPath = MSTSPath & "\trains\trainset\" & Wagpath(i) & "\" & Wagons(i)
+                If Not FileExists(tempPath) Then GoTo TryAnotherWag6
+                Call GetCoupling(tempPath, flagCouple, strBrake, strType, strName)
+                Select Case flagCouple
+                Case 1
+                    Couple = "Automatic"
+                Case 2
+                    Couple = "Chain"
+                Case Else
+                    Couple = "Bar"
+                End Select
+                If Label2(0).Caption = Wagons(i) Then
+                    Label2(1).Caption = Couple
+                    Label2(2).Caption = strBrake
+                    Label2(3).Caption = strType
+                End If
+                GridRepCon.AddItem Wagons(i) & vbTab & Wagpath(i) & vbTab & Couple & vbTab & strBrake & vbTab & strType
 TryAnotherWag6:
-Next i
-End If
+            Next i
+        End If
 
-End If
-If flagGrid <> 1 Then
-GridRepCon.ColAlignment(1) = flexAlignLeftCenter
-GridRepCon.col = 0
-GridRepCon.Sort = flexSortStringAscending
-End If
-frmStock.MousePointer = 0
+    End If
+    If flagGrid <> 1 Then
+        GridRepCon.ColAlignment(1) = flexAlignLeftCenter
+        GridRepCon.col = 0
+        GridRepCon.Sort = flexSortStringAscending
+    End If
+    frmStock.MousePointer = 0
 End Sub
-
 

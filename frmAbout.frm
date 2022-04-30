@@ -1,6 +1,6 @@
 VERSION 5.00
 Begin VB.Form frmAbout 
-   BackColor       =   &H00FFFF80&
+   BackColor       =   &H80000005&
    BorderStyle     =   3  'Fixed Dialog
    Caption         =   "About MyApp"
    ClientHeight    =   5490
@@ -69,50 +69,9 @@ Begin VB.Form frmAbout
       Y1              =   0
       Y2              =   0
    End
-   Begin VB.Label Label4 
-      Alignment       =   2  'Center
-      BackStyle       =   0  'Transparent
-      Caption         =   "Latest version at - http://www.rstools.info"
-      BeginProperty Font 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
-         Charset         =   0
-         Weight          =   400
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-      Height          =   255
-      Index           =   1
-      Left            =   120
-      TabIndex        =   9
-      Top             =   2160
-      Width           =   5535
-   End
-   Begin VB.Label Label4 
-      Alignment       =   2  'Center
-      BackStyle       =   0  'Transparent
-      Caption         =   "For Support: Contact me via the  link on my web site"
-      BeginProperty Font 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
-         Charset         =   0
-         Weight          =   400
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-      Height          =   255
-      Index           =   0
-      Left            =   840
-      TabIndex        =   8
-      Top             =   1920
-      Width           =   4455
-   End
    Begin VB.Label Label2 
-      Alignment       =   2  'Center
       BackStyle       =   0  'Transparent
-      Caption         =   " Penrith, NSW, Australia"
+      Caption         =   "Updated by Jeffrey Kraus-Yao, Madison, Wisconsin"
       BeginProperty Font 
          Name            =   "MS Sans Serif"
          Size            =   8.25
@@ -123,15 +82,14 @@ Begin VB.Form frmAbout
          Strikethrough   =   0   'False
       EndProperty
       Height          =   255
-      Left            =   1080
+      Left            =   1560
       TabIndex        =   7
       Top             =   1680
-      Width           =   4215
+      Width           =   3735
    End
    Begin VB.Label Label1 
-      Alignment       =   2  'Center
       BackStyle       =   0  'Transparent
-      Caption         =   "by Mike Simpson"
+      Caption         =   "Created by Mike Simpson, Penrith, NSW, Australia"
       BeginProperty Font 
          Name            =   "MS Sans Serif"
          Size            =   8.25
@@ -142,10 +100,10 @@ Begin VB.Form frmAbout
          Strikethrough   =   0   'False
       EndProperty
       Height          =   255
-      Left            =   1080
+      Left            =   1560
       TabIndex        =   6
       Top             =   1440
-      Width           =   3975
+      Width           =   4095
    End
    Begin VB.Line Line1 
       BorderColor     =   &H00404000&
@@ -156,7 +114,6 @@ Begin VB.Form frmAbout
       Y2              =   1687.583
    End
    Begin VB.Label lblDescription 
-      Alignment       =   2  'Center
       BackStyle       =   0  'Transparent
       Caption         =   "A suite of utilities for Microsoft Train Simulator"
       BeginProperty Font 
@@ -170,13 +127,12 @@ Begin VB.Form frmAbout
       EndProperty
       ForeColor       =   &H00000000&
       Height          =   195
-      Left            =   840
+      Left            =   1560
       TabIndex        =   2
       Top             =   1200
-      Width           =   4680
+      Width           =   3960
    End
    Begin VB.Label lblTitle 
-      Alignment       =   2  'Center
       BackStyle       =   0  'Transparent
       Caption         =   "Application Title"
       BeginProperty Font 
@@ -188,15 +144,14 @@ Begin VB.Form frmAbout
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
-      ForeColor       =   &H000000FF&
-      Height          =   720
-      Left            =   1680
+      ForeColor       =   &H80000007&
+      Height          =   480
+      Left            =   1560
       TabIndex        =   4
       Top             =   240
-      Width           =   4365
+      Width           =   4485
    End
    Begin VB.Label lblVersion 
-      Alignment       =   2  'Center
       BackStyle       =   0  'Transparent
       Caption         =   "Version"
       BeginProperty Font 
@@ -208,23 +163,32 @@ Begin VB.Form frmAbout
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
-      ForeColor       =   &H00C00000&
+      ForeColor       =   &H80000008&
       Height          =   225
-      Left            =   1800
+      Left            =   1560
       TabIndex        =   5
-      Top             =   960
-      Width           =   3885
+      Top             =   840
+      Width           =   4125
    End
    Begin VB.Label lblDisclaimer 
-      Alignment       =   2  'Center
       BackStyle       =   0  'Transparent
-      Caption         =   $"frmAbout.frx":80D4
-      ForeColor       =   &H000000FF&
-      Height          =   1995
+      Caption         =   "Copyright 2002-2013 © Mike Simpson"
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   &H80000008&
+      Height          =   795
       Left            =   240
       TabIndex        =   3
-      Top             =   3360
-      Width           =   4815
+      Top             =   2760
+      Width           =   4485
+      WordWrap        =   -1  'True
    End
 End
 Attribute VB_Name = "frmAbout"
@@ -236,41 +200,18 @@ Option Explicit
 
 Public registered As Boolean
 
-
-
-
 Private Sub cmdOK_Click()
-
-frmUtils.Show
-Unload Me
-  
+    frmUtils.Show
+    Unload Me
 End Sub
 
-
-
 Private Sub Form_Load()
-
-
- 
-lblDisclaimer.Caption = "This program is Copyright 2002-11, T.M. Simpson. "
-lblDisclaimer.Caption = lblDisclaimer.Caption & "Route_Riter is being released as freeware and may be "
-lblDisclaimer.Caption = lblDisclaimer.Caption & "distributed to anyone interested in MSTS modelling.. "
-lblDisclaimer.Caption = lblDisclaimer.Caption & "Please advise the author of any bugs or "
-lblDisclaimer.Caption = lblDisclaimer.Caption & "problems observed, suggestions for enhancement are welcomed."
-lblDisclaimer.Caption = lblDisclaimer.Caption & vbCrLf & vbCrLf
-
-
-
-10        Me.Caption = "About " & App.Title
-20        lblVersion.Caption = "Version " & App.Major & "." & App.Minor & "." & App.Revision
-30        lblTitle.Caption = App.Title & " for XP, Vista && Windows7"
-40        If Command <> vbNullString Then cmdOK.value = True
-
-
-
-
-
-
+    Me.Caption = "About " & App.Title
+    lblTitle.Caption = App.Title
+    lblVersion.Caption = "Version " & App.Major & "." & App.Minor & "." & App.Revision
+    lblDisclaimer.Caption = "Copyright © 2002-2013 Mike Simpson" & vbCrLf
+    lblDisclaimer.Caption = lblDisclaimer.Caption & vbCrLf & "Copyright © 2015 Digital Rails Corporation"
+    If Command <> vbNullString Then cmdOK.value = True
 End Sub
 
 

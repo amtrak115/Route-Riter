@@ -5,8 +5,6 @@ Declare Function GetShortPathName Lib "kernel32" _
          Alias "GetShortPathNameA" (ByVal lpszLongPath As String, _
          ByVal lpszShortPath As String, ByVal cchBuffer As Long) As Long
          
-        
-
 Public Enum tdcErrorHandlerResponse
     tdcResume = 0
     tdcResumeNext = 1
@@ -15,21 +13,12 @@ Public Enum tdcErrorHandlerResponse
     tdcUnrecognized = 4
 End Enum
 
-
-
-
-         
 Declare Function GetExitCodeProcess Lib "kernel32" _
 (ByVal hProcess As Long, lpExitCode As Long) As Long
-
-
 
 Type FILE_HEADER                    ' Structure for document file header
     lVersion As Long
 End Type
-
-
-
 
 Private Const PROCESS_QUERY_INFORMATION = &H400
 Private Const STILL_ACTIVE = &H103
@@ -41,7 +30,6 @@ Private Const STILL_ACTIVE = &H103
    dwMilliseconds As Long)
   ' Private Declare Function CloseHandle Lib "kernel32" (ByVal hObject _
    As Long) As Long
-
 
 Public Const OFS_MAXPATHNAME = 128
 Public Type SYSTEMTIME
@@ -59,38 +47,31 @@ Public Type FILETIME
     dwHighDateTime As Long
 End Type
 Public Type BY_HANDLE_FILE_INFORMATION
-        dwFileAttributes As Long
-        ftCreationTime As FILETIME
-        ftLastAccessTime As FILETIME
-        ftLastWriteTime As FILETIME
-        dwVolumeSerialNumber As Long
-        nFileSizeHigh As Long
-        nFileSizeLow As Long
-        nNumberOfLinks As Long
-        nFileIndexHigh As Long
-        nFileIndexLow As Long
-        End Type
-        Public Type OFSTRUCT
-        cBytes As Byte
-        fFixedDisk As Byte
-        nErrCode As Integer
-        Reserved1 As Integer
-        Reserved2 As Integer
-        szPathName(OFS_MAXPATHNAME) As Byte
+    dwFileAttributes As Long
+    ftCreationTime As FILETIME
+    ftLastAccessTime As FILETIME
+    ftLastWriteTime As FILETIME
+    dwVolumeSerialNumber As Long
+    nFileSizeHigh As Long
+    nFileSizeLow As Long
+    nNumberOfLinks As Long
+    nFileIndexHigh As Long
+    nFileIndexLow As Long
+    End Type
+    Public Type OFSTRUCT
+    cBytes As Byte
+    fFixedDisk As Byte
+    nErrCode As Integer
+    Reserved1 As Integer
+    Reserved2 As Integer
+    szPathName(OFS_MAXPATHNAME) As Byte
 End Type
-Public Declare Function GetFileInformationByHandle Lib "kernel32" (ByVal hfile As Long, lpFileInformation As BY_HANDLE_FILE_INFORMATION) As Long
+Public Declare Function GetFileInformationByHandle Lib "kernel32" (ByVal hFile As Long, lpFileInformation As BY_HANDLE_FILE_INFORMATION) As Long
 Public Declare Function FileTimeToSystemTime Lib "kernel32" (lpFileTime As FILETIME, lpSystemTime As SYSTEMTIME) As Long
 Public Declare Function FileTimeToLocalFileTime Lib "kernel32" (lpFileTime As FILETIME, lpLocalFileTime As FILETIME) As Long
+Public Const OF_READ As Long = 0
 Public Declare Function OpenFile Lib "kernel32" (ByVal lpFileName As String, lpReOpenBuff As OFSTRUCT, ByVal wStyle As Long) As Long
 Public Declare Function CloseHandle Lib "kernel32" (ByVal hObject As Long) As Long
-
-
-
-
-    
-   
-
-
 
 ''*********************************************************************************
 ' Purpose:  Extract various information about a path
@@ -133,7 +114,6 @@ Public Sub ExtractFileParts(strSourceFileName As String, strExtractedPath As Str
         strExtractedFile = Mid$(strSourceFileName, 1, lngDotPosition - 1)
     End If
     
-    
     'determine the extracted Type
     If lngDotPosition <= Len(strSourceFileName) Then
         strExtractedFileType = UCase(Right$(strSourceFileName, Len(strSourceFileName) - lngDotPosition))
@@ -148,8 +128,6 @@ errorHandler:
 '        Err.Raise Err.Number, mstrcModule, Err.Description
 '    End If
 End Sub
-
-
 
 '*********************************************************************************
 ' Purpose:  Gets a short version of a file name
@@ -223,30 +201,29 @@ errShellAndWait:
     ShellAndWait = dProcessID
  End Function
 
-
-Sub SetImagePath(ByVal path As String, ctl As Control)
+Sub SetImagePath(ByVal Path As String, ctl As Control)
     Dim RStr As String
     Dim plen As Integer
     Dim MSG As String
 
-    plen = Len(path)
+    plen = Len(Path)
 
     While plen > 0
-        RStr = Right$(path, 1)
+        RStr = Right$(Path, 1)
         If RStr = ":" Or RStr = "\" Then
             plen = 0
         Else
             plen = plen - 1
-            path = Left$(path, plen)
+            Path = Left$(Path, plen)
         End If
     Wend
 
     On Error GoTo PathError
-    ctl.ViewImagePath = path
+    ctl.ViewImagePath = Path
     Exit Sub
 
 PathError:
-    MSG = "Invalid image path: " & path
+    MSG = "Invalid image path: " & Path
     MsgBox MSG, 48, "Viewer"
     ctl.ViewImagePath = vbNullString
     Exit Sub

@@ -1,6 +1,6 @@
 VERSION 5.00
 Object = "{1C0489F8-9EFD-423D-887A-315387F18C8F}#1.0#0"; "vsflex8l.ocx"
-Object = "{F9043C88-F6F2-101A-A3C9-08002B2F49FB}#1.2#0"; "ComDlg32.ocx"
+Object = "{F9043C88-F6F2-101A-A3C9-08002B2F49FB}#1.2#0"; "comdlg32.ocx"
 Begin VB.Form frmConsists 
    Caption         =   "Stock used by Selected Consists."
    ClientHeight    =   6660
@@ -150,263 +150,241 @@ Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
+Option Explicit
 Option Compare Text
+
 Dim nextrow As Integer
 Dim nextcol As Integer
 Dim cn As Integer, cnn As Integer
 Const REF_CHUNK = 100
 
 Private Sub Command1_Click()
-Dim i As Integer, strPath(0 To 1), strEng(0 To 1)
+    Dim i As Integer, strPath(0 To 1), strEng(0 To 1)
 
-On Error GoTo ErrTrap
+    On Error GoTo Errtrap
 
-MousePointer = 11
-i = 1
-Do
-Grid3.Select i, 0
-strPath(0) = Grid3.Cell(flexcpText)
-Grid3.Select i + 1, 0
-strPath(1) = Grid3.Cell(flexcpText)
-Grid3.Select i, 1
-strEng(0) = Grid3.Cell(flexcpText)
-Grid3.Select i + 1, 1
-strEng(1) = Grid3.Cell(flexcpText)
-If strPath(0) = strPath(1) And strEng(0) = strEng(1) Then
-Grid3.RemoveItem i + 1
-Else
-i = i + 1
-End If
-Loop While i < Grid3.Rows
+    MousePointer = 11
+    i = 1
+    Do
+        Grid3.Select i, 0
+        strPath(0) = Grid3.Cell(flexcpText)
+        Grid3.Select i + 1, 0
+        strPath(1) = Grid3.Cell(flexcpText)
+        Grid3.Select i, 1
+        strEng(0) = Grid3.Cell(flexcpText)
+        Grid3.Select i + 1, 1
+        strEng(1) = Grid3.Cell(flexcpText)
+        If strPath(0) = strPath(1) And strEng(0) = strEng(1) Then
+            Grid3.RemoveItem i + 1
+        Else
+            i = i + 1
+        End If
+    Loop While i < Grid3.Rows
 EndIt:
-Grid3.Refresh
-MousePointer = 0
-Exit Sub
-ErrTrap:
-If Err = 381 Then GoTo EndIt
+    Grid3.Refresh
+    MousePointer = 0
+    Exit Sub
+Errtrap:
+    If Err = 381 Then GoTo EndIt
 End Sub
 
 Private Sub Command2_Click()
-Unload Me
-
+    Unload Me
 End Sub
 
 Private Sub Command3_Click()
-flagPrint = 17
-fEZPrint.Show
+    flagPrint = 17
+    fEZPrint.Show
 End Sub
 
 Private Sub Command4_Click()
-Dim tit1 As String
+    Dim tit1 As String
 
-CommonDialog1.Filter = "Comma Separated (*.csv)|*.csv|Tab Separated (*.txt)|*.txt"""
-CommonDialog1.DialogTitle = "Save Grid as File"
-CommonDialog1.FilterIndex = 1
-CommonDialog1.Action = 2
-tit1 = CommonDialog1.Filename
-If tit1 = vbNullString Then Exit Sub
-If Right$(tit1, 3) = "csv" Then
-Grid3.SaveGrid tit1, flexFileCommaText
-ElseIf Right$(tit1, 3) = "txt" Then
-Grid3.SaveGrid tit1, flexFileTabText
-End If
+    CommonDialog1.Filter = "Comma Separated (*.csv)|*.csv|Tab Separated (*.txt)|*.txt"""
+    CommonDialog1.DialogTitle = "Save Grid as File"
+    CommonDialog1.FilterIndex = 1
+    CommonDialog1.Action = 2
+    tit1 = CommonDialog1.Filename
+    If tit1 = vbNullString Then Exit Sub
+    If Right$(tit1, 3) = "csv" Then
+        Grid3.SaveGrid tit1, flexFileCommaText
+    ElseIf Right$(tit1, 3) = "txt" Then
+        Grid3.SaveGrid tit1, flexFileTabText
+    End If
 End Sub
 
 Private Sub Form_Load()
-Dim i As Integer, Filpath$, Filpath1$, strCon As String, booSelected As Boolean
+    Dim i As Integer, Filpath$, strCon As String, booSelected As Boolean
 
-ReDim strConsists(0 To REF_CHUNK)
+    ReDim strConsists(0 To REF_CHUNK)
 
-Grid3.AllowUserResizing = flexResizeBoth
-  
+    Grid3.AllowUserResizing = flexResizeBoth
+    Grid3.ExplorerBar = flexExSort
+    Grid3.BackColor = vbWhite
+    Grid3.Rows = 1
+    nextrow = 1
+    nextcol = 0
+    cursouind = 0
+    Show
+    MousePointer = 11
+    For i = 0 To frmUtils.File1(cursouind).ListCount - 1
+        If frmUtils.File1(cursouind).Selected(i) Then
+            booSelected = True
+            Filpath$ = frmUtils.File1(cursouind).Path
    
-   Grid3.ExplorerBar = flexExSort
-   Grid3.BackColor = vbWhite
-   Grid3.Rows = 1
-nextrow = 1
-nextcol = 0
-cursouind = 0
-Filpath1$ = App.Path & "\TempFiles"
-Show
-MousePointer = 11
-For i = 0 To frmUtils.File1(cursouind).ListCount - 1
-  If frmUtils.File1(cursouind).Selected(i) Then
-  booSelected = True
-    Filpath$ = frmUtils.File1(cursouind).Path
-   
-   strCon = Filpath$ & "\" & frmUtils.File1(cursouind).List(i)
-   If Right$(strCon, 3) <> "con" Then GoTo GetAnother
+            strCon = Filpath$ & "\" & frmUtils.File1(cursouind).List(i)
+            If Right$(strCon, 3) <> "con" Then GoTo GetAnother
  
-   Call CheckForConsistGrid(strCon, nextrow)
-   
-   
-   End If
+            Call CheckForConsistGrid(strCon, nextrow)
+        End If
 GetAnother:
-   Next i
-   If booSelected = False Then
-   Call MsgBox("No Consists have been selected.", vbExclamation, App.Title)
-   MousePointer = 0
-   Exit Sub
-   End If
-   Grid3.Select 1, 0, 1, 1
-   Grid3.Sort = flexSortStringAscending
+    Next i
+    If booSelected = False Then
+        Call MsgBox("No Consists have been selected.", vbExclamation, App.Title)
+        MousePointer = 0
+        Exit Sub
+    End If
+    Grid3.Select 1, 0, 1, 1
+    Grid3.Sort = flexSortStringAscending
 
-   MousePointer = 0
+    MousePointer = 0
 End Sub
-
 
 Private Sub CheckForConsistGrid(CFilepath As String, nextrow As Integer)
-Dim Fnumber As Integer, strNew As String
-Dim x As Integer, Engpath As String, Engname As String
-Dim strNew2 As String, Wagonpath As String, Wagname As String
-Dim TrainsetPath As String, ConName As String, strTemp As String, booCon As Boolean
-Dim booEntry As Boolean
+    Dim Fnumber As Integer, strNew As String
+    Dim x As Integer, Engpath As String, Engname As String
+    Dim strNew2 As String, Wagonpath As String, Wagname As String
+    Dim TrainsetPath As String, ConName As String, strTemp As String, booCon As Boolean
+    Dim booEntry As Boolean
+    Dim strConsistNames As String
 
-On Error GoTo ErrTrap
+    On Error GoTo Errtrap
 
+    Fnumber = FreeFile
+    x = InStrRev(CFilepath, "\")
+    ConName = Mid$(CFilepath, x + 1)
+    strConsistNames = strConsistNames & ConName & vbCrLf
+    TrainsetPath = MSTSPath & "\Trains\Trainset\"
 
-Fnumber = FreeFile
-x = InStrRev(CFilepath, "\")
-ConName = Mid$(CFilepath, x + 1)
-strConsistNames = strConsistNames & ConName & vbCrLf
-TrainsetPath = MSTSPath & "\Trains\Trainset\"
-
-Open CFilepath For Input As Fnumber
+    Open CFilepath For Input As Fnumber
  
-   Do While Not EOF(Fnumber)
+    Do While Not EOF(Fnumber)
+        Line Input #Fnumber, strNew
+        strNew = Trim$(strNew)
+        x = InStr(strNew, "EngineData")
    
-   Line Input #Fnumber, strNew
+        If x > 0 Then
+            Call CheckEngineData(strNew, Engname, Engpath, booEntry)
    
-   strNew = Trim$(strNew)
+            If booEntry = True Then
+                If Not FileExists(TrainsetPath & Engpath & "\" & Engname & ".eng") Then
+                    Grid3.AddItem Engpath & vbTab & Engname & ".eng" & vbTab & "*"
+                    strTemp = Engpath & "\" & Engname & ".eng"
+                    For cnn = 0 To cn
+                        If strTemp = strConsists(cnn) Then
+                            booCon = True
+                            Exit For
+                        End If
+                    Next
+                    If booCon = False Then
+                        cn = cn + 1
+                        If cn > UBound(strConsists) Then
+                            ReDim Preserve strConsists(0 To cn + REF_CHUNK)
+                        End If
+                        strConsists(cn) = strTemp
+                    End If
+                    booCon = False
+                    nextrow = nextrow + 1
+                    If Grid3.Rows < nextrow Then
+                        Grid3.Rows = nextrow
+                    End If
+                Else
+                    Grid3.AddItem Engpath & vbTab & Engname & ".eng"
+                    strTemp = Engpath & "\" & Engname & ".eng"
+                    For cnn = 0 To cn
+                        If strTemp = strConsists(cnn) Then
+                            booCon = True
+                            Exit For
+                        End If
+                    Next
+                    If booCon = False Then
+                        cn = cn + 1
+                        If cn > UBound(strConsists) Then
+                            ReDim Preserve strConsists(0 To cn + REF_CHUNK)
+                        End If
+                        strConsists(cn) = strTemp
+                    End If
+                    booCon = False
+                    nextrow = nextrow + 1
+                    If Grid3.Rows < nextrow Then
+                        Grid3.Rows = nextrow
+                    End If
 
-   x = InStr(strNew, "EngineData")
-   
-   If x > 0 Then
-   Call CheckEngineData(strNew, Engname, Engpath, booEntry)
-
-
-   
-   If booEntry = True Then
-   If Not FileExists(TrainsetPath & Engpath & "\" & Engname & ".eng") Then
-Grid3.AddItem Engpath & vbTab & Engname & ".eng" & vbTab & "*"
-strTemp = Engpath & "\" & Engname & ".eng"
-    For cnn = 0 To cn
-    If strTemp = strConsists(cnn) Then
-        booCon = True
-        Exit For
-    End If
-    Next
-    If booCon = False Then
-    cn = cn + 1
-            If cn > UBound(strConsists) Then
-            ReDim Preserve strConsists(0 To cn + REF_CHUNK)
+                End If
+                strNew2 = vbNullString
             End If
-    strConsists(cn) = strTemp
-    End If
-booCon = False
-nextrow = nextrow + 1
-        If Grid3.Rows < nextrow Then
-        Grid3.Rows = nextrow
         End If
-   Else
-
-Grid3.AddItem Engpath & vbTab & Engname & ".eng"
-strTemp = Engpath & "\" & Engname & ".eng"
-    For cnn = 0 To cn
-    If strTemp = strConsists(cnn) Then
-        booCon = True
-        Exit For
-    End If
-    Next
-    If booCon = False Then
-    cn = cn + 1
-            If cn > UBound(strConsists) Then
-            ReDim Preserve strConsists(0 To cn + REF_CHUNK)
+        booEntry = False
+        x = InStr(strNew, "wagonData")
+        If x > 0 Then
+            Call CheckWagonData(strNew, Wagname, Wagonpath, booEntry)
+            If booEntry = True Then
+                If Not FileExists(TrainsetPath & Wagonpath & "\" & Wagname & ".wag") Then
+                    Grid3.AddItem Wagonpath & vbTab & Wagname & ".wag" & vbTab & "*"
+                    strTemp = Wagonpath & "\" & Wagname & ".wag"
+                    For cnn = 0 To cn
+                        If strTemp = strConsists(cnn) Then
+                            booCon = True
+                            Exit For
+                        End If
+                    Next
+                    If booCon = False Then
+                        cn = cn + 1
+                        If cn > UBound(strConsists) Then
+                            ReDim Preserve strConsists(0 To cn + REF_CHUNK)
+                        End If
+                        strConsists(cn) = strTemp
+                    End If
+                    booCon = False
+                    nextrow = nextrow + 1
+                    If Grid3.Rows < nextrow Then
+                        Grid3.Rows = nextrow
+                    End If
+                Else
+                    Grid3.AddItem Wagonpath & vbTab & Wagname & ".wag"
+                    strTemp = Wagonpath & "\" & Wagname & ".wag"
+                    For cnn = 0 To cn
+                        If strTemp = strConsists(cnn) Then
+                            booCon = True
+                            Exit For
+                        End If
+                    Next
+                    If booCon = False Then
+                        cn = cn + 1
+                        If cn > UBound(strConsists) Then
+                            ReDim Preserve strConsists(0 To cn + REF_CHUNK)
+                        End If
+                        strConsists(cn) = strTemp
+                    End If
+                    booCon = False
+                    nextrow = nextrow + 1
+                    If Grid3.Rows < nextrow Then
+                        Grid3.Rows = nextrow
+                    End If
+                End If
             End If
-    strConsists(cn) = strTemp
-    End If
-booCon = False
-nextrow = nextrow + 1
-        If Grid3.Rows < nextrow Then
-        Grid3.Rows = nextrow
         End If
-
-   End If
-   strNew2 = vbNullString
-   End If
-   End If
-   booEntry = False
-   x = InStr(strNew, "wagonData")
-      If x > 0 Then
-   Call CheckWagonData(strNew, Wagname, Wagonpath, booEntry)
-   If booEntry = True Then
-  If Not FileExists(TrainsetPath & Wagonpath & "\" & Wagname & ".wag") Then
-Grid3.AddItem Wagonpath & vbTab & Wagname & ".wag" & vbTab & "*"
-strTemp = Wagonpath & "\" & Wagname & ".wag"
-For cnn = 0 To cn
-If strTemp = strConsists(cnn) Then
-booCon = True
-Exit For
-End If
-Next
-If booCon = False Then
-cn = cn + 1
-If cn > UBound(strConsists) Then
-ReDim Preserve strConsists(0 To cn + REF_CHUNK)
-End If
-strConsists(cn) = strTemp
-End If
-booCon = False
-nextrow = nextrow + 1
-If Grid3.Rows < nextrow Then
-Grid3.Rows = nextrow
-End If
-   Else
-
-Grid3.AddItem Wagonpath & vbTab & Wagname & ".wag"
-strTemp = Wagonpath & "\" & Wagname & ".wag"
-For cnn = 0 To cn
-If strTemp = strConsists(cnn) Then
-booCon = True
-Exit For
-End If
-Next
-If booCon = False Then
-cn = cn + 1
-If cn > UBound(strConsists) Then
-ReDim Preserve strConsists(0 To cn + REF_CHUNK)
-End If
-strConsists(cn) = strTemp
-End If
-booCon = False
-nextrow = nextrow + 1
-If Grid3.Rows < nextrow Then
-Grid3.Rows = nextrow
-End If
-
-   End If
-   
-  End If
-   End If
-   strNew = vbNullString
+        strNew = vbNullString
+    Loop
+    Close #Fnumber
  
-   Loop
-   Close #Fnumber
- 
-Exit Sub
-ErrTrap:
-
-If Err = 381 Then
-Resume Next
-Else
-Call MsgBox("An error #" & Err & " occurred in subroutine 'CheckForConsistGrid' while checking" _
-            & vbCrLf & CFilepath _
-            , vbExclamation, frmConsists)
-
-Resume Next
-End If
+    Exit Sub
+Errtrap:
+    If Err = 381 Then
+        Resume Next
+    Else
+        Call MsgBox("An error #" & Err & " occurred in subroutine 'CheckForConsistGrid' while checking" & vbCrLf & CFilepath, vbExclamation, frmConsists)
+        Resume Next
+    End If
 End Sub
-
-
-
 

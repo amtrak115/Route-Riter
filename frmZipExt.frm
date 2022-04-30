@@ -1,7 +1,7 @@
 VERSION 5.00
 Object = "{1C0489F8-9EFD-423D-887A-315387F18C8F}#1.0#0"; "vsflex8l.ocx"
 Object = "{831FDD16-0C5C-11D2-A9FC-0000F8754DA1}#2.0#0"; "MSCOMCTL.OCX"
-Object = "{F9043C88-F6F2-101A-A3C9-08002B2F49FB}#1.2#0"; "ComDlg32.ocx"
+Object = "{F9043C88-F6F2-101A-A3C9-08002B2F49FB}#1.2#0"; "comdlg32.ocx"
 Begin VB.Form frmNewZip 
    BorderStyle     =   3  'Fixed Dialog
    Caption         =   "MyZipp"
@@ -387,627 +387,573 @@ Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
+Option Explicit
 Option Compare Text
-
 
 Public WithEvents Zip As sawzipng.Archive
 Attribute Zip.VB_VarHelpID = -1
 
-Dim Lfile As sawzipng.FileInfo
-Dim strFile() As String
-Dim tempRow() As Long
-Dim booFullPath As Boolean
-Dim booSubDir As Boolean
-Dim strWildcards As String
-Dim CompLevel As Integer
-Dim booRelative As Boolean
-Dim strRelative As String
-Dim ExtFile As Long
-Dim strSavePath As String
+Dim Lfile             As sawzipng.FileInfo
+Dim strFile()         As String
+Dim tempRow()         As Long
+Dim booFullPath       As Boolean
+Dim booSubDir         As Boolean
+Dim strWildcards      As String
+Dim CompLevel         As Integer
+Dim booRelative       As Boolean
+Dim strRelative       As String
+Dim ExtFile           As Long
+Dim strSavePath       As String
 Private Sub FillGrid()
-Dim i As Long, strTemp As String
-Dim indexes() As Variant
-Dim names(0) As Variant
-On Error GoTo ErrTrap
+    Dim i         As Long, strTemp As String
+    Dim indexes() As Variant
+    Dim names(0)  As Variant
+    On Error GoTo Errtrap
 
-VsFg1.Rows = 1
-For i = 0 To Zip.Count - 1
-Set Lfile = Zip.GetFileInfo(i)
-SB1.Panels(2).Text = Lfile.Filename
-strTemp = Lfile.Filename & vbTab & Lfile.CompressionSize & vbTab & Lfile.UncompressedSize & vbTab
-strTemp = strTemp & "     " & Lfile.ModificationDate
-names(0) = Lfile.Filename
-indexes = Zip.GetIndexes(names)
-If indexes(0) > -1 Then
-strTemp = Str(indexes(0)) & vbTab & strTemp
-End If
+    VsFg1.Rows = 1
+    For i = 0 To Zip.Count - 1
+        Set Lfile = Zip.GetFileInfo(i)
+        SB1.Panels(2).Text = Lfile.Filename
+        strTemp = Lfile.Filename & vbTab & Lfile.CompressionSize & vbTab & Lfile.UncompressedSize & vbTab
+        strTemp = strTemp & "     " & Lfile.ModificationDate
+        names(0) = Lfile.Filename
+        indexes = Zip.GetIndexes(names)
+        If indexes(0) > -1 Then
+            strTemp = Str(indexes(0)) & vbTab & strTemp
+        End If
 Label1:
-VsFg1.AddItem strTemp
+        VsFg1.AddItem strTemp
+    Next i
+    SB1.Panels(3).Text = Str(Zip.DirCount)
+    SB1.Panels(4).Text = Str(Zip.FileCount)
+    MousePointer = 0
 
-Next i
-SB1.Panels(3).Text = Str(Zip.DirCount)
-SB1.Panels(4).Text = Str(Zip.FileCount)
-MousePointer = 0
-
-Exit Sub
-ErrTrap:
-GoTo Label1
+    Exit Sub
+Errtrap:
+    GoTo Label1
 End Sub
 
-
-
-
-
-
-
-
 Private Sub SetLang()
-Me.Caption = Lang(249)
-Label6(0).Caption = Lang(250)
-Label6(1).Caption = Lang(251)
-Label2.Caption = Lang(252)
-Frame2.Caption = Lang(253)
-Label3.Caption = Lang(254)
-Label4.Caption = Lang(255)
-Label5.Caption = Lang(257)
-Check2.Caption = Lang(256)
-Command2.Caption = Lang(258)
-mnuFiles.Caption = Lang(598)
-mnuNew.Caption = Lang(599)
-mnuMulti.Caption = Lang(600)
-mnuOpen.Caption = Lang(601)
-mnuClose.Caption = Lang(602)
-mnuExit.Caption = Lang(38)
-mnuProcess.Caption = Lang(603)
-mnuExt.Caption = Lang(604)
-mnuExtSel.Caption = Lang(605)
-mnuExtCur.Caption = Lang(606)
-mnuAddFiles.Caption = Lang(607)
-mnuAdd.Caption = Lang(608)
-mnuAddFold.Caption = Lang(609)
-mnuSearch.Caption = Lang(610)
-mnuFind.Caption = Lang(611)
-mnuFindFiles.Caption = Lang(612)
-
-
+    Me.Caption = Lang(249)
+    Label6(0).Caption = Lang(250)
+    Label6(1).Caption = Lang(251)
+    Label2.Caption = Lang(252)
+    Frame2.Caption = Lang(253)
+    Label3.Caption = Lang(254)
+    Label4.Caption = Lang(255)
+    Label5.Caption = Lang(257)
+    Check2.Caption = Lang(256)
+    Command2.Caption = Lang(258)
+    mnuFiles.Caption = Lang(598)
+    mnuNew.Caption = Lang(599)
+    mnuMulti.Caption = Lang(600)
+    mnuOpen.Caption = Lang(601)
+    mnuClose.Caption = Lang(602)
+    mnuExit.Caption = Lang(38)
+    mnuProcess.Caption = Lang(603)
+    mnuExt.Caption = Lang(604)
+    mnuExtSel.Caption = Lang(605)
+    mnuExtCur.Caption = Lang(606)
+    mnuAddFiles.Caption = Lang(607)
+    mnuAdd.Caption = Lang(608)
+    mnuAddFold.Caption = Lang(609)
+    mnuSearch.Caption = Lang(610)
+    mnuFind.Caption = Lang(611)
+    mnuFindFiles.Caption = Lang(612)
 End Sub
 
 Private Sub Check1_Click(Index As Integer)
-If Index = 0 Then
-If Check1(0).Value = 0 Then
-booFullPath = False
-Else
-booFullPath = True
-Check1(2).Value = 0
-strRelative = vbNullString
-End If
-End If
-If Index = 1 Then
-If Check1(1).Value = 0 Then
-booSubDir = False
-Else
-booSubDir = True
-End If
-End If
-If Index = 2 Then
-If Check1(2).Value = 0 Then
-booRelative = False
-strRelative = vbNullString
-ElseIf Check1(2).Value = 1 Then
-booRelative = True
-booFullPath = False
-Check1(0).Value = 0
+    If Index = 0 Then
+        If Check1(0).value = 0 Then
+            booFullPath = False
+        Else
+            booFullPath = True
+            Check1(2).value = 0
+            strRelative = vbNullString
+        End If
+    End If
+    If Index = 1 Then
+        If Check1(1).value = 0 Then
+            booSubDir = False
+        Else
+            booSubDir = True
+        End If
+    End If
+    If Index = 2 Then
+        If Check1(2).value = 0 Then
+            booRelative = False
+            strRelative = vbNullString
+        ElseIf Check1(2).value = 1 Then
+            booRelative = True
+            booFullPath = False
+            Check1(0).value = 0
 
-
-End If
-End If
+        End If
+    End If
 End Sub
 
 Private Sub Command1_Click()
-Call FillGrid
+    Call FillGrid
 End Sub
 
 Private Sub Command2_Click()
+    Dim PartLength As Long, strFolder As String
+    Dim x As Long
 
-Dim PartLength As Long, strFolder As String
+    If Check2.value = 1 Then
+        If Val(Text2) = 0 Then
+            Call MsgBox(Lang(541) & vbCrLf & Lang(542), vbExclamation, App.Title)
 
-If Check2.Value = 1 Then
-If Val(Text2) = 0 Then
-Call MsgBox(Lang(541) & vbCrLf & Lang(542), vbExclamation, App.Title)
+            Exit Sub
+        End If
+        CDL1.Flags = cdlOFNHideReadOnly + cdlOFNPathMustExist + cdlOFNOverwritePrompt
+        CDL1.Filename = ZipName
 
-Exit Sub
-End If
-CDL1.Flags = cdlOFNHideReadOnly + cdlOFNPathMustExist + cdlOFNOverwritePrompt
-CDL1.Filename = ZipName
+        CDL1.ShowSave
+        If CDL1.Filename = vbNullString Then
+            Exit Sub
+        End If
+        If Len(CDL1.Filename) > 0 Then
+            strZipName = CDL1.Filename
+            Label4.Caption = "Zip File name:  " & strZipName & ".zip"
 
-    CDL1.ShowSave
-    If CDL1.Filename = vbNullString Then
-    Exit Sub
-    End If
-    If Len(CDL1.Filename) > 0 Then
-    strZipName = CDL1.Filename
-    Label4.Caption = "Zip File name:  " & strZipName & ".zip"
-
-    If Right$(strZipName, 4) = ".zip" Then
-    strZipName = Left$(strZipName, Len(strZipName) - 4)
-    End If
-    DoEvents
+            If Right$(strZipName, 4) = ".zip" Then
+                strZipName = Left$(strZipName, Len(strZipName) - 4)
+            End If
+            DoEvents
     
-    PartLength = Val(Text2)
-    PartLength = PartLength * 1000000
-    MousePointer = 11
-        If Zip Is Nothing Then
-            Set Zip = New Archive
+            PartLength = Val(Text2)
+            PartLength = PartLength * 1000000
+            MousePointer = 11
+            If Zip Is Nothing Then
+                Set Zip = New Archive
            
-        Else
-            Zip.Close
+            Else
+                Zip.Close
+            End If
+            Zip.Create CDL1.Filename, CM_CREATE_SPAN, PartLength
+            booMulti = True
         End If
-        Zip.Create CDL1.Filename, CM_CREATE_SPAN, PartLength
-        booMulti = True
+    ElseIf Check2.value = 0 Then
+        CDL1.Flags = cdlOFNHideReadOnly + cdlOFNPathMustExist + cdlOFNOverwritePrompt
+        CDL1.Filter = "Zip|*.zip"
+        CDL1.Filename = ZipName
+
+        CDL1.ShowSave
+        If CDL1.Filename = vbNullString Then
+            Exit Sub
         End If
-        
-ElseIf Check2.Value = 0 Then
-CDL1.Flags = cdlOFNHideReadOnly + cdlOFNPathMustExist + cdlOFNOverwritePrompt
-CDL1.Filter = "Zip|*.zip"
-CDL1.Filename = ZipName
+        If Len(CDL1.Filename) > 0 Then
+            strZipName = CDL1.Filename
+            Label4.Caption = "Zip File name:  " & strZipName
 
-    CDL1.ShowSave
-    If CDL1.Filename = vbNullString Then
-    Exit Sub
-    End If
-    If Len(CDL1.Filename) > 0 Then
-    strZipName = CDL1.Filename
-    Label4.Caption = "Zip File name:  " & strZipName
-
-    If Right$(strZipName, 4) <> ".zip" Then
-    strZipName = strZipName & ".zip"
+            If Right$(strZipName, 4) <> ".zip" Then
+                strZipName = strZipName & ".zip"
     
-    End If
-    DoEvents
+            End If
+            DoEvents
    
-    MousePointer = 11
-        If Zip Is Nothing Then
-            Set Zip = New Archive
-           
-        Else
-            Zip.Close
+            MousePointer = 11
+            If Zip Is Nothing Then
+                Set Zip = New Archive
+            Else
+                Zip.Close
+            End If
+            Zip.Create CDL1.Filename, CM_CREATE
+            booMulti = False
         End If
-        Zip.Create CDL1.Filename, CM_CREATE
-        booMulti = False
-        End If
-        
 
-End If
-strFolder = NewZipPath
-DoEvents
+    End If
+    strFolder = NewZipPath
+    DoEvents
 
-x = InStrRev(strFolder, "\")
-strRelative = Left$(strFolder, x - 1)
-Zip.RootPath = strRelative
+    x = InStrRev(strFolder, "\")
+    strRelative = Left$(strFolder, x - 1)
+    Zip.RootPath = strRelative
 
-Zip.AddFolder strFolder, booSubDir, booFullPath, CompLevel, SM_SMART_SAFE, 65536
-DoEvents
+    Zip.AddFolder strFolder, booSubDir, booFullPath, CompLevel, SM_SMART_SAFE, 65536
+    DoEvents
 
-Call FillGrid
+    Call FillGrid
 
-MousePointer = 0
-
+    MousePointer = 0
 End Sub
 
 Private Sub Command3_Click()
-Unload Me
-
+    Unload Me
 End Sub
 
-
 Private Sub Form_Load()
-Call SetLang
-booFullPath = False
-booSubDir = True
-booRelative = True
-booMulti = False
-strWildcards = Text1
-CompLevel = Slider1.Value
-If FromZip = 1 Then
-Frame2.Visible = True
-Label3.Caption = "Route Path:  " & NewZipPath
-Label4.Caption = "Zip File name:  " & ZipName & ".zip"
+    Call SetLang
+    booFullPath = False
+    booSubDir = True
+    booRelative = True
+    booMulti = False
+    strWildcards = Text1
+    CompLevel = Slider1.value
+    If FromZip = 1 Then
+        Frame2.Visible = True
+        Label3.Caption = "Route Path:  " & NewZipPath
+        Label4.Caption = "Zip File name:  " & ZipName & ".zip"
 
-End If
-If FromZip = 2 Then
-    Call mnuNew_Click
-    Zip.RootPath = NewZipPath
-    If Len(CDL1.Filename) = 0 Then Exit Sub
-    Zip.AddFolder NewZipPath & "Routes", True, False
-    Zip.AddFolder NewZipPath & "Trains", True, False
-    Call FillGrid
+    End If
+    If FromZip = 2 Then
+        Call mnuNew_Click
+        Zip.RootPath = NewZipPath
+        If Len(CDL1.Filename) = 0 Then Exit Sub
+        Zip.AddFolder NewZipPath & "Routes", True, False
+        Zip.AddFolder NewZipPath & "Trains", True, False
+        Call FillGrid
 
-      End If
+    End If
      
-FromZip = 0
+    FromZip = 0
 End Sub
 
 Private Sub Form_Unload(Cancel As Integer)
-On Error GoTo ErrTrap
+    On Error GoTo Errtrap
  
-        If Not Zip.Closed Then
-            Zip.Close
-            
-        End If
+    If Not Zip.Closed Then
+        Zip.Close
+    End If
    
     Unload Me
-Exit Sub
-ErrTrap:
-Exit Sub
-    
+    Exit Sub
+Errtrap:
+    Exit Sub
 End Sub
 
-
 Private Sub mnuAdd_Click()
-Dim x As Integer, strPath As String, a$, xx As Integer, Y As Integer
-Dim xy As Integer, i As Integer, Z As Integer
-On Error GoTo ErrTrap
+    Dim x  As Integer, strPath As String, A$, xx As Integer, y As Integer
+    Dim xy As Integer, i As Integer, Z As Integer
+    On Error GoTo Errtrap
 
-PB1.Visible = False
-If Zip Is Nothing Then
-Call MsgBox(Lang(543) & vbCrLf & Lang(544), vbExclamation, "Error")
+    PB1.Visible = False
+    If Zip Is Nothing Then
+        Call MsgBox(Lang(543) & vbCrLf & Lang(544), vbExclamation, "Error")
 
-Exit Sub
-End If
-dlgAdd.Flags = cdlOFNLongNames + cdlOFNAllowMultiselect
-dlgAdd.DialogTitle = "Choose File(s) to Add"
-dlgAdd.Filename = "*.*"
-dlgAdd.ShowOpen
-If Len(dlgAdd.Filename) > 0 Then
-a$ = dlgAdd.Filename
-x = InStr(a$, " ")
-If x = 0 Then
-If booRelative = True Then
-Z = InStrRev(a$, "\")
-Z = InStrRev(a$, "\", Z - 1)
-strRelative = Left$(a$, Z - 1)
-Zip.RootPath = strRelative
-End If
+        Exit Sub
+    End If
+    dlgAdd.Flags = cdlOFNLongNames + cdlOFNAllowMultiselect
+    dlgAdd.DialogTitle = "Choose File(s) to Add"
+    dlgAdd.Filename = "*.*"
+    dlgAdd.ShowOpen
+    If Len(dlgAdd.Filename) > 0 Then
+        A$ = dlgAdd.Filename
+        x = InStr(A$, " ")
+        If x = 0 Then
+            If booRelative = True Then
+                Z = InStrRev(A$, "\")
+                Z = InStrRev(A$, "\", Z - 1)
+                strRelative = Left$(A$, Z - 1)
+                Zip.RootPath = strRelative
+            End If
 
+            Zip.AddFile A$, booFullPath, CompLevel, SM_SMART_SAFE, 65536
 
-Zip.AddFile a$, booFullPath, CompLevel, SM_SMART_SAFE, 65536
+            Call FillGrid
+            Exit Sub
+        End If
 
-Call FillGrid
-Exit Sub
-End If
+        strPath = Left$(A$, x - 1)
 
-strPath = Left$(a$, x - 1)
+        xx = x + 1
+        xy = xx
+        Do
+            x = InStr(xx, A$, " ")
+            y = y + 1
+            xx = x + 1
+        Loop While x > 0
+        ReDim strFile(0 To y - 1)
+        xx = xy
 
-xx = x + 1
-xy = xx
-Do
-x = InStr(xx, a$, " ")
-Y = Y + 1
-xx = x + 1
-Loop While x > 0
-ReDim strFile(0 To Y - 1)
-xx = xy
+        For i = 0 To y - 1
+            x = InStr(xx, A$, " ")
+            If x = 0 Then
+                strFile(i) = Mid$(A$, xx)
+                Exit For
+            End If
+            strFile(i) = Mid$(A$, xx, x - xx)
+            xx = x + 1
+        Next i
 
-For i = 0 To Y - 1
-x = InStr(xx, a$, " ")
-If x = 0 Then
-strFile(i) = Mid$(a$, xx)
-Exit For
-End If
-strFile(i) = Mid$(a$, xx, x - xx)
-xx = x + 1
-Next i
+        For i = 0 To y - 1
+            If booRelative = True Then
+                Z = InStrRev(strPath, "\")
+                Z = InStrRev(A$, "\", Z - 1)
+                strRelative = Left$(strPath, Z - 1)
+                Zip.RootPath = strRelative
+            End If
+            Zip.AddFile strPath & strFile(i), booFullPath, CompLevel, SM_SMART_SAFE, 65536
+        Next i
+        Call FillGrid
+    End If
 
-For i = 0 To Y - 1
-If booRelative = True Then
-Z = InStrRev(strPath, "\")
-Z = InStrRev(a$, "\", Z - 1)
-strRelative = Left$(strPath, Z - 1)
-Zip.RootPath = strRelative
-End If
-Zip.AddFile strPath & strFile(i), booFullPath, CompLevel, SM_SMART_SAFE, 65536
-Next i
-Call FillGrid
-End If
-
-
-Exit Sub
-ErrTrap:
-
-Call MsgBox("You have selected more than the maximum number of files possible at one time. Reduce your" _
-            & vbCrLf & "                                                      selection and try again." _
-            , vbCritical, "An Error Occurred")
-
-
+    Exit Sub
+Errtrap:
+    Call MsgBox("You have selected more than the maximum number of files possible at one time. Reduce your" & vbCrLf & "                                                      selection and try again.", vbCritical, "An Error Occurred")
 End Sub
 
 Private Sub mnuAddFiles_Click()
-Check1(1).Value = 1
-Check1(2).Value = 1
+    Check1(1).value = 1
+    Check1(2).value = 1
 End Sub
 
 Private Sub mnuAddFold_Click()
-Dim Dir As String, strFolder As String, strRelative As String, x As Integer
+    Dim Dir As String, strFolder As String, strRelative As String, x As Integer
 
-PB1.Visible = False
-If Zip Is Nothing Then
-Call MsgBox(Lang(543) & vbCrLf & Lang(544), vbExclamation, "Error")
+    PB1.Visible = False
+    If Zip Is Nothing Then
+        Call MsgBox(Lang(543) & vbCrLf & Lang(544), vbExclamation, "Error")
 
-Exit Sub
-End If
-Dir = SelectDir(Me.hwnd, "Select folder to add")
-        If Len(Dir) > 0 Then
-strFolder = Dir
-        End If
-MousePointer = 11
-ZOrder
+        Exit Sub
+    End If
+    Dir = SelectDir(Me.hwnd, "Select folder to add")
+    If Len(Dir) > 0 Then
+        strFolder = Dir
+    End If
+    MousePointer = 11
+    ZOrder
 
-If booRelative = True Then
-x = InStrRev(strFolder, "\")
-strRelative = Left$(strFolder, x - 1)
-Zip.RootPath = strRelative
-End If
+    If booRelative = True Then
+        x = InStrRev(strFolder, "\")
+        strRelative = Left$(strFolder, x - 1)
+        Zip.RootPath = strRelative
+    End If
 
+    If Len(strFolder) > 0 And Text1 = vbNullString Then
 
-
-If Len(strFolder) > 0 And Text1 = vbNullString Then
-
-Zip.AddFolder strFolder, booSubDir, booFullPath, CompLevel, SM_SMART_SAFE, 65536
-Call FillGrid
-ElseIf Len(strFolder) > 0 And Text1 <> vbNullString Then
-Zip.AddFolderWithWildcard strFolder, strWildcards, booSubDir, booFullPath, CompLevel, SM_SMART_SAFE, 65536
-Call FillGrid
-End If
-MousePointer = 0
-'Zip.Close
-'If booMulti = True Then
-'Name strZipName As strZipName & ".zip"
-'End If
-'Zip.AddFolderWithWildcard "d:\msts-backups\portogden", "*.*", True, True, -1, SM_SMART_SAFE, 65536
+        Zip.AddFolder strFolder, booSubDir, booFullPath, CompLevel, SM_SMART_SAFE, 65536
+        Call FillGrid
+    ElseIf Len(strFolder) > 0 And Text1 <> vbNullString Then
+        Zip.AddFolderWithWildcard strFolder, strWildcards, booSubDir, booFullPath, CompLevel, SM_SMART_SAFE, 65536
+        Call FillGrid
+    End If
+    MousePointer = 0
+    'Zip.Close
+    'If booMulti = True Then
+    'Name strZipName As strZipName & ".zip"
+    'End If
+    'Zip.AddFolderWithWildcard "d:\msts-backups\portogden", "*.*", True, True, -1, SM_SMART_SAFE, 65536
 End Sub
 
-
 Private Sub mnuClose_Click()
- If Not Zip.Closed Then
-            Zip.Close
-            VsFg1.Rows = 1
-        End If
+    If Not Zip.Closed Then
+        Zip.Close
+        VsFg1.Rows = 1
+    End If
 End Sub
 
 Private Sub mnuExit_Click()
-Unload Me
-
+    Unload Me
 End Sub
 
-
 Private Sub mnuExt_Click()
-Dim i As Long, Dir As String
+    Dim i As Long, Dir As String
 
-On Error GoTo ErrTrap
-ExtFile = 1
-PB1.Visible = True
-If Zip Is Nothing Then
-Call MsgBox(Lang(543) & vbCrLf & Lang(545), vbExclamation, "Error")
+    On Error GoTo Errtrap
+    ExtFile = 1
+    PB1.Visible = True
+    If Zip Is Nothing Then
+        Call MsgBox(Lang(543) & vbCrLf & Lang(545), vbExclamation, "Error")
 
-Exit Sub
-End If
-Dir = SelectDir(Me.hwnd, "Select destination directory")
-        If Len(Dir) > 0 Then
-strSavePath = Dir
+        Exit Sub
+    End If
+    Dir = SelectDir(Me.hwnd, "Select destination directory")
+    If Len(Dir) > 0 Then
+        strSavePath = Dir
+    End If
+
+    strSavePath = InputBox("Save to: ", "Confirm Save Path", strSavePath, 3360, 1080)
+    If strSavePath = vbNullString Then Exit Sub
+    MousePointer = 11
+    If Len(strSavePath) > 0 Then
+        If Zip.FileCount > 0 Then
+            i = 0
+            Do
+                Zip.Extract i, strSavePath, booFullPath
+                i = i + 1
+            Loop While i < Zip.FileCount
         End If
 
-
-strSavePath = InputBox("Save to: ", "Confirm Save Path", strSavePath, 3360, 1080)
-If strSavePath = vbNullString Then Exit Sub
-MousePointer = 11
-If Len(strSavePath) > 0 Then
-
-If Zip.FileCount > 0 Then
-   i = 0
-   Do
-   
-       Zip.Extract i, strSavePath, booFullPath
-       i = i + 1
-   Loop While i < Zip.FileCount
-End If
-
-End If
-MousePointer = 0
-SB1.Panels(2).Text = "Extract Completed"
-Exit Sub
-ErrTrap:
+    End If
+    MousePointer = 0
+    SB1.Panels(2).Text = "Extract Completed"
+    Exit Sub
+Errtrap:
 
 End Sub
 
 Private Sub mnuExtCur_Click()
-Dim x As Integer, i As Long
+    Dim x As Integer, i As Long
 
+    ExtFile = 1
+    PB1.Visible = True
+    If Zip Is Nothing Then
+        Call MsgBox(Lang(543) & vbCrLf & Lang(545), vbExclamation, "Error")
 
-ExtFile = 1
-PB1.Visible = True
-If Zip Is Nothing Then
-Call MsgBox(Lang(543) & vbCrLf & Lang(545), vbExclamation, "Error")
-
-Exit Sub
-End If
-MousePointer = 11
-If Len(CDL1.Filename) > 0 Then
-x = InStrRev(CDL1.Filename, "\")
-strSavePath = Left$(CDL1.Filename, x - 1)
-Else
-Exit Sub
-End If
-If Zip.FileCount > 0 Then
-   i = 0
-   Do
-       Zip.Extract i, strSavePath, False
-       i = i + 1
-   Loop While i < Zip.FileCount
-End If
-MousePointer = 0
-SB1.Panels(2).Text = "Extract Completed"
+        Exit Sub
+    End If
+    MousePointer = 11
+    If Len(CDL1.Filename) > 0 Then
+        x = InStrRev(CDL1.Filename, "\")
+        strSavePath = Left$(CDL1.Filename, x - 1)
+    Else
+        Exit Sub
+    End If
+    If Zip.FileCount > 0 Then
+        i = 0
+        Do
+            Zip.Extract i, strSavePath, False
+            i = i + 1
+        Loop While i < Zip.FileCount
+    End If
+    MousePointer = 0
+    SB1.Panels(2).Text = "Extract Completed"
 End Sub
 
 Private Sub mnuExtSel_Click()
-Dim i As Long, Dir As String, tempTtl As Long
-Dim tempIdx As Long
+    Dim i       As Long, Dir As String, tempTtl As Long
+    Dim tempIdx As Long
 
-ExtFile = 1
-PB1.Visible = True
-If Zip Is Nothing Then
-Call MsgBox(Lang(543) & vbCrLf & Lang(545), vbExclamation, "Error")
+    ExtFile = 1
+    PB1.Visible = True
+    If Zip Is Nothing Then
+        Call MsgBox(Lang(543) & vbCrLf & Lang(545), vbExclamation, "Error")
 
-Exit Sub
-End If
+        Exit Sub
+    End If
 
-Dir = SelectDir(Me.hwnd, "Select destination directory")
-        If Len(Dir) > 0 Then
-strSavePath = Dir
-        End If
+    Dir = SelectDir(Me.hwnd, "Select destination directory")
+    If Len(Dir) > 0 Then
+        strSavePath = Dir
+    End If
 
+    strSavePath = InputBox("Save Selected Files to: ", "Confirm Save Path", strSavePath, 3360, 1080)
+    If strSavePath = vbNullString Then Exit Sub
 
-strSavePath = InputBox("Save Selected Files to: ", "Confirm Save Path", strSavePath, 3360, 1080)
-If strSavePath = vbNullString Then Exit Sub
+    MousePointer = 11
+    If Len(strSavePath) > 0 Then
+        ReDim tempRow(VsFg1.SelectedRows - 1)
 
-MousePointer = 11
-If Len(strSavePath) > 0 Then
-ReDim tempRow(VsFg1.SelectedRows - 1)
+        For i = 0 To VsFg1.SelectedRows - 1
+            tempRow(i) = VsFg1.SelectedRow(i)
+        Next i
+        tempTtl = VsFg1.SelectedRows - 1
 
-For i = 0 To VsFg1.SelectedRows - 1
-tempRow(i) = VsFg1.SelectedRow(i)
-Next i
-tempTtl = VsFg1.SelectedRows - 1
+        For i = 0 To tempTtl
+            VsFg1.Select tempRow(i), 0
+            tempIdx = Val(VsFg1.Cell(flexcpText))
+            Zip.Extract tempIdx, strSavePath, booFullPath
+        Next i
 
-For i = 0 To tempTtl
-VsFg1.Select tempRow(i), 0
-tempIdx = Val(VsFg1.Cell(flexcpText))
-
-       Zip.Extract tempIdx, strSavePath, booFullPath
-       
- Next i
-
-End If
-MousePointer = 0
-SB1.Panels(2).Text = Lang(547)
+    End If
+    MousePointer = 0
+    SB1.Panels(2).Text = Lang(547)
 End Sub
 
-
 Private Sub mnuFind_Click()
-Dim FoundIndex As Long, strFile As String
+    Dim FoundIndex As Long, strFile As String
+    Dim strTemp As String
 
+    If Zip Is Nothing Then
+        Call MsgBox(Lang(543) & vbCrLf & Lang(546), vbExclamation, "Error")
+        Exit Sub
+    End If
 
-If Zip Is Nothing Then
-Call MsgBox(Lang(543) & vbCrLf & Lang(546), vbExclamation, "Error")
-
-Exit Sub
-End If
-
-strFile = InputBox("Filename: ", "Search For", , 3360, 2080)
-If strFile = vbNullString Then Exit Sub
-FoundIndex = Zip.FindFile(strFile, FF_DEFAULT, Not booFullPath)
-If FoundIndex = -1 Then
-VsFg1.Rows = 1
-      Call MsgBox("The file  " & strFile _
-                  & vbCrLf & "was not found." _
-                  , vbExclamation, App.Title)
+    strFile = InputBox("Filename: ", "Search For", , 3360, 2080)
+    If strFile = vbNullString Then Exit Sub
+    FoundIndex = Zip.FindFile(strFile, FF_DEFAULT, Not booFullPath)
+    If FoundIndex = -1 Then
+        VsFg1.Rows = 1
+        Call MsgBox("The file  " & strFile & vbCrLf & "was not found.", vbExclamation, App.Title)
       
-Exit Sub
-End If
+        Exit Sub
+    End If
 
-VsFg1.Rows = 1
+    VsFg1.Rows = 1
 
-Set Lfile = Zip.GetFileInfo(FoundIndex)
-SB1.Panels(2).Text = Lfile.Filename
-strTemp = Str(FoundIndex) & vbTab & Lfile.Filename & vbTab & Lfile.CompressionSize & vbTab & Lfile.UncompressedSize & vbTab
-strTemp = strTemp & "     " & Lfile.ModificationDate
+    Set Lfile = Zip.GetFileInfo(FoundIndex)
+    SB1.Panels(2).Text = Lfile.Filename
+    strTemp = Str(FoundIndex) & vbTab & Lfile.Filename & vbTab & Lfile.CompressionSize & vbTab & Lfile.UncompressedSize & vbTab
+    strTemp = strTemp & "     " & Lfile.ModificationDate
 Label1:
-VsFg1.AddItem strTemp
-
-
-
+    VsFg1.AddItem strTemp
 End Sub
 
 Private Sub mnuFindFiles_Click()
-Dim strFile As String
-Dim indexes() As Variant
-Dim i As Long, strTemp As String
-On Error GoTo ErrTrap
+    Dim strFile   As String
+    Dim indexes() As Variant
+    Dim i         As Long, strTemp As String
+    On Error GoTo Errtrap
 
-If Zip Is Nothing Then
-Call MsgBox(Lang(543) & vbCrLf & Lang(546), vbExclamation, "Error")
-
-Exit Sub
-End If
-strFile = InputBox("Pattern: ", "Search For", , 3360, 1080)
-If strFile = vbNullString Then Exit Sub
-indexes = Zip.FindFiles(strFile, False)
-VsFg1.Rows = 1
-For i = LBound(indexes) To UBound(indexes)
-Set Lfile = Zip.GetFileInfo(indexes(i))
-SB1.Panels(2).Text = Lfile.Filename
-strTemp = Str(indexes(i)) & vbTab & Lfile.Filename & vbTab & Lfile.CompressionSize & vbTab & Lfile.UncompressedSize & vbTab
-strTemp = strTemp & "     " & Lfile.ModificationDate
+    If Zip Is Nothing Then
+        Call MsgBox(Lang(543) & vbCrLf & Lang(546), vbExclamation, "Error")
+        Exit Sub
+    End If
+    strFile = InputBox("Pattern: ", "Search For", , 3360, 1080)
+    If strFile = vbNullString Then Exit Sub
+    indexes = Zip.FindFiles(strFile, False)
+    VsFg1.Rows = 1
+    For i = LBound(indexes) To UBound(indexes)
+        Set Lfile = Zip.GetFileInfo(indexes(i))
+        SB1.Panels(2).Text = Lfile.Filename
+        strTemp = Str(indexes(i)) & vbTab & Lfile.Filename & vbTab & Lfile.CompressionSize & vbTab & Lfile.UncompressedSize & vbTab
+        strTemp = strTemp & "     " & Lfile.ModificationDate
 Label1:
-VsFg1.AddItem strTemp
+        VsFg1.AddItem strTemp
+    Next i
 
-Next i
-
-Exit Sub
-ErrTrap:
-GoTo Label1
-
-
+    Exit Sub
+Errtrap:
+    GoTo Label1
 End Sub
 
-
 Private Sub mnuMulti_Click()
-Dim PartLength As Long
+    Dim PartLength As Long
 
-
-CDL1.Flags = cdlOFNHideReadOnly + cdlOFNPathMustExist + cdlOFNOverwritePrompt
+    CDL1.Flags = cdlOFNHideReadOnly + cdlOFNPathMustExist + cdlOFNOverwritePrompt
 
     CDL1.ShowSave
     
     If Len(CDL1.Filename) > 0 Then
-    strZipName = CDL1.Filename
-    If Right$(strZipName, 4) = ".zip" Then
-    strZipName = Left$(strZipName, Len(strZipName) - 4)
-    End If
-    PartLength = Val(InputBox("Enter approx. section length in Mb", "Multi-Part Zip", "10", 3360, 1080))
-    PartLength = PartLength * 1000000
+        strZipName = CDL1.Filename
+        If Right$(strZipName, 4) = ".zip" Then
+            strZipName = Left$(strZipName, Len(strZipName) - 4)
+        End If
+        PartLength = Val(InputBox("Enter approx. section length in Mb", "Multi-Part Zip", "10", 3360, 1080))
+        PartLength = PartLength * 1000000
         If Zip Is Nothing Then
             Set Zip = New Archive
-           
         Else
             Zip.Close
         End If
         Zip.Create CDL1.Filename, CM_CREATE_SPAN, PartLength
         booMulti = True
-        End If
+    End If
 End Sub
 
 Private Sub mnuNew_Click()
-CDL1.Flags = cdlOFNHideReadOnly + cdlOFNPathMustExist + cdlOFNOverwritePrompt
-CDL1.Filter = "Zip|*.zip"
+    CDL1.Flags = cdlOFNHideReadOnly + cdlOFNPathMustExist + cdlOFNOverwritePrompt
+    CDL1.Filter = "Zip|*.zip"
 
     CDL1.ShowSave
     If Len(CDL1.Filename) > 0 Then
         If Zip Is Nothing Then
             Set Zip = New Archive
-           
         Else
             Zip.Close
         End If
         Zip.Create CDL1.Filename, CM_CREATE
-        End If
-        'zip.Password = "test"
+    End If
+    'zip.Password = "test"
 End Sub
 
 Private Sub mnuOpen_Click()
-Dim x As Integer, i As Integer, strTempZip As String
-Dim strTempPath As String, strInt As String, strInt2 As String
+    Dim x           As Integer, i As Integer, strTempZip As String
+    Dim strTempPath As String, strInt As String, strInt2 As String
 
-CDL1.ShowOpen
+    CDL1.ShowOpen
 
     If Len(CDL1.Filename) > 0 Then
         If Zip Is Nothing Then
@@ -1024,64 +970,54 @@ CDL1.ShowOpen
         strTempZip = Mid$(CDL1.Filename, x + 1)
         strTempZip = Left$(strTempZip, Len(strTempZip) - 3)
         For i = 1 To 99
-        strInt = Trim$(Str(i))
-        If Len(strInt) = 1 Then
-        strInt = "0" & strInt
-        End If
-        If FileExists(strTempPath & strTempZip & "z" & strInt) Then
-        strInt2 = Trim$(Str(i - 1))
-        If Len(strInt2) = 1 Then
-        strInt2 = "0" & strInt2
-        End If
-        Name strTempPath & strTempZip & "z" & strInt As strTempPath & strTempZip & "0" & strInt2
-        Else
-        Exit For
-        End If
-        
+            strInt = Trim$(Str(i))
+            If Len(strInt) = 1 Then
+                strInt = "0" & strInt
+            End If
+            If FileExists(strTempPath & strTempZip & "z" & strInt) Then
+                strInt2 = Trim$(Str(i - 1))
+                If Len(strInt2) = 1 Then
+                    strInt2 = "0" & strInt2
+                End If
+                Name strTempPath & strTempZip & "z" & strInt As strTempPath & strTempZip & "0" & strInt2
+            Else
+                Exit For
+            End If
         Next i
         
         DoEvents
         Call FillGrid
-        End If
+    End If
         
 End Sub
 
-
-
-
-
 Private Sub mnuProcess_Click()
-'Check1(0).Value = 1
+    'Check1(0).Value = 1
 
-Check1(1).Value = 2
-Check1(2).Value = 2
+    Check1(1).value = 2
+    Check1(2).value = 2
 End Sub
 
 Private Sub Slider1_Change()
-Label2.Caption = "Compression Level = " & Str(Slider1.Value)
-CompLevel = Slider1.Value
-
+    Label2.Caption = "Compression Level = " & Str(Slider1.value)
+    CompLevel = Slider1.value
 End Sub
 
 Private Sub Text1_Change()
-strWildcards = Text1
+    strWildcards = Text1
 End Sub
 
-
 Private Sub Zip_OnAdd(ByVal Filename As String, ByVal soFar As Long, ByVal ToDo As Long, Cancel As Boolean)
-SB1.Panels(2).Text = Filename
+    SB1.Panels(2).Text = Filename
 End Sub
 
 Private Sub Zip_OnExtract(ByVal Filename As String, ByVal soFar As Long, ByVal ToDo As Long, Cancel As Boolean)
 
+    SB1.Panels(2).Text = Filename
 
-SB1.Panels(2).Text = Filename
-
-
-If (ExtFile * 100) / Zip.FileCount <= 100 Then
-PB1.Value = (ExtFile * 100) / Zip.FileCount
-End If
-ExtFile = ExtFile + 1
+    If (ExtFile * 100) / Zip.FileCount <= 100 Then
+        PB1.value = (ExtFile * 100) / Zip.FileCount
+    End If
+    ExtFile = ExtFile + 1
 End Sub
-
 

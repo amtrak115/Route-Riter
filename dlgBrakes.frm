@@ -84,42 +84,38 @@ Attribute VB_Exposed = False
 
 Option Explicit
 
-
-
 Private Sub Form_Load()
-If booProBrakes = True Then
-Frame2.Visible = True
-Else
-Frame2.Visible = False
-End If
+    If booProBrakes = True Then
+        Frame2.Visible = True
+    Else
+        Frame2.Visible = False
+    End If
 End Sub
 
 Private Sub OKButton_Click()
-Unload Me
+    Unload Me
 End Sub
 
 Private Sub Option1_Click(Index As Integer)
-If Option1(0).Value = True Then
-Option1(1).Value = False
-booIron = False
-Frame2.Visible = True
-ElseIf Option1(1).Value = True Then
-Option1(0).Value = False
-booIron = True
-Frame2.Visible = False
-booLSD = False
-End If
+    If Option1(0).value = True Then
+        Option1(1).value = False
+        booIron = False
+        Frame2.Visible = True
+    ElseIf Option1(1).value = True Then
+        Option1(0).value = False
+        booIron = True
+        Frame2.Visible = False
+        booLSD = False
+    End If
 End Sub
-
 
 Private Sub Option2_Click(Index As Integer)
-If Option2(0).Value = True Then
-Option2(1).Value = False
-booLSD = False
-ElseIf Option2(1).Value = True Then
-Option2(0).Value = False
-booLSD = True
-End If
+    If Option2(0).value = True Then
+        Option2(1).value = False
+        booLSD = False
+    ElseIf Option2(1).value = True Then
+        Option2(0).value = False
+        booLSD = True
+    End If
 End Sub
-
 
