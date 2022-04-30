@@ -16,4 +16,9 @@ VB6
 
 # Credits:
 Mike Simpson
+
 Jeffrey Kraus Yao
+
+# License:
+
+GNU GPLv3
