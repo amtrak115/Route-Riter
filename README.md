@@ -17,10 +17,56 @@
 
 # Credits:
 Mike Simpson
+http://www.rstools.info/route_riter.html
+mailto:rwtools@live.com.au
 
-Jeffrey Kraus Yao
+Carl-Heinz Rave
+TsUtils
+http://www.carloshr.de
+mailto:carlosHR@t-online.de
 
-Carl Hein Rave for TSUtils
+Scott Miller
+AceIt
+mailto:aceit@ameritech.net
+
+Martin Wright
+TGATools2A
+http://www.mwgfx.co.uk/index.htm
+mailto:mnwright@btinternet.com
+mailto:enquiries@mwgfx.co.uk
+
+Paul Gausden
+Shape Viewer
+https://decapod99.wordpress.com/
+
+Edward Grubb
+PicFormat32
+http://www.planetsourcecode.com/vb/scripts/ShowCode.asp?txtCodeId=13267&lngWId=1
+
+Franky Braem
+SAWZipNG
+http://www.codeproject.com/Articles/875/SAWZip-zip-file-manipulation-control
+
+Jean-loup Gailly
+zlib.dll
+http://www.zlib.net/
+
+ComponentOne
+c1sizer.ocx, vsflex8l.ocx and vsprint8.ocx
+http://www.componentone.com/
+
+ClickTeam
+ClickTeam Installer Pro
+http://www.clickteam.com/
+
+Uwe Herklotz
+UHARC.EXE
+mailto:Uwe.Herklotz@gmx.de
+
+Jerry Sulivan
+tester
+jhsulliv@comcast.net
+
 
 # License:
 
