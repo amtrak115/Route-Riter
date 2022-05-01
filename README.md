@@ -40,7 +40,7 @@ https://decapod99.wordpress.com/
 
 Edward Grubb
 PicFormat32
-http://www.planetsourcecode.com/vb/scripts/ShowCode.asp?txtCodeId=13267&lngWId=1
+https://github.com/Planet-Source-Code/edward-grubb-ed0-picformat32__1-13267
 
 Franky Braem
 SAWZipNG
