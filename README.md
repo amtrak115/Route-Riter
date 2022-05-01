@@ -11,8 +11,7 @@
 - Fully parse the Microsoft Train Simulator files by adapting an XML parser, http://pugixml.org/
 
 # Dependancies:
-- VSflexgrid v(?)
-
+- ComponentOne
 - VB6
 
 # Credits:
