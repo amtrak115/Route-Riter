@@ -16,23 +16,26 @@
 
 # Credits:
 Mike Simpson
-http://www.rstools.info/route_riter.html
-mailto:rwtools@live.com.au
+virtualtrains@tpg.com
+
+Jeffrey Kraus-Yao
+http://www.digital-rails.com
+support@digital-rails.com
 
 Carl-Heinz Rave
 TsUtils
 http://www.carloshr.de
-mailto:carlosHR@t-online.de
+carlosHR@t-online.de
 
 Scott Miller
 AceIt
-mailto:aceit@ameritech.net
+aceit@ameritech.net
 
 Martin Wright
 TGATools2A
 http://www.mwgfx.co.uk/index.htm
-mailto:mnwright@btinternet.com
-mailto:enquiries@mwgfx.co.uk
+mnwright@btinternet.com
+enquiries@mwgfx.co.uk
 
 Paul Gausden
 Shape Viewer
@@ -60,12 +63,11 @@ http://www.clickteam.com/
 
 Uwe Herklotz
 UHARC.EXE
-mailto:Uwe.Herklotz@gmx.de
+Uwe.Herklotz@gmx.de
 
 Jerry Sulivan
 tester
 jhsulliv@comcast.net
-
 
 # License:
 
