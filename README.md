@@ -100,6 +100,9 @@ Uwe.Herklotz@gmx.de
 tester
 jhsulliv@comcast.net
 
+© Giorgio Brausi
+VS6Installer
+
 # License:
 
 GNU GPLv3
