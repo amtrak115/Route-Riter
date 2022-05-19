@@ -21,7 +21,7 @@
 
  - Install [Microsoft Visual Basic 6.0 Common Controls Update](https://www.microsoft.com/en-US/download/details.aspx?id=10019)
 
- - Install Source Dependancies from [./Source/Dependancies](https://github.com/FrannDzs/Route-Riter/tree/main-(7.6.27)/Source/Dependancies)
+ - Install Source and System Dependancies from [./Source/Dependancies](https://github.com/FrannDzs/Route-Riter/tree/main-(7.6.27)/Source/Dependancies) Don't forget to install C1ActiveX
 
  - Run Visual Basic 6.0, choose the option to load existing project and choose Route_Riter7.vbp to load the project.
  
