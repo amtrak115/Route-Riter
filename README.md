@@ -21,8 +21,8 @@
  From Project>Properties>Compile you can choose the compilation mode.
 
 # After compiling the project 
- Extract all compressed files from [./Release/Dependancies/Extract to release folder](https://github.com/FrannDzs/Route-Riter/tree/main-(7.6.27)/Release/Dependancies/Extract%20to%20release%20folder) directory to the root of the Release folder. 
- Install mwgfxdll.exe.
+ Extract all compressed files from [./Release/Dependancies/Extract...(https://github.com/FrannDzs/Route-Riter/tree/main-(7.6.27)/Release/Dependancies/Extract%20to%20release%20folder) directory to the root of the Release folder. 
+ Install [mwgfxdll.exe](https://github.com/FrannDzs/Route-Riter/blob/main-(7.6.27)/Release/Dependancies/mwgfxdll%20INSTALLER.7z).
 
 # Development plans
  Improve the current code following the original direction.
