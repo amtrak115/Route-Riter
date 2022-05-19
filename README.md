@@ -9,10 +9,11 @@
 - Install [Visual Basic 6.0](https://winworldpc.com/product/microsoft-visual-bas/60) or [Visual Studio 6.0](https://winworldpc.com/product/microsoft-visual-stu/60) with its corresponding [Service Pack 6](https://winworldpc.com/download/a4208baa-aaee-11eb-bc5b-0200008a0da4).
 
  - Install [MSDN Library](https://winworldpc.com/product/msdn/vs-60) (Optional) 
-   MSDN Latest Version: 
-   Disc1: https://archive.org/details/MSDN_Library_October_2001_Disc_1 
-   Disc2: https://archive.org/details/MSDN_Library_October_2001_Disc_2 
-   Disc3: https://archive.org/details/MSDN_Library_October_2001_Disc_3
+   
+   **MSDN Latest Version**: 
+   **Disc1**: https://archive.org/details/MSDN_Library_October_2001_Disc_1 
+   **Disc2**: https://archive.org/details/MSDN_Library_October_2001_Disc_2 
+   **Disc3**: https://archive.org/details/MSDN_Library_October_2001_Disc_3
  
  - Install [Code Advisor](https://www.microsoft.com/en-US/download/details.aspx?id=1222) (Optional)
 
