@@ -4,6 +4,8 @@
 # Compiling
  Install Visual Basic 6.0 with its corresponding Service Pack 6.
 
+ Install Dependancies from ./Source/Dependancies
+
  Run Visual Basic 6.0, choose the option to load existing project and choose Route_Riter7.vbp to load the project.
  
  Make the necessary changes and run with F5 or F5 to run with a complete compilation.
