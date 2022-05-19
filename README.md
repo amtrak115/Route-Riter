@@ -23,7 +23,7 @@
 
  - If you are having problems copy and register dlls from [./Source/Dependancies/ActiveX Controls and DLL](https://github.com/FrannDzs/Route-Riter/tree/main-(7.6.27)/Source/Dependancies/ActiveX%20Controls%20and%20DLL) to either C:\Windows\system32 or C:\Windows\SysWOW64 . 
 
- - Don't forget to install [C1ActiveX](https://github.com/FrannDzs/Route-Riter/tree/main-(7.6.27)/Source/Dependancies/C1%20ActiveX%20Controls).
+ - Don't forget to install [C1ActiveX](https://github.com/FrannDzs/Route-Riter/tree/main-(7.6.27)/Source/Dependancies/C1%20ActiveX%20Controls/C1ActiveX%20Installers) or [manual install](https://github.com/FrannDzs/Route-Riter/tree/main-(7.6.27)/Source/Dependancies/C1%20ActiveX%20Controls/ActiveX%20cabs)
 
  - Run Visual Basic 6.0, choose the option to load existing project and choose Route_Riter7.vbp to load the project.
  
