@@ -4,7 +4,7 @@
 # Compiling
  Install Visual Basic 6.0 with its corresponding Service Pack 6.
 
- Install Dependancies from ./Source/Dependancies
+ Install Dependancies from [./Source/Dependancies](https://github.com/FrannDzs/Route-Riter/tree/main-(7.6.27)/Source/Dependancies)
 
  Run Visual Basic 6.0, choose the option to load existing project and choose Route_Riter7.vbp to load the project.
  
@@ -15,7 +15,7 @@
  From Project>Properties>Compile you can choose the compilation mode.
 
 # After compiling the project 
- Extract all compressed files from the ./Release/Dependancies/ directory to the root of the releases folder.
+ Extract all compressed files from [./Release/Dependancies](https://github.com/FrannDzs/Route-Riter/tree/main-(7.6.27)/Release/Dependancies) directory to the root of the releases folder.
 
 # Development plans
  Improve the current code following the original direction.
