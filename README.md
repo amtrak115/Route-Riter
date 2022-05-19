@@ -7,7 +7,7 @@
 - Download [Visual Basic 6.0](https://winworldpc.com/product/microsoft-visual-bas/60) or [Visual Studio 6.0](https://winworldpc.com/product/microsoft-visual-stu/60) with its corresponding [Service Pack 6](https://winworldpc.com/download/a4208baa-aaee-11eb-bc5b-0200008a0da4).
 
  - Download [MSDN Library](https://winworldpc.com/product/msdn/vs-60) (Optional)
-   - After downloading the MSDN library you can install the following update for it:
+   - After downloading and install the MSDN library you can install the following update for it:
 - **MSDN Latest Version Update**: 
    - **Disc1**: https://archive.org/details/MSDN_Library_October_2001_Disc_1 
    - **Disc2**: https://archive.org/details/MSDN_Library_October_2001_Disc_2 
