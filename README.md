@@ -55,7 +55,7 @@ support@digital-rails.com
 © Carl-Heinz Rave
 TsUtils
 http://www.carloshr.de
-carlosHR@t-online.de
+mail@carloshr.de
 
 © Scott Miller
 AceIt
