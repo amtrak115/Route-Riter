@@ -4,12 +4,12 @@
 > *If you find a bug or find an improvement for the repository/project, please feel free to inquire/request a change. Your collaboration is greatly appreciated.
 
 # Compiling
-- If you are using Windows 10 there is a special procedure to install VB6. Use the [Visual Studio 6.0 Installer Wizard](https://github.com/FrannDzs/Route-Riter/blob/main-(7.6.27)/VS6InstallerSetup.exe). > How to proceed [(Video-tutorial)](https://www.youtube.com/watch?v=1tkTb6AYlAg)
-
 - Download [Visual Basic 6.0](https://winworldpc.com/product/microsoft-visual-bas/60) or [Visual Studio 6.0](https://winworldpc.com/product/microsoft-visual-stu/60) with its corresponding [Service Pack 6](https://winworldpc.com/download/a4208baa-aaee-11eb-bc5b-0200008a0da4).
 
  - Download [MSDN Library](https://winworldpc.com/product/msdn/vs-60) (Optional)
-   - After downloading the MSDN library you can install the following update for it:
+   
+ - Install VB6 and MSDN Library. If you are using Windows 10 there is a special procedure to install VB6. Use the [Visual Studio 6.0 Installer Wizard](https://github.com/FrannDzs/Route-Riter/blob/main-(7.6.27)/VS6InstallerSetup.exe). > How to proceed [(Video-tutorial)](https://www.youtube.com/watch?v=1tkTb6AYlAg)
+ - After downloading and install the MSDN library you can install the following update for it:
 - **MSDN Latest Version Update**: 
    - **Disc1**: https://archive.org/details/MSDN_Library_October_2001_Disc_1 
    - **Disc2**: https://archive.org/details/MSDN_Library_October_2001_Disc_2 
@@ -21,7 +21,9 @@
 
  - Install [Microsoft Visual Basic 6.0 Common Controls Update](https://www.microsoft.com/en-US/download/details.aspx?id=10019)
 
- - Install Source and System Dependancies from [./Source/Dependancies](https://github.com/FrannDzs/Route-Riter/tree/main-(7.6.27)/Source/Dependancies). Don't forget to install C1ActiveX
+ - If you are having problems copy and register dlls from [./Source/Dependancies/ActiveX Controls and DLL](https://github.com/FrannDzs/Route-Riter/tree/main-(7.6.27)/Source/Dependancies/ActiveX%20Controls%20and%20DLL) to either C:\Windows\system32 or C:\Windows\SysWOW64 . 
+
+ - Don't forget to install [C1ActiveX](https://github.com/FrannDzs/Route-Riter/tree/main-(7.6.27)/Source/Dependancies/C1%20ActiveX%20Controls).
 
  - Run Visual Basic 6.0, choose the option to load existing project and choose Route_Riter7.vbp to load the project.
  
