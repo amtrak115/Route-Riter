@@ -8,6 +8,8 @@
  
  Install [Code Advisor](https://www.microsoft.com/en-US/download/details.aspx?id=1222) (Optional)
 
+ Install [vb6mousewheelfix](https://github.com/FrannDzs/Route-Riter/blob/main-(7.6.27)/Others/vb6mousewheelfix.exe)
+
  Install Source Dependancies from [./Source/Dependancies](https://github.com/FrannDzs/Route-Riter/tree/main-(7.6.27)/Source/Dependancies)
 
  Run Visual Basic 6.0, choose the option to load existing project and choose Route_Riter7.vbp to load the project.
