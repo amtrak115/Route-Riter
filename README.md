@@ -16,7 +16,7 @@
 
  - Run Visual Basic 6.0, choose the option to load existing project and choose Route_Riter7.vbp to load the project.
  
- - Make the necessary changes and run with F5 or F5 to run with a complete compilation.
+ - Make the necessary changes and run with F5 or ctrl + F5 to run with a complete compilation.
 
  - From the file menu you can generate an .exe
 
