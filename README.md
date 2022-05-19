@@ -1,7 +1,24 @@
 # Route-Riter
  Route Riter is a set of tools for Microsoft Train Simulator created by Mike Simpson.
 
-# Development Plans
+# Compiling
+ Install Visual Basic 6.0 with its corresponding Service Pack 6.
+
+ Run Visual Basic 6.0, choose the option to load existing project and choose Route_Riter7.vbp to load the project.
+ 
+ Make the necessary changes and run with F5 or F5 to run with a complete compilation.
+
+ From the file menu you can generate an .exe
+
+ From Project>Properties>Compile you can choose the compilation mode.
+
+# After compiling the project 
+ Extract all compressed files from the ./releases/dependancies/ directory to the root of the releases folder.
+
+# Development plans
+ Improve the current code following the original direction.
+
+# Future development plans
 - Prepare the Visual Basic 6.0 code for migration to Visual Basic .NET.
 
 - Separate application and data tiers into a DLL separate from presentation.

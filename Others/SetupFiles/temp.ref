@@ -1,0 +1,11 @@
+
+
+Static (
+Filename ( "caravan.s" )
+Shadow ( RECT )
+Class ( "Vehicles - Trailer" )
+Align ( None )
+Description ( "Trailer" )
+
+)
+

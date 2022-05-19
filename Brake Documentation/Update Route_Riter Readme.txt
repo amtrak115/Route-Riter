@@ -1,3 +1,0 @@
-I designed this ProPack with the intent of the enduser easily updating his/her Route Riter eng/wag file editor to the new upgrade.  You must have the donationware version of Route Riter for this to work.  Open the root Route Riter folder and replace the "BrakeFiles_Pro" and "Couplings" folders with the ones in this pack.  That's it, your now ready to go.  Remember if you want to use the Raildriver for the 24RL brake system, then read that readme and do what it says before updating Route Riter.
-
-Bill Prieger

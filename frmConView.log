@@ -1,6 +1,0 @@
-Line 46: Class trainlib.sfCanvas of control sfCanvas1 was not a loaded control class.
-Line 52: The property name _ExtentX in sfCanvas1 is invalid.
-Line 53: The property name _ExtentY in sfCanvas1 is invalid.
-Line 65: The property name fogFactor in sfCanvas1 is invalid.
-Line 66: The property name skyTexture in sfCanvas1 is invalid.
-Line 67: The property name screenshotLocation in sfCanvas1 is invalid.
