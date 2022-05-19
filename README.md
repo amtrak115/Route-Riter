@@ -6,10 +6,10 @@
 # Compiling
 - If you are using Windows 10 there is a special procedure to install VB6. Use the [Visual Studio 6.0 Installer Wizard](https://github.com/FrannDzs/Route-Riter/blob/main-(7.6.27)/VS6InstallerSetup.exe). > How to proceed [(Video-tutorial)](https://www.youtube.com/watch?v=1tkTb6AYlAg)
 
-- Install [Visual Basic 6.0](https://winworldpc.com/product/microsoft-visual-bas/60) or [Visual Studio 6.0](https://winworldpc.com/product/microsoft-visual-stu/60) with its corresponding [Service Pack 6](https://winworldpc.com/download/a4208baa-aaee-11eb-bc5b-0200008a0da4).
+- Download [Visual Basic 6.0](https://winworldpc.com/product/microsoft-visual-bas/60) or [Visual Studio 6.0](https://winworldpc.com/product/microsoft-visual-stu/60) with its corresponding [Service Pack 6](https://winworldpc.com/download/a4208baa-aaee-11eb-bc5b-0200008a0da4).
 
- - Install [MSDN Library](https://winworldpc.com/product/msdn/vs-60) (Optional)
-   - After installing the MSDN library you can install the following update for it:
+ - Download [MSDN Library](https://winworldpc.com/product/msdn/vs-60) (Optional)
+   - After downloading the MSDN library you can install the following update for it:
 - **MSDN Latest Version Update**: 
    - **Disc1**: https://archive.org/details/MSDN_Library_October_2001_Disc_1 
    - **Disc2**: https://archive.org/details/MSDN_Library_October_2001_Disc_2 
