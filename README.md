@@ -45,57 +45,57 @@
 - VB6
 
 # Credits:
-Mike Simpson
+© Mike Simpson
 virtualtrains@tpg.com
 
-Jeffrey Kraus-Yao
+© Jeffrey Kraus-Yao
 http://www.digital-rails.com
 support@digital-rails.com
 
-Carl-Heinz Rave
+© Carl-Heinz Rave
 TsUtils
 http://www.carloshr.de
 carlosHR@t-online.de
 
-Scott Miller
+© Scott Miller
 AceIt
 aceit@ameritech.net
 
-Martin Wright
+© Martin Wright
 TGATools2A
 http://www.mwgfx.co.uk/index.htm
 mnwright@btinternet.com
 enquiries@mwgfx.co.uk
 
-Paul Gausden
+© Paul Gausden
 Shape Viewer
 https://decapod99.wordpress.com/
 
-Edward Grubb
+© Edward Grubb
 PicFormat32
 https://github.com/Planet-Source-Code/edward-grubb-ed0-picformat32__1-13267
 
-Franky Braem
+© Franky Braem
 SAWZipNG
 http://www.codeproject.com/Articles/875/SAWZip-zip-file-manipulation-control
 
-Jean-loup Gailly
+© Jean-loup Gailly
 zlib.dll
 http://www.zlib.net/
 
-ComponentOne
+© ComponentOne
 c1sizer.ocx, vsflex8l.ocx and vsprint8.ocx
 http://www.componentone.com/
 
-ClickTeam
+© ClickTeam
 ClickTeam Installer Pro
 http://www.clickteam.com/
 
-Uwe Herklotz
+© Uwe Herklotz
 UHARC.EXE
 Uwe.Herklotz@gmx.de
 
-Jerry Sulivan
+© Jerry Sulivan
 tester
 jhsulliv@comcast.net
 
