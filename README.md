@@ -22,9 +22,11 @@
  
  - Make the necessary changes and run with F5 or ctrl + F5 to run with a complete compilation.
 
+ - From Project>Properties>Compile you can choose the compilation mode.
+
  - From the file menu you can generate an .exe
 
- - From Project>Properties>Compile you can choose the compilation mode.
+ - Drop the compiled executable to the Release folder
 
 # After compiling the project 
  - Extract all compressed files from [./Release/Dependancies/Extract...](https://github.com/FrannDzs/Route-Riter/tree/main-(7.6.27)/Release/Dependancies/Extract%20to%20release%20folder) directory to the root of the Release folder. 
