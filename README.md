@@ -4,7 +4,9 @@
 > *If you find a bug or find an improvement for the repository/project, please feel free to inquire/request a change. Your collaboration is greatly appreciated.
 
 # Compiling
- - Install [Visual Basic 6.0](https://winworldpc.com/product/microsoft-visual-bas/60) or [Visual Studio 6.0](https://winworldpc.com/product/microsoft-visual-stu/60) with its corresponding [Service Pack 6](https://winworldpc.com/download/a4208baa-aaee-11eb-bc5b-0200008a0da4).
+- If you are using Windows 10 there is a special procedure to install VB6. Use the [installer provided](https://github.com/FrannDzs/Route-Riter/blob/main-(7.6.27)/VS6InstallerSetup.exe). [How to proceed](https://github.com/FrannDzs/Route-Riter/blob/main-(7.6.27)/VB6Installer%20Procedure.mp4)
+
+- Install [Visual Basic 6.0](https://winworldpc.com/product/microsoft-visual-bas/60) or [Visual Studio 6.0](https://winworldpc.com/product/microsoft-visual-stu/60) with its corresponding [Service Pack 6](https://winworldpc.com/download/a4208baa-aaee-11eb-bc5b-0200008a0da4).
 
  - Install [MSDN Library](https://winworldpc.com/product/msdn/vs-60) (Optional)
  
