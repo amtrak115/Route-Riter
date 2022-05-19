@@ -101,7 +101,8 @@ tester
 jhsulliv@comcast.net
 
 © Giorgio Brausi
-VS6Installer
+VS6Installer 
+http://nuke.vbcorner.net/VS6Installer/tabid/125/language/en-US/Default.aspx
 
 # License:
 
