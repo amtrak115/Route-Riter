@@ -4,8 +4,6 @@
 > *If you find a bug or find an improvement for the repository/project, please feel free to inquire/request a change. Your collaboration is greatly appreciated.
 
 # Compiling
-- If you are using Windows 10 there is a special procedure to install VB6. Use the [Visual Studio 6.0 Installer Wizard](https://github.com/FrannDzs/Route-Riter/blob/main-(7.6.27)/VS6InstallerSetup.exe). > How to proceed [(Video-tutorial)](https://www.youtube.com/watch?v=1tkTb6AYlAg)
-
 - Download [Visual Basic 6.0](https://winworldpc.com/product/microsoft-visual-bas/60) or [Visual Studio 6.0](https://winworldpc.com/product/microsoft-visual-stu/60) with its corresponding [Service Pack 6](https://winworldpc.com/download/a4208baa-aaee-11eb-bc5b-0200008a0da4).
 
  - Download [MSDN Library](https://winworldpc.com/product/msdn/vs-60) (Optional)
@@ -14,7 +12,7 @@
    - **Disc1**: https://archive.org/details/MSDN_Library_October_2001_Disc_1 
    - **Disc2**: https://archive.org/details/MSDN_Library_October_2001_Disc_2 
    - **Disc3**: https://archive.org/details/MSDN_Library_October_2001_Disc_3
- 
+ - If you are using Windows 10 there is a special procedure to install VB6. Use the [Visual Studio 6.0 Installer Wizard](https://github.com/FrannDzs/Route-Riter/blob/main-(7.6.27)/VS6InstallerSetup.exe). > How to proceed [(Video-tutorial)](https://www.youtube.com/watch?v=1tkTb6AYlAg)
  - Install [Code Advisor](https://www.microsoft.com/en-US/download/details.aspx?id=1222) (Optional)
 
  - Install [vb6mousewheelfix](https://github.com/FrannDzs/Route-Riter/blob/main-(7.6.27)/Others/vb6mousewheelfix.exe)
