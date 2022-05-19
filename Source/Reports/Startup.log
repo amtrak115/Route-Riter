@@ -1,0 +1,16 @@
+Start
+Write version number
+Check for Tview.exe
+Check for TgaTool2a.exe
+Set Language
+Check for Envstring
+Check for mwgfxvb.dll
+Check for TsUtil
+Check for TrainStore
+Get Startup settings
+TryAgain: - Get file settings
+Check RoutePath
+Check for Common Path
+Check for Languages
+Language = Lang_English.txt
+MSTS Path = C:\Program Files (x86)\Open Rails
