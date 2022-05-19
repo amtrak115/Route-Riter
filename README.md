@@ -64,8 +64,7 @@ aceit@ameritech.net
 © Martin Wright
 TGATools2A
 http://www.mwgfx.co.uk/index.htm
-mnwright@btinternet.com
-enquiries@mwgfx.co.uk
+martin@mwgfx.co.uk
 
 © Paul Gausden
 Shape Viewer
