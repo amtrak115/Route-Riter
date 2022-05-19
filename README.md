@@ -6,28 +6,28 @@
 # Compiling
  Install [Visual Basic 6.0](https://winworldpc.com/product/microsoft-visual-bas/60) or [Visual Studio 6.0](https://winworldpc.com/product/microsoft-visual-stu/60) with its corresponding [Service Pack 6](https://winworldpc.com/download/a4208baa-aaee-11eb-bc5b-0200008a0da4).
 
- Install [MSDN Library](https://winworldpc.com/product/msdn/vs-60) (Optional)
+ - Install [MSDN Library](https://winworldpc.com/product/msdn/vs-60) (Optional)
  
- Install [Code Advisor](https://www.microsoft.com/en-US/download/details.aspx?id=1222) (Optional)
+ - Install [Code Advisor](https://www.microsoft.com/en-US/download/details.aspx?id=1222) (Optional)
 
- Install [vb6mousewheelfix](https://github.com/FrannDzs/Route-Riter/blob/main-(7.6.27)/Others/vb6mousewheelfix.exe)
+ - Install [vb6mousewheelfix](https://github.com/FrannDzs/Route-Riter/blob/main-(7.6.27)/Others/vb6mousewheelfix.exe)
 
- Install Source Dependancies from [./Source/Dependancies](https://github.com/FrannDzs/Route-Riter/tree/main-(7.6.27)/Source/Dependancies)
+ - Install Source Dependancies from [./Source/Dependancies](https://github.com/FrannDzs/Route-Riter/tree/main-(7.6.27)/Source/Dependancies)
 
- Run Visual Basic 6.0, choose the option to load existing project and choose Route_Riter7.vbp to load the project.
+ - Run Visual Basic 6.0, choose the option to load existing project and choose Route_Riter7.vbp to load the project.
  
- Make the necessary changes and run with F5 or F5 to run with a complete compilation.
+ - Make the necessary changes and run with F5 or F5 to run with a complete compilation.
 
- From the file menu you can generate an .exe
+ - From the file menu you can generate an .exe
 
- From Project>Properties>Compile you can choose the compilation mode.
+ - From Project>Properties>Compile you can choose the compilation mode.
 
 # After compiling the project 
- Extract all compressed files from [./Release/Dependancies/Extract...](https://github.com/FrannDzs/Route-Riter/tree/main-(7.6.27)/Release/Dependancies/Extract%20to%20release%20folder) directory to the root of the Release folder. 
+ - Extract all compressed files from [./Release/Dependancies/Extract...](https://github.com/FrannDzs/Route-Riter/tree/main-(7.6.27)/Release/Dependancies/Extract%20to%20release%20folder) directory to the root of the Release folder. 
  Install [mwgfxdll.exe](https://github.com/FrannDzs/Route-Riter/blob/main-(7.6.27)/Release/Dependancies/mwgfxdll%20INSTALLER.7z).
 
 # Development plans
- Improve the current code following the original direction.
+ - Improve the current code following the original direction.
 
 # Future development plans
 - Prepare the Visual Basic 6.0 code for migration to Visual Basic .NET.
