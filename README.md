@@ -13,7 +13,7 @@
  From Project>Properties>Compile you can choose the compilation mode.
 
 # After compiling the project 
- Extract all compressed files from the ./releases/dependancies/ directory to the root of the releases folder.
+ Extract all compressed files from the ./Release/Dependancies/ directory to the root of the releases folder.
 
 # Development plans
  Improve the current code following the original direction.
