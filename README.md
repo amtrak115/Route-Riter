@@ -3,6 +3,8 @@
 
 > *If you find a bug or find an improvement for the repository/project, please feel free to inquire/request a change. Your collaboration is greatly appreciated.
 
+> *There are Forms and Modules that are unused if you check the folder containing the source, but due to my limited knowledge in MSTS I could not decipher if these are needed or obsolete. Please, if you know something about it I hope for your collaboration.
+
 # Compiling
 - Download [Visual Basic 6.0](https://winworldpc.com/product/microsoft-visual-bas/60) or [Visual Studio 6.0](https://winworldpc.com/product/microsoft-visual-stu/60) with its corresponding [Service Pack 6](https://winworldpc.com/download/a4208baa-aaee-11eb-bc5b-0200008a0da4).
 
