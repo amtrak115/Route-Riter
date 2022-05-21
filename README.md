@@ -117,3 +117,6 @@ http://nuke.vbcorner.net/VS6Installer/tabid/125/language/en-US/Default.aspx
 # License:
 
 GNU GPLv3
+
+# Disclaimer
+The Route-Riter source code and all software in this repository is provided for educational purposes ONLY. This repository is not affiliated with or endorsed by their respective copyright holders.
