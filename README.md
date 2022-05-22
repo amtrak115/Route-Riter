@@ -24,7 +24,9 @@
 
  - Install [Microsoft Visual Basic 6.0 Common Controls Update](https://www.microsoft.com/en-US/download/details.aspx?id=10019)
 
- - Install C1 Controls. If you have problems loading the vsflex8l.ocx vsprint.ocx and c1sizer.ocx controls in visual basic try copying and registering them in both system directories: /system32 and /SysWow64 manually with [cabs files](https://github.com/FrannDzs/Route-Riter/tree/main-(7.6.27)/Source/Dependancies/C1%20ActiveX%20Controls) or with [.ocx files](https://github.com/FrannDzs/Route-Riter/tree/main-(7.6.27)/Source/Dependancies/ActiveX%20Controls%20and%20DLL/VSFLEX8) . Or better make an installation from the [installers (New Versions).](https://github.com/FrannDzs/Route-Riter/tree/main-(7.6.27)/Source/Dependancies/C1%20ActiveX%20Controls/C1ActiveX%20Installers) or [installers (Old Versions).](https://github.com/FrannDzs/Route-Riter/tree/main-(7.6.27)/Source/Dependancies/C1%20ActiveX%20Controls).
+ - Install C1 Controls. 
+ 
+If you have problems loading the vsflex8l.ocx vsprint.ocx and c1sizer.ocx controls in visual basic try copying and registering them in both system directories: /system32 and /SysWow64 manually with [cabs files](https://github.com/FrannDzs/Route-Riter/tree/main-(7.6.27)/Source/Dependancies/ComponentOne%20Installers) or with [.ocx files](https://github.com/FrannDzs/Route-Riter/tree/main-(7.6.27)/Source/Dependancies/ComponentOne%20.ocx) . Or better make an installation from the [installers.](https://github.com/FrannDzs/Route-Riter/tree/main-(7.6.27)/Source/Dependancies/ComponentOne%20Installers)
 
  - Run Visual Basic 6.0, choose the option to load existing project and choose Route_Riter7.vbp to load the project.
  
