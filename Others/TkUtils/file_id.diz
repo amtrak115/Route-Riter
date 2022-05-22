@@ -5,6 +5,6 @@ Horace is a route converter when doing changes to the
 tsection.dat file like installing XTracks first time.
 Mapper is for doing maps and profiles of routes.
 Zipper last but not least is an easy to use compression 
-utility that also handles folders. This update improves 
-some file handling and adds a search function in Archibald. 
+utility that also handles folders. This is a maintenance 
+update without new functionality to handle some special s-files. 
 By Okrasa Ghia.

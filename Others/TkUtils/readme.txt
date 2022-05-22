@@ -1,6 +1,6 @@
  Archibald, Horace & Zipper
 ================================
-By Okrasa Ghia (okrasa@xtracks.tk, okrasaghia@yahoo.com), Januari 2005.
+By Okrasa Ghia (okrasa@xtracks.tk, okrasaghia@yahoo.com), July 2005.
 All the utilities have been extensively tested but as with any pice of
 software there are no guarantees, use at your own risk.
 These utilities are free to use and share, you must not sell them.
