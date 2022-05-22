@@ -1,7 +1,7 @@
 VERSION 5.00
-Object = "{831FDD16-0C5C-11D2-A9FC-0000F8754DA1}#2.1#0"; "MSCOMCTL.OCX"
-Object = "{BDC217C8-ED16-11CD-956C-0000C04E4C0A}#1.1#0"; "TABCTL32.OCX"
-Object = "{F9043C88-F6F2-101A-A3C9-08002B2F49FB}#1.2#0"; "ComDlg32.OCX"
+Object = "{831FDD16-0C5C-11D2-A9FC-0000F8754DA1}#2.2#0"; "mscomctl.ocx"
+Object = "{BDC217C8-ED16-11CD-956C-0000C04E4C0A}#1.1#0"; "TabCtl32.Ocx"
+Object = "{F9043C88-F6F2-101A-A3C9-08002B2F49FB}#1.2#0"; "comdlg32.ocx"
 Begin VB.Form frmUtils 
    Caption         =   "Route_Riter v7"
    ClientHeight    =   9420
@@ -25,14 +25,14 @@ Begin VB.Form frmUtils
    Begin VB.Frame Frame7 
       Height          =   615
       Left            =   0
-      TabIndex        =   11
+      TabIndex        =   10
       Top             =   0
       Width           =   12255
       Begin VB.CommandButton Command124 
          Caption         =   "E/W"
          Height          =   255
          Left            =   3840
-         TabIndex        =   199
+         TabIndex        =   198
          Top             =   240
          Width           =   495
       End
@@ -40,7 +40,7 @@ Begin VB.Form frmUtils
          Caption         =   "sms"
          Height          =   255
          Left            =   3360
-         TabIndex        =   24
+         TabIndex        =   23
          Top             =   240
          Width           =   495
       End
@@ -48,7 +48,7 @@ Begin VB.Form frmUtils
          Caption         =   "Con"
          Height          =   255
          Left            =   0
-         TabIndex        =   23
+         TabIndex        =   22
          Top             =   240
          Width           =   495
       End
@@ -66,7 +66,7 @@ Begin VB.Form frmUtils
          Height          =   255
          Index           =   3
          Left            =   5520
-         TabIndex        =   22
+         TabIndex        =   21
          ToolTipText     =   "Filter to show all files"
          Top             =   240
          Width           =   255
@@ -76,7 +76,7 @@ Begin VB.Form frmUtils
          Height          =   255
          Index           =   0
          Left            =   480
-         TabIndex        =   19
+         TabIndex        =   18
          ToolTipText     =   "Show main MSTS folder"
          Top             =   240
          Width           =   615
@@ -86,7 +86,7 @@ Begin VB.Form frmUtils
          Height          =   255
          Index           =   1
          Left            =   9240
-         TabIndex        =   18
+         TabIndex        =   17
          ToolTipText     =   "Show main MSTS folder"
          Top             =   240
          Width           =   615
@@ -95,7 +95,7 @@ Begin VB.Form frmUtils
          Caption         =   "Same View"
          Height          =   255
          Left            =   5760
-         TabIndex        =   17
+         TabIndex        =   16
          ToolTipText     =   "Makes both File View windows the same."
          Top             =   240
          Width           =   1335
@@ -104,7 +104,7 @@ Begin VB.Form frmUtils
          Caption         =   "All"
          Height          =   255
          Left            =   2520
-         TabIndex        =   16
+         TabIndex        =   15
          ToolTipText     =   "Selects All files in file window"
          Top             =   240
          Width           =   375
@@ -114,7 +114,7 @@ Begin VB.Form frmUtils
          Height          =   255
          Index           =   0
          Left            =   4800
-         TabIndex        =   15
+         TabIndex        =   14
          ToolTipText     =   "Filter to show only .S files"
          Top             =   240
          Width           =   255
@@ -124,7 +124,7 @@ Begin VB.Form frmUtils
          Height          =   255
          Index           =   1
          Left            =   5040
-         TabIndex        =   14
+         TabIndex        =   13
          ToolTipText     =   "Filter to show only .T files"
          Top             =   240
          Width           =   255
@@ -134,7 +134,7 @@ Begin VB.Form frmUtils
          Height          =   255
          Index           =   2
          Left            =   5280
-         TabIndex        =   13
+         TabIndex        =   12
          ToolTipText     =   "Filter to show only .W files"
          Top             =   240
          Width           =   255
@@ -143,7 +143,7 @@ Begin VB.Form frmUtils
          Caption         =   "Ace"
          Height          =   255
          Left            =   2880
-         TabIndex        =   12
+         TabIndex        =   11
          Top             =   240
          Width           =   495
       End
@@ -155,7 +155,7 @@ Begin VB.Form frmUtils
          Height          =   255
          Index           =   0
          Left            =   1080
-         TabIndex        =   21
+         TabIndex        =   20
          Top             =   240
          Width           =   1455
       End
@@ -166,30 +166,10 @@ Begin VB.Form frmUtils
          Height          =   255
          Index           =   1
          Left            =   7200
-         TabIndex        =   20
+         TabIndex        =   19
          Top             =   240
          Width           =   1935
       End
-   End
-   Begin VB.CommandButton Command1 
-      Caption         =   "&Quit"
-      BeginProperty Font 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
-         Charset         =   0
-         Weight          =   700
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-      Height          =   375
-      Index           =   15
-      Left            =   10200
-      Style           =   1  'Graphical
-      TabIndex        =   10
-      ToolTipText     =   "Leave Program"
-      Top             =   8760
-      Width           =   1215
    End
    Begin VB.TextBox Text1 
       Height          =   285
@@ -270,7 +250,7 @@ Begin VB.Form frmUtils
    Begin TabDlg.SSTab SSTab1 
       Height          =   4815
       Left            =   120
-      TabIndex        =   25
+      TabIndex        =   24
       ToolTipText     =   "Select TAB for operations you wish to use"
       Top             =   4440
       Width           =   11775
@@ -292,28 +272,28 @@ Begin VB.Form frmUtils
       TabCaption(1)   =   "Activities/Stock"
       TabPicture(1)   =   "frmUtils.frx":4086
       Tab(1).ControlEnabled=   0   'False
-      Tab(1).Control(0)=   "Label8(5)"
-      Tab(1).Control(1)=   "Label3"
-      Tab(1).Control(2)=   "Label8(3)"
-      Tab(1).Control(3)=   "Label8(2)"
-      Tab(1).Control(4)=   "Label8(4)"
-      Tab(1).Control(5)=   "Label7(4)"
-      Tab(1).Control(6)=   "Label7(3)"
-      Tab(1).Control(7)=   "Label7(2)"
-      Tab(1).Control(8)=   "Label8(1)"
-      Tab(1).Control(9)=   "Label8(0)"
-      Tab(1).Control(10)=   "Label7(1)"
-      Tab(1).Control(11)=   "Label7(0)"
-      Tab(1).Control(12)=   "Label7(5)"
-      Tab(1).Control(13)=   "Label8(6)"
-      Tab(1).Control(14)=   "SB2"
-      Tab(1).Control(15)=   "Frame4"
+      Tab(1).Control(0)=   "Frame4"
+      Tab(1).Control(1)=   "SB2"
+      Tab(1).Control(2)=   "Label8(6)"
+      Tab(1).Control(3)=   "Label7(5)"
+      Tab(1).Control(4)=   "Label7(0)"
+      Tab(1).Control(5)=   "Label7(1)"
+      Tab(1).Control(6)=   "Label8(0)"
+      Tab(1).Control(7)=   "Label8(1)"
+      Tab(1).Control(8)=   "Label7(2)"
+      Tab(1).Control(9)=   "Label7(3)"
+      Tab(1).Control(10)=   "Label7(4)"
+      Tab(1).Control(11)=   "Label8(4)"
+      Tab(1).Control(12)=   "Label8(2)"
+      Tab(1).Control(13)=   "Label8(3)"
+      Tab(1).Control(14)=   "Label3"
+      Tab(1).Control(15)=   "Label8(5)"
       Tab(1).ControlCount=   16
       TabCaption(2)   =   "MSTS File Utils"
       TabPicture(2)   =   "frmUtils.frx":40A2
       Tab(2).ControlEnabled=   0   'False
-      Tab(2).Control(0)=   "Label9"
-      Tab(2).Control(1)=   "Frame3"
+      Tab(2).Control(0)=   "Frame3"
+      Tab(2).Control(1)=   "Label9"
       Tab(2).ControlCount=   2
       TabCaption(3)   =   "General Utils"
       TabPicture(3)   =   "frmUtils.frx":40BE
@@ -328,22 +308,22 @@ Begin VB.Form frmUtils
       TabCaption(5)   =   "Misc. Options"
       TabPicture(5)   =   "frmUtils.frx":40F6
       Tab(5).ControlEnabled=   0   'False
-      Tab(5).Control(0)=   "Frame15"
-      Tab(5).Control(1)=   "Frame6"
-      Tab(5).Control(2)=   "Frame13"
-      Tab(5).Control(3)=   "Frame11"
+      Tab(5).Control(0)=   "Frame11"
+      Tab(5).Control(1)=   "Frame13"
+      Tab(5).Control(2)=   "Frame6"
+      Tab(5).Control(3)=   "Frame15"
       Tab(5).ControlCount=   4
       TabCaption(6)   =   "Graphics"
       TabPicture(6)   =   "frmUtils.frx":4112
       Tab(6).ControlEnabled=   0   'False
-      Tab(6).Control(0)=   "Label11"
-      Tab(6).Control(1)=   "Frame8"
+      Tab(6).Control(0)=   "Frame8"
+      Tab(6).Control(1)=   "Label11"
       Tab(6).ControlCount=   2
       TabCaption(7)   =   "TsUtils"
       TabPicture(7)   =   "frmUtils.frx":412E
       Tab(7).ControlEnabled=   0   'False
-      Tab(7).Control(0)=   "Label12"
-      Tab(7).Control(1)=   "Frame10"
+      Tab(7).Control(0)=   "Frame10"
+      Tab(7).Control(1)=   "Label12"
       Tab(7).ControlCount=   2
       TabCaption(8)   =   "Hardlink Files"
       TabPicture(8)   =   "frmUtils.frx":414A
@@ -353,21 +333,21 @@ Begin VB.Form frmUtils
       TabCaption(9)   =   "RailDriver/Registry"
       TabPicture(9)   =   "frmUtils.frx":4166
       Tab(9).ControlEnabled=   0   'False
-      Tab(9).Control(0)=   "Frame17"
-      Tab(9).Control(1)=   "Frame18"
+      Tab(9).Control(0)=   "Frame18"
+      Tab(9).Control(1)=   "Frame17"
       Tab(9).ControlCount=   2
       Begin VB.Frame Frame18 
          Caption         =   "Registry Options"
          Height          =   1095
          Left            =   -74520
-         TabIndex        =   218
+         TabIndex        =   217
          Top             =   720
          Width           =   10575
          Begin VB.CommandButton Command111 
             Caption         =   "Change MSTS Registry Path"
             Height          =   495
             Left            =   2520
-            TabIndex        =   223
+            TabIndex        =   222
             Top             =   360
             Width           =   1815
          End
@@ -375,7 +355,7 @@ Begin VB.Form frmUtils
             Caption         =   "Revert to Original Registry Settings"
             Height          =   495
             Left            =   6360
-            TabIndex        =   222
+            TabIndex        =   221
             Top             =   360
             Width           =   1815
          End
@@ -383,7 +363,7 @@ Begin VB.Form frmUtils
             Caption         =   "Read Original MSTS Registry Path"
             Height          =   495
             Left            =   600
-            TabIndex        =   221
+            TabIndex        =   220
             Top             =   360
             Width           =   1815
          End
@@ -391,7 +371,7 @@ Begin VB.Form frmUtils
             Caption         =   "Read Current MSTS Registry Path"
             Height          =   495
             Left            =   4440
-            TabIndex        =   220
+            TabIndex        =   219
             Top             =   360
             Width           =   1815
          End
@@ -399,7 +379,7 @@ Begin VB.Form frmUtils
             Caption         =   "Show type of .eng"
             Height          =   495
             Left            =   8280
-            TabIndex        =   219
+            TabIndex        =   218
             Top             =   360
             Width           =   1815
          End
@@ -408,14 +388,14 @@ Begin VB.Form frmUtils
          Caption         =   "Raildriver Options"
          Height          =   1815
          Left            =   -74520
-         TabIndex        =   185
+         TabIndex        =   184
          Top             =   1920
          Width           =   10575
          Begin VB.CommandButton Command113 
             Caption         =   "Modify ComboThrottle .eng for RailDriver"
             Height          =   495
             Left            =   8280
-            TabIndex        =   191
+            TabIndex        =   190
             Top             =   360
             Width           =   1815
          End
@@ -423,7 +403,7 @@ Begin VB.Form frmUtils
             Caption         =   "Modify Diesel .eng for Raildriver"
             Height          =   495
             Left            =   4440
-            TabIndex        =   190
+            TabIndex        =   189
             Top             =   360
             Width           =   1815
          End
@@ -431,7 +411,7 @@ Begin VB.Form frmUtils
             Caption         =   "Modify Electric.eng for RailDriver"
             Height          =   495
             Left            =   600
-            TabIndex        =   189
+            TabIndex        =   188
             Top             =   360
             Width           =   1815
          End
@@ -439,7 +419,7 @@ Begin VB.Form frmUtils
             Caption         =   "Modify Steam .eng for RailDriver"
             Height          =   495
             Left            =   2520
-            TabIndex        =   188
+            TabIndex        =   187
             Top             =   360
             Width           =   1815
          End
@@ -447,7 +427,7 @@ Begin VB.Form frmUtils
             Caption         =   "Modify Diesel with Gears (e.g. Kiha)"
             Height          =   495
             Left            =   6360
-            TabIndex        =   187
+            TabIndex        =   186
             Top             =   360
             Width           =   1815
          End
@@ -457,7 +437,7 @@ Begin VB.Form frmUtils
             BorderStyle     =   1  'Fixed Single
             Height          =   375
             Left            =   840
-            TabIndex        =   186
+            TabIndex        =   185
             Top             =   1080
             Width           =   9015
          End
@@ -476,14 +456,14 @@ Begin VB.Form frmUtils
          ForeColor       =   &H000000FF&
          Height          =   2295
          Left            =   -74280
-         TabIndex        =   177
+         TabIndex        =   176
          Top             =   1380
          Width           =   9735
          Begin VB.CommandButton Command132 
             Caption         =   "Link Global\Shapes to Common Files"
             Height          =   495
             Left            =   7560
-            TabIndex        =   208
+            TabIndex        =   207
             Top             =   480
             Width           =   1695
          End
@@ -491,7 +471,7 @@ Begin VB.Form frmUtils
             Caption         =   "Copy Global\Shapes to Common Files"
             Height          =   495
             Left            =   5760
-            TabIndex        =   207
+            TabIndex        =   206
             Top             =   480
             Width           =   1695
          End
@@ -502,7 +482,7 @@ Begin VB.Form frmUtils
             Index           =   1
             Left            =   360
             Style           =   1  'Graphical
-            TabIndex        =   183
+            TabIndex        =   182
             ToolTipText     =   "Click to confirm Route"
             Top             =   480
             Width           =   1695
@@ -511,7 +491,7 @@ Begin VB.Form frmUtils
             Caption         =   "List Linked Files in Selected Route"
             Height          =   495
             Left            =   4920
-            TabIndex        =   182
+            TabIndex        =   181
             ToolTipText     =   "Lists all linked files in Selected route."
             Top             =   1080
             Width           =   1695
@@ -520,7 +500,7 @@ Begin VB.Form frmUtils
             Caption         =   "List Hard-LInks in Common Files"
             Height          =   495
             Left            =   3120
-            TabIndex        =   181
+            TabIndex        =   180
             ToolTipText     =   "Lists all hard-linked files in the Common folder. Allows you to delete unlinked files."
             Top             =   1080
             Width           =   1695
@@ -529,7 +509,7 @@ Begin VB.Form frmUtils
             Caption         =   "Copy Route Files to Common Folder"
             Height          =   495
             Left            =   2160
-            TabIndex        =   179
+            TabIndex        =   178
             ToolTipText     =   "Copy shapes/textures/sounds from Selected Route to Common folder."
             Top             =   480
             Width           =   1695
@@ -538,7 +518,7 @@ Begin VB.Form frmUtils
             Caption         =   "Link All Route Files to Common Files"
             Height          =   495
             Left            =   3960
-            TabIndex        =   178
+            TabIndex        =   177
             ToolTipText     =   "Link all possible files in Selected route to Common files."
             Top             =   480
             Width           =   1695
@@ -546,7 +526,7 @@ Begin VB.Form frmUtils
          Begin MSComctlLib.StatusBar SB3 
             Height          =   375
             Left            =   120
-            TabIndex        =   180
+            TabIndex        =   179
             Top             =   1800
             Width           =   8055
             _ExtentX        =   14208
@@ -571,14 +551,14 @@ Begin VB.Form frmUtils
          Caption         =   "Convert Tile Names"
          Height          =   3255
          Left            =   -67800
-         TabIndex        =   161
+         TabIndex        =   160
          Top             =   600
          Width           =   4095
          Begin VB.CommandButton Command99 
             Caption         =   "Clear"
             Height          =   375
             Left            =   2160
-            TabIndex        =   172
+            TabIndex        =   171
             Top             =   2640
             Width           =   975
          End
@@ -586,7 +566,7 @@ Begin VB.Form frmUtils
             Caption         =   "Calculate"
             Height          =   375
             Left            =   840
-            TabIndex        =   167
+            TabIndex        =   166
             ToolTipText     =   "Will convert either Long/Lat or WorldTile coords to Tile File name."
             Top             =   2640
             Width           =   1095
@@ -595,7 +575,7 @@ Begin VB.Form frmUtils
             Height          =   375
             Index           =   4
             Left            =   2160
-            TabIndex        =   166
+            TabIndex        =   165
             Top             =   1440
             Width           =   1695
          End
@@ -603,7 +583,7 @@ Begin VB.Form frmUtils
             Height          =   375
             Index           =   3
             Left            =   240
-            TabIndex        =   165
+            TabIndex        =   164
             Top             =   1440
             Width           =   1695
          End
@@ -611,7 +591,7 @@ Begin VB.Form frmUtils
             Height          =   375
             Index           =   2
             Left            =   1560
-            TabIndex        =   164
+            TabIndex        =   163
             Top             =   2040
             Width           =   1695
          End
@@ -619,7 +599,7 @@ Begin VB.Form frmUtils
             Height          =   375
             Index           =   1
             Left            =   2160
-            TabIndex        =   163
+            TabIndex        =   162
             Top             =   600
             Width           =   1695
          End
@@ -627,7 +607,7 @@ Begin VB.Form frmUtils
             Height          =   375
             Index           =   0
             Left            =   240
-            TabIndex        =   162
+            TabIndex        =   161
             Top             =   600
             Width           =   1695
          End
@@ -636,7 +616,7 @@ Begin VB.Form frmUtils
             Caption         =   "World Tile Co-ordinates"
             Height          =   255
             Left            =   600
-            TabIndex        =   171
+            TabIndex        =   170
             Top             =   1200
             Width           =   3015
          End
@@ -645,7 +625,7 @@ Begin VB.Form frmUtils
             Caption         =   "Tile file name"
             Height          =   375
             Left            =   600
-            TabIndex        =   170
+            TabIndex        =   169
             Top             =   2040
             Width           =   855
          End
@@ -654,7 +634,7 @@ Begin VB.Form frmUtils
             Caption         =   "Latitude"
             Height          =   255
             Left            =   2040
-            TabIndex        =   169
+            TabIndex        =   168
             Top             =   360
             Width           =   1695
          End
@@ -663,7 +643,7 @@ Begin VB.Form frmUtils
             Caption         =   "Longitude"
             Height          =   255
             Left            =   360
-            TabIndex        =   168
+            TabIndex        =   167
             Top             =   360
             Width           =   1335
          End
@@ -671,14 +651,14 @@ Begin VB.Form frmUtils
       Begin VB.Frame Frame14 
          Height          =   3255
          Left            =   -74280
-         TabIndex        =   156
+         TabIndex        =   155
          Top             =   720
          Width           =   9375
          Begin VB.CommandButton Command129 
             Caption         =   "Mini-Route Compact Sounds"
             Height          =   495
             Left            =   7440
-            TabIndex        =   204
+            TabIndex        =   203
             Top             =   840
             Width           =   1695
          End
@@ -686,7 +666,7 @@ Begin VB.Form frmUtils
             Caption         =   "Check Route"
             Height          =   495
             Left            =   4680
-            TabIndex        =   174
+            TabIndex        =   173
             Top             =   1560
             Width           =   1695
          End
@@ -694,7 +674,7 @@ Begin VB.Form frmUtils
             Caption         =   "Confirm Route"
             Height          =   495
             Left            =   2880
-            TabIndex        =   173
+            TabIndex        =   172
             Top             =   1560
             Width           =   1695
          End
@@ -702,7 +682,7 @@ Begin VB.Form frmUtils
             Caption         =   "Mini-Route Setup"
             Height          =   495
             Left            =   240
-            TabIndex        =   160
+            TabIndex        =   159
             Top             =   840
             Width           =   1695
          End
@@ -710,7 +690,7 @@ Begin VB.Form frmUtils
             Caption         =   "Mini-Route Compact Tracks"
             Height          =   495
             Left            =   5640
-            TabIndex        =   159
+            TabIndex        =   158
             ToolTipText     =   "Removes track sections from Global\Shapes not used by the mini-route"
             Top             =   840
             Width           =   1695
@@ -719,7 +699,7 @@ Begin VB.Form frmUtils
             Caption         =   "Mini-Route get Stock"
             Height          =   495
             Left            =   3840
-            TabIndex        =   158
+            TabIndex        =   157
             Top             =   840
             Width           =   1695
          End
@@ -727,7 +707,7 @@ Begin VB.Form frmUtils
             Caption         =   "Mini-Route Copy Route"
             Height          =   495
             Left            =   2040
-            TabIndex        =   157
+            TabIndex        =   156
             Top             =   840
             Width           =   1695
          End
@@ -736,14 +716,14 @@ Begin VB.Form frmUtils
          Caption         =   "Common Files"
          Height          =   3255
          Left            =   -70080
-         TabIndex        =   152
+         TabIndex        =   151
          Top             =   600
          Width           =   2175
          Begin VB.CommandButton Command33 
             Caption         =   "Copy Default Files to Common"
             Height          =   495
             Left            =   360
-            TabIndex        =   155
+            TabIndex        =   154
             ToolTipText     =   "Copies default files to Common folder"
             Top             =   1020
             Width           =   1455
@@ -752,7 +732,7 @@ Begin VB.Form frmUtils
             Caption         =   "Convert Install File"
             Height          =   495
             Left            =   360
-            TabIndex        =   154
+            TabIndex        =   153
             ToolTipText     =   "Converts an existing InstallMe.bat to point to Common files."
             Top             =   1680
             Width           =   1455
@@ -761,7 +741,7 @@ Begin VB.Form frmUtils
             Caption         =   "Set Up Common Files"
             Height          =   495
             Left            =   360
-            TabIndex        =   153
+            TabIndex        =   152
             ToolTipText     =   "Sets up a Common folder for default files"
             Top             =   360
             Width           =   1455
@@ -771,7 +751,7 @@ Begin VB.Form frmUtils
          Caption         =   "Environment"
          Height          =   3255
          Left            =   -72360
-         TabIndex        =   147
+         TabIndex        =   146
          Top             =   600
          Width           =   2175
          Begin VB.CommandButton Command19 
@@ -790,7 +770,7 @@ Begin VB.Form frmUtils
             Left            =   240
             MaskColor       =   &H00C0FFFF&
             Style           =   1  'Graphical
-            TabIndex        =   151
+            TabIndex        =   150
             ToolTipText     =   "Writes a new set of .env files for the selected route"
             Top             =   360
             Width           =   1575
@@ -799,7 +779,7 @@ Begin VB.Form frmUtils
             Caption         =   "Correct Sun Rise/Set"
             Height          =   495
             Left            =   240
-            TabIndex        =   150
+            TabIndex        =   149
             ToolTipText     =   "Corrects sunrise/set for route."
             Top             =   1005
             Width           =   1575
@@ -809,7 +789,7 @@ Begin VB.Form frmUtils
             Caption         =   "Improve Snow"
             Height          =   495
             Left            =   240
-            TabIndex        =   149
+            TabIndex        =   148
             ToolTipText     =   "Changes Routes Snow textures to give deeper snow."
             Top             =   2280
             Width           =   1575
@@ -818,7 +798,7 @@ Begin VB.Form frmUtils
             Caption         =   "Replace BlendATexDiff"
             Height          =   495
             Left            =   240
-            TabIndex        =   148
+            TabIndex        =   147
             ToolTipText     =   "Replace BlendATexDiff in .env to stop Flashing Water."
             Top             =   1635
             Width           =   1575
@@ -828,14 +808,14 @@ Begin VB.Form frmUtils
          Caption         =   "Misc"
          Height          =   3255
          Left            =   -74640
-         TabIndex        =   144
+         TabIndex        =   143
          Top             =   600
          Width           =   2175
          Begin VB.CommandButton Command95 
             Caption         =   "Fix Bad .S File Format"
             Height          =   495
             Left            =   240
-            TabIndex        =   217
+            TabIndex        =   216
             Top             =   1800
             Width           =   1575
          End
@@ -843,7 +823,7 @@ Begin VB.Form frmUtils
             Caption         =   "Raise Bounding Box Minimum"
             Height          =   495
             Left            =   240
-            TabIndex        =   146
+            TabIndex        =   145
             ToolTipText     =   "Raises the base of all rolling-stock Bounding Boxes to 0.9 to give greater clearance at crossings etc."
             Top             =   1080
             Width           =   1575
@@ -852,7 +832,7 @@ Begin VB.Form frmUtils
             Caption         =   "Set up Editing Folder"
             Height          =   495
             Left            =   240
-            TabIndex        =   145
+            TabIndex        =   144
             ToolTipText     =   "Backs up the Trainset folder .eng/.wag/.sd files only"
             Top             =   360
             Width           =   1575
@@ -862,7 +842,7 @@ Begin VB.Form frmUtils
          Caption         =   "General Utilities"
          Height          =   2655
          Left            =   -74520
-         TabIndex        =   111
+         TabIndex        =   110
          Top             =   720
          Width           =   9855
          Begin VB.CommandButton Command1 
@@ -871,7 +851,7 @@ Begin VB.Form frmUtils
             Height          =   495
             Index           =   17
             Left            =   3360
-            TabIndex        =   128
+            TabIndex        =   127
             ToolTipText     =   "Print out selected Directory."
             Top             =   1560
             Width           =   1455
@@ -881,7 +861,7 @@ Begin VB.Form frmUtils
             Height          =   495
             Index           =   2
             Left            =   3360
-            TabIndex        =   127
+            TabIndex        =   126
             ToolTipText     =   "Delete selected files"
             Top             =   360
             Width           =   1455
@@ -891,7 +871,7 @@ Begin VB.Form frmUtils
             Height          =   495
             Index           =   7
             Left            =   1800
-            TabIndex        =   126
+            TabIndex        =   125
             ToolTipText     =   "Rename selected file"
             Top             =   960
             Width           =   1455
@@ -901,7 +881,7 @@ Begin VB.Form frmUtils
             Height          =   495
             Index           =   8
             Left            =   3360
-            TabIndex        =   125
+            TabIndex        =   124
             ToolTipText     =   "Make new directory"
             Top             =   960
             Width           =   1455
@@ -911,7 +891,7 @@ Begin VB.Form frmUtils
             Height          =   495
             Index           =   9
             Left            =   4920
-            TabIndex        =   124
+            TabIndex        =   123
             ToolTipText     =   "Remove selected directory"
             Top             =   960
             Width           =   1455
@@ -921,7 +901,7 @@ Begin VB.Form frmUtils
             Height          =   495
             Index           =   0
             Left            =   240
-            TabIndex        =   123
+            TabIndex        =   122
             ToolTipText     =   "Select all files "
             Top             =   360
             Width           =   1455
@@ -931,7 +911,7 @@ Begin VB.Form frmUtils
             Height          =   495
             Index           =   1
             Left            =   1800
-            TabIndex        =   122
+            TabIndex        =   121
             ToolTipText     =   "De-Select all selected files"
             Top             =   360
             Width           =   1455
@@ -941,7 +921,7 @@ Begin VB.Form frmUtils
             Height          =   495
             Index           =   3
             Left            =   4920
-            TabIndex        =   121
+            TabIndex        =   120
             ToolTipText     =   "Copy selected files to Target Dir."
             Top             =   360
             Width           =   1455
@@ -951,7 +931,7 @@ Begin VB.Form frmUtils
             Height          =   495
             Index           =   11
             Left            =   6480
-            TabIndex        =   120
+            TabIndex        =   119
             ToolTipText     =   "Go to parent directory"
             Top             =   960
             Width           =   1455
@@ -961,7 +941,7 @@ Begin VB.Form frmUtils
             Height          =   495
             Index           =   12
             Left            =   8040
-            TabIndex        =   119
+            TabIndex        =   118
             ToolTipText     =   "Go to root directory"
             Top             =   960
             Width           =   1455
@@ -971,7 +951,7 @@ Begin VB.Form frmUtils
             Height          =   495
             Index           =   4
             Left            =   6480
-            TabIndex        =   118
+            TabIndex        =   117
             ToolTipText     =   "Move selected files to Target Dir."
             Top             =   360
             Width           =   1455
@@ -981,7 +961,7 @@ Begin VB.Form frmUtils
             Height          =   495
             Index           =   5
             Left            =   8040
-            TabIndex        =   117
+            TabIndex        =   116
             ToolTipText     =   "Edit File"
             Top             =   360
             Width           =   1455
@@ -991,7 +971,7 @@ Begin VB.Form frmUtils
             Height          =   495
             Index           =   13
             Left            =   240
-            TabIndex        =   116
+            TabIndex        =   115
             ToolTipText     =   "Execute selected file"
             Top             =   1560
             Width           =   1455
@@ -1002,7 +982,7 @@ Begin VB.Form frmUtils
             Height          =   495
             Index           =   14
             Left            =   1800
-            TabIndex        =   115
+            TabIndex        =   114
             ToolTipText     =   "Toggles whether Hidden or System files appear"
             Top             =   1560
             Width           =   1455
@@ -1012,7 +992,7 @@ Begin VB.Form frmUtils
             Height          =   495
             Index           =   6
             Left            =   240
-            TabIndex        =   114
+            TabIndex        =   113
             ToolTipText     =   "Show/adjust properties of selected file"
             Top             =   960
             Width           =   1455
@@ -1021,7 +1001,7 @@ Begin VB.Form frmUtils
             Caption         =   "Move Folder"
             Height          =   495
             Left            =   4920
-            TabIndex        =   113
+            TabIndex        =   112
             ToolTipText     =   "Move selected folder"
             Top             =   1560
             Width           =   1455
@@ -1030,7 +1010,7 @@ Begin VB.Form frmUtils
             Caption         =   "My&Zipp"
             Height          =   495
             Left            =   6480
-            TabIndex        =   112
+            TabIndex        =   111
             ToolTipText     =   "Zip tool similar to WinZip"
             Top             =   1560
             Width           =   1455
@@ -1040,14 +1020,14 @@ Begin VB.Form frmUtils
          Caption         =   "Activity Checking"
          Height          =   3375
          Left            =   -74880
-         TabIndex        =   98
+         TabIndex        =   97
          Top             =   600
          Width           =   9375
          Begin VB.CommandButton Command144 
             Caption         =   "Consist Editor"
             Height          =   495
             Left            =   7680
-            TabIndex        =   231
+            TabIndex        =   230
             Top             =   360
             Width           =   1575
          End
@@ -1055,7 +1035,7 @@ Begin VB.Form frmUtils
             Caption         =   "Check Acts for Selected Route"
             Height          =   495
             Left            =   1680
-            TabIndex        =   216
+            TabIndex        =   215
             Top             =   360
             Width           =   1335
          End
@@ -1063,7 +1043,7 @@ Begin VB.Form frmUtils
             Caption         =   "Make unpowered Loco"
             Height          =   495
             Left            =   7680
-            TabIndex        =   214
+            TabIndex        =   213
             ToolTipText     =   "Turns Loco into a Wagon which may be pulled by another train etc."
             Top             =   960
             Width           =   1575
@@ -1072,7 +1052,7 @@ Begin VB.Form frmUtils
             Caption         =   "Make AI or MU .eng"
             Height          =   495
             Left            =   6120
-            TabIndex        =   213
+            TabIndex        =   212
             ToolTipText     =   "Makes an AI or MU version of a Locomotive"
             Top             =   960
             Width           =   1575
@@ -1081,7 +1061,7 @@ Begin VB.Form frmUtils
             Caption         =   "List Rolling Stock for Selected Route"
             Height          =   495
             Left            =   4560
-            TabIndex        =   198
+            TabIndex        =   197
             ToolTipText     =   "Lists the rolling stock for the Route in the Left hand window, Click 'Confirm Route' before using this option."
             Top             =   960
             Width           =   1575
@@ -1090,7 +1070,7 @@ Begin VB.Form frmUtils
             Caption         =   ".ENG/.WAG file Editor"
             Height          =   495
             Left            =   6120
-            TabIndex        =   195
+            TabIndex        =   194
             Top             =   360
             Width           =   1575
          End
@@ -1098,7 +1078,7 @@ Begin VB.Form frmUtils
             Caption         =   "List Stock for Selected Consists"
             Height          =   495
             Left            =   4560
-            TabIndex        =   184
+            TabIndex        =   183
             Top             =   360
             Width           =   1575
          End
@@ -1106,7 +1086,7 @@ Begin VB.Form frmUtils
             Caption         =   "Fix .CVF Files"
             Height          =   495
             Left            =   6840
-            TabIndex        =   176
+            TabIndex        =   175
             Top             =   1800
             Width           =   1575
          End
@@ -1115,7 +1095,7 @@ Begin VB.Form frmUtils
             Height          =   495
             Index           =   0
             Left            =   120
-            TabIndex        =   110
+            TabIndex        =   109
             ToolTipText     =   "Checks all the Activities"
             Top             =   360
             Width           =   1575
@@ -1124,7 +1104,7 @@ Begin VB.Form frmUtils
             Caption         =   "Check Consists"
             Height          =   495
             Left            =   1680
-            TabIndex        =   109
+            TabIndex        =   108
             ToolTipText     =   "Checks the Consists"
             Top             =   960
             Visible         =   0   'False
@@ -1134,7 +1114,7 @@ Begin VB.Form frmUtils
             Caption         =   "Check  Rolling Stock"
             Height          =   495
             Left            =   3000
-            TabIndex        =   108
+            TabIndex        =   107
             ToolTipText     =   "Checks rolling stock and fixes some errors."
             Top             =   360
             Width           =   1575
@@ -1143,7 +1123,7 @@ Begin VB.Form frmUtils
             Caption         =   "Check Selected Activity"
             Height          =   495
             Left            =   120
-            TabIndex        =   107
+            TabIndex        =   106
             ToolTipText     =   "Checks the Selected Activity only"
             Top             =   960
             Width           =   1575
@@ -1152,7 +1132,7 @@ Begin VB.Form frmUtils
             Caption         =   "Quick consist check"
             Height          =   495
             Left            =   3000
-            TabIndex        =   106
+            TabIndex        =   105
             Top             =   960
             Width           =   1575
          End
@@ -1160,7 +1140,7 @@ Begin VB.Form frmUtils
             Caption         =   "Fix .SMS Files"
             Height          =   495
             Left            =   6840
-            TabIndex        =   105
+            TabIndex        =   104
             ToolTipText     =   "Fixes some alias and filename errors in sms files"
             Top             =   2400
             Width           =   1575
@@ -1179,14 +1159,14 @@ Begin VB.Form frmUtils
             ForeColor       =   &H000000FF&
             Height          =   1695
             Left            =   240
-            TabIndex        =   99
+            TabIndex        =   98
             Top             =   1560
             Width           =   6375
             Begin VB.CommandButton Command142 
                Caption         =   "[2] Fix Wag Names"
                Height          =   495
                Left            =   2160
-               TabIndex        =   230
+               TabIndex        =   229
                Top             =   360
                Width           =   1815
             End
@@ -1194,7 +1174,7 @@ Begin VB.Form frmUtils
                Caption         =   "[ 3 ]   Fix .SD Files"
                Height          =   495
                Left            =   4080
-               TabIndex        =   104
+               TabIndex        =   103
                ToolTipText     =   "Corrects some Case errors in .SD files"
                Top             =   360
                Width           =   1815
@@ -1203,7 +1183,7 @@ Begin VB.Form frmUtils
                Caption         =   "[ 1 ]   Fix .ENG names"
                Height          =   495
                Left            =   240
-               TabIndex        =   103
+               TabIndex        =   102
                ToolTipText     =   "Corrects case errors in .eng files"
                Top             =   360
                Width           =   1815
@@ -1212,7 +1192,7 @@ Begin VB.Form frmUtils
                Caption         =   "[6 ]   Fix .SRV Names"
                Height          =   495
                Left            =   4080
-               TabIndex        =   102
+               TabIndex        =   101
                ToolTipText     =   "Fixes case errors in .srv files"
                Top             =   960
                Width           =   1815
@@ -1221,7 +1201,7 @@ Begin VB.Form frmUtils
                Caption         =   "[ 4 ]   Fix .CON names"
                Height          =   495
                Left            =   240
-               TabIndex        =   101
+               TabIndex        =   100
                ToolTipText     =   "Fixes case errors in .con files"
                Top             =   960
                Width           =   1815
@@ -1230,7 +1210,7 @@ Begin VB.Form frmUtils
                Caption         =   "[5 ]   Fix .ACT Names"
                Height          =   495
                Left            =   2160
-               TabIndex        =   100
+               TabIndex        =   99
                ToolTipText     =   "Fixes case errors in .act files"
                Top             =   960
                Width           =   1815
@@ -1242,14 +1222,14 @@ Begin VB.Form frmUtils
          ForeColor       =   &H000000FF&
          Height          =   3255
          Left            =   -74880
-         TabIndex        =   78
+         TabIndex        =   77
          Top             =   480
          Width           =   11055
          Begin VB.CommandButton Command140 
             Caption         =   "Remove ViewDbSphere from Selected .W files"
             Height          =   495
             Left            =   8760
-            TabIndex        =   228
+            TabIndex        =   227
             Top             =   2640
             Width           =   2055
          End
@@ -1257,7 +1237,7 @@ Begin VB.Form frmUtils
             Caption         =   "Correct Stuck Points"
             Height          =   495
             Left            =   6600
-            TabIndex        =   225
+            TabIndex        =   224
             Top             =   2640
             Width           =   2055
          End
@@ -1265,7 +1245,7 @@ Begin VB.Form frmUtils
             Caption         =   "Find Stuck Points in Route"
             Height          =   495
             Left            =   4440
-            TabIndex        =   224
+            TabIndex        =   223
             Top             =   2640
             Width           =   2055
          End
@@ -1273,7 +1253,7 @@ Begin VB.Form frmUtils
             Caption         =   "Del Shape or Transfer from Selected .W files"
             Height          =   495
             Left            =   8760
-            TabIndex        =   206
+            TabIndex        =   205
             Top             =   2040
             Width           =   2055
          End
@@ -1281,7 +1261,7 @@ Begin VB.Form frmUtils
             Caption         =   "Change .T ErrorBias on tiles with track/roads"
             Height          =   495
             Left            =   120
-            TabIndex        =   200
+            TabIndex        =   199
             Top             =   2640
             Width           =   2055
          End
@@ -1291,7 +1271,7 @@ Begin VB.Form frmUtils
             Height          =   495
             Index           =   0
             Left            =   120
-            TabIndex        =   97
+            TabIndex        =   96
             ToolTipText     =   "Compress the selected  S,T or W files"
             Top             =   240
             Width           =   2055
@@ -1301,7 +1281,7 @@ Begin VB.Form frmUtils
             Height          =   495
             Index           =   0
             Left            =   6600
-            TabIndex        =   96
+            TabIndex        =   95
             ToolTipText     =   "Convert Unicode to Ascii"
             Top             =   240
             Width           =   2055
@@ -1311,7 +1291,7 @@ Begin VB.Form frmUtils
             Height          =   495
             Index           =   1
             Left            =   8760
-            TabIndex        =   95
+            TabIndex        =   94
             ToolTipText     =   "Convert ASCII to Unicode"
             Top             =   240
             Width           =   2055
@@ -1320,7 +1300,7 @@ Begin VB.Form frmUtils
             Caption         =   "Count Objects per tile in Selected Route"
             Height          =   495
             Left            =   120
-            TabIndex        =   94
+            TabIndex        =   93
             ToolTipText     =   "Count all route objects"
             Top             =   1440
             Width           =   2055
@@ -1329,7 +1309,7 @@ Begin VB.Form frmUtils
             Caption         =   "Add LoadAllWaves"
             Height          =   495
             Left            =   2280
-            TabIndex        =   93
+            TabIndex        =   92
             ToolTipText     =   "Adds LoadAllWaves to selected Sound folder"
             Top             =   840
             Width           =   2055
@@ -1338,7 +1318,7 @@ Begin VB.Form frmUtils
             Caption         =   "Edit Unicode"
             Height          =   495
             Left            =   4440
-            TabIndex        =   92
+            TabIndex        =   91
             ToolTipText     =   "Edit Unicode files"
             Top             =   240
             Width           =   2055
@@ -1347,7 +1327,7 @@ Begin VB.Form frmUtils
             Caption         =   "Delete LoadAllWaves"
             Height          =   495
             Left            =   4440
-            TabIndex        =   91
+            TabIndex        =   90
             ToolTipText     =   "Removes LoadAllWaves from folder"
             Top             =   840
             Width           =   2055
@@ -1356,7 +1336,7 @@ Begin VB.Form frmUtils
             Caption         =   "Uncompress all selected  S,T or W Files"
             Height          =   495
             Left            =   2280
-            TabIndex        =   90
+            TabIndex        =   89
             ToolTipText     =   "Uncompresses selected .T files"
             Top             =   240
             Width           =   2055
@@ -1365,7 +1345,7 @@ Begin VB.Form frmUtils
             Caption         =   "Del Shape or Transfer from all .W files"
             Height          =   495
             Left            =   6600
-            TabIndex        =   89
+            TabIndex        =   88
             ToolTipText     =   "Deletes a named shape or transfer from selected route's .W files"
             Top             =   2040
             Width           =   2055
@@ -1374,7 +1354,7 @@ Begin VB.Form frmUtils
             Caption         =   "Copy Shape to another route"
             Height          =   495
             Left            =   6600
-            TabIndex        =   88
+            TabIndex        =   87
             ToolTipText     =   "Copy selected shape and all associated files."
             Top             =   1440
             Width           =   2055
@@ -1383,7 +1363,7 @@ Begin VB.Form frmUtils
             Caption         =   "List all instances of a shape in .W"
             Height          =   495
             Left            =   120
-            TabIndex        =   87
+            TabIndex        =   86
             ToolTipText     =   "Lists all instances of a shape in a route."
             Top             =   2040
             Width           =   2055
@@ -1392,7 +1372,7 @@ Begin VB.Form frmUtils
             Caption         =   "Make tsection.dat"
             Height          =   495
             Left            =   6600
-            TabIndex        =   86
+            TabIndex        =   85
             ToolTipText     =   "Makes a tsection.dat which only includes shapes you have"
             Top             =   840
             Width           =   2055
@@ -1401,7 +1381,7 @@ Begin VB.Form frmUtils
             Caption         =   "Make all files in folder  read/write"
             Height          =   495
             Left            =   120
-            TabIndex        =   85
+            TabIndex        =   84
             ToolTipText     =   "Makes all  files in selected folder and sub-folders  read/write"
             Top             =   840
             Width           =   2055
@@ -1410,7 +1390,7 @@ Begin VB.Form frmUtils
             Caption         =   "Replace Shapes in .W files"
             Height          =   495
             Left            =   4440
-            TabIndex        =   84
+            TabIndex        =   83
             ToolTipText     =   "Replace Shape A with Shape B throughout a Route"
             Top             =   2040
             Width           =   2055
@@ -1419,7 +1399,7 @@ Begin VB.Form frmUtils
             Caption         =   "Set Up a New Route"
             Height          =   495
             Left            =   4440
-            TabIndex        =   83
+            TabIndex        =   82
             ToolTipText     =   "Copies all the files from the Default routes to your new routes and sets up a .ref file"
             Top             =   1440
             Width           =   2055
@@ -1428,7 +1408,7 @@ Begin VB.Form frmUtils
             Caption         =   "Duplicate route with new name"
             Height          =   495
             Left            =   2280
-            TabIndex        =   82
+            TabIndex        =   81
             Top             =   1440
             Width           =   2055
          End
@@ -1436,7 +1416,7 @@ Begin VB.Form frmUtils
             Caption         =   "List .ACE files for Selected .S file"
             Height          =   495
             Left            =   8760
-            TabIndex        =   81
+            TabIndex        =   80
             Top             =   1440
             Width           =   2055
          End
@@ -1444,7 +1424,7 @@ Begin VB.Form frmUtils
             Caption         =   "Replace Forest Textures in .W Files"
             Height          =   495
             Left            =   2280
-            TabIndex        =   80
+            TabIndex        =   79
             Top             =   2040
             Width           =   2055
          End
@@ -1452,7 +1432,7 @@ Begin VB.Form frmUtils
             Caption         =   "Change .T ErrorBias"
             Height          =   495
             Left            =   2280
-            TabIndex        =   79
+            TabIndex        =   78
             ToolTipText     =   "Make all Error Bias entries the same."
             Top             =   2640
             Width           =   2055
@@ -1462,7 +1442,7 @@ Begin VB.Form frmUtils
          Caption         =   "MSTS Utilities"
          Height          =   3735
          Left            =   120
-         TabIndex        =   61
+         TabIndex        =   60
          ToolTipText     =   "Makes a .ref file for a route where no .ref exists"
          Top             =   480
          Width           =   11175
@@ -1470,7 +1450,7 @@ Begin VB.Form frmUtils
             Caption         =   "Change altitude of objects in .W files"
             Height          =   495
             Left            =   9240
-            TabIndex        =   229
+            TabIndex        =   228
             Top             =   2160
             Width           =   1695
          End
@@ -1478,7 +1458,7 @@ Begin VB.Form frmUtils
             Caption         =   "Remove Auto-Gantry items from .w files"
             Height          =   495
             Left            =   9240
-            TabIndex        =   212
+            TabIndex        =   211
             ToolTipText     =   "Remove auto-gantry items from .w files - for Route Authors only."
             Top             =   1560
             Width           =   1695
@@ -1487,7 +1467,7 @@ Begin VB.Form frmUtils
             Caption         =   "Convert Google .kml or .gpx file to  .mkr"
             Height          =   495
             Left            =   7440
-            TabIndex        =   210
+            TabIndex        =   209
             ToolTipText     =   "Converts Google .kml or .gpx files into MSTS Marker files."
             Top             =   1560
             Width           =   1695
@@ -1496,7 +1476,7 @@ Begin VB.Form frmUtils
             Caption         =   "Run Conbuilder"
             Height          =   495
             Left            =   5640
-            TabIndex        =   205
+            TabIndex        =   204
             ToolTipText     =   "Runs Conbuilder on the Instance of MSTS currently running in Route_Riter"
             Top             =   1560
             Width           =   1695
@@ -1505,7 +1485,7 @@ Begin VB.Form frmUtils
             Caption         =   "Compact Global\Shapes"
             Height          =   495
             Left            =   3840
-            TabIndex        =   203
+            TabIndex        =   202
             ToolTipText     =   "Checks the Track items used in all routes and stores those not in use."
             Top             =   1560
             Width           =   1695
@@ -1514,7 +1494,7 @@ Begin VB.Form frmUtils
             Caption         =   "Count objects in World tiles"
             Height          =   495
             Left            =   2040
-            TabIndex        =   202
+            TabIndex        =   201
             ToolTipText     =   "Lists and Counts all object in the selected World tile and the 8 adjacent tiles"
             Top             =   1560
             Width           =   1695
@@ -1523,7 +1503,7 @@ Begin VB.Form frmUtils
             Caption         =   "List Track Sections in Route"
             Height          =   495
             Left            =   240
-            TabIndex        =   201
+            TabIndex        =   200
             ToolTipText     =   "Displays a list of all Track/Road sections used in selected route."
             Top             =   1560
             Width           =   1695
@@ -1532,7 +1512,7 @@ Begin VB.Form frmUtils
             Caption         =   "List Filtered Files"
             Height          =   495
             Left            =   9240
-            TabIndex        =   196
+            TabIndex        =   195
             ToolTipText     =   "Lists all files in accordance with the pattern in the filter box"
             Top             =   960
             Width           =   1695
@@ -1541,7 +1521,7 @@ Begin VB.Form frmUtils
             Caption         =   "Activate/Deactivate Routes"
             Height          =   495
             Left            =   9240
-            TabIndex        =   175
+            TabIndex        =   174
             Top             =   360
             Width           =   1695
          End
@@ -1551,7 +1531,7 @@ Begin VB.Form frmUtils
             Height          =   495
             Left            =   240
             Style           =   1  'Graphical
-            TabIndex        =   77
+            TabIndex        =   76
             ToolTipText     =   "Compress any uncompressed .ace files in route."
             Top             =   960
             Width           =   1695
@@ -1562,7 +1542,7 @@ Begin VB.Form frmUtils
             Height          =   495
             Left            =   3840
             Style           =   1  'Graphical
-            TabIndex        =   76
+            TabIndex        =   75
             ToolTipText     =   "Compresses any uncompressed .S files in selected route"
             Top             =   960
             Width           =   1695
@@ -1573,7 +1553,7 @@ Begin VB.Form frmUtils
             Height          =   495
             Left            =   2040
             Style           =   1  'Graphical
-            TabIndex        =   75
+            TabIndex        =   74
             ToolTipText     =   "Compresses any uncompressed .W files in selected route."
             Top             =   960
             Width           =   1695
@@ -1582,7 +1562,7 @@ Begin VB.Form frmUtils
             Caption         =   "Compact Route"
             Height          =   495
             Left            =   5640
-            TabIndex        =   74
+            TabIndex        =   73
             ToolTipText     =   "Compact the Route by removing Unused files."
             Top             =   360
             Width           =   1695
@@ -1603,7 +1583,7 @@ Begin VB.Form frmUtils
             Left            =   240
             MaskColor       =   &H00C0FFFF&
             Style           =   1  'Graphical
-            TabIndex        =   73
+            TabIndex        =   72
             ToolTipText     =   "Click to confirm Route"
             Top             =   360
             Width           =   1695
@@ -1612,7 +1592,7 @@ Begin VB.Form frmUtils
             Caption         =   "For Route Developers Only:-  "
             Height          =   975
             Left            =   120
-            TabIndex        =   67
+            TabIndex        =   66
             Top             =   2640
             Width           =   10935
             Begin VB.CommandButton Command122 
@@ -1621,7 +1601,7 @@ Begin VB.Form frmUtils
                Height          =   495
                Left            =   7320
                Style           =   1  'Graphical
-               TabIndex        =   197
+               TabIndex        =   196
                ToolTipText     =   "Packs the route as an .exe file using UHARC"
                Top             =   360
                Width           =   1695
@@ -1632,7 +1612,7 @@ Begin VB.Form frmUtils
                Height          =   495
                Left            =   1920
                Style           =   1  'Graphical
-               TabIndex        =   72
+               TabIndex        =   71
                ToolTipText     =   "Write an installation batch file for your route."
                Top             =   360
                Width           =   1695
@@ -1643,7 +1623,7 @@ Begin VB.Form frmUtils
                Height          =   495
                Left            =   120
                Style           =   1  'Graphical
-               TabIndex        =   71
+               TabIndex        =   70
                ToolTipText     =   "Deletes e.raw/n.raw/.bk files"
                Top             =   360
                Width           =   1695
@@ -1654,7 +1634,7 @@ Begin VB.Form frmUtils
                Height          =   495
                Left            =   5520
                Style           =   1  'Graphical
-               TabIndex        =   70
+               TabIndex        =   69
                ToolTipText     =   "Make ZIP file(s) of the route."
                Top             =   360
                Width           =   1695
@@ -1665,7 +1645,7 @@ Begin VB.Form frmUtils
                Height          =   495
                Left            =   3720
                Style           =   1  'Graphical
-               TabIndex        =   69
+               TabIndex        =   68
                ToolTipText     =   "Make a Route Updater to next version."
                Top             =   360
                Width           =   1695
@@ -1676,7 +1656,7 @@ Begin VB.Form frmUtils
                Height          =   495
                Left            =   9120
                Style           =   1  'Graphical
-               TabIndex        =   68
+               TabIndex        =   67
                ToolTipText     =   "Backup World\Tiles\TD\Root folders of Route"
                Top             =   360
                Width           =   1695
@@ -1686,7 +1666,7 @@ Begin VB.Form frmUtils
             Caption         =   "Make Read/Write"
             Height          =   495
             Left            =   2040
-            TabIndex        =   66
+            TabIndex        =   65
             ToolTipText     =   "Make all files on selected route Read/Write"
             Top             =   360
             Width           =   1695
@@ -1695,7 +1675,7 @@ Begin VB.Form frmUtils
             Caption         =   ".Ref File Editor"
             Height          =   495
             Left            =   5640
-            TabIndex        =   65
+            TabIndex        =   64
             Top             =   960
             Width           =   1695
          End
@@ -1703,7 +1683,7 @@ Begin VB.Form frmUtils
             Caption         =   "Make .REF File"
             Height          =   495
             Left            =   7440
-            TabIndex        =   64
+            TabIndex        =   63
             Top             =   960
             Width           =   1695
          End
@@ -1711,7 +1691,7 @@ Begin VB.Form frmUtils
             Caption         =   "Check Route"
             Height          =   495
             Left            =   3840
-            TabIndex        =   63
+            TabIndex        =   62
             Top             =   360
             Width           =   1695
          End
@@ -1719,7 +1699,7 @@ Begin VB.Form frmUtils
             Caption         =   "Make tsection.dat for use with TrainStore"
             Height          =   495
             Left            =   7440
-            TabIndex        =   62
+            TabIndex        =   61
             ToolTipText     =   "Builds a route-specific tsection.dat file for selected route to use with Train-Store."
             Top             =   360
             Width           =   1695
@@ -1728,7 +1708,7 @@ Begin VB.Form frmUtils
       Begin VB.Frame Frame8 
          Height          =   3495
          Left            =   -74760
-         TabIndex        =   40
+         TabIndex        =   39
          ToolTipText     =   "View the selected .s files in MSTSView"
          Top             =   480
          Width           =   11055
@@ -1736,7 +1716,7 @@ Begin VB.Form frmUtils
             Caption         =   "List Shapes which use this .ACE"
             Height          =   495
             Left            =   9240
-            TabIndex        =   209
+            TabIndex        =   208
             Top             =   360
             Width           =   1575
          End
@@ -1744,7 +1724,7 @@ Begin VB.Form frmUtils
             Caption         =   "Show Selected Pictures"
             Height          =   495
             Left            =   4920
-            TabIndex        =   60
+            TabIndex        =   59
             ToolTipText     =   "Display selected graphics files."
             Top             =   2160
             Visible         =   0   'False
@@ -1755,7 +1735,7 @@ Begin VB.Form frmUtils
             Height          =   495
             Index           =   0
             Left            =   480
-            TabIndex        =   59
+            TabIndex        =   58
             Top             =   960
             Width           =   1935
          End
@@ -1764,7 +1744,7 @@ Begin VB.Form frmUtils
             Height          =   495
             Index           =   1
             Left            =   480
-            TabIndex        =   58
+            TabIndex        =   57
             Top             =   1560
             Width           =   1935
          End
@@ -1772,7 +1752,7 @@ Begin VB.Form frmUtils
             Caption         =   "List ACE types"
             Height          =   495
             Left            =   4920
-            TabIndex        =   57
+            TabIndex        =   56
             ToolTipText     =   "Lists all selected .ace files and shows whether or not compressed and file type."
             Top             =   960
             Width           =   1935
@@ -1781,7 +1761,7 @@ Begin VB.Form frmUtils
             Caption         =   "Compress all .ACE files in selected folder."
             Height          =   495
             Left            =   2640
-            TabIndex        =   56
+            TabIndex        =   55
             ToolTipText     =   "Compress the selected .ACE files"
             Top             =   360
             Width           =   1935
@@ -1792,7 +1772,7 @@ Begin VB.Form frmUtils
             Height          =   495
             Index           =   3
             Left            =   4920
-            TabIndex        =   55
+            TabIndex        =   54
             ToolTipText     =   "Make a standard .ACE file from .bmp or .tga file."
             Top             =   360
             Width           =   1935
@@ -1803,7 +1783,7 @@ Begin VB.Form frmUtils
             Height          =   495
             Index           =   4
             Left            =   2640
-            TabIndex        =   54
+            TabIndex        =   53
             ToolTipText     =   "Make a compressed .ACE file from .bmp or .tga file."
             Top             =   960
             Width           =   1935
@@ -1814,7 +1794,7 @@ Begin VB.Form frmUtils
             Height          =   495
             Index           =   5
             Left            =   2640
-            TabIndex        =   53
+            TabIndex        =   52
             ToolTipText     =   "Make a compressed .ACE file from .bmp or .tga file."
             Top             =   1560
             Width           =   1935
@@ -1823,7 +1803,7 @@ Begin VB.Form frmUtils
             Caption         =   "Slide-Show Settings"
             Height          =   975
             Left            =   480
-            TabIndex        =   49
+            TabIndex        =   48
             Top             =   2160
             Visible         =   0   'False
             Width           =   4095
@@ -1831,7 +1811,7 @@ Begin VB.Form frmUtils
                Caption         =   "Slide-Show of Selected Folder"
                Height          =   615
                Left            =   1800
-               TabIndex        =   51
+               TabIndex        =   50
                ToolTipText     =   "Show all graphics in selected folder in slide-show."
                Top             =   240
                Width           =   2055
@@ -1840,7 +1820,7 @@ Begin VB.Form frmUtils
                Alignment       =   2  'Center
                Height          =   285
                Left            =   120
-               TabIndex        =   50
+               TabIndex        =   49
                Text            =   "4"
                Top             =   240
                Width           =   375
@@ -1849,7 +1829,7 @@ Begin VB.Form frmUtils
                Caption         =   "Delay"
                Height          =   495
                Left            =   600
-               TabIndex        =   52
+               TabIndex        =   51
                Top             =   240
                Width           =   1095
             End
@@ -1858,7 +1838,7 @@ Begin VB.Form frmUtils
             Caption         =   "View .S File"
             Height          =   495
             Left            =   4920
-            TabIndex        =   48
+            TabIndex        =   47
             ToolTipText     =   "Display .s file in 3D mode including its texture"
             Top             =   1560
             Width           =   1935
@@ -1867,7 +1847,7 @@ Begin VB.Form frmUtils
             Caption         =   "Convert Selected files to DXT1"
             Height          =   495
             Left            =   480
-            TabIndex        =   47
+            TabIndex        =   46
             ToolTipText     =   "Convert selected .ace files to DXT1 compression"
             Top             =   360
             Width           =   1935
@@ -1877,7 +1857,7 @@ Begin VB.Form frmUtils
             Height          =   495
             Index           =   0
             Left            =   7080
-            TabIndex        =   46
+            TabIndex        =   45
             ToolTipText     =   "Display all graphics in folder using T-View"
             Top             =   2160
             Width           =   1935
@@ -1887,7 +1867,7 @@ Begin VB.Form frmUtils
             Height          =   495
             Index           =   1
             Left            =   7080
-            TabIndex        =   45
+            TabIndex        =   44
             ToolTipText     =   "Display all graphics in folder using T-View"
             Top             =   1560
             Width           =   1935
@@ -1896,7 +1876,7 @@ Begin VB.Form frmUtils
             Caption         =   "Retrieve Saved Pictures"
             Height          =   495
             Left            =   7080
-            TabIndex        =   44
+            TabIndex        =   43
             ToolTipText     =   "Display pictures of shapes which have been saved."
             Top             =   2760
             Width           =   1935
@@ -1905,7 +1885,7 @@ Begin VB.Form frmUtils
             Caption         =   "List all Filtered Files"
             Height          =   495
             Left            =   7080
-            TabIndex        =   43
+            TabIndex        =   42
             ToolTipText     =   "Lists all files according to the filter box, includes sub-folders."
             Top             =   360
             Width           =   1935
@@ -1916,7 +1896,7 @@ Begin VB.Form frmUtils
             Height          =   495
             Left            =   7080
             Style           =   1  'Graphical
-            TabIndex        =   42
+            TabIndex        =   41
             Top             =   360
             Visible         =   0   'False
             Width           =   1935
@@ -1925,7 +1905,7 @@ Begin VB.Form frmUtils
             Caption         =   "Include CabView Folder"
             Height          =   375
             Left            =   7080
-            TabIndex        =   41
+            TabIndex        =   40
             Top             =   960
             Width           =   1575
          End
@@ -1933,14 +1913,14 @@ Begin VB.Form frmUtils
       Begin VB.Frame Frame10 
          Height          =   2895
          Left            =   -74400
-         TabIndex        =   28
+         TabIndex        =   27
          Top             =   1200
          Width           =   9375
          Begin VB.CommandButton Command57 
             Caption         =   "Raise or Lower Track (mveobj)"
             Height          =   495
             Left            =   3840
-            TabIndex        =   233
+            TabIndex        =   232
             Top             =   2040
             Width           =   1695
          End
@@ -1959,7 +1939,7 @@ Begin VB.Form frmUtils
             Height          =   495
             Left            =   240
             Style           =   1  'Graphical
-            TabIndex        =   232
+            TabIndex        =   231
             Top             =   2040
             Width           =   2055
          End
@@ -1967,7 +1947,7 @@ Begin VB.Form frmUtils
             Caption         =   "Log Signals in Route (srchsig)"
             Height          =   495
             Left            =   7440
-            TabIndex        =   227
+            TabIndex        =   226
             Top             =   1440
             Width           =   1695
          End
@@ -1975,7 +1955,7 @@ Begin VB.Form frmUtils
             Caption         =   "Remove .t where no .w exists"
             Height          =   495
             Left            =   7440
-            TabIndex        =   226
+            TabIndex        =   225
             ToolTipText     =   "If no .w file exists, the corresponding .t file is moved to RRBackups folder"
             Top             =   840
             Width           =   1695
@@ -1995,7 +1975,7 @@ Begin VB.Form frmUtils
             Height          =   495
             Left            =   7080
             Style           =   1  'Graphical
-            TabIndex        =   215
+            TabIndex        =   214
             ToolTipText     =   "Allows you to use all of the TsUtils commands manually"
             Top             =   2040
             Width           =   2055
@@ -2004,7 +1984,7 @@ Begin VB.Form frmUtils
             Caption         =   "Use CVRT to fix Soundsources"
             Height          =   495
             Left            =   7440
-            TabIndex        =   211
+            TabIndex        =   210
             ToolTipText     =   "Where possible correctly places SoundSources in a route"
             Top             =   240
             Width           =   1695
@@ -2013,7 +1993,7 @@ Begin VB.Form frmUtils
             Caption         =   "Show TsUtil Version"
             Height          =   495
             Left            =   5640
-            TabIndex        =   194
+            TabIndex        =   193
             ToolTipText     =   "Displays the version numbers of all TsUtil files"
             Top             =   240
             Width           =   1695
@@ -2022,7 +2002,7 @@ Begin VB.Form frmUtils
             Caption         =   "Check Integrity of Route (ICHK)"
             Height          =   495
             Left            =   2040
-            TabIndex        =   39
+            TabIndex        =   38
             ToolTipText     =   "Checks .tdb .rdb .tit .rit etc files"
             Top             =   240
             Width           =   1695
@@ -2034,7 +2014,7 @@ Begin VB.Form frmUtils
             Index           =   0
             Left            =   240
             Style           =   1  'Graphical
-            TabIndex        =   38
+            TabIndex        =   37
             ToolTipText     =   "Click to confirm Route"
             Top             =   240
             Width           =   1695
@@ -2043,7 +2023,7 @@ Begin VB.Form frmUtils
             Caption         =   "Move a Route to new Lat/Long (MOVE)"
             Height          =   495
             Left            =   240
-            TabIndex        =   37
+            TabIndex        =   36
             ToolTipText     =   "Moves a route to a new position"
             Top             =   1440
             Width           =   1695
@@ -2052,7 +2032,7 @@ Begin VB.Form frmUtils
             Caption         =   "Modify RDB/TDB (RENDB)"
             Height          =   495
             Left            =   3840
-            TabIndex        =   36
+            TabIndex        =   35
             ToolTipText     =   "Repair tdb/rdb which has had  faulty Track Nodes manually deleted."
             Top             =   840
             Width           =   1695
@@ -2061,7 +2041,7 @@ Begin VB.Form frmUtils
             Caption         =   "Change refs in TDB (CHGDB)"
             Height          =   495
             Left            =   240
-            TabIndex        =   35
+            TabIndex        =   34
             ToolTipText     =   "Attempts to repair a faulty .tdb file"
             Top             =   840
             Width           =   1695
@@ -2070,7 +2050,7 @@ Begin VB.Form frmUtils
             Caption         =   "Change Route Altitude (ADJH)"
             Height          =   495
             Left            =   2040
-            TabIndex        =   34
+            TabIndex        =   33
             ToolTipText     =   "Changes the altitude of a route"
             Top             =   1440
             Width           =   1695
@@ -2079,7 +2059,7 @@ Begin VB.Form frmUtils
             Caption         =   "Check new tsection.dat (CHKUP)"
             Height          =   495
             Left            =   2040
-            TabIndex        =   33
+            TabIndex        =   32
             ToolTipText     =   "Checks that a new Global tsection.dat is compatible with the original one used by a route."
             Top             =   840
             Width           =   1695
@@ -2088,7 +2068,7 @@ Begin VB.Form frmUtils
             Caption         =   "Modify Route for new tsection.dat (cvrt)"
             Height          =   495
             Left            =   5640
-            TabIndex        =   32
+            TabIndex        =   31
             ToolTipText     =   "Similar to the Horace.exe program"
             Top             =   840
             Width           =   1695
@@ -2097,7 +2077,7 @@ Begin VB.Form frmUtils
             Caption         =   "Check Tile Definitions (Filter)"
             Height          =   495
             Left            =   3840
-            TabIndex        =   31
+            TabIndex        =   30
             ToolTipText     =   "Removes unused tiles from the TD file."
             Top             =   1440
             Width           =   1695
@@ -2106,7 +2086,7 @@ Begin VB.Form frmUtils
             Caption         =   "Merge Routes (Merge)"
             Height          =   495
             Left            =   5640
-            TabIndex        =   30
+            TabIndex        =   29
             ToolTipText     =   "Merges two routes."
             Top             =   1440
             Width           =   1695
@@ -2115,7 +2095,7 @@ Begin VB.Form frmUtils
             Caption         =   "Reorg .tdb/.rdb (CLRDB)"
             Height          =   495
             Left            =   3840
-            TabIndex        =   29
+            TabIndex        =   28
             ToolTipText     =   "Reorganizes .tdb/.rdb files"
             Top             =   240
             Width           =   1695
@@ -2124,7 +2104,7 @@ Begin VB.Form frmUtils
       Begin MSComctlLib.StatusBar SB2 
          Height          =   375
          Left            =   -74640
-         TabIndex        =   26
+         TabIndex        =   25
          Top             =   4080
          Width           =   8055
          _ExtentX        =   14208
@@ -2147,7 +2127,7 @@ Begin VB.Form frmUtils
       Begin MSComctlLib.StatusBar SB1 
          Height          =   375
          Left            =   120
-         TabIndex        =   27
+         TabIndex        =   26
          Top             =   4320
          Width           =   9855
          _ExtentX        =   17383
@@ -2190,7 +2170,7 @@ Begin VB.Form frmUtils
          Height          =   255
          Index           =   6
          Left            =   -64440
-         TabIndex        =   193
+         TabIndex        =   192
          Top             =   3240
          Width           =   615
       End
@@ -2201,7 +2181,7 @@ Begin VB.Form frmUtils
          Height          =   255
          Index           =   5
          Left            =   -65400
-         TabIndex        =   192
+         TabIndex        =   191
          Top             =   3240
          Width           =   855
       End
@@ -2212,7 +2192,7 @@ Begin VB.Form frmUtils
          Height          =   255
          Index           =   0
          Left            =   -65400
-         TabIndex        =   143
+         TabIndex        =   142
          Top             =   960
          Width           =   855
       End
@@ -2223,7 +2203,7 @@ Begin VB.Form frmUtils
          Height          =   255
          Index           =   1
          Left            =   -65400
-         TabIndex        =   142
+         TabIndex        =   141
          Top             =   1320
          Width           =   855
       End
@@ -2232,7 +2212,7 @@ Begin VB.Form frmUtils
          Height          =   255
          Index           =   0
          Left            =   -64440
-         TabIndex        =   141
+         TabIndex        =   140
          Top             =   960
          Width           =   855
       End
@@ -2241,7 +2221,7 @@ Begin VB.Form frmUtils
          Height          =   255
          Index           =   1
          Left            =   -64440
-         TabIndex        =   140
+         TabIndex        =   139
          Top             =   1320
          Width           =   855
       End
@@ -2252,7 +2232,7 @@ Begin VB.Form frmUtils
          Height          =   255
          Index           =   2
          Left            =   -65400
-         TabIndex        =   139
+         TabIndex        =   138
          Top             =   1680
          Width           =   855
       End
@@ -2263,7 +2243,7 @@ Begin VB.Form frmUtils
          Height          =   255
          Index           =   3
          Left            =   -65400
-         TabIndex        =   138
+         TabIndex        =   137
          Top             =   2040
          Width           =   855
       End
@@ -2274,7 +2254,7 @@ Begin VB.Form frmUtils
          Height          =   255
          Index           =   4
          Left            =   -65400
-         TabIndex        =   137
+         TabIndex        =   136
          Top             =   2400
          Width           =   855
       End
@@ -2283,7 +2263,7 @@ Begin VB.Form frmUtils
          Height          =   255
          Index           =   4
          Left            =   -64440
-         TabIndex        =   136
+         TabIndex        =   135
          Top             =   2460
          Width           =   615
       End
@@ -2292,7 +2272,7 @@ Begin VB.Form frmUtils
          Height          =   255
          Index           =   2
          Left            =   -64440
-         TabIndex        =   135
+         TabIndex        =   134
          Top             =   1680
          Width           =   615
       End
@@ -2301,7 +2281,7 @@ Begin VB.Form frmUtils
          Height          =   255
          Index           =   3
          Left            =   -64440
-         TabIndex        =   134
+         TabIndex        =   133
          Top             =   2040
          Width           =   615
       End
@@ -2311,7 +2291,7 @@ Begin VB.Form frmUtils
          BorderStyle     =   1  'Fixed Single
          Height          =   255
          Left            =   -65400
-         TabIndex        =   133
+         TabIndex        =   132
          Top             =   2820
          Width           =   855
       End
@@ -2320,7 +2300,7 @@ Begin VB.Form frmUtils
          Height          =   255
          Index           =   5
          Left            =   -64440
-         TabIndex        =   132
+         TabIndex        =   131
          Top             =   2820
          Width           =   615
       End
@@ -2329,7 +2309,7 @@ Begin VB.Form frmUtils
          BorderStyle     =   1  'Fixed Single
          Height          =   375
          Left            =   -74160
-         TabIndex        =   131
+         TabIndex        =   130
          Top             =   3960
          Visible         =   0   'False
          Width           =   8775
@@ -2339,7 +2319,7 @@ Begin VB.Form frmUtils
          BorderStyle     =   1  'Fixed Single
          Height          =   315
          Left            =   -72600
-         TabIndex        =   130
+         TabIndex        =   129
          ToolTipText     =   "File being processed"
          Top             =   5280
          Visible         =   0   'False
@@ -2350,7 +2330,7 @@ Begin VB.Form frmUtils
          BorderStyle     =   1  'Fixed Single
          Height          =   375
          Left            =   -72720
-         TabIndex        =   129
+         TabIndex        =   128
          Top             =   4560
          Width           =   5895
       End
@@ -31469,8 +31449,7 @@ frmInternet.Show
 End Sub
 
 Private Sub mnuHome_Click()
-flagInternet = 2
-frmInternet.Show
+
 End Sub
 
 Private Sub mnuPath_Click()
@@ -31533,12 +31512,6 @@ If strTrainStore <> vbNullString Then
 retval = Shell(strTrainStore, 1)
 End If
 SaveSetting "Route_Riter6", "Trainstore", "Trainstore", strTrainStore
-End Sub
-
-
-Private Sub mnuUpdates_Click()
-flagInternet = 2
-frmInternet.Show
 End Sub
 
 Private Sub SSTab1_Click(PreviousTab As Integer)
