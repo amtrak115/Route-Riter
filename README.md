@@ -18,11 +18,15 @@
    - **Disc3**: https://archive.org/details/MSDN_Library_October_2001_Disc_3
  - Install Service Pack 6
  
+ - Install [Microsoft Visual Basic 6.0 Service Pack 6 Cumulative Update](https://www.microsoft.com/en-us/download/details.aspx?id=7030)
+ 
+ - Install [Microsoft Visual Basic 6.0 Service Pack 6 Security Rollup Update](https://www.microsoft.com/en-us/download/details.aspx?id=50722)
+ 
  - Install [Code Advisor](https://www.microsoft.com/en-US/download/details.aspx?id=1222) (Optional)
 
  - Install [vb6mousewheelfix](https://github.com/FrannDzs/Route-Riter/blob/main-(7.6.27)/Others/vb6mousewheelfix.exe)
 
- - Install [Microsoft Visual Basic 6.0 Common Controls Update](https://www.microsoft.com/en-US/download/details.aspx?id=10019)
+ 
 
  - Install C1 Controls. 
  
