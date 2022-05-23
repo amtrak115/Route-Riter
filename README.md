@@ -7,12 +7,12 @@
 
 ## *This repository is under reconstruction.*
 
-# Compiling
+# Pre-requisites:
 - Download [Visual Basic 6.0](https://winworldpc.com/product/microsoft-visual-bas/60) or [Visual Studio 6.0](https://winworldpc.com/product/microsoft-visual-stu/60) with its corresponding [Service Pack 6](https://winworldpc.com/download/a4208baa-aaee-11eb-bc5b-0200008a0da4).
 
  - Download [MSDN Library](https://winworldpc.com/product/msdn/vs-60) (Optional)
    
- - Install VB6 and MSDN Library. If you are using Windows 10 there is a special procedure to install VB6. Use the [Visual Studio 6.0 Installer Wizard](https://github.com/FrannDzs/Route-Riter/blob/main-(7.6.27)/VS6InstallerSetup.exe). > How to proceed [(Video-tutorial)](https://www.youtube.com/watch?v=1tkTb6AYlAg)
+ - Install VB6 and MSDN Library. If you are using Windows 10 there is a special procedure to install VB6. Use the [Visual Studio 6.0 Installer Wizard](https://github.com/FrannDzs/Route-Riter/blob/main-(7.6.26)/VS6InstallerSetup.exe). > How to proceed [(Video-tutorial)](https://www.youtube.com/watch?v=1tkTb6AYlAg)
  - After downloading and install the MSDN library you can install the following update for it:
 - **MSDN Latest Version Update**: 
    - **Disc1**: https://archive.org/details/MSDN_Library_October_2001_Disc_1 
@@ -23,17 +23,24 @@
  - Install [Microsoft Visual Basic 6.0 Service Pack 6 Cumulative Update](https://www.microsoft.com/en-us/download/details.aspx?id=7030)
  
  - Install [Microsoft Visual Basic 6.0 Service Pack 6 Security Rollup Update](https://www.microsoft.com/en-us/download/details.aspx?id=50722)
+   
+ - Install C1 Controls manually with [cabs files](https://github.com/FrannDzs/Route-Riter/tree/main-(7.6.26)/Source/Dependancies/ComponentOne%20Installers) or with [.ocx files](https://github.com/FrannDzs/Route-Riter/tree/main-(7.6.26)/Source/Dependancies/ComponentOne%20.ocx), or better make an installation from the [installers.](https://github.com/FrannDzs/Route-Riter/tree/main-(7.6.26)/Source/Dependancies/ComponentOne%20Installers)
  
- - Install [Code Advisor](https://www.microsoft.com/en-US/download/details.aspx?id=1222) (Optional)
+If you have problems loading the vsflex8l.ocx vsprint.ocx and c1sizer.ocx controls in visual basic try copying and registering them in both system directories: /system32 and /SysWOW64 
 
- - Install [vb6mousewheelfix](https://github.com/FrannDzs/Route-Riter/blob/main-(7.6.27)/Others/vb6mousewheelfix.exe)
+## Recommended addins/tools for VB6 IDE:
 
- 
+ - [Code Advisor](https://www.microsoft.com/en-US/download/details.aspx?id=1222) (Optional)
 
- - Install C1 Controls. 
- 
-If you have problems loading the vsflex8l.ocx vsprint.ocx and c1sizer.ocx controls in visual basic try copying and registering them in both system directories: /system32 and /SysWow64 manually with [cabs files](https://github.com/FrannDzs/Route-Riter/tree/main-(7.6.27)/Source/Dependancies/ComponentOne%20Installers) or with [.ocx files](https://github.com/FrannDzs/Route-Riter/tree/main-(7.6.27)/Source/Dependancies/ComponentOne%20.ocx) . Or better make an installation from the [installers.](https://github.com/FrannDzs/Route-Riter/tree/main-(7.6.27)/Source/Dependancies/ComponentOne%20Installers)
+ - [vb6mousewheelfix](https://github.com/FrannDzs/Route-Riter/blob/main-(7.6.27)/Others/vb6mousewheelfix.exe)
 
+ - [MZ-Tools 8.0](https://www.mztools.com/v8/mztools8.aspx) (Recommended)
+
+ - [CodeSMART](https://www.axtools.com/products-codesmart-vb6.php) (Recommended)
+
+ - [Codejock Extreme Controls ActiveX](https://www.componentsource.com/es/product/codejock-xtreme-controls-activex)
+
+# Run compiling
  - Run Visual Basic 6.0, choose the option to load existing project and choose Route_Riter7.vbp to load the project.
  
  - Make the necessary changes and run with F5 or ctrl + F5 to run with a complete compilation.
@@ -45,8 +52,8 @@ If you have problems loading the vsflex8l.ocx vsprint.ocx and c1sizer.ocx contro
  - Drop the compiled executable to the Release folder
 
 # After compiling the project 
- - Extract all compressed files from [./Release/Dependancies](https://github.com/FrannDzs/Route-Riter/tree/main-(7.6.27)/Release/Dependancies) directory to the root of the Release folder. 
- Install [mwgfxdll.exe.](https://github.com/FrannDzs/Route-Riter/blob/main-(7.6.27)/Release/mwgfxdll.exe)
+ - Extract all compressed files from [./Release/Dependancies](https://github.com/FrannDzs/Route-Riter/tree/main-(7.6.26)/Release/Dependancies) directory to the root of the Release folder. 
+ Install [mwgfxdll.exe.](https://github.com/FrannDzs/Route-Riter/blob/main-(7.6.26)/Release/mwgfxdll.exe)
 
 # Development plans
  - Improve the current code following the original direction.
@@ -59,10 +66,6 @@ If you have problems loading the vsflex8l.ocx vsprint.ocx and c1sizer.ocx contro
 - Change the user interface to an inductive user interface, https://msdn.microsoft.com/en-us/library/ms997506.aspx
 
 - Fully parse the Microsoft Train Simulator files by adapting an XML parser, http://pugixml.org/
-
-# Dependancies:
-- ComponentOne
-- VB6
 
 # Credits:
 © Mike Simpson
