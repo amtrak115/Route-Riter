@@ -38,7 +38,9 @@ If you have problems loading the vsflex8l.ocx vsprint.ocx and c1sizer.ocx contro
 
  - [CodeSMART](https://www.axtools.com/products-codesmart-vb6.php) (Recommended)
 
- - [Codejock Extreme Controls ActiveX](https://www.componentsource.com/es/product/codejock-xtreme-controls-activex)
+ - [Codejock Extreme Controls ActiveX](https://www.componentsource.com/es/product/codejock-xtreme-controls-activex) (Recommended)
+
+ - [ModernVB](https://github.com/VykosX/ModernVB) (Recommended)
 
 # Run compiling
  - Run Visual Basic 6.0, choose the option to load existing project and choose Route_Riter7.vbp to load the project.
