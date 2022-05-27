@@ -7,7 +7,7 @@
 
 ## *This repository is under reconstruction.*
 
-# Pre-requisites:
+# 1. Pre-requisites:
 - Download [Visual Basic 6.0](https://winworldpc.com/product/microsoft-visual-bas/60) or [Visual Studio 6.0](https://winworldpc.com/product/microsoft-visual-stu/60)
 
  - Download [MSDN Library](https://winworldpc.com/product/msdn/vs-60) (Optional)
@@ -37,21 +37,43 @@
  
 If you have problems loading the vsflex8l.ocx vsprint.ocx and c1sizer.ocx controls in visual basic try copying and registering them in both system directories: /system32 and /SysWOW64 
 
-## Recommended addins/tools for VB6 IDE:
+# 2. Recommended/Interest addins/tools for VB6 IDE:
 
  - [Code Advisor](https://www.microsoft.com/en-US/download/details.aspx?id=1222) (Optional)
 
- - [vb6mousewheelfix](https://github.com/FrannDzs/Route-Riter/blob/main-(7.6.27)/Others/vb6mousewheelfix.exe)
+ - [Visual Basic 6 Mouse Wheel Fix](https://github.com/FrannDzs/Route-Riter/blob/main-(7.6.27)/Others/vb6mousewheelfix.exe)
 
  - [MZ-Tools 8.0](https://www.mztools.com/v8/mztools8.aspx) (Recommended)
 
  - [CodeSMART](https://www.axtools.com/products-codesmart-vb6.php) (Recommended)
 
- - [Codejock Extreme Controls ActiveX](https://www.componentsource.com/es/product/codejock-xtreme-controls-activex) (Recommended)
+ - [Codejock Suite Pro for ActiveX](https://codejock.com/products/suitepro/?2yn6s14z=p1z) (Recommended)
 
  - [ModernVB](https://github.com/VykosX/ModernVB) (Recommended)
 
-# Run compiling
+ - [OLEEXP : Modern Shell Interfaces](https://www.vbforums.com/showthread.php?786079-VB6-Modern-Shell-Interface-Type-Library-oleexp-tlb)
+
+ - [DX9VB](https://github.com/thetrik/DX9VB)
+
+ - [VbTrickMultiThreading](https://github.com/thetrik/VbTrickThreading)
+
+ - [VbTrickTimer](https://github.com/thetrik/VbTrickTimer)
+ 
+ - [VB64bitDLLusage](https://github.com/thetrik/Vb64BitDllUsage)
+
+ - [VBPNG](https://github.com/thetrik/VbPng)
+
+ - [DeleteVbwFiles](https://github.com/EduardoVB/VB6-AddIn-Delete-vbw-Files)
+
+ - [VB6NAMESPACES](https://github.com/WindowStations/VB6NameSpaces)
+
+ - [VB6 PORTER](https://github.com/VBForumsCommunity/VB6Porter)
+
+ - [VBSQlite](https://github.com/Kr00l/VBSQLite)
+
+ - [VB Common Controls Replacement Library](https://github.com/Kr00l/VBCCR)
+
+# 3. Run compiling
  - Run Visual Basic 6.0, choose the option to load existing project and choose Route_Riter7.vbp to load the project.
  
  - Make the necessary changes and run with F5 or ctrl + F5 to run with a complete compilation.
@@ -62,7 +84,7 @@ If you have problems loading the vsflex8l.ocx vsprint.ocx and c1sizer.ocx contro
 
  - Drop the compiled executable to the Release folder
 
-# After compiling the project 
+# 4. After compiling the project 
  - Extract all compressed files from [./Release/Dependancies](https://github.com/FrannDzs/Route-Riter/tree/main-(7.6.26)/Release/Dependancies) directory to the root of the Release folder. 
  Install [mwgfxdll.exe.](https://github.com/FrannDzs/Route-Riter/blob/main-(7.6.26)/Release/mwgfxdll.exe)
 
