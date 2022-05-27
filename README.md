@@ -8,17 +8,26 @@
 ## *This repository is under reconstruction.*
 
 # Pre-requisites:
-- Download [Visual Basic 6.0](https://winworldpc.com/product/microsoft-visual-bas/60) or [Visual Studio 6.0](https://winworldpc.com/product/microsoft-visual-stu/60) with its corresponding [Service Pack 6.](https://web.archive.org/web/20120707200906/http://download.microsoft.com/download/1/9/f/19fe4660-5792-4683-99e0-8d48c22eed74/Vs6sp6.exe)
+- Download [Visual Basic 6.0](https://winworldpc.com/product/microsoft-visual-bas/60) or [Visual Studio 6.0](https://winworldpc.com/product/microsoft-visual-stu/60)
 
  - Download [MSDN Library](https://winworldpc.com/product/msdn/vs-60) (Optional)
    
- - Install VB6 and MSDN Library. If you are using Windows 10 there is a special procedure to install VB6. Use the [Visual Studio 6.0 Installer Wizard](https://github.com/FrannDzs/Route-Riter/blob/main-(7.6.26)/VS6InstallerSetup.exe). > How to proceed [(Video-tutorial)](https://www.youtube.com/watch?v=1tkTb6AYlAg)
- - After downloading and install the MSDN library you can install the following update for it:
+    ***I assume you are running Windows 10 64 bit***
+ 
+- Install Visual Studio 6 and MSDN Library.
+
+*There is a special procedure to install Visual Studio 6 in Windows 10. Use the* [Visual Studio 6 Installer Wizard v5.0](https://github.com/FrannDzs/Route-Riter/blob/main-(7.6.26)/VS6InstallerSetup.exe)
+
+**How to proceed**
+- [(Video-tutorial)](https://www.youtube.com/watch?v=1tkTb6AYlAg)
+- [Manual installation tutorial](https://www.codeproject.com/Articles/1191047/Install-Visual-Studio-on-Windows)
+
+**After downloading and install the MSDN library you can install the following update for it:
 - **MSDN Latest Version Update**: 
    - **Disc1**: https://archive.org/details/MSDN_Library_October_2001_Disc_1 
    - **Disc2**: https://archive.org/details/MSDN_Library_October_2001_Disc_2 
    - **Disc3**: https://archive.org/details/MSDN_Library_October_2001_Disc_3
- - Install Service Pack 6
+ - Install [Service Pack 6](https://web.archive.org/web/20120707200906/http://download.microsoft.com/download/1/9/f/19fe4660-5792-4683-99e0-8d48c22eed74/Vs6sp6.exe)
  
  - Install [Microsoft Visual Basic 6.0 Service Pack 6 Cumulative Update](https://www.microsoft.com/en-us/download/details.aspx?id=7030)
  
@@ -73,7 +82,7 @@ If you have problems loading the vsflex8l.ocx vsprint.ocx and c1sizer.ocx contro
 © Mike Simpson
 virtualtrains@tpg.com
 
-© Jeffrey Kraus-Yao
+© Jeffrey Kraus
 http://www.digital-rails.com
 support@digital-rails.com
 
@@ -126,6 +135,16 @@ jhsulliv@comcast.net
 © Giorgio Brausi
 VS6Installer 
 http://nuke.vbcorner.net/VS6Installer/tabid/125/language/en-US/Default.aspx
+
+© UPX Packer
+upx.exe
+https://upx.github.io/
+
+© Okrasa Ghia
+FCalc
+okrasaghia@yahoo.com
+
+And much more.
 
 # License:
 
