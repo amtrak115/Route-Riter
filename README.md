@@ -71,6 +71,8 @@ If you have problems loading the vsflex8l.ocx vsprint.ocx and c1sizer.ocx contro
 
  - [VBSQlite](https://github.com/Kr00l/VBSQLite)
 
+ - [VB Common Controls Replacement Library](https://github.com/Kr00l/VBCCR)
+
 # 3. Run compiling
  - Run Visual Basic 6.0, choose the option to load existing project and choose Route_Riter7.vbp to load the project.
  
