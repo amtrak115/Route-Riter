@@ -82,7 +82,7 @@ If you have problems loading the vsflex8l.ocx vsprint.ocx and c1sizer.ocx contro
 © Mike Simpson
 virtualtrains@tpg.com
 
-© Jeffrey Kraus-Yao
+© Jeffrey Kraus
 http://www.digital-rails.com
 support@digital-rails.com
 
@@ -140,7 +140,7 @@ http://nuke.vbcorner.net/VS6Installer/tabid/125/language/en-US/Default.aspx
 upx.exe
 https://upx.github.io/
 
-©Okrasa Ghia
+© Okrasa Ghia
 FCalc
 okrasaghia@yahoo.com
 
