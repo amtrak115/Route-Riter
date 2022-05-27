@@ -53,6 +53,24 @@ If you have problems loading the vsflex8l.ocx vsprint.ocx and c1sizer.ocx contro
 
  - [OLEEXP : Modern Shell Interfaces](https://www.vbforums.com/showthread.php?786079-VB6-Modern-Shell-Interface-Type-Library-oleexp-tlb)
 
+ - [DX9VB](https://github.com/thetrik/DX9VB)
+
+ - [VbTrickMultiThreading](https://github.com/thetrik/VbTrickThreading)
+
+ - [VbTrickTimer](https://github.com/thetrik/VbTrickTimer)
+ 
+ - [VB64bitDLLusage](https://github.com/thetrik/Vb64BitDllUsage)
+
+ - [VBPNG](https://github.com/thetrik/VbPng)
+
+ - [DeleteVbwFiles](https://github.com/EduardoVB/VB6-AddIn-Delete-vbw-Files)
+
+ - [VB6NAMESPACES](https://github.com/WindowStations/VB6NameSpaces)
+
+ - [VB6 PORTER](https://github.com/VBForumsCommunity/VB6Porter)
+
+ - [VBSQlite](https://github.com/Kr00l/VBSQLite)
+
 # Run compiling
  - Run Visual Basic 6.0, choose the option to load existing project and choose Route_Riter7.vbp to load the project.
  
