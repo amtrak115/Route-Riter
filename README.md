@@ -47,7 +47,7 @@ If you have problems loading the vsflex8l.ocx vsprint.ocx and c1sizer.ocx contro
 
  - [CodeSMART](https://www.axtools.com/products-codesmart-vb6.php) (Recommended)
 
- - [Codejock Suite Pro for ActiveX]([https://www.componentsource.com/es/product/codejock-xtreme-controls-activex](https://codejock.com/products/suitepro/?2yn6s14z=p1z)) (Recommended)
+ - [Codejock Suite Pro for ActiveX](https://codejock.com/products/suitepro/?2yn6s14z=p1z) (Recommended)
 
  - [ModernVB](https://github.com/VykosX/ModernVB) (Recommended)
 
