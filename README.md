@@ -37,19 +37,21 @@
  
 If you have problems loading the vsflex8l.ocx vsprint.ocx and c1sizer.ocx controls in visual basic try copying and registering them in both system directories: /system32 and /SysWOW64 
 
-## Recommended addins/tools for VB6 IDE:
+## Recommended/Interest addins/tools for VB6 IDE:
 
  - [Code Advisor](https://www.microsoft.com/en-US/download/details.aspx?id=1222) (Optional)
 
- - [vb6mousewheelfix](https://github.com/FrannDzs/Route-Riter/blob/main-(7.6.27)/Others/vb6mousewheelfix.exe)
+ - [Visual Basic 6 Mouse Wheel Fix](https://github.com/FrannDzs/Route-Riter/blob/main-(7.6.27)/Others/vb6mousewheelfix.exe)
 
  - [MZ-Tools 8.0](https://www.mztools.com/v8/mztools8.aspx) (Recommended)
 
  - [CodeSMART](https://www.axtools.com/products-codesmart-vb6.php) (Recommended)
 
- - [Codejock Extreme Controls ActiveX](https://www.componentsource.com/es/product/codejock-xtreme-controls-activex) (Recommended)
+ - [Codejock Suite Pro for ActiveX]([https://www.componentsource.com/es/product/codejock-xtreme-controls-activex](https://codejock.com/products/suitepro/?2yn6s14z=p1z)) (Recommended)
 
  - [ModernVB](https://github.com/VykosX/ModernVB) (Recommended)
+
+ - [OLEEXP : Modern Shell Interfaces](https://www.vbforums.com/showthread.php?786079-VB6-Modern-Shell-Interface-Type-Library-oleexp-tlb)
 
 # Run compiling
  - Run Visual Basic 6.0, choose the option to load existing project and choose Route_Riter7.vbp to load the project.
