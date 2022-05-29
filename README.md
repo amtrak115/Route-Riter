@@ -102,11 +102,11 @@ If you have problems loading the vsflex8l.ocx vsprint.ocx and c1sizer.ocx contro
 
 - Fully parse the Microsoft Train Simulator files by adapting an XML parser, http://pugixml.org/
 
-# Credits:
-© Mike Simpson
+# Credits/Acknowledgement:
+© Mike Simpson for writing this initially, the kindness and giving the necessary permissions.
 virtualtrains@tpg.com
 
-© Jeffrey Kraus
+© Jeffrey Kraus for donating his code and allowing this to be revived.
 http://www.digital-rails.com
 support@digital-rails.com
 
