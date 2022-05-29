@@ -39,39 +39,41 @@ If you have problems loading the vsflex8l.ocx vsprint.ocx and c1sizer.ocx contro
 
 # 2. Recommended/Interest addins/tools for VB6 IDE:
 
- - [Code Advisor](https://www.microsoft.com/en-US/download/details.aspx?id=1222) (Optional)
+ - [Code Advisor](https://www.microsoft.com/en-US/download/details.aspx?id=1222) (Free) (Optional)
 
- - [Visual Basic 6 Mouse Wheel Fix](https://github.com/FrannDzs/Route-Riter/blob/main-(7.6.27)/Others/vb6mousewheelfix.exe)
+ - [Code Help 3.0](https://github.com/clayreimann/CodeHelp) (Free) (Tabs in VB IDE) (Recommended)
 
- - [MZ-Tools 8.0](https://www.mztools.com/v8/mztools8.aspx) (Recommended)
+ - [Visual Basic 6 Mouse Wheel Fix](https://github.com/FrannDzs/Route-Riter/blob/main-(7.6.27)/Others/vb6mousewheelfix.exe) (Free) (Fix Scroll Whel in IDE)
 
- - [CodeSMART](https://www.axtools.com/products-codesmart-vb6.php) (Recommended)
+ - [MZ-Tools 8.0](https://www.mztools.com/v8/mztools8.aspx) (Paid) (Tools Suite) (Very Recommended)
 
- - [Codejock Suite Pro for ActiveX](https://codejock.com/products/suitepro/?2yn6s14z=p1z) (Recommended)
+ - [CodeSMART](https://www.axtools.com/products-codesmart-vb6.php) (Paid) (Tools Suite) (Very Recommended)
 
- - [ModernVB](https://github.com/VykosX/ModernVB) (Recommended)
+ - [Codejock Suite Pro for ActiveX](https://codejock.com/products/suitepro/?2yn6s14z=p1z) (Paid) (Controls Suite) (Recommended)
 
- - [OLEEXP : Modern Shell Interfaces](https://www.vbforums.com/showthread.php?786079-VB6-Modern-Shell-Interface-Type-Library-oleexp-tlb)
+ - [ModernVB](https://github.com/VykosX/ModernVB) (Free) (Modernize your VB6 IDE) (Very Recommended)
 
- - [DX9VB](https://github.com/thetrik/DX9VB)
+ - [OLEEXP : Modern Shell Interfaces](https://www.vbforums.com/showthread.php?786079-VB6-Modern-Shell-Interface-Type-Library-oleexp-tlb) (Free)
 
- - [VbTrickMultiThreading](https://github.com/thetrik/VbTrickThreading)
+ - [VB Common Controls Replacement Library](https://github.com/Kr00l/VBCCR) (Free) (Common Controls Remake) (Recommended)
 
- - [VbTrickTimer](https://github.com/thetrik/VbTrickTimer)
+ - [DX9VB](https://github.com/thetrik/DX9VB) (Free) (Direct3D9 for Visual Basic 6)
+
+ - [VbTrickMultiThreading](https://github.com/thetrik/VbTrickThreading) (Free) (Module for working with multithreading in VB6)
+
+ - [VbTrickTimer](https://github.com/thetrik/VbTrickTimer) (Free) (Timer class for VB6/VBA compatible with 64 bit office)
  
- - [VB64bitDLLusage](https://github.com/thetrik/Vb64BitDllUsage)
+ - [VB64bitDLLusage](https://github.com/thetrik/Vb64BitDllUsage) (Free) (Using 64-bit dll in VB6 (in WOW64)
 
- - [VBPNG](https://github.com/thetrik/VbPng)
+ - [VBPNG](https://github.com/thetrik/VbPng) (Free) (provide the ability to work with PNG/ICO/CUR/ANI images using the standard controls)
 
- - [DeleteVbwFiles](https://github.com/EduardoVB/VB6-AddIn-Delete-vbw-Files)
+ - [DeleteVbwFiles](https://github.com/EduardoVB/VB6-AddIn-Delete-vbw-Files) (Free) (VB6 Add-In to delete vbw files automatically (when opening or closing project)
 
- - [VB6NAMESPACES](https://github.com/WindowStations/VB6NameSpaces)
+ - [VB6NAMESPACES](https://github.com/WindowStations/VB6NameSpaces) (Free) (A single VB.NET assembly makes it possible to interoperate with VBA/VB6 including VB.NET Forms, Controls, Properties, Events, and NameSpaces, instanced as nested class buckets)
 
- - [VB6 PORTER](https://github.com/VBForumsCommunity/VB6Porter)
+ - [VB6 PORTER](https://github.com/VBForumsCommunity/VB6Porter) (Free) (Supports a use of the language that accommodates porting VB code, both forwards and backwards)
 
- - [VBSQlite](https://github.com/Kr00l/VBSQLite)
-
- - [VB Common Controls Replacement Library](https://github.com/Kr00l/VBCCR)
+ - [VBSQlite](https://github.com/Kr00l/VBSQLite) (Free) (VB SQLite Library)
 
 # 3. Run compiling
  - Run Visual Basic 6.0, choose the option to load existing project and choose Route_Riter7.vbp to load the project.
