@@ -142,9 +142,9 @@ http://www.zlib.net/
 c1sizer.ocx, vsflex8l.ocx and vsprint8.ocx
 http://www.componentone.com/
 
-© ClickTeam
-ClickTeam Installer Pro
-http://www.clickteam.com/
+© Jordan Rusell Software
+Inno Setup Installer
+https://jrsoftware.org/
 
 © Uwe Herklotz
 UHARC.EXE
